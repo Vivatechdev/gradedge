@@ -1,0 +1,4902 @@
+[
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(auth)/forgot-password/page.tsx",
+    "line": 21,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<span className=\"font-serif text-xl text-navy-deep font-semibold tracking-tight\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(auth)/forgot-password/page.tsx",
+    "line": 28,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h1 className=\"type-h2 text-navy-deep\">Reset your password</h1>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(auth)/forgot-password/page.tsx",
+    "line": 29,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<p className=\"type-body text-ink-soft\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(auth)/forgot-password/page.tsx",
+    "line": 38,
+    "oldClass": "text-ink",
+    "newClass": "text-tone-body",
+    "lineContent": "<label htmlFor=\"email\" className=\"type-small text-ink font-medium\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(auth)/forgot-password/page.tsx",
+    "line": 46,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "className=\"w-full border border-rule bg-white px-3 py-2.5 text-sm text-ink rounded-[2px] focus:outline-2 focus:outline-navy placeholder:text-ink-soft/60\""
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(auth)/forgot-password/page.tsx",
+    "line": 46,
+    "oldClass": "text-ink",
+    "newClass": "text-tone-body",
+    "lineContent": "className=\"w-full border border-rule bg-white px-3 py-2.5 text-sm text-ink rounded-[2px] focus:outline-2 focus:outline-navy placeholder:text-ink-soft/60\""
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(auth)/forgot-password/page.tsx",
+    "line": 46,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "className=\"w-full border border-rule bg-white px-3 py-2.5 text-sm text-ink rounded-[2px] focus:outline-2 focus:outline-navy placeholder:text-ink-soft/60\""
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(auth)/forgot-password/page.tsx",
+    "line": 57,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<p className=\"type-small text-ink-soft text-center\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(auth)/forgot-password/page.tsx",
+    "line": 61,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "className=\"text-navy font-medium hover:text-navy-deep transition-colors duration-150 border-b border-navy/30 hover:border-navy pb-0.5\""
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(auth)/verify-email/page.tsx",
+    "line": 21,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<span className=\"font-serif text-xl text-navy-deep font-semibold tracking-tight\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(auth)/verify-email/page.tsx",
+    "line": 48,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h1 className=\"type-h2 text-navy-deep\">Check your email</h1>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(auth)/verify-email/page.tsx",
+    "line": 49,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<p className=\"type-body text-ink-soft\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(auth)/verify-email/page.tsx",
+    "line": 56,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<p className=\"type-small text-ink-soft\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(auth)/verify-email/page.tsx",
+    "line": 60,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "className=\"text-navy font-medium hover:text-navy-deep transition-colors duration-150\""
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/about/academic-integrity/page.tsx",
+    "line": 40,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h2 className=\"type-h2 text-navy-deep\">Our mentoring scope</h2>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/about/academic-integrity/page.tsx",
+    "line": 42,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div className=\"p-4 bg-white border border-rule rounded-[2px] space-y-1\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/about/academic-integrity/page.tsx",
+    "line": 43,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h3 className=\"font-serif text-base text-navy-deep font-semibold\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/about/academic-integrity/page.tsx",
+    "line": 46,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<p className=\"type-body text-ink-soft leading-relaxed\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/about/academic-integrity/page.tsx",
+    "line": 51,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div className=\"p-4 bg-white border border-rule rounded-[2px] space-y-1\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/about/academic-integrity/page.tsx",
+    "line": 52,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h3 className=\"font-serif text-base text-navy-deep font-semibold\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/about/academic-integrity/page.tsx",
+    "line": 55,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<p className=\"type-body text-ink-soft leading-relaxed\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/about/academic-integrity/page.tsx",
+    "line": 60,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div className=\"p-4 bg-white border border-rule rounded-[2px] space-y-1\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/about/academic-integrity/page.tsx",
+    "line": 61,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h3 className=\"font-serif text-base text-navy-deep font-semibold\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/about/academic-integrity/page.tsx",
+    "line": 64,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<p className=\"type-body text-ink-soft leading-relaxed\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/about/academic-integrity/page.tsx",
+    "line": 69,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div className=\"p-4 bg-white border border-rule rounded-[2px] space-y-1\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/about/academic-integrity/page.tsx",
+    "line": 70,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h3 className=\"font-serif text-base text-navy-deep font-semibold\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/about/academic-integrity/page.tsx",
+    "line": 73,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<p className=\"type-body text-ink-soft leading-relaxed\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/about/academic-integrity/page.tsx",
+    "line": 81,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<section className=\"space-y-6 pt-8 border-t border-rule\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/about/academic-integrity/page.tsx",
+    "line": 83,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h2 className=\"type-h2 text-navy-deep\">What GradEdge does not do</h2>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/about/academic-integrity/page.tsx",
+    "line": 85,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div className=\"p-4 bg-cream border border-rule rounded-[2px] space-y-1\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/about/academic-integrity/page.tsx",
+    "line": 89,
+    "oldClass": "text-ink",
+    "newClass": "text-tone-body",
+    "lineContent": "<p className=\"type-body text-ink leading-relaxed\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/about/academic-integrity/page.tsx",
+    "line": 94,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div className=\"p-4 bg-cream border border-rule rounded-[2px] space-y-1\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/about/academic-integrity/page.tsx",
+    "line": 98,
+    "oldClass": "text-ink",
+    "newClass": "text-tone-body",
+    "lineContent": "<p className=\"type-body text-ink leading-relaxed\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/about/academic-integrity/page.tsx",
+    "line": 103,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div className=\"p-4 bg-cream border border-rule rounded-[2px] space-y-1\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/about/academic-integrity/page.tsx",
+    "line": 107,
+    "oldClass": "text-ink",
+    "newClass": "text-tone-body",
+    "lineContent": "<p className=\"type-body text-ink leading-relaxed\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/about/academic-integrity/page.tsx",
+    "line": 112,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div className=\"p-4 bg-cream border border-rule rounded-[2px] space-y-1\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/about/academic-integrity/page.tsx",
+    "line": 116,
+    "oldClass": "text-ink",
+    "newClass": "text-tone-body",
+    "lineContent": "<p className=\"type-body text-ink leading-relaxed\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/about/academic-integrity/page.tsx",
+    "line": 130,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<section className=\"space-y-4 pt-8 border-t border-rule\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/about/academic-integrity/page.tsx",
+    "line": 132,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h2 className=\"type-h2 text-navy-deep\">Shared scholarly contract</h2>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/about/academic-integrity/page.tsx",
+    "line": 133,
+    "oldClass": "text-ink",
+    "newClass": "text-tone-body",
+    "lineContent": "<p className=\"type-body text-ink leading-relaxed\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/about/academic-integrity/page.tsx",
+    "line": 136,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<ul className=\"list-disc pl-5 space-y-2 type-body text-ink-soft\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/about/how-it-works/page.tsx",
+    "line": 68,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h2 className=\"type-h2 text-navy-deep\">Initial assessment</h2>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/about/how-it-works/page.tsx",
+    "line": 69,
+    "oldClass": "text-ink",
+    "newClass": "text-tone-body",
+    "lineContent": "<p className=\"type-body text-ink leading-relaxed\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/about/how-it-works/page.tsx",
+    "line": 75,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<section className=\"space-y-4 pt-8 border-t border-rule\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/about/how-it-works/page.tsx",
+    "line": 77,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h2 className=\"type-h2 text-navy-deep\">Discipline-matched mentor assignment</h2>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/about/how-it-works/page.tsx",
+    "line": 78,
+    "oldClass": "text-ink",
+    "newClass": "text-tone-body",
+    "lineContent": "<p className=\"type-body text-ink leading-relaxed\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/about/how-it-works/page.tsx",
+    "line": 84,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<section className=\"space-y-6 pt-8 border-t border-rule\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/about/how-it-works/page.tsx",
+    "line": 86,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h2 className=\"type-h2 text-navy-deep\">Structured written feedback cycles</h2>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/about/how-it-works/page.tsx",
+    "line": 91,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<section className=\"space-y-6 pt-8 border-t border-rule\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/about/how-it-works/page.tsx",
+    "line": 93,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h2 className=\"type-h2 text-navy-deep\">What we track</h2>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/about/how-it-works/page.tsx",
+    "line": 95,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div className=\"p-4 bg-paper border border-rule rounded-[2px] space-y-2\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/about/how-it-works/page.tsx",
+    "line": 96,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h3 className=\"font-serif text-base text-navy-deep font-semibold\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/about/how-it-works/page.tsx",
+    "line": 99,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<p className=\"text-sm text-ink-soft leading-relaxed\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/about/how-it-works/page.tsx",
+    "line": 103,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div className=\"p-4 bg-paper border border-rule rounded-[2px] space-y-2\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/about/how-it-works/page.tsx",
+    "line": 104,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h3 className=\"font-serif text-base text-navy-deep font-semibold\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/about/how-it-works/page.tsx",
+    "line": 107,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<p className=\"text-sm text-ink-soft leading-relaxed\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/about/how-it-works/page.tsx",
+    "line": 111,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div className=\"p-4 bg-paper border border-rule rounded-[2px] space-y-2\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/about/how-it-works/page.tsx",
+    "line": 112,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h3 className=\"font-serif text-base text-navy-deep font-semibold\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/about/how-it-works/page.tsx",
+    "line": 115,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<p className=\"text-sm text-ink-soft leading-relaxed\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/about/how-it-works/page.tsx",
+    "line": 123,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<section className=\"space-y-4 pt-8 border-t border-rule\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/about/how-it-works/page.tsx",
+    "line": 125,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h2 className=\"type-h2 text-navy-deep\">Scholarly confidentiality</h2>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/about/how-it-works/page.tsx",
+    "line": 126,
+    "oldClass": "text-ink",
+    "newClass": "text-tone-body",
+    "lineContent": "<p className=\"type-body text-ink leading-relaxed\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/about/page.tsx",
+    "line": 58,
+    "oldClass": "text-ink",
+    "newClass": "text-tone-body",
+    "lineContent": "<p className=\"type-body text-ink italic leading-relaxed\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/about/page.tsx",
+    "line": 66,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h2 className=\"type-h2 text-navy-deep\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/about/page.tsx",
+    "line": 75,
+    "oldClass": "text-ink",
+    "newClass": "text-tone-body",
+    "lineContent": "<div className=\"type-body text-ink space-y-4 leading-relaxed\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/about/page.tsx",
+    "line": 89,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div className=\"space-y-8 max-w-3xl pt-8 border-t border-rule\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/about/page.tsx",
+    "line": 91,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h2 className=\"type-h2 text-navy-deep\">A typical engagement</h2>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/accelerator/application-received/page.tsx",
+    "line": 53,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h1 className=\"type-h1 text-navy-deep\">We have received your application.</h1>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/accelerator/application-received/page.tsx",
+    "line": 54,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<p className=\"type-lead text-ink-soft max-w-lg mx-auto\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/accelerator/application-received/page.tsx",
+    "line": 59,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div className=\"text-left bg-white p-8 border border-rule rounded-[2px] space-y-6\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/accelerator/application-received/page.tsx",
+    "line": 60,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h2 className=\"font-serif text-xl text-navy-deep font-medium border-b border-rule pb-2\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/accelerator/application-received/page.tsx",
+    "line": 60,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<h2 className=\"font-serif text-xl text-navy-deep font-medium border-b border-rule pb-2\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/accelerator/apply/page.tsx",
+    "line": 64,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<form onSubmit={handleSubmit(onSubmit)} className=\"space-y-6 bg-white p-8 border border-rule rounded-[2px]\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/accelerator/apply/page.tsx",
+    "line": 73,
+    "oldClass": "text-ink",
+    "newClass": "text-tone-body",
+    "lineContent": "<label htmlFor=\"full_name\" className=\"type-small font-medium text-ink\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/accelerator/apply/page.tsx",
+    "line": 80,
+    "oldClass": "text-ink",
+    "newClass": "text-tone-body",
+    "lineContent": "className=\"w-full border border-rule bg-paper px-3 py-2 text-sm text-ink rounded-[2px] focus:outline-2 focus:outline-navy\""
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/accelerator/apply/page.tsx",
+    "line": 80,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "className=\"w-full border border-rule bg-paper px-3 py-2 text-sm text-ink rounded-[2px] focus:outline-2 focus:outline-navy\""
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/accelerator/apply/page.tsx",
+    "line": 89,
+    "oldClass": "text-ink",
+    "newClass": "text-tone-body",
+    "lineContent": "<label htmlFor=\"email\" className=\"type-small font-medium text-ink\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/accelerator/apply/page.tsx",
+    "line": 96,
+    "oldClass": "text-ink",
+    "newClass": "text-tone-body",
+    "lineContent": "className=\"w-full border border-rule bg-paper px-3 py-2 text-sm text-ink rounded-[2px] focus:outline-2 focus:outline-navy\""
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/accelerator/apply/page.tsx",
+    "line": 96,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "className=\"w-full border border-rule bg-paper px-3 py-2 text-sm text-ink rounded-[2px] focus:outline-2 focus:outline-navy\""
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/accelerator/apply/page.tsx",
+    "line": 107,
+    "oldClass": "text-ink",
+    "newClass": "text-tone-body",
+    "lineContent": "<label htmlFor=\"institution\" className=\"type-small font-medium text-ink\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/accelerator/apply/page.tsx",
+    "line": 114,
+    "oldClass": "text-ink",
+    "newClass": "text-tone-body",
+    "lineContent": "className=\"w-full border border-rule bg-paper px-3 py-2 text-sm text-ink rounded-[2px] focus:outline-2 focus:outline-navy\""
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/accelerator/apply/page.tsx",
+    "line": 114,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "className=\"w-full border border-rule bg-paper px-3 py-2 text-sm text-ink rounded-[2px] focus:outline-2 focus:outline-navy\""
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/accelerator/apply/page.tsx",
+    "line": 123,
+    "oldClass": "text-ink",
+    "newClass": "text-tone-body",
+    "lineContent": "<label htmlFor=\"study_level\" className=\"type-small font-medium text-ink\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/accelerator/apply/page.tsx",
+    "line": 129,
+    "oldClass": "text-ink",
+    "newClass": "text-tone-body",
+    "lineContent": "className=\"w-full border border-rule bg-paper px-3 py-2 text-sm text-ink rounded-[2px] focus:outline-2 focus:outline-navy\""
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/accelerator/apply/page.tsx",
+    "line": 129,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "className=\"w-full border border-rule bg-paper px-3 py-2 text-sm text-ink rounded-[2px] focus:outline-2 focus:outline-navy\""
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/accelerator/apply/page.tsx",
+    "line": 142,
+    "oldClass": "text-ink",
+    "newClass": "text-tone-body",
+    "lineContent": "<label htmlFor=\"field_of_study\" className=\"type-small font-medium text-ink\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/accelerator/apply/page.tsx",
+    "line": 149,
+    "oldClass": "text-ink",
+    "newClass": "text-tone-body",
+    "lineContent": "className=\"w-full border border-rule bg-paper px-3 py-2 text-sm text-ink rounded-[2px] focus:outline-2 focus:outline-navy\""
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/accelerator/apply/page.tsx",
+    "line": 149,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "className=\"w-full border border-rule bg-paper px-3 py-2 text-sm text-ink rounded-[2px] focus:outline-2 focus:outline-navy\""
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/accelerator/apply/page.tsx",
+    "line": 158,
+    "oldClass": "text-ink",
+    "newClass": "text-tone-body",
+    "lineContent": "<label htmlFor=\"dissertation_title\" className=\"type-small font-medium text-ink\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/accelerator/apply/page.tsx",
+    "line": 165,
+    "oldClass": "text-ink",
+    "newClass": "text-tone-body",
+    "lineContent": "className=\"w-full border border-rule bg-paper px-3 py-2 text-sm text-ink rounded-[2px] focus:outline-2 focus:outline-navy\""
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/accelerator/apply/page.tsx",
+    "line": 165,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "className=\"w-full border border-rule bg-paper px-3 py-2 text-sm text-ink rounded-[2px] focus:outline-2 focus:outline-navy\""
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/accelerator/apply/page.tsx",
+    "line": 174,
+    "oldClass": "text-ink",
+    "newClass": "text-tone-body",
+    "lineContent": "<label htmlFor=\"summary\" className=\"type-small font-medium text-ink\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/accelerator/apply/page.tsx",
+    "line": 181,
+    "oldClass": "text-ink",
+    "newClass": "text-tone-body",
+    "lineContent": "className=\"w-full border border-rule bg-paper px-3 py-2 text-sm text-ink rounded-[2px] focus:outline-2 focus:outline-navy\""
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/accelerator/apply/page.tsx",
+    "line": 181,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "className=\"w-full border border-rule bg-paper px-3 py-2 text-sm text-ink rounded-[2px] focus:outline-2 focus:outline-navy\""
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/accelerator/apply/page.tsx",
+    "line": 190,
+    "oldClass": "text-ink",
+    "newClass": "text-tone-body",
+    "lineContent": "<label htmlFor=\"supervisor_feedback\" className=\"type-small font-medium text-ink\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/accelerator/apply/page.tsx",
+    "line": 197,
+    "oldClass": "text-ink",
+    "newClass": "text-tone-body",
+    "lineContent": "className=\"w-full border border-rule bg-paper px-3 py-2 text-sm text-ink rounded-[2px] focus:outline-2 focus:outline-navy\""
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/accelerator/apply/page.tsx",
+    "line": 197,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "className=\"w-full border border-rule bg-paper px-3 py-2 text-sm text-ink rounded-[2px] focus:outline-2 focus:outline-navy\""
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/accelerator/apply/page.tsx",
+    "line": 204,
+    "oldClass": "text-ink",
+    "newClass": "text-tone-body",
+    "lineContent": "<label htmlFor=\"timeline\" className=\"type-small font-medium text-ink\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/accelerator/apply/page.tsx",
+    "line": 211,
+    "oldClass": "text-ink",
+    "newClass": "text-tone-body",
+    "lineContent": "className=\"w-full border border-rule bg-paper px-3 py-2 text-sm text-ink rounded-[2px] focus:outline-2 focus:outline-navy\""
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/accelerator/apply/page.tsx",
+    "line": 211,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "className=\"w-full border border-rule bg-paper px-3 py-2 text-sm text-ink rounded-[2px] focus:outline-2 focus:outline-navy\""
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/accelerator/apply/page.tsx",
+    "line": 220,
+    "oldClass": "text-ink",
+    "newClass": "text-tone-body",
+    "lineContent": "<label htmlFor=\"heard_from\" className=\"type-small font-medium text-ink\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/accelerator/apply/page.tsx",
+    "line": 227,
+    "oldClass": "text-ink",
+    "newClass": "text-tone-body",
+    "lineContent": "className=\"w-full border border-rule bg-paper px-3 py-2 text-sm text-ink rounded-[2px] focus:outline-2 focus:outline-navy\""
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/accelerator/apply/page.tsx",
+    "line": 227,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "className=\"w-full border border-rule bg-paper px-3 py-2 text-sm text-ink rounded-[2px] focus:outline-2 focus:outline-navy\""
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/accelerator/apply/page.tsx",
+    "line": 234,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div className=\"pt-2 border-t border-rule space-y-2\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/accelerator/apply/page.tsx",
+    "line": 235,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<p className=\"text-xs text-ink-soft leading-relaxed\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/accelerator/apply/page.tsx",
+    "line": 250,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<p className=\"text-xs text-center text-ink-soft\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/accelerator/faq/page.tsx",
+    "line": 90,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<div className=\"prose prose-sm text-ink-soft leading-relaxed\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/accelerator/page.tsx",
+    "line": 87,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h2 className=\"type-h2 text-navy-deep\">Who the Accelerator is built for</h2>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/accelerator/page.tsx",
+    "line": 89,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div className=\"p-5 bg-white border border-rule rounded-[2px] space-y-2\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/accelerator/page.tsx",
+    "line": 90,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h3 className=\"font-serif text-base text-navy-deep font-semibold\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/accelerator/page.tsx",
+    "line": 93,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<p className=\"text-sm text-ink-soft leading-relaxed\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/accelerator/page.tsx",
+    "line": 97,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div className=\"p-5 bg-white border border-rule rounded-[2px] space-y-2\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/accelerator/page.tsx",
+    "line": 98,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h3 className=\"font-serif text-base text-navy-deep font-semibold\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/accelerator/page.tsx",
+    "line": 101,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<p className=\"text-sm text-ink-soft leading-relaxed\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/accelerator/page.tsx",
+    "line": 105,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div className=\"p-5 bg-white border border-rule rounded-[2px] space-y-2\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/accelerator/page.tsx",
+    "line": 106,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h3 className=\"font-serif text-base text-navy-deep font-semibold\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/accelerator/page.tsx",
+    "line": 109,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<p className=\"text-sm text-ink-soft leading-relaxed\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/accelerator/page.tsx",
+    "line": 117,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<section className=\"space-y-8 pt-8 border-t border-rule\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/accelerator/page.tsx",
+    "line": 119,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h2 className=\"type-h2 text-navy-deep\">Two-phase structured progression</h2>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/accelerator/page.tsx",
+    "line": 123,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div className=\"border-b border-rule pb-2\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/accelerator/page.tsx",
+    "line": 125,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h3 className=\"font-serif text-xl text-navy-deep font-medium\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/accelerator/page.tsx",
+    "line": 133,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div className=\"border-b border-rule pb-2\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/accelerator/page.tsx",
+    "line": 135,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h3 className=\"font-serif text-xl text-navy-deep font-medium\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/accelerator/page.tsx",
+    "line": 145,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<section className=\"space-y-6 pt-8 border-t border-rule\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/accelerator/page.tsx",
+    "line": 147,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h2 className=\"type-h2 text-navy-deep\">What members receive</h2>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/accelerator/page.tsx",
+    "line": 175,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div key={i} className=\"p-4 bg-paper border border-rule rounded-[2px] space-y-1\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/accelerator/page.tsx",
+    "line": 176,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h4 className=\"font-serif text-base text-navy-deep font-semibold\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/accelerator/page.tsx",
+    "line": 179,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<p className=\"text-xs text-ink-soft leading-relaxed\">{item.desc}</p>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/accelerator/page.tsx",
+    "line": 186,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div className=\"bg-cream border border-rule p-6 rounded-[2px] space-y-2\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/accelerator/page.tsx",
+    "line": 188,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h3 className=\"font-serif text-lg text-navy-deep font-medium\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/accelerator/page.tsx",
+    "line": 191,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<p className=\"type-body text-ink-soft leading-relaxed\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/accelerator/page.tsx",
+    "line": 200,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<section className=\"space-y-6 pt-8 border-t border-rule\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/accelerator/page.tsx",
+    "line": 202,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h2 className=\"type-h2 text-navy-deep\">How application and admission works</h2>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/accelerator/page.tsx",
+    "line": 210,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div key={idx} className=\"flex items-start gap-4 p-3 bg-white border border-rule rounded-[2px]\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/accelerator/page.tsx",
+    "line": 214,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<p className=\"text-sm text-ink-soft leading-relaxed\">{step}</p>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/accessibility/page.tsx",
+    "line": 26,
+    "oldClass": "text-ink",
+    "newClass": "text-tone-body",
+    "lineContent": "<div className=\"site-container py-12 md:py-16 max-w-3xl prose prose-sm text-ink leading-relaxed space-y-8\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/accessibility/page.tsx",
+    "line": 28,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h2 className=\"type-h3 text-navy-deep\">1. Conformance Standards</h2>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/accessibility/page.tsx",
+    "line": 35,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h2 className=\"type-h3 text-navy-deep\">2. Accessible Features</h2>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/accessibility/page.tsx",
+    "line": 45,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h2 className=\"type-h3 text-navy-deep\">3. Feedback and Assistance</h2>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/blog/category/[category]/page.tsx",
+    "line": 101,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<ul className=\"divide-y divide-rule border-y border-rule\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/blog/category/[category]/page.tsx",
+    "line": 101,
+    "oldClass": "divide-rule",
+    "newClass": "divide-tone-rule",
+    "lineContent": "<ul className=\"divide-y divide-rule border-y border-rule\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/blog/category/[category]/page.tsx",
+    "line": 109,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h3 className=\"font-serif text-xl text-navy-deep font-medium group-hover:text-navy transition-colors\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/blog/category/[category]/page.tsx",
+    "line": 113,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<p className=\"text-sm text-ink-soft line-clamp-2 leading-relaxed\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/blog/category/[category]/page.tsx",
+    "line": 118,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<div className=\"flex items-center gap-4 shrink-0 text-xs text-ink-soft\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/blog/page.tsx",
+    "line": 97,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div className=\"flex flex-wrap items-center gap-2 pb-4 border-b border-rule\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/blog/page.tsx",
+    "line": 98,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<span className=\"type-micro text-ink-soft mr-2\">Categories:</span>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/blog/page.tsx",
+    "line": 103,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "className=\"text-xs px-2.5 py-1 bg-paper border border-rule hover:border-navy text-ink-soft hover:text-navy transition-colors rounded-[2px]\""
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/blog/page.tsx",
+    "line": 103,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "className=\"text-xs px-2.5 py-1 bg-paper border border-rule hover:border-navy text-ink-soft hover:text-navy transition-colors rounded-[2px]\""
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/blog/page.tsx",
+    "line": 110,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "className=\"text-xs px-2.5 py-1 bg-cream border border-rule text-gold hover:text-navy transition-colors rounded-[2px] font-medium ml-auto\""
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/blog/page.tsx",
+    "line": 149,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<ul className=\"divide-y divide-rule border-y border-rule\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/blog/page.tsx",
+    "line": 149,
+    "oldClass": "divide-rule",
+    "newClass": "divide-tone-rule",
+    "lineContent": "<ul className=\"divide-y divide-rule border-y border-rule\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/blog/page.tsx",
+    "line": 160,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h3 className=\"font-serif text-xl text-navy-deep font-medium group-hover:text-navy transition-colors\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/blog/page.tsx",
+    "line": 164,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<p className=\"text-sm text-ink-soft line-clamp-2 leading-relaxed\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/blog/page.tsx",
+    "line": 169,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<div className=\"flex items-center gap-4 shrink-0 text-xs text-ink-soft\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/blog/page.tsx",
+    "line": 193,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div className=\"bg-paper border border-rule p-8 rounded-[2px] space-y-4\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/blog/page.tsx",
+    "line": 195,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h3 className=\"type-h3 text-navy-deep\">Receive new articles in your inbox</h3>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/blog/page.tsx",
+    "line": 196,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<p className=\"text-sm text-ink-soft max-w-lg leading-relaxed\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/blog/search/page.tsx",
+    "line": 53,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<label htmlFor=\"blog-search-input\" className=\"type-micro text-ink-soft mb-2 block\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/blog/search/page.tsx",
+    "line": 63,
+    "oldClass": "text-ink",
+    "newClass": "text-tone-body",
+    "lineContent": "className=\"w-full border border-rule bg-white px-4 py-3 text-base text-ink rounded-[2px] focus:outline-2 focus:outline-navy\""
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/blog/search/page.tsx",
+    "line": 63,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "className=\"w-full border border-rule bg-white px-4 py-3 text-base text-ink rounded-[2px] focus:outline-2 focus:outline-navy\""
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/blog/search/page.tsx",
+    "line": 68,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<div className=\"text-sm text-ink-soft py-4\">Searching published articles...</div>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/blog/search/page.tsx",
+    "line": 72,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div className=\"p-8 text-center border border-rule bg-white rounded-[2px] space-y-2\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/blog/search/page.tsx",
+    "line": 73,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<p className=\"type-body text-navy-deep font-medium\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/blog/search/page.tsx",
+    "line": 76,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<p className=\"type-small text-ink-soft\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/blog/search/page.tsx",
+    "line": 84,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<p className=\"type-micro text-ink-soft\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/blog/search/page.tsx",
+    "line": 87,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<ul className=\"divide-y divide-rule border-y border-rule bg-white\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/blog/search/page.tsx",
+    "line": 87,
+    "oldClass": "divide-rule",
+    "newClass": "divide-tone-rule",
+    "lineContent": "<ul className=\"divide-y divide-rule border-y border-rule bg-white\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/blog/search/page.tsx",
+    "line": 95,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h3 className=\"font-serif text-lg text-navy-deep font-semibold group-hover:text-navy transition-colors\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/blog/search/page.tsx",
+    "line": 99,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<p className=\"text-xs text-ink-soft line-clamp-2 leading-relaxed\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/blog/search/page.tsx",
+    "line": 104,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<div className=\"flex items-center gap-3 shrink-0 text-xs text-ink-soft\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/blog/search/page.tsx",
+    "line": 139,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<Suspense fallback={<div className=\"p-8 text-ink-soft\">Loading search...</div>}>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/blog/tag/[tag]/page.tsx",
+    "line": 85,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<ul className=\"divide-y divide-rule border-y border-rule\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/blog/tag/[tag]/page.tsx",
+    "line": 85,
+    "oldClass": "divide-rule",
+    "newClass": "divide-tone-rule",
+    "lineContent": "<ul className=\"divide-y divide-rule border-y border-rule\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/blog/tag/[tag]/page.tsx",
+    "line": 93,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h3 className=\"font-serif text-xl text-navy-deep font-medium group-hover:text-navy transition-colors\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/blog/tag/[tag]/page.tsx",
+    "line": 97,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<p className=\"text-sm text-ink-soft line-clamp-2 leading-relaxed\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/blog/tag/[tag]/page.tsx",
+    "line": 102,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<div className=\"flex items-center gap-4 shrink-0 text-xs text-ink-soft\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/blog/[slug]/page.tsx",
+    "line": 163,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<header className=\"space-y-4 pb-8 border-b border-rule\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/blog/[slug]/page.tsx",
+    "line": 165,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h1 className=\"type-h1 text-navy-deep leading-tight\">{post.title}</h1>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/blog/[slug]/page.tsx",
+    "line": 168,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<p className=\"type-lead text-ink-soft leading-relaxed\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/blog/[slug]/page.tsx",
+    "line": 173,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<div className=\"flex items-center gap-3 pt-2 text-xs text-ink-soft\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/blog/[slug]/page.tsx",
+    "line": 174,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<span className=\"font-semibold text-navy-deep\">GradEdge Team</span>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/blog/[slug]/page.tsx",
+    "line": 187,
+    "oldClass": "text-ink",
+    "newClass": "text-tone-body",
+    "lineContent": "<div className=\"py-8 prose prose-lg text-ink leading-relaxed space-y-6\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/blog/[slug]/page.tsx",
+    "line": 189,
+    "oldClass": "text-ink",
+    "newClass": "text-tone-body",
+    "lineContent": "<p key={index} className=\"type-body text-ink leading-relaxed\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/blog/[slug]/page.tsx",
+    "line": 196,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div className=\"mt-12 p-8 bg-paper border border-rule rounded-[2px] space-y-3\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/blog/[slug]/page.tsx",
+    "line": 197,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h3 className=\"font-serif text-xl text-navy-deep font-semibold\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/blog/[slug]/page.tsx",
+    "line": 200,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<p className=\"type-body text-ink-soft leading-relaxed\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/blog/[slug]/page.tsx",
+    "line": 212,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div className=\"mt-16 pt-8 border-t border-rule space-y-6\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/blog/[slug]/page.tsx",
+    "line": 213,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h3 className=\"type-h3 text-navy-deep\">Related reading</h3>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/blog/[slug]/page.tsx",
+    "line": 219,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "className=\"p-4 bg-white border border-rule rounded-[2px] space-y-2 group hover:border-navy transition-colors\""
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/blog/[slug]/page.tsx",
+    "line": 221,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<p className=\"font-serif text-sm font-semibold text-navy-deep group-hover:text-navy\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/blog/[slug]/page.tsx",
+    "line": 225,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<p className=\"text-xs text-ink-soft line-clamp-2 leading-relaxed\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/book/confirmed/page.tsx",
+    "line": 28,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h1 className=\"type-h1 text-navy-deep\">Your consultation is scheduled.</h1>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/book/confirmed/page.tsx",
+    "line": 29,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<p className=\"type-lead text-ink-soft leading-relaxed\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/book/confirmed/page.tsx",
+    "line": 34,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div className=\"p-6 bg-white border border-rule rounded-[2px] text-left space-y-4\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/book/confirmed/page.tsx",
+    "line": 35,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h2 className=\"font-serif text-base text-navy-deep font-semibold border-b border-rule pb-2\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/book/confirmed/page.tsx",
+    "line": 35,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<h2 className=\"font-serif text-base text-navy-deep font-semibold border-b border-rule pb-2\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/book/confirmed/page.tsx",
+    "line": 38,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<ul className=\"space-y-2 text-xs text-ink-soft leading-relaxed\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/book/page.tsx",
+    "line": 43,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h2 className=\"type-h3 text-navy-deep\">What to expect on your call</h2>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/book/page.tsx",
+    "line": 46,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div key={idx} className=\"p-4 bg-white border border-rule rounded-[2px] space-y-1\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/book/page.tsx",
+    "line": 48,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h3 className=\"font-serif text-sm font-semibold text-navy-deep\">{e.title}</h3>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/book/page.tsx",
+    "line": 49,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<p className=\"text-xs text-ink-soft leading-relaxed\">{e.desc}</p>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/book/page.tsx",
+    "line": 56,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<section className=\"p-8 bg-paper border border-rule rounded-[2px] text-center space-y-4\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/book/page.tsx",
+    "line": 58,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h3 className=\"font-serif text-xl text-navy-deep font-semibold\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/book/page.tsx",
+    "line": 61,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<p className=\"type-body text-ink-soft max-w-md mx-auto leading-relaxed text-sm\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/booking/manage/[token]/page.tsx",
+    "line": 34,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h1 className=\"type-h2 text-navy-deep\">Manage your booking</h1>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/booking/manage/[token]/page.tsx",
+    "line": 35,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<p className=\"type-body text-ink-soft leading-relaxed\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/booking/manage/[token]/page.tsx",
+    "line": 40,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div className=\"p-6 bg-white border border-rule rounded-[2px] text-left space-y-4\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/booking/manage/[token]/page.tsx",
+    "line": 41,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<p className=\"type-body text-ink-soft text-sm leading-relaxed\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/booking/manage/[token]/page.tsx",
+    "line": 44,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<p className=\"type-body text-ink-soft text-sm leading-relaxed\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/checkout/failed/page.tsx",
+    "line": 24,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h1 className=\"type-h2 text-navy-deep\">Payment Could Not Be Completed</h1>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/checkout/failed/page.tsx",
+    "line": 25,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<p className=\"type-body text-ink-soft leading-relaxed\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/checkout/failed/page.tsx",
+    "line": 30,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div className=\"bg-white p-6 border border-rule rounded-[2px] text-left space-y-3\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/checkout/failed/page.tsx",
+    "line": 31,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h2 className=\"font-serif text-base text-navy-deep font-semibold border-b border-rule pb-2\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/checkout/failed/page.tsx",
+    "line": 31,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<h2 className=\"font-serif text-base text-navy-deep font-semibold border-b border-rule pb-2\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/checkout/failed/page.tsx",
+    "line": 34,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<ul className=\"space-y-1.5 text-xs text-ink-soft\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/checkout/pending/page.tsx",
+    "line": 24,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h1 className=\"type-h2 text-navy-deep\">Payment Authorization Pending</h1>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/checkout/pending/page.tsx",
+    "line": 25,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<p className=\"type-body text-ink-soft leading-relaxed\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/checkout/pending/page.tsx",
+    "line": 30,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div className=\"bg-white p-6 border border-rule rounded-[2px] text-left space-y-3\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/checkout/pending/page.tsx",
+    "line": 31,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<p className=\"text-xs text-ink-soft leading-relaxed\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/checkout/success/page.tsx",
+    "line": 24,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h1 className=\"type-h1 text-navy-deep\">Payment Confirmed</h1>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/checkout/success/page.tsx",
+    "line": 25,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<p className=\"type-lead text-ink-soft leading-relaxed\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/checkout/success/page.tsx",
+    "line": 30,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div className=\"bg-white p-6 border border-rule rounded-[2px] text-left space-y-3\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/checkout/success/page.tsx",
+    "line": 31,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h2 className=\"font-serif text-base text-navy-deep font-semibold border-b border-rule pb-2\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/checkout/success/page.tsx",
+    "line": 31,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<h2 className=\"font-serif text-base text-navy-deep font-semibold border-b border-rule pb-2\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/checkout/success/page.tsx",
+    "line": 34,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<p className=\"text-xs text-ink-soft leading-relaxed\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/checkout/[item]/page.tsx",
+    "line": 30,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<p className=\"type-micro text-ink-soft\">Secure Checkout Gateway</p>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/checkout/[item]/page.tsx",
+    "line": 31,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h1 className=\"type-h2 text-navy-deep\">Order Summary</h1>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/checkout/[item]/page.tsx",
+    "line": 32,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<p className=\"type-body text-ink-soft\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/checkout/[item]/page.tsx",
+    "line": 33,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "Item requested: <span className=\"font-semibold text-navy-deep\">{decodedItem}</span>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/checkout/[item]/page.tsx",
+    "line": 37,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div className=\"bg-white p-6 border border-rule rounded-[2px] text-left space-y-4\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/checkout/[item]/page.tsx",
+    "line": 38,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<div className=\"p-4 bg-cream border border-rule text-xs text-ink-soft leading-relaxed\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/checkout/[item]/page.tsx",
+    "line": 38,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div className=\"p-4 bg-cream border border-rule text-xs text-ink-soft leading-relaxed\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/checkout/[item]/page.tsx",
+    "line": 42,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<div className=\"space-y-2 pt-2 border-t border-rule text-xs text-ink-soft\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/checkout/[item]/page.tsx",
+    "line": 42,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div className=\"space-y-2 pt-2 border-t border-rule text-xs text-ink-soft\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/checkout/[item]/page.tsx",
+    "line": 45,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<span className=\"font-semibold text-navy-deep\">Paystack (PCI-DSS Level 1)</span>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/checkout/[item]/page.tsx",
+    "line": 49,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<span className=\"font-semibold text-navy-deep\">Mastercard, Visa, Verve, Bank Transfer</span>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/contact/page.tsx",
+    "line": 63,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div className=\"bg-white p-8 border border-rule rounded-[2px] space-y-4\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/contact/page.tsx",
+    "line": 65,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h2 className=\"type-h2 text-navy-deep\">Message received</h2>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/contact/page.tsx",
+    "line": 66,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<p className=\"type-body text-ink-soft leading-relaxed\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/contact/page.tsx",
+    "line": 78,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "className=\"bg-white p-8 border border-rule rounded-[2px] space-y-5\""
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/contact/page.tsx",
+    "line": 97,
+    "oldClass": "text-ink",
+    "newClass": "text-tone-body",
+    "lineContent": "<label htmlFor=\"name\" className=\"type-small font-medium text-ink\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/contact/page.tsx",
+    "line": 104,
+    "oldClass": "text-ink",
+    "newClass": "text-tone-body",
+    "lineContent": "className=\"w-full border border-rule bg-paper px-3 py-2 text-sm text-ink rounded-[2px] focus:outline-2 focus:outline-navy\""
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/contact/page.tsx",
+    "line": 104,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "className=\"w-full border border-rule bg-paper px-3 py-2 text-sm text-ink rounded-[2px] focus:outline-2 focus:outline-navy\""
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/contact/page.tsx",
+    "line": 111,
+    "oldClass": "text-ink",
+    "newClass": "text-tone-body",
+    "lineContent": "<label htmlFor=\"email\" className=\"type-small font-medium text-ink\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/contact/page.tsx",
+    "line": 118,
+    "oldClass": "text-ink",
+    "newClass": "text-tone-body",
+    "lineContent": "className=\"w-full border border-rule bg-paper px-3 py-2 text-sm text-ink rounded-[2px] focus:outline-2 focus:outline-navy\""
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/contact/page.tsx",
+    "line": 118,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "className=\"w-full border border-rule bg-paper px-3 py-2 text-sm text-ink rounded-[2px] focus:outline-2 focus:outline-navy\""
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/contact/page.tsx",
+    "line": 125,
+    "oldClass": "text-ink",
+    "newClass": "text-tone-body",
+    "lineContent": "<label htmlFor=\"message\" className=\"type-small font-medium text-ink\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/contact/page.tsx",
+    "line": 132,
+    "oldClass": "text-ink",
+    "newClass": "text-tone-body",
+    "lineContent": "className=\"w-full border border-rule bg-paper px-3 py-2 text-sm text-ink rounded-[2px] focus:outline-2 focus:outline-navy\""
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/contact/page.tsx",
+    "line": 132,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "className=\"w-full border border-rule bg-paper px-3 py-2 text-sm text-ink rounded-[2px] focus:outline-2 focus:outline-navy\""
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/contact/page.tsx",
+    "line": 153,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div className=\"p-6 bg-paper border border-rule rounded-[2px] space-y-3\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/contact/page.tsx",
+    "line": 154,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h3 className=\"font-serif text-lg text-navy-deep font-semibold\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/contact/page.tsx",
+    "line": 157,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<p className=\"text-xs text-ink-soft leading-relaxed\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/contact/page.tsx",
+    "line": 162,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div className=\"p-6 bg-paper border border-rule rounded-[2px] space-y-3\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/contact/page.tsx",
+    "line": 163,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h3 className=\"font-serif text-lg text-navy-deep font-semibold\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/contact/page.tsx",
+    "line": 166,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<p className=\"text-xs text-ink-soft leading-relaxed\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/contact/page.tsx",
+    "line": 176,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div className=\"p-6 bg-paper border border-rule rounded-[2px] space-y-3\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/contact/page.tsx",
+    "line": 177,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h3 className=\"font-serif text-lg text-navy-deep font-semibold\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/contact/page.tsx",
+    "line": 180,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<p className=\"text-xs text-ink-soft leading-relaxed\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/contact/page.tsx",
+    "line": 186,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "className=\"type-small font-medium text-navy hover:text-navy-deep border-b border-navy/30 pb-0.5\""
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/institutions/page.tsx",
+    "line": 78,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h2 className=\"type-h2 text-navy-deep\">What we provide university faculties</h2>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/institutions/page.tsx",
+    "line": 81,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div key={i} className=\"p-6 bg-white border border-rule rounded-[2px] space-y-2\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/institutions/page.tsx",
+    "line": 82,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h3 className=\"font-serif text-lg text-navy-deep font-semibold\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/institutions/page.tsx",
+    "line": 85,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<p className=\"text-xs text-ink-soft leading-relaxed\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/institutions/page.tsx",
+    "line": 94,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<section className=\"space-y-6 pt-8 border-t border-rule\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/institutions/page.tsx",
+    "line": 96,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h2 className=\"type-h2 text-navy-deep\">How university partnerships operate</h2>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/institutions/page.tsx",
+    "line": 101,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div className=\"grid grid-cols-1 sm:grid-cols-3 gap-6 pt-8 border-t border-rule\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/institutions/page.tsx",
+    "line": 104,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "className=\"p-6 bg-paper border border-rule hover:border-navy rounded-[2px] space-y-2 group transition-colors\""
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/institutions/page.tsx",
+    "line": 106,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h4 className=\"font-serif text-base text-navy-deep font-semibold group-hover:text-navy\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/institutions/page.tsx",
+    "line": 109,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<p className=\"text-xs text-ink-soft leading-relaxed\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/institutions/page.tsx",
+    "line": 120,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "className=\"p-6 bg-paper border border-rule hover:border-navy rounded-[2px] space-y-2 group transition-colors\""
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/institutions/page.tsx",
+    "line": 122,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h4 className=\"font-serif text-base text-navy-deep font-semibold group-hover:text-navy\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/institutions/page.tsx",
+    "line": 125,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<p className=\"text-xs text-ink-soft leading-relaxed\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/institutions/page.tsx",
+    "line": 136,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "className=\"p-6 bg-paper border border-rule hover:border-navy rounded-[2px] space-y-2 group transition-colors\""
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/institutions/page.tsx",
+    "line": 138,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h4 className=\"font-serif text-base text-navy-deep font-semibold group-hover:text-navy\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/institutions/page.tsx",
+    "line": 141,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<p className=\"text-xs text-ink-soft leading-relaxed\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/institutions/partnerships/page.tsx",
+    "line": 77,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h2 className=\"type-h2 text-navy-deep\">Collaborative frameworks</h2>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/institutions/partnerships/page.tsx",
+    "line": 80,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div key={i} className=\"p-6 bg-white border border-rule rounded-[2px] space-y-2\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/institutions/partnerships/page.tsx",
+    "line": 81,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h3 className=\"font-serif text-lg text-navy-deep font-semibold\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/institutions/partnerships/page.tsx",
+    "line": 84,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<p className=\"text-xs text-ink-soft leading-relaxed\">{m.desc}</p>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/institutions/partnerships/page.tsx",
+    "line": 90,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<section className=\"space-y-6 pt-8 border-t border-rule\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/institutions/partnerships/page.tsx",
+    "line": 92,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h2 className=\"type-h2 text-navy-deep\">How partnerships are structured</h2>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/institutions/request-a-workshop/page.tsx",
+    "line": 52,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div className=\"bg-white p-8 border border-rule rounded-[2px] text-center space-y-4\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/institutions/request-a-workshop/page.tsx",
+    "line": 54,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h2 className=\"type-h2 text-navy-deep\">Workshop Request Received</h2>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/institutions/request-a-workshop/page.tsx",
+    "line": 55,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<p className=\"type-body text-ink-soft max-w-md mx-auto leading-relaxed\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/institutions/request-a-workshop/page.tsx",
+    "line": 68,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<form onSubmit={handleSubmit(onSubmit)} className=\"space-y-6 bg-white p-8 border border-rule rounded-[2px]\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/institutions/request-a-workshop/page.tsx",
+    "line": 77,
+    "oldClass": "text-ink",
+    "newClass": "text-tone-body",
+    "lineContent": "<label htmlFor=\"institution_name\" className=\"type-small font-medium text-ink\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/institutions/request-a-workshop/page.tsx",
+    "line": 84,
+    "oldClass": "text-ink",
+    "newClass": "text-tone-body",
+    "lineContent": "className=\"w-full border border-rule bg-paper px-3 py-2 text-sm text-ink rounded-[2px] focus:outline-2 focus:outline-navy\""
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/institutions/request-a-workshop/page.tsx",
+    "line": 84,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "className=\"w-full border border-rule bg-paper px-3 py-2 text-sm text-ink rounded-[2px] focus:outline-2 focus:outline-navy\""
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/institutions/request-a-workshop/page.tsx",
+    "line": 93,
+    "oldClass": "text-ink",
+    "newClass": "text-tone-body",
+    "lineContent": "<label htmlFor=\"contact_name\" className=\"type-small font-medium text-ink\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/institutions/request-a-workshop/page.tsx",
+    "line": 100,
+    "oldClass": "text-ink",
+    "newClass": "text-tone-body",
+    "lineContent": "className=\"w-full border border-rule bg-paper px-3 py-2 text-sm text-ink rounded-[2px] focus:outline-2 focus:outline-navy\""
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/institutions/request-a-workshop/page.tsx",
+    "line": 100,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "className=\"w-full border border-rule bg-paper px-3 py-2 text-sm text-ink rounded-[2px] focus:outline-2 focus:outline-navy\""
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/institutions/request-a-workshop/page.tsx",
+    "line": 111,
+    "oldClass": "text-ink",
+    "newClass": "text-tone-body",
+    "lineContent": "<label htmlFor=\"email\" className=\"type-small font-medium text-ink\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/institutions/request-a-workshop/page.tsx",
+    "line": 118,
+    "oldClass": "text-ink",
+    "newClass": "text-tone-body",
+    "lineContent": "className=\"w-full border border-rule bg-paper px-3 py-2 text-sm text-ink rounded-[2px] focus:outline-2 focus:outline-navy\""
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/institutions/request-a-workshop/page.tsx",
+    "line": 118,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "className=\"w-full border border-rule bg-paper px-3 py-2 text-sm text-ink rounded-[2px] focus:outline-2 focus:outline-navy\""
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/institutions/request-a-workshop/page.tsx",
+    "line": 127,
+    "oldClass": "text-ink",
+    "newClass": "text-tone-body",
+    "lineContent": "<label htmlFor=\"phone\" className=\"type-small font-medium text-ink\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/institutions/request-a-workshop/page.tsx",
+    "line": 134,
+    "oldClass": "text-ink",
+    "newClass": "text-tone-body",
+    "lineContent": "className=\"w-full border border-rule bg-paper px-3 py-2 text-sm text-ink rounded-[2px] focus:outline-2 focus:outline-navy\""
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/institutions/request-a-workshop/page.tsx",
+    "line": 134,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "className=\"w-full border border-rule bg-paper px-3 py-2 text-sm text-ink rounded-[2px] focus:outline-2 focus:outline-navy\""
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/institutions/request-a-workshop/page.tsx",
+    "line": 142,
+    "oldClass": "text-ink",
+    "newClass": "text-tone-body",
+    "lineContent": "<label htmlFor=\"topic\" className=\"type-small font-medium text-ink\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/institutions/request-a-workshop/page.tsx",
+    "line": 148,
+    "oldClass": "text-ink",
+    "newClass": "text-tone-body",
+    "lineContent": "className=\"w-full border border-rule bg-paper px-3 py-2 text-sm text-ink rounded-[2px] focus:outline-2 focus:outline-navy\""
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/institutions/request-a-workshop/page.tsx",
+    "line": 148,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "className=\"w-full border border-rule bg-paper px-3 py-2 text-sm text-ink rounded-[2px] focus:outline-2 focus:outline-navy\""
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/institutions/request-a-workshop/page.tsx",
+    "line": 175,
+    "oldClass": "text-ink",
+    "newClass": "text-tone-body",
+    "lineContent": "<label htmlFor=\"attendee_count\" className=\"type-small font-medium text-ink\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/institutions/request-a-workshop/page.tsx",
+    "line": 184,
+    "oldClass": "text-ink",
+    "newClass": "text-tone-body",
+    "lineContent": "className=\"w-full border border-rule bg-paper px-3 py-2 text-sm text-ink rounded-[2px] focus:outline-2 focus:outline-navy\""
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/institutions/request-a-workshop/page.tsx",
+    "line": 184,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "className=\"w-full border border-rule bg-paper px-3 py-2 text-sm text-ink rounded-[2px] focus:outline-2 focus:outline-navy\""
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/institutions/request-a-workshop/page.tsx",
+    "line": 193,
+    "oldClass": "text-ink",
+    "newClass": "text-tone-body",
+    "lineContent": "<label htmlFor=\"preferred_date\" className=\"type-small font-medium text-ink\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/institutions/request-a-workshop/page.tsx",
+    "line": 200,
+    "oldClass": "text-ink",
+    "newClass": "text-tone-body",
+    "lineContent": "className=\"w-full border border-rule bg-paper px-3 py-2 text-sm text-ink rounded-[2px] focus:outline-2 focus:outline-navy\""
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/institutions/request-a-workshop/page.tsx",
+    "line": 200,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "className=\"w-full border border-rule bg-paper px-3 py-2 text-sm text-ink rounded-[2px] focus:outline-2 focus:outline-navy\""
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/institutions/request-a-workshop/page.tsx",
+    "line": 206,
+    "oldClass": "text-ink",
+    "newClass": "text-tone-body",
+    "lineContent": "<label htmlFor=\"notes\" className=\"type-small font-medium text-ink\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/institutions/request-a-workshop/page.tsx",
+    "line": 213,
+    "oldClass": "text-ink",
+    "newClass": "text-tone-body",
+    "lineContent": "className=\"w-full border border-rule bg-paper px-3 py-2 text-sm text-ink rounded-[2px] focus:outline-2 focus:outline-navy\""
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/institutions/request-a-workshop/page.tsx",
+    "line": 213,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "className=\"w-full border border-rule bg-paper px-3 py-2 text-sm text-ink rounded-[2px] focus:outline-2 focus:outline-navy\""
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/institutions/request-a-workshop/page.tsx",
+    "line": 250,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<Suspense fallback={<div className=\"p-8 text-ink-soft\">Loading request form...</div>}>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/institutions/workshops/page.tsx",
+    "line": 97,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div key={i} className=\"p-6 bg-white border border-rule rounded-[2px] flex flex-col justify-between space-y-4\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/institutions/workshops/page.tsx",
+    "line": 100,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h3 className=\"font-serif text-lg text-navy-deep font-semibold\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/institutions/workshops/page.tsx",
+    "line": 103,
+    "oldClass": "text-ink",
+    "newClass": "text-tone-body",
+    "lineContent": "<p className=\"text-xs text-ink font-medium\">Audience: {w.audience}</p>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/institutions/workshops/page.tsx",
+    "line": 104,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<p className=\"text-xs text-ink-soft leading-relaxed\">{w.summary}</p>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/institutions/workshops/page.tsx",
+    "line": 107,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div className=\"pt-2 border-t border-rule\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/institutions/workshops/page.tsx",
+    "line": 121,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div className=\"p-6 bg-paper border border-rule rounded-[2px] space-y-2\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/institutions/workshops/page.tsx",
+    "line": 123,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h3 className=\"font-serif text-base text-navy-deep font-semibold\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/institutions/workshops/page.tsx",
+    "line": 126,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<p className=\"type-body text-ink-soft leading-relaxed\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/layout.tsx",
+    "line": 12,
+    "oldClass": "text-ink",
+    "newClass": "text-tone-body",
+    "lineContent": "<div className=\"min-h-screen flex flex-col bg-paper text-ink\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/legal/academic-integrity/page.tsx",
+    "line": 29,
+    "oldClass": "text-ink",
+    "newClass": "text-tone-body",
+    "lineContent": "<div className=\"site-container py-12 md:py-16 max-w-3xl prose prose-sm text-ink leading-relaxed space-y-8\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/legal/academic-integrity/page.tsx",
+    "line": 31,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h2 className=\"type-h3 text-navy-deep\">1. Core Mission & Definitions</h2>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/legal/academic-integrity/page.tsx",
+    "line": 38,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h2 className=\"type-h3 text-navy-deep\">2. Prohibited Services and Ghostwriting Ban</h2>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/legal/academic-integrity/page.tsx",
+    "line": 52,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h2 className=\"type-h3 text-navy-deep\">3. Permissible Mentoring Scope</h2>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/legal/academic-integrity/page.tsx",
+    "line": 67,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h2 className=\"type-h3 text-navy-deep\">4. Student Warranties and Legal Indemnity</h2>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/legal/academic-integrity/page.tsx",
+    "line": 79,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h2 className=\"type-h3 text-navy-deep\">5. Immediate Termination for Breach</h2>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/legal/acceptable-use/page.tsx",
+    "line": 28,
+    "oldClass": "text-ink",
+    "newClass": "text-tone-body",
+    "lineContent": "<div className=\"site-container py-12 md:py-16 max-w-3xl prose prose-sm text-ink leading-relaxed space-y-8\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/legal/acceptable-use/page.tsx",
+    "line": 30,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h2 className=\"type-h3 text-navy-deep\">1. Professional Demeanor</h2>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/legal/acceptable-use/page.tsx",
+    "line": 37,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h2 className=\"type-h3 text-navy-deep\">2. Prohibition on Plagiarism Solicitation</h2>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/legal/acceptable-use/page.tsx",
+    "line": 44,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h2 className=\"type-h3 text-navy-deep\">3. Platform and Network Integrity</h2>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/legal/cookies/page.tsx",
+    "line": 28,
+    "oldClass": "text-ink",
+    "newClass": "text-tone-body",
+    "lineContent": "<div className=\"site-container py-12 md:py-16 max-w-3xl prose prose-sm text-ink leading-relaxed space-y-8\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/legal/cookies/page.tsx",
+    "line": 30,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h2 className=\"type-h3 text-navy-deep\">1. Essential Technical Cookies Only</h2>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/legal/cookies/page.tsx",
+    "line": 37,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h2 className=\"type-h3 text-navy-deep\">2. No Third-Party Tracking Cookies</h2>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/legal/cookies/page.tsx",
+    "line": 44,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h2 className=\"type-h3 text-navy-deep\">3. Browser Cookie Controls</h2>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/legal/disclaimer/page.tsx",
+    "line": 28,
+    "oldClass": "text-ink",
+    "newClass": "text-tone-body",
+    "lineContent": "<div className=\"site-container py-12 md:py-16 max-w-3xl prose prose-sm text-ink leading-relaxed space-y-8\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/legal/disclaimer/page.tsx",
+    "line": 30,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h2 className=\"type-h3 text-navy-deep\">1. Independent Advisory Status</h2>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/legal/disclaimer/page.tsx",
+    "line": 37,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h2 className=\"type-h3 text-navy-deep\">2. No Guarantee of Academic Outcomes</h2>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/legal/disclaimer/page.tsx",
+    "line": 44,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h2 className=\"type-h3 text-navy-deep\">3. Responsibility for Implementation</h2>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/legal/privacy/page.tsx",
+    "line": 28,
+    "oldClass": "text-ink",
+    "newClass": "text-tone-body",
+    "lineContent": "<div className=\"site-container py-12 md:py-16 max-w-3xl prose prose-sm text-ink leading-relaxed space-y-8\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/legal/privacy/page.tsx",
+    "line": 30,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h2 className=\"type-h3 text-navy-deep\">1. Information We Collect</h2>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/legal/privacy/page.tsx",
+    "line": 37,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h2 className=\"type-h3 text-navy-deep\">2. Confidentiality of Research Manuscripts</h2>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/legal/privacy/page.tsx",
+    "line": 44,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h2 className=\"type-h3 text-navy-deep\">3. Sub-Processors and Data Storage</h2>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/legal/privacy/page.tsx",
+    "line": 51,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h2 className=\"type-h3 text-navy-deep\">4. Data Retention and Erasure</h2>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/legal/privacy/page.tsx",
+    "line": 58,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h2 className=\"type-h3 text-navy-deep\">5. Data Inquiries</h2>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/legal/refunds/page.tsx",
+    "line": 29,
+    "oldClass": "text-ink",
+    "newClass": "text-tone-body",
+    "lineContent": "<div className=\"site-container py-12 md:py-16 max-w-3xl prose prose-sm text-ink leading-relaxed space-y-8\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/legal/refunds/page.tsx",
+    "line": 31,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h2 className=\"type-h3 text-navy-deep\">1. Individual Mentoring Sessions</h2>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/legal/refunds/page.tsx",
+    "line": 38,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h2 className=\"type-h3 text-navy-deep\">2. Multi-Milestone Project Packages</h2>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/legal/refunds/page.tsx",
+    "line": 45,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h2 className=\"type-h3 text-navy-deep\">3. Membership Subscriptions</h2>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/legal/refunds/page.tsx",
+    "line": 52,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h2 className=\"type-h3 text-navy-deep\">4. Dissertation Accelerator Program</h2>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/legal/refunds/page.tsx",
+    "line": 59,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h2 className=\"type-h3 text-navy-deep\">5. Refund Processing Timeline</h2>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/legal/terms/page.tsx",
+    "line": 29,
+    "oldClass": "text-ink",
+    "newClass": "text-tone-body",
+    "lineContent": "<div className=\"site-container py-12 md:py-16 max-w-3xl prose prose-sm text-ink leading-relaxed space-y-8\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/legal/terms/page.tsx",
+    "line": 31,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h2 className=\"type-h3 text-navy-deep\">1. Nature of the Service</h2>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/legal/terms/page.tsx",
+    "line": 38,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h2 className=\"type-h3 text-navy-deep\">2. Student Acknowledgement and Integrity</h2>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/legal/terms/page.tsx",
+    "line": 49,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h2 className=\"type-h3 text-navy-deep\">3. Payments, Fees, and Invoicing</h2>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/legal/terms/page.tsx",
+    "line": 56,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h2 className=\"type-h3 text-navy-deep\">4. Intellectual Property</h2>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/legal/terms/page.tsx",
+    "line": 63,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h2 className=\"type-h3 text-navy-deep\">5. Limitation of Liability</h2>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/legal/terms/page.tsx",
+    "line": 70,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h2 className=\"type-h3 text-navy-deep\">6. Governing Law</h2>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/maintenance/page.tsx",
+    "line": 18,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h1 className=\"type-h1 text-navy-deep\">We are doing a quick update.</h1>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/maintenance/page.tsx",
+    "line": 19,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<p className=\"type-body text-ink-soft leading-relaxed\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/maintenance/page.tsx",
+    "line": 21,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<span className=\"font-semibold text-navy-deep\">[CONTACT EMAIL TO BE CONFIRMED]</span>."
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/membership/join/page.tsx",
+    "line": 83,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": ": \"border-rule bg-white hover:border-ink-soft\""
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/membership/join/page.tsx",
+    "line": 97,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h3 className=\"font-serif text-lg font-semibold text-navy-deep\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/membership/join/page.tsx",
+    "line": 100,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<p className=\"text-xs text-ink-soft mt-0.5\">{p.description}</p>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/membership/join/page.tsx",
+    "line": 101,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<ul className=\"flex flex-wrap gap-x-4 gap-y-1 mt-2 text-xs text-ink-soft\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/membership/join/page.tsx",
+    "line": 112,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<span className=\"font-mono text-lg font-medium text-navy-deep\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/membership/join/page.tsx",
+    "line": 115,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<span className=\"text-xs text-ink-soft block\">/ month</span>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/membership/join/page.tsx",
+    "line": 123,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div className=\"pt-4 border-t border-rule space-y-4\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/membership/join/page.tsx",
+    "line": 133,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<p className=\"text-xs text-center text-ink-soft\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/membership/join/page.tsx",
+    "line": 160,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<Suspense fallback={<div className=\"p-8 text-center text-ink-soft\">Loading plans...</div>}>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/membership/page.tsx",
+    "line": 141,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h2 className=\"type-h2 text-navy-deep\">Compare membership plans</h2>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/membership/page.tsx",
+    "line": 148,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "idx === 1 ? \"border-gold ring-1 ring-gold shadow-sm\" : \"border-rule\""
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/membership/page.tsx",
+    "line": 157,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h3 className=\"font-serif text-xl text-navy-deep font-semibold\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/membership/page.tsx",
+    "line": 161,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<span className=\"font-mono text-2xl text-navy-deep font-medium\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/membership/page.tsx",
+    "line": 164,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<span className=\"text-xs text-ink-soft\"> / month</span>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/membership/page.tsx",
+    "line": 166,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<p className=\"text-xs text-ink-soft leading-relaxed border-b border-rule pb-3\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/membership/page.tsx",
+    "line": 166,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<p className=\"text-xs text-ink-soft leading-relaxed border-b border-rule pb-3\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/membership/page.tsx",
+    "line": 172,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<li key={i} className=\"text-xs text-ink-soft flex items-start gap-2 leading-relaxed\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/membership/page.tsx",
+    "line": 196,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<section className=\"space-y-6 pt-8 border-t border-rule\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/membership/page.tsx",
+    "line": 198,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h2 className=\"type-h2 text-navy-deep\">What every membership tier guarantees</h2>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/membership/page.tsx",
+    "line": 200,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div className=\"p-4 bg-paper border border-rule rounded-[2px] space-y-1\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/membership/page.tsx",
+    "line": 201,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h4 className=\"font-serif text-base text-navy-deep font-medium\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/membership/page.tsx",
+    "line": 204,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<p className=\"text-xs text-ink-soft leading-relaxed\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/membership/page.tsx",
+    "line": 208,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div className=\"p-4 bg-paper border border-rule rounded-[2px] space-y-1\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/membership/page.tsx",
+    "line": 209,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h4 className=\"font-serif text-base text-navy-deep font-medium\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/membership/page.tsx",
+    "line": 212,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<p className=\"text-xs text-ink-soft leading-relaxed\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/membership/page.tsx",
+    "line": 216,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div className=\"p-4 bg-paper border border-rule rounded-[2px] space-y-1\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/membership/page.tsx",
+    "line": 217,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h4 className=\"font-serif text-base text-navy-deep font-medium\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/membership/page.tsx",
+    "line": 220,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<p className=\"text-xs text-ink-soft leading-relaxed\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/membership/page.tsx",
+    "line": 228,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<section className=\"space-y-6 pt-8 border-t border-rule\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/membership/page.tsx",
+    "line": 230,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h2 className=\"type-h2 text-navy-deep\">Frequently asked questions</h2>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/membership/page.tsx",
+    "line": 234,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<div className=\"prose prose-sm text-ink-soft leading-relaxed\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/newsletter/confirm/page.tsx",
+    "line": 34,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<p className=\"type-body text-ink-soft\">Confirming your subscription...</p>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/newsletter/confirm/page.tsx",
+    "line": 46,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h1 className=\"type-h2 text-navy-deep\">Subscription Confirmed</h1>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/newsletter/confirm/page.tsx",
+    "line": 47,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<p className=\"type-body text-ink-soft leading-relaxed\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/newsletter/confirm/page.tsx",
+    "line": 65,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<Suspense fallback={<div className=\"p-12 text-center text-ink-soft\">Confirming subscription...</div>}>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/newsletter/unsubscribe/page.tsx",
+    "line": 30,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h1 className=\"type-h2 text-navy-deep\">You have been unsubscribed</h1>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/newsletter/unsubscribe/page.tsx",
+    "line": 31,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<p className=\"type-body text-ink-soft leading-relaxed\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/newsletter/unsubscribe/page.tsx",
+    "line": 49,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<Suspense fallback={<div className=\"p-12 text-center text-ink-soft\">Processing unsubscribe request...</div>}>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/pricing/page.tsx",
+    "line": 109,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h2 className=\"type-h2 text-navy-deep\">Services & starting rates</h2>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/pricing/page.tsx",
+    "line": 111,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div className=\"border border-rule bg-white rounded-[2px] overflow-x-auto\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/pricing/page.tsx",
+    "line": 112,
+    "oldClass": "divide-rule",
+    "newClass": "divide-tone-rule",
+    "lineContent": "<table className=\"w-full text-left text-sm divide-y divide-rule\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/pricing/page.tsx",
+    "line": 113,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<thead className=\"bg-paper font-serif text-navy-deep\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/pricing/page.tsx",
+    "line": 121,
+    "oldClass": "divide-rule",
+    "newClass": "divide-tone-rule",
+    "lineContent": "<tbody className=\"divide-y divide-rule\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/pricing/page.tsx",
+    "line": 127,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "className=\"font-medium text-navy-deep hover:text-navy transition-colors\""
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/pricing/page.tsx",
+    "line": 133,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<span className=\"inline-block px-2 py-0.5 bg-paper border border-rule text-xs uppercase tracking-wider font-mono text-ink-soft rounded-[2px]\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/pricing/page.tsx",
+    "line": 133,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<span className=\"inline-block px-2 py-0.5 bg-paper border border-rule text-xs uppercase tracking-wider font-mono text-ink-soft rounded-[2px]\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/pricing/page.tsx",
+    "line": 137,
+    "oldClass": "text-ink",
+    "newClass": "text-tone-body",
+    "lineContent": "<td className=\"py-3.5 px-4 font-mono font-medium text-ink\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/pricing/page.tsx",
+    "line": 157,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<section className=\"space-y-4 pt-8 border-t border-rule\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/pricing/page.tsx",
+    "line": 159,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h2 className=\"type-h2 text-navy-deep\">Ongoing membership tiers</h2>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/pricing/page.tsx",
+    "line": 161,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div className=\"border border-rule bg-white rounded-[2px] overflow-x-auto\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/pricing/page.tsx",
+    "line": 162,
+    "oldClass": "divide-rule",
+    "newClass": "divide-tone-rule",
+    "lineContent": "<table className=\"w-full text-left text-sm divide-y divide-rule\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/pricing/page.tsx",
+    "line": 163,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<thead className=\"bg-paper font-serif text-navy-deep\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/pricing/page.tsx",
+    "line": 171,
+    "oldClass": "divide-rule",
+    "newClass": "divide-tone-rule",
+    "lineContent": "<tbody className=\"divide-y divide-rule\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/pricing/page.tsx",
+    "line": 174,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<td className=\"py-3.5 px-4 font-medium text-navy-deep\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/pricing/page.tsx",
+    "line": 177,
+    "oldClass": "text-ink",
+    "newClass": "text-tone-body",
+    "lineContent": "<td className=\"py-3.5 px-4 font-mono font-medium text-ink\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/pricing/page.tsx",
+    "line": 180,
+    "oldClass": "text-ink",
+    "newClass": "text-tone-body",
+    "lineContent": "<td className=\"py-3.5 px-4 font-mono font-medium text-ink\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/pricing/page.tsx",
+    "line": 200,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div className=\"grid grid-cols-1 md:grid-cols-2 gap-8 pt-8 border-t border-rule\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/pricing/page.tsx",
+    "line": 203,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h3 className=\"type-h3 text-navy-deep\">What affects the final price</h3>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/pricing/page.tsx",
+    "line": 204,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<ul className=\"space-y-2 text-sm text-ink-soft\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/pricing/page.tsx",
+    "line": 226,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h3 className=\"type-h3 text-navy-deep\">Currencies & Payment Mechanics</h3>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/pricing/page.tsx",
+    "line": 227,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<div className=\"type-body text-ink space-y-3 leading-relaxed text-sm text-ink-soft\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/pricing/page.tsx",
+    "line": 227,
+    "oldClass": "text-ink",
+    "newClass": "text-tone-body",
+    "lineContent": "<div className=\"type-body text-ink space-y-3 leading-relaxed text-sm text-ink-soft\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/pricing/page.tsx",
+    "line": 242,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<section className=\"p-6 bg-paper border border-rule rounded-[2px] space-y-2\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/pricing/page.tsx",
+    "line": 244,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h3 className=\"font-serif text-base text-navy-deep font-semibold\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/pricing/page.tsx",
+    "line": 247,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<p className=\"text-sm text-ink-soft leading-relaxed\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/request-support/page.tsx",
+    "line": 48,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h2 className=\"type-h2 text-navy-deep\">Four steps to receiving written feedback</h2>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/request-support/page.tsx",
+    "line": 52,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<section className=\"p-8 bg-paper border border-rule rounded-[2px] space-y-4\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/request-support/page.tsx",
+    "line": 53,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h3 className=\"font-serif text-xl text-navy-deep font-semibold\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/request-support/page.tsx",
+    "line": 56,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<p className=\"type-body text-ink-soft text-sm leading-relaxed\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/resources/guides/page.tsx",
+    "line": 55,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div key={g.title} className=\"p-6 bg-white border border-rule rounded-[2px] space-y-4\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/resources/guides/page.tsx",
+    "line": 57,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h3 className=\"font-serif text-lg text-navy-deep font-semibold\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/resources/guides/page.tsx",
+    "line": 60,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<p className=\"text-xs text-ink-soft mt-1 leading-relaxed\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/resources/page.tsx",
+    "line": 55,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<ul className=\"divide-y divide-rule border-y border-rule\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/resources/page.tsx",
+    "line": 55,
+    "oldClass": "divide-rule",
+    "newClass": "divide-tone-rule",
+    "lineContent": "<ul className=\"divide-y divide-rule border-y border-rule\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/resources/page.tsx",
+    "line": 63,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h3 className=\"font-serif text-2xl text-navy-deep font-medium group-hover:text-navy transition-colors\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/resources/page.tsx",
+    "line": 66,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<p className=\"type-body text-ink-soft leading-relaxed\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/resources/templates/page.tsx",
+    "line": 58,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div key={tpl.title} className=\"p-6 bg-white border border-rule rounded-[2px] space-y-4\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/resources/templates/page.tsx",
+    "line": 60,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h3 className=\"font-serif text-lg text-navy-deep font-semibold\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/resources/templates/page.tsx",
+    "line": 63,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<p className=\"text-xs text-ink-soft mt-1 leading-relaxed\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/resources/templates/page.tsx",
+    "line": 71,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div className=\"p-4 bg-paper border border-rule rounded-[2px] flex items-center justify-between gap-4\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/resources/templates/page.tsx",
+    "line": 72,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<span className=\"text-xs text-ink-soft\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/search/page.tsx",
+    "line": 66,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<label htmlFor=\"site-search-input\" className=\"type-micro text-ink-soft mb-2 block\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/search/page.tsx",
+    "line": 76,
+    "oldClass": "text-ink",
+    "newClass": "text-tone-body",
+    "lineContent": "className=\"w-full border border-rule bg-white px-4 py-3 text-base text-ink rounded-[2px] focus:outline-2 focus:outline-navy\""
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/search/page.tsx",
+    "line": 76,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "className=\"w-full border border-rule bg-white px-4 py-3 text-base text-ink rounded-[2px] focus:outline-2 focus:outline-navy\""
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/search/page.tsx",
+    "line": 81,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<div className=\"text-sm text-ink-soft py-4\">Searching platform index...</div>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/search/page.tsx",
+    "line": 85,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div className=\"p-8 text-center border border-rule bg-white rounded-[2px] space-y-2\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/search/page.tsx",
+    "line": 86,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<p className=\"type-body text-navy-deep font-medium\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/search/page.tsx",
+    "line": 89,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<p className=\"type-small text-ink-soft\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/search/page.tsx",
+    "line": 101,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div className=\"divide-y divide-rule border-y border-rule bg-white\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/search/page.tsx",
+    "line": 101,
+    "oldClass": "divide-rule",
+    "newClass": "divide-tone-rule",
+    "lineContent": "<div className=\"divide-y divide-rule border-y border-rule bg-white\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/search/page.tsx",
+    "line": 108,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h4 className=\"font-serif text-base font-semibold text-navy-deep group-hover:text-navy\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/search/page.tsx",
+    "line": 111,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<p className=\"text-xs text-ink-soft line-clamp-2 mt-0.5\">{s.summary}</p>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/search/page.tsx",
+    "line": 122,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div className=\"divide-y divide-rule border-y border-rule bg-white\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/search/page.tsx",
+    "line": 122,
+    "oldClass": "divide-rule",
+    "newClass": "divide-tone-rule",
+    "lineContent": "<div className=\"divide-y divide-rule border-y border-rule bg-white\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/search/page.tsx",
+    "line": 129,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h4 className=\"font-serif text-base font-semibold text-navy-deep group-hover:text-navy\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/search/page.tsx",
+    "line": 132,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<p className=\"text-xs text-ink-soft line-clamp-2 mt-0.5\">{sub.summary}</p>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/search/page.tsx",
+    "line": 143,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div className=\"divide-y divide-rule border-y border-rule bg-white\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/search/page.tsx",
+    "line": 143,
+    "oldClass": "divide-rule",
+    "newClass": "divide-tone-rule",
+    "lineContent": "<div className=\"divide-y divide-rule border-y border-rule bg-white\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/search/page.tsx",
+    "line": 150,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h4 className=\"font-serif text-base font-semibold text-navy-deep group-hover:text-navy\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/search/page.tsx",
+    "line": 154,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<p className=\"text-xs text-ink-soft line-clamp-2 mt-0.5\">{p.standfirst}</p>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/search/page.tsx",
+    "line": 166,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div className=\"divide-y divide-rule border-y border-rule bg-white\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/search/page.tsx",
+    "line": 166,
+    "oldClass": "divide-rule",
+    "newClass": "divide-tone-rule",
+    "lineContent": "<div className=\"divide-y divide-rule border-y border-rule bg-white\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/search/page.tsx",
+    "line": 169,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h4 className=\"font-serif text-base font-semibold text-navy-deep\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/search/page.tsx",
+    "line": 172,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<p className=\"text-xs text-ink-soft leading-relaxed\">{f.answer}</p>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/search/page.tsx",
+    "line": 197,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<Suspense fallback={<div className=\"p-8 text-ink-soft\">Loading search portal...</div>}>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/services/coaching-and-training/page.tsx",
+    "line": 77,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<ul className=\"divide-y divide-rule border-y border-rule\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/services/coaching-and-training/page.tsx",
+    "line": 77,
+    "oldClass": "divide-rule",
+    "newClass": "divide-tone-rule",
+    "lineContent": "<ul className=\"divide-y divide-rule border-y border-rule\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/services/coaching-and-training/page.tsx",
+    "line": 89,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h3 className=\"font-serif text-xl text-navy-deep font-medium group-hover:text-navy transition-colors\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/services/coaching-and-training/page.tsx",
+    "line": 92,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<p className=\"type-body text-ink-soft leading-relaxed\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/services/coaching-and-training/page.tsx",
+    "line": 97,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<span className=\"type-small font-mono text-ink-soft\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/services/data-analysis/page.tsx",
+    "line": 84,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<ul className=\"divide-y divide-rule border-y border-rule\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/services/data-analysis/page.tsx",
+    "line": 84,
+    "oldClass": "divide-rule",
+    "newClass": "divide-tone-rule",
+    "lineContent": "<ul className=\"divide-y divide-rule border-y border-rule\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/services/data-analysis/page.tsx",
+    "line": 92,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h3 className=\"font-serif text-xl text-navy-deep font-medium group-hover:text-navy transition-colors\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/services/data-analysis/page.tsx",
+    "line": 95,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<p className=\"type-body text-ink-soft leading-relaxed\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/services/data-analysis/page.tsx",
+    "line": 100,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<span className=\"type-small font-mono text-ink-soft\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/services/dissertation-support/page.tsx",
+    "line": 91,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<ul className=\"divide-y divide-rule border-y border-rule\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/services/dissertation-support/page.tsx",
+    "line": 91,
+    "oldClass": "divide-rule",
+    "newClass": "divide-tone-rule",
+    "lineContent": "<ul className=\"divide-y divide-rule border-y border-rule\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/services/dissertation-support/page.tsx",
+    "line": 99,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h3 className=\"font-serif text-xl text-navy-deep font-medium group-hover:text-navy transition-colors\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/services/dissertation-support/page.tsx",
+    "line": 102,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<p className=\"type-body text-ink-soft leading-relaxed\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/services/dissertation-support/page.tsx",
+    "line": 107,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<span className=\"type-small font-mono text-ink-soft\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/services/editing-and-writing-quality/page.tsx",
+    "line": 84,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<ul className=\"divide-y divide-rule border-y border-rule\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/services/editing-and-writing-quality/page.tsx",
+    "line": 84,
+    "oldClass": "divide-rule",
+    "newClass": "divide-tone-rule",
+    "lineContent": "<ul className=\"divide-y divide-rule border-y border-rule\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/services/editing-and-writing-quality/page.tsx",
+    "line": 92,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h3 className=\"font-serif text-xl text-navy-deep font-medium group-hover:text-navy transition-colors\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/services/editing-and-writing-quality/page.tsx",
+    "line": 95,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<p className=\"type-body text-ink-soft leading-relaxed\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/services/editing-and-writing-quality/page.tsx",
+    "line": 100,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<span className=\"type-small font-mono text-ink-soft\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/services/page.tsx",
+    "line": 190,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div className=\"flex items-baseline justify-between border-b border-rule pb-2\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/services/page.tsx",
+    "line": 200,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<ul className=\"divide-y divide-rule border-b border-rule\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/services/page.tsx",
+    "line": 200,
+    "oldClass": "divide-rule",
+    "newClass": "divide-tone-rule",
+    "lineContent": "<ul className=\"divide-y divide-rule border-b border-rule\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/services/page.tsx",
+    "line": 208,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h3 className=\"font-serif text-lg text-navy-deep font-medium group-hover:text-navy transition-colors\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/services/page.tsx",
+    "line": 211,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<p className=\"text-sm text-ink-soft leading-relaxed\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/services/page.tsx",
+    "line": 216,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<span className=\"type-small text-ink-soft font-mono\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/services/publishing-and-career/page.tsx",
+    "line": 77,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<ul className=\"divide-y divide-rule border-y border-rule\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/services/publishing-and-career/page.tsx",
+    "line": 77,
+    "oldClass": "divide-rule",
+    "newClass": "divide-tone-rule",
+    "lineContent": "<ul className=\"divide-y divide-rule border-y border-rule\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/services/publishing-and-career/page.tsx",
+    "line": 85,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h3 className=\"font-serif text-xl text-navy-deep font-medium group-hover:text-navy transition-colors\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/services/publishing-and-career/page.tsx",
+    "line": 88,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<p className=\"type-body text-ink-soft leading-relaxed\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/services/publishing-and-career/page.tsx",
+    "line": 93,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<span className=\"type-small font-mono text-ink-soft\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/services/[slug]/page.tsx",
+    "line": 320,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h2 className=\"type-h2 text-navy-deep\">What this service provides</h2>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/services/[slug]/page.tsx",
+    "line": 321,
+    "oldClass": "text-ink",
+    "newClass": "text-tone-body",
+    "lineContent": "<div className=\"type-body text-ink space-y-4 leading-relaxed\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/services/[slug]/page.tsx",
+    "line": 327,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div className=\"grid grid-cols-1 md:grid-cols-2 gap-8 pt-8 border-t border-rule\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/services/[slug]/page.tsx",
+    "line": 330,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h3 className=\"type-h3 text-navy-deep\">Who it is for</h3>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/services/[slug]/page.tsx",
+    "line": 333,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<li key={idx} className=\"flex items-start gap-2.5 text-sm text-ink-soft leading-relaxed\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/services/[slug]/page.tsx",
+    "line": 343,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h3 className=\"type-h3 text-navy-deep\">What you receive</h3>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/services/[slug]/page.tsx",
+    "line": 346,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<li key={idx} className=\"flex items-start gap-2.5 text-sm text-ink-soft leading-relaxed\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/services/[slug]/page.tsx",
+    "line": 361,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<section className=\"space-y-6 pt-8 border-t border-rule\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/services/[slug]/page.tsx",
+    "line": 363,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h2 className=\"type-h2 text-navy-deep\">Available packages</h2>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/services/[slug]/page.tsx",
+    "line": 370,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "className=\"bg-paper border border-rule p-6 flex flex-col justify-between rounded-[2px]\""
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/services/[slug]/page.tsx",
+    "line": 373,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h4 className=\"font-serif text-lg text-navy-deep font-semibold\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/services/[slug]/page.tsx",
+    "line": 379,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<p className=\"text-xs text-ink-soft leading-relaxed\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/services/[slug]/page.tsx",
+    "line": 382,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<ul className=\"space-y-2 pt-2 border-t border-rule\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/services/[slug]/page.tsx",
+    "line": 384,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<li key={i} className=\"text-xs text-ink-soft flex items-start gap-1.5\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/services/[slug]/page.tsx",
+    "line": 405,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div className=\"bg-cream border border-rule p-6 rounded-[2px] flex flex-col sm:flex-row sm:items-center justify-between gap-4\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/services/[slug]/page.tsx",
+    "line": 407,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<p className=\"type-body text-navy-deep font-medium\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/services/[slug]/page.tsx",
+    "line": 410,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<p className=\"type-small text-ink-soft\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/services/[slug]/page.tsx",
+    "line": 426,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<section className=\"space-y-6 pt-8 border-t border-rule\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/services/[slug]/page.tsx",
+    "line": 428,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h2 className=\"type-h2 text-navy-deep\">How mentoring operates</h2>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/services/[slug]/page.tsx",
+    "line": 434,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<section className=\"space-y-4 pt-8 border-t border-rule\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/services/[slug]/page.tsx",
+    "line": 435,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h3 className=\"type-h3 text-navy-deep\">Related services</h3>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/services/[slug]/page.tsx",
+    "line": 441,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "className=\"p-4 bg-white border border-rule rounded-[2px] space-y-1 group hover:border-navy transition-colors\""
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/services/[slug]/page.tsx",
+    "line": 443,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<p className=\"font-serif text-sm font-semibold text-navy-deep group-hover:text-navy\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/services/[slug]/page.tsx",
+    "line": 446,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<p className=\"text-xs text-ink-soft line-clamp-2 leading-relaxed\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/sitemap/page.tsx",
+    "line": 31,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h3 className=\"font-serif text-lg text-navy-deep font-semibold border-b border-rule pb-2\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/sitemap/page.tsx",
+    "line": 31,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<h3 className=\"font-serif text-lg text-navy-deep font-semibold border-b border-rule pb-2\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/sitemap/page.tsx",
+    "line": 39,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "className=\"text-ink-soft hover:text-navy transition-colors\""
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/sitemap/page.tsx",
+    "line": 50,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div className=\"pt-8 border-t border-rule space-y-4\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/sitemap/page.tsx",
+    "line": 51,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h3 className=\"font-serif text-lg text-navy-deep font-semibold\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/sitemap/page.tsx",
+    "line": 54,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<ul className=\"flex flex-wrap gap-x-6 gap-y-2 text-sm text-ink-soft\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/sitemap/page.tsx",
+    "line": 65,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<div className=\"p-6 bg-paper border border-rule rounded-[2px] text-xs text-ink-soft leading-relaxed\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/sitemap/page.tsx",
+    "line": 65,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div className=\"p-6 bg-paper border border-rule rounded-[2px] text-xs text-ink-soft leading-relaxed\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/stories/page.tsx",
+    "line": 57,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h1 className=\"type-h2 text-navy-deep\">Student Stories</h1>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/stories/page.tsx",
+    "line": 58,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<p className=\"type-body text-ink-soft leading-relaxed max-w-lg mx-auto\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/stories/page.tsx",
+    "line": 64,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "className=\"type-small font-medium text-navy hover:text-navy-deep border-b border-navy/30 pb-0.5\""
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/stories/page.tsx",
+    "line": 90,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "className=\"p-8 bg-white border border-rule rounded-[2px] flex flex-col justify-between space-y-4 hover:border-navy transition-colors\""
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/stories/page.tsx",
+    "line": 98,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h3 className=\"font-serif text-xl text-navy-deep font-semibold\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/stories/page.tsx",
+    "line": 103,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<p className=\"text-sm text-ink-soft leading-relaxed\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/stories/page.tsx",
+    "line": 109,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div className=\"pt-4 border-t border-rule flex items-center justify-between\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/stories/page.tsx",
+    "line": 110,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<span className=\"text-xs font-semibold text-navy-deep\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/stories/[slug]/page.tsx",
+    "line": 92,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<header className=\"space-y-4 pb-8 border-b border-rule\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/stories/[slug]/page.tsx",
+    "line": 94,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<div className=\"flex items-center gap-2 text-xs text-ink-soft\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/stories/[slug]/page.tsx",
+    "line": 95,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<span className=\"font-semibold text-navy-deep\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/stories/[slug]/page.tsx",
+    "line": 108,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h1 className=\"type-h1 text-navy-deep leading-tight\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/stories/[slug]/page.tsx",
+    "line": 122,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div className=\"pt-8 border-t border-rule\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/subjects/health-sciences/page.tsx",
+    "line": 97,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h2 className=\"type-h2 text-navy-deep\">Sub-disciplines we support</h2>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/subjects/health-sciences/page.tsx",
+    "line": 104,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "className=\"p-6 bg-white border border-rule hover:border-navy rounded-[2px] space-y-2 group transition-colors\""
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/subjects/health-sciences/page.tsx",
+    "line": 106,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h3 className=\"font-serif text-lg font-semibold text-navy-deep group-hover:text-navy transition-colors\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/subjects/health-sciences/page.tsx",
+    "line": 109,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<p className=\"text-xs text-ink-soft leading-relaxed\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/subjects/health-sciences/page.tsx",
+    "line": 122,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<section className=\"space-y-6 pt-8 border-t border-rule\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/subjects/health-sciences/page.tsx",
+    "line": 124,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h2 className=\"type-h2 text-navy-deep\">Common research challenges in health sciences</h2>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/subjects/health-sciences/page.tsx",
+    "line": 145,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div key={i} className=\"p-4 bg-paper border border-rule rounded-[2px] space-y-1\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/subjects/health-sciences/page.tsx",
+    "line": 146,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h4 className=\"font-serif text-base text-navy-deep font-semibold\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/subjects/health-sciences/page.tsx",
+    "line": 149,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<p className=\"text-xs text-ink-soft leading-relaxed\">{c.desc}</p>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/subjects/health-sciences/[slug]/page.tsx",
+    "line": 172,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h2 className=\"type-h2 text-navy-deep\">Field overview</h2>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/subjects/health-sciences/[slug]/page.tsx",
+    "line": 173,
+    "oldClass": "text-ink",
+    "newClass": "text-tone-body",
+    "lineContent": "<div className=\"type-body text-ink space-y-4 leading-relaxed\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/subjects/health-sciences/[slug]/page.tsx",
+    "line": 179,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<section className=\"space-y-6 pt-8 border-t border-rule\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/subjects/health-sciences/[slug]/page.tsx",
+    "line": 181,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h2 className=\"type-h2 text-navy-deep\">How we support researchers in this area</h2>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/subjects/health-sciences/[slug]/page.tsx",
+    "line": 184,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div key={i} className=\"flex items-start gap-3 p-4 bg-paper border border-rule rounded-[2px]\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/subjects/health-sciences/[slug]/page.tsx",
+    "line": 188,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<p className=\"text-sm text-ink-soft leading-relaxed\">{point}</p>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/subjects/page.tsx",
+    "line": 120,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "className=\"p-6 bg-white border border-rule hover:border-navy rounded-[2px] space-y-3 flex flex-col justify-between group transition-colors\""
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/subjects/page.tsx",
+    "line": 123,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h3 className=\"font-serif text-lg font-semibold text-navy-deep group-hover:text-navy transition-colors\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/subjects/page.tsx",
+    "line": 126,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<p className=\"text-xs text-ink-soft leading-relaxed\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/subjects/page.tsx",
+    "line": 139,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div className=\"p-6 bg-paper border border-rule rounded-[2px] space-y-2\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/subjects/page.tsx",
+    "line": 141,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h3 className=\"font-serif text-base text-navy-deep font-semibold\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/subjects/page.tsx",
+    "line": 144,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<p className=\"type-body text-ink-soft leading-relaxed\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/subjects/page.tsx",
+    "line": 150,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "className=\"type-small font-medium text-navy hover:text-navy-deep border-b border-navy/30 pb-0.5 inline-block\""
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/subjects/[slug]/page.tsx",
+    "line": 240,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h2 className=\"type-h2 text-navy-deep\">Research in this field</h2>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/subjects/[slug]/page.tsx",
+    "line": 241,
+    "oldClass": "text-ink",
+    "newClass": "text-tone-body",
+    "lineContent": "<div className=\"type-body text-ink space-y-4 leading-relaxed\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/subjects/[slug]/page.tsx",
+    "line": 247,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<section className=\"space-y-6 pt-8 border-t border-rule\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/subjects/[slug]/page.tsx",
+    "line": 249,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h2 className=\"type-h2 text-navy-deep\">Common research approaches & software</h2>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/subjects/[slug]/page.tsx",
+    "line": 253,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h3 className=\"font-serif text-lg text-navy-deep font-semibold\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/subjects/[slug]/page.tsx",
+    "line": 258,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<li key={i} className=\"text-sm text-ink-soft flex items-start gap-2\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/subjects/[slug]/page.tsx",
+    "line": 267,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h3 className=\"font-serif text-lg text-navy-deep font-semibold\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/subjects/[slug]/page.tsx",
+    "line": 274,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "className=\"inline-block px-3 py-1 bg-cream border border-rule text-xs font-mono font-medium text-navy-deep rounded-[2px]\""
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/subjects/[slug]/page.tsx",
+    "line": 274,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "className=\"inline-block px-3 py-1 bg-cream border border-rule text-xs font-mono font-medium text-navy-deep rounded-[2px]\""
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/subjects/[slug]/page.tsx",
+    "line": 286,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<section className=\"space-y-4 pt-8 border-t border-rule\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/subjects/[slug]/page.tsx",
+    "line": 287,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h3 className=\"type-h3 text-navy-deep\">Recommended services for this field</h3>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/subjects/[slug]/page.tsx",
+    "line": 293,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "className=\"p-5 bg-white border border-rule rounded-[2px] space-y-1.5 group hover:border-navy transition-colors\""
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/subjects/[slug]/page.tsx",
+    "line": 295,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<p className=\"font-serif text-base font-semibold text-navy-deep group-hover:text-navy\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/subjects/[slug]/page.tsx",
+    "line": 298,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<p className=\"text-xs text-ink-soft line-clamp-2 leading-relaxed\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/thank-you/contact/page.tsx",
+    "line": 20,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h1 className=\"type-h1 text-navy-deep\">Message received.</h1>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/thank-you/contact/page.tsx",
+    "line": 21,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<p className=\"type-lead text-ink-soft leading-relaxed\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/thank-you/contact/page.tsx",
+    "line": 24,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<p className=\"type-body text-ink-soft text-sm leading-relaxed\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/thank-you/workshop-request/page.tsx",
+    "line": 20,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h1 className=\"type-h1 text-navy-deep\">Workshop request received.</h1>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/(public)/thank-you/workshop-request/page.tsx",
+    "line": 21,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<p className=\"type-lead text-ink-soft leading-relaxed\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/admin/page.tsx",
+    "line": 18,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div className=\"border-b border-rule pb-6 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/admin/page.tsx",
+    "line": 20,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<span className=\"text-xs font-semibold uppercase tracking-widest text-ink-soft\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/admin/page.tsx",
+    "line": 23,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h2 className=\"text-2xl font-serif text-navy-deep mt-1\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/admin/page.tsx",
+    "line": 26,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<p className=\"text-xs text-ink-soft mt-1\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/admin/page.tsx",
+    "line": 36,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<span className=\"text-[10px] font-semibold uppercase tracking-wider text-ink-soft\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/admin/page.tsx",
+    "line": 42,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<p className=\"text-xs text-ink-soft\">New researcher briefs awaiting mentor assignment</p>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/admin/page.tsx",
+    "line": 48,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<span className=\"text-[10px] font-semibold uppercase tracking-wider text-ink-soft\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/admin/page.tsx",
+    "line": 54,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<p className=\"text-xs text-ink-soft\">Mentoring engagements currently in progress</p>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/admin/page.tsx",
+    "line": 60,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<span className=\"text-[10px] font-semibold uppercase tracking-wider text-ink-soft\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/admin/page.tsx",
+    "line": 66,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<p className=\"text-xs text-ink-soft\">Zero academic integrity violations reported</p>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/admin/page.tsx",
+    "line": 72,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div className=\"border border-rule bg-white rounded-[2px] overflow-hidden\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/admin/page.tsx",
+    "line": 73,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div className=\"p-4 border-b border-rule bg-cream flex justify-between items-center\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/admin/page.tsx",
+    "line": 74,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h3 className=\"font-serif text-base text-navy-deep font-medium\">Recent Researcher Briefs</h3>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/admin/page.tsx",
+    "line": 75,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<span className=\"text-xs text-ink-soft\">Live triage queue</span>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/admin/page.tsx",
+    "line": 78,
+    "oldClass": "divide-rule",
+    "newClass": "divide-tone-rule",
+    "lineContent": "<div className=\"divide-y divide-rule text-xs\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/admin/page.tsx",
+    "line": 81,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<span className=\"font-semibold text-navy-deep block\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/admin/page.tsx",
+    "line": 84,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<span className=\"text-[11px] text-ink-soft\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/admin/page.tsx",
+    "line": 93,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<span className=\"font-semibold text-navy-deep block\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/admin/page.tsx",
+    "line": 96,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<span className=\"text-[11px] text-ink-soft\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/admin/page.tsx",
+    "line": 105,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<span className=\"font-semibold text-navy-deep block\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/admin/page.tsx",
+    "line": 108,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<span className=\"text-[11px] text-ink-soft\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/error.tsx",
+    "line": 22,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h1 className=\"type-h2 text-navy-deep\">Something went wrong.</h1>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/error.tsx",
+    "line": 23,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<p className=\"type-body text-ink-soft leading-relaxed\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/layout.tsx",
+    "line": 36,
+    "oldClass": "text-ink",
+    "newClass": "text-tone-body",
+    "lineContent": "<body className=\"min-h-full flex flex-col bg-paper text-ink font-sans\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/not-found.tsx",
+    "line": 8,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<p className=\"type-micro text-ink-soft\">404 Error</p>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/not-found.tsx",
+    "line": 9,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h1 className=\"type-h1 text-navy-deep\">We could not find that page.</h1>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/not-found.tsx",
+    "line": 10,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<p className=\"type-body text-ink-soft leading-relaxed\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/student/page.tsx",
+    "line": 20,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div className=\"border-b border-rule pb-6 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/student/page.tsx",
+    "line": 22,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<span className=\"text-xs font-semibold uppercase tracking-widest text-ink-soft\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/student/page.tsx",
+    "line": 25,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h2 className=\"text-2xl font-serif text-navy-deep mt-1\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/student/page.tsx",
+    "line": 28,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<p className=\"text-xs text-ink-soft mt-1\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/student/page.tsx",
+    "line": 41,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<span className=\"text-[10px] font-semibold uppercase tracking-wider text-ink-soft\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/student/page.tsx",
+    "line": 47,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<p className=\"text-xs text-ink-soft\">Doctoral thesis mentoring in progress</p>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/student/page.tsx",
+    "line": 53,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<span className=\"text-[10px] font-semibold uppercase tracking-wider text-ink-soft\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/student/page.tsx",
+    "line": 59,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<p className=\"text-xs text-ink-soft\">With assigned quantitative mentor (Dr. E. R.)</p>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/student/page.tsx",
+    "line": 65,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<span className=\"text-[10px] font-semibold uppercase tracking-wider text-ink-soft\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/student/page.tsx",
+    "line": 71,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<p className=\"text-xs text-ink-soft\">Methodology review & sample size audit</p>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/student/page.tsx",
+    "line": 77,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div className=\"border border-rule bg-cream p-6 rounded-[2px]\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/student/page.tsx",
+    "line": 78,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div className=\"flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 border-b border-rule/70 pb-4 mb-4\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/student/page.tsx",
+    "line": 83,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h3 className=\"text-lg font-serif text-navy-deep font-medium mt-0.5\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/student/page.tsx",
+    "line": 90,
+    "oldClass": "text-ink",
+    "newClass": "text-tone-body",
+    "lineContent": "<p className=\"text-xs text-ink leading-relaxed\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/student/page.tsx",
+    "line": 95,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<div className=\"mt-4 pt-3 border-t border-rule/60 flex flex-wrap gap-2 text-xs text-ink-soft\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/student/page.tsx",
+    "line": 95,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div className=\"mt-4 pt-3 border-t border-rule/60 flex flex-wrap gap-2 text-xs text-ink-soft\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/student/page.tsx",
+    "line": 107,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h3 className=\"font-serif text-lg text-navy-deep\">Active Support Requests</h3>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/student/page.tsx",
+    "line": 113,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div className=\"border border-rule bg-white divide-y divide-rule rounded-[2px]\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/student/page.tsx",
+    "line": 113,
+    "oldClass": "divide-rule",
+    "newClass": "divide-tone-rule",
+    "lineContent": "<div className=\"border border-rule bg-white divide-y divide-rule rounded-[2px]\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/student/page.tsx",
+    "line": 116,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<span className=\"text-xs font-semibold text-navy-deep\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/student/page.tsx",
+    "line": 119,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<p className=\"text-[11px] text-ink-soft mt-0.5\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/styleguide/page.tsx",
+    "line": 109,
+    "oldClass": "text-ink",
+    "newClass": "text-tone-body",
+    "lineContent": "<div className=\"min-h-screen bg-paper text-ink pb-24\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/styleguide/page.tsx",
+    "line": 111,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<header className=\"border-b border-rule bg-white py-4 px-6 sticky top-0 z-30\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/styleguide/page.tsx",
+    "line": 115,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<span className=\"text-xs font-semibold uppercase tracking-widest text-ink-soft border-l border-rule pl-4\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/styleguide/page.tsx",
+    "line": 115,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<span className=\"text-xs font-semibold uppercase tracking-widest text-ink-soft border-l border-rule pl-4\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/styleguide/page.tsx",
+    "line": 130,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div className=\"border-b border-rule pb-8\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/styleguide/page.tsx",
+    "line": 146,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div className=\"border border-rule p-4 bg-white rounded-[2px]\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/styleguide/page.tsx",
+    "line": 148,
+    "oldClass": "text-ink",
+    "newClass": "text-tone-body",
+    "lineContent": "<span className=\"text-xs font-semibold text-ink block\">Navy (Primary)</span>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/styleguide/page.tsx",
+    "line": 149,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<span className=\"text-[11px] text-ink-soft font-mono\">#1F3A5F</span>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/styleguide/page.tsx",
+    "line": 152,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div className=\"border border-rule p-4 bg-white rounded-[2px]\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/styleguide/page.tsx",
+    "line": 154,
+    "oldClass": "text-ink",
+    "newClass": "text-tone-body",
+    "lineContent": "<span className=\"text-xs font-semibold text-ink block\">Navy Deep</span>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/styleguide/page.tsx",
+    "line": 155,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<span className=\"text-[11px] text-ink-soft font-mono\">#14263F</span>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/styleguide/page.tsx",
+    "line": 158,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div className=\"border border-rule p-4 bg-white rounded-[2px]\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/styleguide/page.tsx",
+    "line": 160,
+    "oldClass": "text-ink",
+    "newClass": "text-tone-body",
+    "lineContent": "<span className=\"text-xs font-semibold text-ink block\">Warm Gold (Accent)</span>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/styleguide/page.tsx",
+    "line": 161,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<span className=\"text-[11px] text-ink-soft font-mono\">#C8963E</span>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/styleguide/page.tsx",
+    "line": 164,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div className=\"border border-rule p-4 bg-white rounded-[2px]\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/styleguide/page.tsx",
+    "line": 165,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div className=\"h-12 w-full bg-paper border border-rule rounded-[1px] mb-2\" />"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/styleguide/page.tsx",
+    "line": 166,
+    "oldClass": "text-ink",
+    "newClass": "text-tone-body",
+    "lineContent": "<span className=\"text-xs font-semibold text-ink block\">Paper (Background)</span>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/styleguide/page.tsx",
+    "line": 167,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<span className=\"text-[11px] text-ink-soft font-mono\">#FAF8F4</span>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/styleguide/page.tsx",
+    "line": 170,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div className=\"border border-rule p-4 bg-white rounded-[2px]\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/styleguide/page.tsx",
+    "line": 171,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div className=\"h-12 w-full bg-cream border border-rule rounded-[1px] mb-2\" />"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/styleguide/page.tsx",
+    "line": 172,
+    "oldClass": "text-ink",
+    "newClass": "text-tone-body",
+    "lineContent": "<span className=\"text-xs font-semibold text-ink block\">Cream (Sections)</span>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/styleguide/page.tsx",
+    "line": 173,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<span className=\"text-[11px] text-ink-soft font-mono\">#FBF5E9</span>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/styleguide/page.tsx",
+    "line": 176,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div className=\"border border-rule p-4 bg-white rounded-[2px]\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/styleguide/page.tsx",
+    "line": 178,
+    "oldClass": "text-ink",
+    "newClass": "text-tone-body",
+    "lineContent": "<span className=\"text-xs font-semibold text-ink block\">Ink (Body Text)</span>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/styleguide/page.tsx",
+    "line": 179,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<span className=\"text-[11px] text-ink-soft font-mono\">#2B2B2B</span>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/styleguide/page.tsx",
+    "line": 182,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div className=\"border border-rule p-4 bg-white rounded-[2px]\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/styleguide/page.tsx",
+    "line": 184,
+    "oldClass": "text-ink",
+    "newClass": "text-tone-body",
+    "lineContent": "<span className=\"text-xs font-semibold text-ink block\">Ink Soft (Secondary)</span>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/styleguide/page.tsx",
+    "line": 185,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<span className=\"text-[11px] text-ink-soft font-mono\">#555555</span>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/styleguide/page.tsx",
+    "line": 188,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div className=\"border border-rule p-4 bg-white rounded-[2px]\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/styleguide/page.tsx",
+    "line": 190,
+    "oldClass": "text-ink",
+    "newClass": "text-tone-body",
+    "lineContent": "<span className=\"text-xs font-semibold text-ink block\">Rule (Hairline)</span>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/styleguide/page.tsx",
+    "line": 191,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<span className=\"text-[11px] text-ink-soft font-mono\">#E4DFD5</span>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/styleguide/page.tsx",
+    "line": 194,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div className=\"border border-rule p-4 bg-white rounded-[2px]\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/styleguide/page.tsx",
+    "line": 196,
+    "oldClass": "text-ink",
+    "newClass": "text-tone-body",
+    "lineContent": "<span className=\"text-xs font-semibold text-ink block\">Success</span>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/styleguide/page.tsx",
+    "line": 197,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<span className=\"text-[11px] text-ink-soft font-mono\">#2E7D5B</span>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/styleguide/page.tsx",
+    "line": 200,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div className=\"border border-rule p-4 bg-white rounded-[2px]\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/styleguide/page.tsx",
+    "line": 202,
+    "oldClass": "text-ink",
+    "newClass": "text-tone-body",
+    "lineContent": "<span className=\"text-xs font-semibold text-ink block\">Error</span>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/styleguide/page.tsx",
+    "line": 203,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<span className=\"text-[11px] text-ink-soft font-mono\">#C0392B</span>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/styleguide/page.tsx",
+    "line": 213,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div className=\"space-y-8 bg-cream p-8 border border-rule rounded-[2px]\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/styleguide/page.tsx",
+    "line": 221,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div className=\"pt-6 border-t border-rule\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/styleguide/page.tsx",
+    "line": 228,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div className=\"pt-6 border-t border-rule\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/styleguide/page.tsx",
+    "line": 235,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div className=\"pt-6 border-t border-rule\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/styleguide/page.tsx",
+    "line": 242,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div className=\"pt-6 border-t border-rule\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/styleguide/page.tsx",
+    "line": 251,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div className=\"pt-6 border-t border-rule\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/styleguide/page.tsx",
+    "line": 261,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div className=\"pt-6 border-t border-rule\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/styleguide/page.tsx",
+    "line": 279,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div className=\"p-6 bg-white border border-rule rounded-[2px] flex flex-col justify-between\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/styleguide/page.tsx",
+    "line": 284,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<span className=\"text-[11px] text-ink-soft\">Min-width: 96px, Clear space = height of &apos;E&apos;</span>"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/styleguide/page.tsx",
+    "line": 287,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div className=\"p-6 bg-navy-deep border border-rule rounded-[2px] flex flex-col justify-between text-white\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/styleguide/page.tsx",
+    "line": 295,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div className=\"p-6 bg-navy-deep border border-rule rounded-[2px] flex flex-col justify-between text-white\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/styleguide/page.tsx",
+    "line": 310,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div className=\"space-y-6 bg-white p-8 border border-rule rounded-[2px]\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/styleguide/page.tsx",
+    "line": 321,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div className=\"pt-6 border-t border-rule\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/styleguide/page.tsx",
+    "line": 330,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div className=\"pt-6 border-t border-rule\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/styleguide/page.tsx",
+    "line": 347,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div className=\"bg-white p-8 border border-rule rounded-[2px] max-w-3xl space-y-6\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/styleguide/page.tsx",
+    "line": 401,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div className=\"pt-4 border-t border-rule\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/styleguide/page.tsx",
+    "line": 409,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div className=\"pt-4 border-t border-rule\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/styleguide/page.tsx",
+    "line": 496,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div className=\"bg-white p-6 border border-rule rounded-[2px] flex flex-wrap gap-3 items-center\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/styleguide/page.tsx",
+    "line": 514,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div className=\"bg-white p-6 border border-rule rounded-[2px]\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/styleguide/page.tsx",
+    "line": 524,
+    "oldClass": "text-ink",
+    "newClass": "text-tone-body",
+    "lineContent": "<p className=\"text-ink leading-relaxed\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/styleguide/page.tsx",
+    "line": 531,
+    "oldClass": "text-ink",
+    "newClass": "text-tone-body",
+    "lineContent": "<p className=\"text-ink leading-relaxed\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/styleguide/page.tsx",
+    "line": 538,
+    "oldClass": "text-ink",
+    "newClass": "text-tone-body",
+    "lineContent": "<p className=\"text-ink leading-relaxed\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/styleguide/page.tsx",
+    "line": 547,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div className=\"bg-white p-6 border border-rule rounded-[2px]\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/styleguide/page.tsx",
+    "line": 575,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div className=\"bg-white p-6 border border-rule rounded-[2px] flex flex-wrap gap-4 items-center\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/styleguide/page.tsx",
+    "line": 676,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div className=\"p-3 bg-cream border border-rule rounded-[2px]\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/styleguide/page.tsx",
+    "line": 678,
+    "oldClass": "text-navy-deep",
+    "newClass": "text-tone-heading",
+    "lineContent": "<h4 className=\"font-serif text-base text-navy-deep font-semibold mt-1\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/styleguide/page.tsx",
+    "line": 681,
+    "oldClass": "text-ink-soft",
+    "newClass": "text-tone-muted",
+    "lineContent": "<p className=\"text-xs text-ink-soft mt-1\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/styleguide/page.tsx",
+    "line": 688,
+    "oldClass": "text-ink",
+    "newClass": "text-tone-body",
+    "lineContent": "<p className=\"text-xs text-ink leading-relaxed\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/styleguide/page.tsx",
+    "line": 694,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div className=\"pt-4 border-t border-rule\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/styleguide/page.tsx",
+    "line": 766,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div className=\"bg-white p-8 border border-rule rounded-[2px] space-y-8\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/styleguide/page.tsx",
+    "line": 778,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div className=\"pt-6 border-t border-rule\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/styleguide/page.tsx",
+    "line": 787,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div className=\"pt-6 border-t border-rule\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/styleguide/page.tsx",
+    "line": 796,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div className=\"pt-6 border-t border-rule\">"
+  },
+  {
+    "file": "C:/Users/user/Desktop/DEV/gradedge/app/styleguide/page.tsx",
+    "line": 809,
+    "oldClass": "border-rule",
+    "newClass": "border-tone-rule",
+    "lineContent": "<div className=\"pt-6 border-t border-rule\">"
+  }
+]

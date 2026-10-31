@@ -1,0 +1,516 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy: #1F3A5F;
+  --color-navy-deep: #14263F;
+  --color-gold: #C8963E;
+  --color-paper: #FAF8F4;
+  --color-cream: #FBF5E9;
+  --color-ink: #2B2B2B;
+  --color-ink-soft: #555555;
+  --color-rule: #E4DFD5;
+  --color-success: #2E7D5B;
+  --color-error: #C0392B;
+
+  --radius-sm: 2px;
+  --radius-md: 4px;
+
+  --font-serif: var(--font-fraunces), Georgia, "Times New Roman", serif;
+  --font-sans: var(--font-instrument-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+:root {
+  --background: #FAF8F4;
+  --foreground: #2B2B2B;
+  --navy: #1F3A5F;
+  --navy-deep: #14263F;
+  --gold: #C8963E;
+  --gold-hover: #D6A650;
+  --paper: #FAF8F4;
+  --cream: #FBF5E9;
+  --ink: #2B2B2B;
+  --ink-soft: #555555;
+  --rule: #E4DFD5;
+  --success: #2E7D5B;
+  --error: #C0392B;
+
+  /* Default tone: paper */
+  --tone-bg: #FAF8F4;
+  --tone-heading: #14263F;
+  --tone-body: #2B2B2B;
+  --tone-muted: #555555;
+  --tone-link: #1F3A5F;
+  --tone-link-underline: #C8963E;
+  --tone-rule: #E4DFD5;
+  --tone-focus-ring: #C8963E;
+  --tone-input-bg: #FFFFFF;
+  --tone-input-text: #2B2B2B;
+  --tone-input-border: #E4DFD5;
+  --tone-input-placeholder: #555555;
+}
+
+/* Tone rules & CSS variables cascade */
+[data-tone="paper"],
+.tone-paper {
+  --tone-bg: #FAF8F4;
+  --tone-heading: #14263F;
+  --tone-body: #2B2B2B;
+  --tone-muted: #555555;
+  --tone-link: #1F3A5F;
+  --tone-link-underline: #C8963E;
+  --tone-rule: #E4DFD5;
+  --tone-focus-ring: #C8963E;
+  --tone-input-bg: #FFFFFF;
+  --tone-input-text: #2B2B2B;
+  --tone-input-border: #8C827A;
+  --tone-input-placeholder: #555555;
+  background-color: var(--tone-bg);
+  color: var(--tone-body);
+}
+
+[data-tone="cream"],
+.tone-cream {
+  --tone-bg: #FBF5E9;
+  --tone-heading: #14263F;
+  --tone-body: #2B2B2B;
+  --tone-muted: #555555;
+  --tone-link: #1F3A5F;
+  --tone-link-underline: #C8963E;
+  --tone-rule: #E4DFD5;
+  --tone-focus-ring: #C8963E;
+  --tone-input-bg: #FFFFFF;
+  --tone-input-text: #2B2B2B;
+  --tone-input-border: #8C827A;
+  --tone-input-placeholder: #555555;
+  background-color: var(--tone-bg);
+  color: var(--tone-body);
+}
+
+[data-tone="white"],
+.tone-white {
+  --tone-bg: #FFFFFF;
+  --tone-heading: #14263F;
+  --tone-body: #2B2B2B;
+  --tone-muted: #555555;
+  --tone-link: #1F3A5F;
+  --tone-link-underline: #C8963E;
+  --tone-rule: #E4DFD5;
+  --tone-focus-ring: #C8963E;
+  --tone-input-bg: #FAF8F4;
+  --tone-input-text: #2B2B2B;
+  --tone-input-border: #8C827A;
+  --tone-input-placeholder: #555555;
+  background-color: var(--tone-bg);
+  color: var(--tone-body);
+}
+
+[data-tone="navy"],
+.tone-navy {
+  --tone-bg: #1F3A5F;
+  --tone-heading: #FFFFFF;
+  --tone-body: #E6ECF4;
+  --tone-muted: #B9C6D8;
+  --tone-link: #E0B563;
+  --tone-link-underline: #E0B563;
+  --tone-rule: rgba(255, 255, 255, 0.2);
+  --tone-focus-ring: #E0B563;
+  --tone-input-bg: #FFFFFF;
+  --tone-input-text: #14263F;
+  --tone-input-border: rgba(255, 255, 255, 0.6);
+  --tone-input-placeholder: #555555;
+  background-color: var(--tone-bg);
+  color: var(--tone-body);
+}
+
+[data-tone="navy-deep"],
+.tone-navy-deep {
+  --tone-bg: #14263F;
+  --tone-heading: #FFFFFF;
+  --tone-body: #E6ECF4;
+  --tone-muted: #B9C6D8;
+  --tone-link: #E0B563;
+  --tone-link-underline: #E0B563;
+  --tone-rule: rgba(255, 255, 255, 0.2);
+  --tone-focus-ring: #E0B563;
+  --tone-input-bg: #FFFFFF;
+  --tone-input-text: #14263F;
+  --tone-input-border: rgba(255, 255, 255, 0.6);
+  --tone-input-placeholder: #555555;
+  background-color: var(--tone-bg);
+  color: var(--tone-body);
+}
+
+body {
+  background-color: var(--tone-bg);
+  color: var(--tone-body);
+  font-family: var(--font-instrument-sans), -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 17.5px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Typography scale utilities reading tone CSS variables */
+.type-display {
+  font-family: var(--font-fraunces), Georgia, serif;
+  font-size: clamp(2.6rem, 5vw, 4.5rem);
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+  font-weight: 500;
+  color: var(--tone-heading);
+  text-wrap: balance;
+}
+
+.type-h1 {
+  font-family: var(--font-fraunces), Georgia, serif;
+  font-size: clamp(2.1rem, 3.8vw, 3rem);
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+  font-weight: 500;
+  color: var(--tone-heading);
+  text-wrap: balance;
+}
+
+.type-h2 {
+  font-family: var(--font-fraunces), Georgia, serif;
+  font-size: clamp(1.6rem, 2.6vw, 2.15rem);
+  line-height: 1.22;
+  letter-spacing: -0.018em;
+  font-weight: 500;
+  color: var(--tone-heading);
+  text-wrap: balance;
+}
+
+.type-h3 {
+  font-family: var(--font-fraunces), Georgia, serif;
+  font-size: clamp(1.25rem, 2vw, 1.45rem);
+  line-height: 1.3;
+  letter-spacing: -0.012em;
+  font-weight: 500;
+  color: var(--tone-heading);
+}
+
+.type-lead {
+  font-size: 1.18rem;
+  line-height: 1.65;
+  color: var(--tone-body);
+}
+
+.type-body {
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  color: var(--tone-body);
+}
+
+.type-small {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--tone-muted);
+}
+
+.type-micro {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 600;
+  color: var(--tone-muted);
+}
+
+/* Tone utility helpers */
+.text-tone-heading {
+  color: var(--tone-heading);
+}
+
+.text-tone-body {
+  color: var(--tone-body);
+}
+
+.text-tone-muted {
+  color: var(--tone-muted);
+}
+
+.text-tone-link {
+  color: var(--tone-link);
+}
+
+.border-tone-rule {
+  border-color: var(--tone-rule);
+}
+
+.divide-tone-rule> :not([hidden])~ :not([hidden]) {
+  border-color: var(--tone-rule);
+}
+
+.bg-tone {
+  background-color: var(--tone-bg);
+}
+
+/* UI Interface Density for Dashboards, Tables, and Compact Components */
+.ui-interface {
+  font-size: 0.9375rem;
+  /* 15px */
+  line-height: 1.5;
+}
+
+.ui-interface-sm {
+  font-size: 0.8125rem;
+  /* 13px */
+  line-height: 1.4;
+}
+
+/* Horizontal subnav utilities for sticky anchor navigation */
+.subnav-track {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.subnav-track::-webkit-scrollbar {
+  display: none;
+}
+
+.subnav-fade-mask {
+  mask-image: linear-gradient(to right, transparent, black 14px, black calc(100% - 14px), transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 14px, black calc(100% - 14px), transparent);
+}
+
+/* Accessible gold & rule text contrast guards */
+.text-gold {
+  color: #8E6319;
+}
+
+[data-tone="paper"] .text-gold,
+[data-tone="cream"] .text-gold,
+[data-tone="white"] .text-gold,
+.tone-paper .text-gold,
+.tone-cream .text-gold,
+.tone-white .text-gold {
+  color: #8E6319 !important;
+}
+
+[data-tone="navy"] .text-gold,
+[data-tone="navy-deep"] .text-gold,
+.tone-navy .text-gold,
+.tone-navy-deep .text-gold {
+  color: #E0B563 !important;
+}
+
+/* Ensure text-rule applied to glyphs/chevrons meets minimum contrast */
+.text-rule {
+  color: var(--tone-muted) !important;
+}
+
+/* Standardized Site Container (1180px with 12-col grid) */
+.site-container {
+  max-width: 1180px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+/* Gold rule accents */
+.rule-gold {
+  border-bottom: 2px solid #C8963E;
+}
+
+.rule-gold-thin {
+  border-bottom: 1px solid #C8963E;
+}
+
+/* Text link with animated underline reading tone variables */
+.link-editorial {
+  position: relative;
+  text-decoration: none;
+  color: var(--tone-link);
+  font-weight: 500;
+  transition: color 150ms ease;
+}
+
+.link-editorial::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 1px;
+  background-color: var(--tone-link-underline);
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 200ms ease;
+}
+
+.link-editorial:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* ─── BUTTON TONE SYSTEM ─────────────────────────────────────────────────── */
+.btn-focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.btn-focus:focus-visible {
+  outline: 2px solid var(--tone-focus-ring) !important;
+  outline-offset: 2px !important;
+}
+
+/* Gold button: background #C8963E, text #14263F (never white). Hover #D6A650 */
+.btn-accent {
+  background-color: #C8963E;
+  color: #14263F !important;
+  border: 1px solid #C8963E;
+  transition: all 150ms ease-in-out;
+}
+
+.btn-accent:hover:not(:disabled) {
+  background-color: #D6A650;
+  color: #14263F !important;
+  border-color: #D6A650;
+  box-shadow: 0 1px 3px rgba(200, 150, 62, 0.25);
+}
+
+.btn-accent:active:not(:disabled) {
+  background-color: #B8842E;
+  color: #14263F !important;
+  border-color: #B8842E;
+  transform: translateY(1px);
+}
+
+/* Navy button on light tones: background #1F3A5F, text #FFFFFF */
+.btn-primary {
+  background-color: #1F3A5F;
+  color: #FFFFFF !important;
+  border: 1px solid #1F3A5F;
+  transition: all 150ms ease-in-out;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background-color: #14263F;
+  color: #FFFFFF !important;
+  border-color: #14263F;
+  box-shadow: 0 1px 3px rgba(20, 38, 63, 0.2);
+}
+
+.btn-primary:active:not(:disabled) {
+  background-color: #0E1B2E;
+  color: #FFFFFF !important;
+  transform: translateY(1px);
+}
+
+/* Outline button on light tones: navy border and navy text */
+.btn-secondary {
+  background-color: transparent;
+  border: 1px solid #1F3A5F;
+  color: #1F3A5F !important;
+  transition: all 150ms ease-in-out;
+}
+
+.btn-secondary:hover:not(:disabled) {
+  background-color: #1F3A5F;
+  color: #FFFFFF !important;
+  box-shadow: 0 1px 3px rgba(20, 38, 63, 0.12);
+}
+
+.btn-secondary:active:not(:disabled) {
+  background-color: #14263F;
+  transform: translateY(1px);
+}
+
+/* Outline button on navy tones: white border and white text. Hover fills white with navy text */
+[data-tone="navy"] .btn-secondary,
+[data-tone="navy-deep"] .btn-secondary,
+.tone-navy .btn-secondary,
+.tone-navy-deep .btn-secondary {
+  border: 1px solid #FFFFFF !important;
+  color: #FFFFFF !important;
+  background-color: transparent;
+}
+
+[data-tone="navy"] .btn-secondary:hover:not(:disabled),
+[data-tone="navy-deep"] .btn-secondary:hover:not(:disabled),
+.tone-navy .btn-secondary:hover:not(:disabled),
+.tone-navy-deep .btn-secondary:hover:not(:disabled) {
+  background-color: #FFFFFF !important;
+  color: #14263F !important;
+  border-color: #FFFFFF !important;
+}
+
+/* Disabled buttons with min 3:1 contrast label */
+.btn-accent:disabled,
+.btn-accent[aria-disabled="true"] {
+  background-color: #E2CCA1 !important;
+  color: #14263F !important;
+  border-color: transparent !important;
+  cursor: not-allowed !important;
+  opacity: 0.8 !important;
+}
+
+.btn-primary:disabled,
+.btn-primary[aria-disabled="true"] {
+  background-color: #6D7F99 !important;
+  color: #FFFFFF !important;
+  border-color: transparent !important;
+  cursor: not-allowed !important;
+  opacity: 0.85 !important;
+}
+
+.btn-secondary:disabled,
+.btn-secondary[aria-disabled="true"] {
+  border-color: #A0AAB8 !important;
+  color: #555555 !important;
+  background-color: transparent !important;
+  cursor: not-allowed !important;
+  opacity: 0.8 !important;
+}
+
+[data-tone="navy"] .btn-secondary:disabled,
+[data-tone="navy-deep"] .btn-secondary:disabled,
+.tone-navy .btn-secondary:disabled,
+.tone-navy-deep .btn-secondary:disabled {
+  border-color: rgba(255, 255, 255, 0.4) !important;
+  color: #E6ECF4 !important;
+  background-color: transparent !important;
+}
+
+/* Badge adaptation on navy tones */
+[data-tone="navy"] .badge-navy,
+[data-tone="navy-deep"] .badge-navy,
+.tone-navy .badge-navy,
+.tone-navy-deep .badge-navy {
+  background-color: rgba(255, 255, 255, 0.15) !important;
+  color: #FFFFFF !important;
+  border-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+[data-tone="navy"] .badge-gold,
+[data-tone="navy-deep"] .badge-gold,
+.tone-navy .badge-gold,
+.tone-navy-deep .badge-gold {
+  background-color: rgba(200, 150, 62, 0.25) !important;
+  color: #E0B563 !important;
+  border-color: #E0B563 !important;
+}
+
+[data-tone="navy"] .badge-outline,
+[data-tone="navy-deep"] .badge-outline,
+.tone-navy .badge-outline,
+.tone-navy-deep .badge-outline {
+  background-color: transparent !important;
+  color: #FFFFFF !important;
+  border-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+/* Respect user's motion preferences */
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
