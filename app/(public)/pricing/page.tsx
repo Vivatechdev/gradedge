@@ -11,6 +11,7 @@ import {
   ArrowRight,
 } from "@/components/marketing/page-components";
 import { SectionLabel } from "@/components/ui/editorial";
+import { PricingScopeCalculator } from "@/components/marketing/pricing-scope-calculator";
 
 export const revalidate = 3600;
 
@@ -108,6 +109,11 @@ export default async function PricingPage() {
       />
 
       <div className="site-container py-12 md:py-16 space-y-16 max-w-4xl ui-interface">
+        {/* Interactive Scope Calculator */}
+        <section className="space-y-4">
+          <PricingScopeCalculator />
+        </section>
+
         {/* Services pricing table */}
         <section className="space-y-4">
           <SectionLabel label="Starting Investment by Service" />

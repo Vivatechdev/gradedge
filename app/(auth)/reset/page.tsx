@@ -1,26 +1,37 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+import { buildMetadata } from "@/lib/metadata";
+import { Logo } from "@/components/layout/logo";
+import { Button } from "@/components/ui/button";
+
+export const metadata: Metadata = buildMetadata({
+  title: "Reset Password — GradEdge",
+  description: "Reset instructions for your GradEdge researcher account.",
+  path: "/reset",
+  noIndex: true,
+});
 
 export default function ResetPasswordPage() {
   return (
-    <div className="min-h-screen bg-off-white flex flex-col justify-center py-12 sm:px-6 lg:px-8">
-      <div className="sm:mx-auto sm:w-full sm:max-w-md">
-        <Link href="/" className="flex justify-center font-serif text-3xl font-semibold text-deep-navy">
-          GradEdge
-        </Link>
-        <h2 className="mt-4 text-center text-xl font-serif text-deep-navy">
-          Reset your password
-        </h2>
-        <p className="mt-2 text-center text-xs text-secondary-grey">
-          Enter your registered email address to receive password reset instructions.
+    <div className="min-h-screen bg-paper flex flex-col justify-center py-12 px-4 sm:px-6 lg:px-8 text-tone-body">
+      <div className="sm:mx-auto sm:w-full sm:max-w-md text-center space-y-3">
+        <div className="flex justify-center">
+          <Logo variant="full" href="/" />
+        </div>
+        <h1 className="text-2xl font-serif text-tone-heading font-medium mt-2">
+          Reset Your Password
+        </h1>
+        <p className="text-xs text-tone-muted">
+          Enter your registered institutional or primary email address to receive reset instructions.
         </p>
       </div>
 
       <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
-        <div className="bg-cream py-8 px-6 border border-hairline sm:px-10 rounded-[3px]">
+        <div className="bg-white py-8 px-6 border border-tone-rule sm:px-10 rounded-[2px] shadow-xs space-y-6">
           <form className="space-y-4">
-            <div>
-              <label htmlFor="email" className="block text-xs font-medium text-charcoal uppercase tracking-wider">
-                Email address
+            <div className="space-y-1">
+              <label htmlFor="email" className="block text-xs font-semibold uppercase tracking-wider text-tone-heading">
+                Email Address
               </label>
               <input
                 id="email"
@@ -28,19 +39,23 @@ export default function ResetPasswordPage() {
                 type="email"
                 required
                 placeholder="researcher@university.edu"
-                className="mt-1 block w-full border border-hairline bg-white px-3 py-2 text-sm text-charcoal placeholder-secondary-grey focus:border-navy focus:outline-none rounded-[3px]"
+                className="block w-full border border-tone-rule bg-paper px-3 py-2.5 text-xs sm:text-sm text-tone-heading placeholder:text-tone-muted/60 focus:outline-2 focus:outline-navy rounded-[2px]"
               />
             </div>
 
-            <button
-              type="submit"
-              className="w-full flex justify-center py-2.5 px-4 border border-navy rounded-[3px] text-sm font-medium text-white bg-navy hover:bg-deep-navy transition-colors focus:outline-none"
-            >
-              Send reset instructions
-            </button>
+            <div className="pt-2">
+              <Button
+                type="submit"
+                variant="accent"
+                size="lg"
+                className="w-full text-xs font-semibold"
+              >
+                Send Reset Instructions &rarr;
+              </Button>
+            </div>
 
             <div className="text-center pt-2">
-              <Link href="/login" className="text-xs text-navy hover:underline">
+              <Link href="/login" className="text-xs text-tone-muted hover:text-navy underline">
                 Return to sign in
               </Link>
             </div>
@@ -50,4 +65,3 @@ export default function ResetPasswordPage() {
     </div>
   );
 }
-

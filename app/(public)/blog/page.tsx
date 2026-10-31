@@ -50,6 +50,54 @@ export default async function BlogIndexPage() {
     { slug: "grant-writing-scholarships", name: "Grant Writing & Scholarships" },
   ];
 
+  const FALLBACK_POSTS: PostItem[] = [
+    {
+      id: "fb-1",
+      slug: "structural-equation-modeling-five-diagnostic-tests",
+      title: "Structural Equation Modeling in R: Five Diagnostic Tests University Committees Expect",
+      standfirst: "Why reporting CFI and RMSEA is only the beginning. How to audit multivariate normality, multicollinearity, and modification indices without p-hacking.",
+      published_at: "2026-10-24T10:00:00Z",
+      reading_time_minutes: 8,
+      category: [{ name: "Statistical Analysis", slug: "statistical-analysis" }],
+    },
+    {
+      id: "fb-2",
+      slug: "how-to-rebut-reviewer-two-academic-diplomacy",
+      title: "How to Rebut Reviewer 2: The Art of Academic Diplomacy in Peer-Reviewed Journal Revisions",
+      standfirst: "A structured, point-by-point strategy for responding to aggressive referee reports while defending your core theoretical stance.",
+      published_at: "2026-10-20T14:30:00Z",
+      reading_time_minutes: 6,
+      category: [{ name: "Publishing in Peer-Reviewed Journals", slug: "publishing-peer-reviewed" }],
+    },
+    {
+      id: "fb-3",
+      slug: "thematic-synthesis-without-drowning",
+      title: "The Thematic Matrix: How to Synthesize 100+ Empirical Papers Without Drowning",
+      standfirst: "Moving beyond descriptive paper summaries. How to organize literature reviews into conceptual battlegrounds that justify your doctoral inquiry.",
+      published_at: "2026-10-15T09:15:00Z",
+      reading_time_minutes: 7,
+      category: [{ name: "Literature Reviews", slug: "literature-reviews" }],
+    },
+    {
+      id: "fb-4",
+      slug: "viva-voce-defense-methodological-traps",
+      title: "The Viva Voce Defense: How External Examiners Frame Methodological Traps",
+      standfirst: "The three standard lines of questioning external examiners use to probe doctoral rigor — and the 3-part response framework that satisfies committees.",
+      published_at: "2026-10-10T11:00:00Z",
+      reading_time_minutes: 9,
+      category: [{ name: "Defense Preparation", slug: "defense-preparation" }],
+    },
+    {
+      id: "fb-5",
+      slug: "construct-validity-cronbach-alpha-limits",
+      title: "Construct Validity and Scale Development: Why Cronbach's Alpha Is Rarely Sufficient",
+      standfirst: "Examining composite reliability, average variance extracted (AVE), and the Fornell-Larcker criterion for postgraduate survey instruments.",
+      published_at: "2026-10-05T16:20:00Z",
+      reading_time_minutes: 6,
+      category: [{ name: "Dissertation Methodology", slug: "dissertation-methodology" }],
+    },
+  ];
+
   if (process.env.NEXT_PUBLIC_SUPABASE_URL && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY) {
     try {
       const supabase = await createClient();
@@ -79,6 +127,12 @@ export default async function BlogIndexPage() {
     } catch {
       // Keep defaults
     }
+  }
+
+  // Fallback to foundational scholarly articles if database is empty
+  if (!featuredPost && posts.length === 0) {
+    featuredPost = FALLBACK_POSTS[0];
+    posts = FALLBACK_POSTS.slice(1);
   }
 
   return (

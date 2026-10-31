@@ -228,27 +228,24 @@ export default function AdminDashboardPage() {
               <button
                 type="button"
                 onClick={() => setFilterStatus("all")}
-                className={`px-2.5 py-1 rounded-[1px] font-medium transition-colors cursor-pointer ${
-                  filterStatus === "all" ? "bg-navy text-white" : "text-tone-muted hover:text-tone-heading"
-                }`}
+                className={`px-2.5 py-1 rounded-[1px] font-medium transition-colors cursor-pointer ${filterStatus === "all" ? "bg-navy text-white" : "text-tone-muted hover:text-tone-heading"
+                  }`}
               >
                 All ({RECENT_BRIEFS.length})
               </button>
               <button
                 type="button"
                 onClick={() => setFilterStatus("in_scoping")}
-                className={`px-2.5 py-1 rounded-[1px] font-medium transition-colors cursor-pointer ${
-                  filterStatus === "in_scoping" ? "bg-navy text-white" : "text-tone-muted hover:text-tone-heading"
-                }`}
+                className={`px-2.5 py-1 rounded-[1px] font-medium transition-colors cursor-pointer ${filterStatus === "in_scoping" ? "bg-navy text-white" : "text-tone-muted hover:text-tone-heading"
+                  }`}
               >
                 In Scoping (2)
               </button>
               <button
                 type="button"
                 onClick={() => setFilterStatus("active")}
-                className={`px-2.5 py-1 rounded-[1px] font-medium transition-colors cursor-pointer ${
-                  filterStatus === "active" ? "bg-navy text-white" : "text-tone-muted hover:text-tone-heading"
-                }`}
+                className={`px-2.5 py-1 rounded-[1px] font-medium transition-colors cursor-pointer ${filterStatus === "active" ? "bg-navy text-white" : "text-tone-muted hover:text-tone-heading"
+                  }`}
               >
                 Active (2)
               </button>
@@ -342,9 +339,8 @@ export default function AdminDashboardPage() {
                       <div className="flex items-center gap-2">
                         <div className="w-20 bg-cream h-1.5 rounded-full overflow-hidden border border-tone-rule/60">
                           <div
-                            className={`h-full rounded-full ${
-                              m.activeMentees >= m.capacity ? "bg-gold" : "bg-navy"
-                            }`}
+                            className={`h-full rounded-full ${m.activeMentees >= m.capacity ? "bg-gold" : "bg-navy"
+                              }`}
                             style={{ width: `${(m.activeMentees / m.capacity) * 100}%` }}
                           />
                         </div>
