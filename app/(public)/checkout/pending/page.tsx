@@ -29,7 +29,7 @@ export default function CheckoutPendingPage() {
 
         <div className="bg-white p-6 border border-tone-rule rounded-[2px] text-left space-y-3">
           <p className="text-xs text-tone-muted leading-relaxed">
-            As soon as Paystack confirms clearance, your student portal will unlock and a formal confirmation will arrive in your email.
+            As soon as authorization is confirmed, your student portal will unlock and a formal confirmation will arrive in your email.
           </p>
         </div>
 

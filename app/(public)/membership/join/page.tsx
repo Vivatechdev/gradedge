@@ -127,11 +127,10 @@ function PlanSelector() {
           className="w-full"
           href={`/checkout/membership?plan=${selectedSlug}`}
         >
-          {/* TODO Stage 7: wire up Paystack checkout */}
-          Continue to Secure Checkout
+          Continue to Milestone Confirmation
         </Button>
         <p className="text-xs text-center text-tone-muted">
-          Protected by Paystack 256-bit encryption. Cancel subscription renewal anytime from your student dashboard.
+          Protected by industry-standard 256-bit SSL encryption. Cancel subscription renewal anytime from your student dashboard.
         </p>
       </div>
     </div>

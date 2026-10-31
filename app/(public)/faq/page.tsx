@@ -46,8 +46,8 @@ export default async function FullFaqPage() {
     {
       id: "5",
       category: "Pricing & payment",
-      question: "What currencies do you accept?",
-      answer: "Our standard pricing is in Nigerian Naira (NGN). We process payments via Paystack with full support for international debit and credit cards. International scholars may also request verified US Dollar (USD) invoices.",
+      question: "How are your prices structured and what currencies are supported?",
+      answer: "All services feature transparent, fixed milestone pricing listed in Nigerian Naira (NGN) and US Dollars (USD). The price quoted for your chapter or package is the exact total you pay, with zero hidden administrative fees, surprise surcharges, or billable hourly overruns.",
     },
     {
       id: "6",

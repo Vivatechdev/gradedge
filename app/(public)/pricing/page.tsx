@@ -237,17 +237,17 @@ export default async function PricingPage() {
           </section>
 
           <section className="space-y-3">
-            <SectionLabel label="Payment Security & Currency" />
-            <h3 className="type-h3 text-tone-heading">Currencies & Payment Mechanics</h3>
+            <SectionLabel label="Transparent Pricing & Currency" />
+            <h3 className="type-h3 text-tone-heading">Currencies & Invoicing</h3>
             <div className="type-body text-tone-body space-y-3 leading-relaxed text-sm text-tone-muted">
               <p>
-                Our default billing currency is Nigerian Naira (NGN). We process payments securely via Paystack, supporting international Mastercard, Visa, and direct bank transfers.
+                All services feature clear, upfront milestone pricing in Nigerian Naira (NGN) and US Dollars (USD). The price listed is the exact total you pay.
               </p>
               <p>
-                International researchers may remit equivalent fees in US Dollars (USD). Contact our team if you require an authorized USD invoice.
+                International researchers may request quotes and invoices in US Dollars (USD) or Nigerian Naira (NGN). We provide transparent quotes before you confirm any engagement.
               </p>
               <p>
-                All completed transactions generate downloadable PDF invoices accessible directly inside your student dashboard.
+                Every engagement generates an official, downloadable invoice available directly inside your student dashboard.
               </p>
             </div>
           </section>

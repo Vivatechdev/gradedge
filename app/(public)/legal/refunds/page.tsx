@@ -58,7 +58,7 @@ export default function RefundsPage() {
         <section className="space-y-3">
           <h2 className="type-h3 text-tone-heading">5. Refund Processing Timeline</h2>
           <p>
-            Approved refunds are credited back to the original funding source (credit card or bank account) via Paystack within 5 to 10 working days, subject to your issuing bank&apos;s settlement procedures.
+            Approved refunds are credited back to the original funding source within 5 to 10 working days, subject to your issuing bank&apos;s settlement procedures.
           </p>
         </section>
       </div>

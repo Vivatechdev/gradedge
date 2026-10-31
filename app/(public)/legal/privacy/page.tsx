@@ -29,7 +29,7 @@ export default function PrivacyPage() {
         <section className="space-y-3">
           <h2 className="type-h3 text-tone-heading">1. Information We Collect</h2>
           <p>
-            We collect personal identification information including your full name, academic email address, university affiliation, degree level, field of study, and project abstracts. For payment processing, transactions are handled directly by Paystack; we never store complete credit or debit card numbers on our servers.
+            We collect personal identification information including your full name, academic email address, university affiliation, degree level, field of study, and project abstracts. For payment security, we never store complete credit or debit card numbers on our servers.
           </p>
         </section>
 
@@ -43,7 +43,7 @@ export default function PrivacyPage() {
         <section className="space-y-3">
           <h2 className="type-h3 text-tone-heading">3. Sub-Processors and Data Storage</h2>
           <p>
-            We engage vetted infrastructure partners strictly necessary to deliver our services: Supabase (encrypted database and storage), Paystack (PCI-compliant payment gateway), and Resend (transactional email notifications). We do not sell, rent, or trade student records to commercial third parties.
+            We engage vetted infrastructure partners strictly necessary to deliver our services: Supabase (encrypted database and storage) and Resend (transactional email notifications). We do not sell, rent, or trade student records to commercial third parties.
           </p>
         </section>
 

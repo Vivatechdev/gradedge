@@ -48,7 +48,7 @@ export default function TermsPage() {
         <section className="space-y-3">
           <h2 className="type-h3 text-tone-heading">3. Payments, Fees, and Invoicing</h2>
           <p>
-            Fees for sessions, milestone packages, and monthly memberships must be remitted in advance through our authorized payment processor (Paystack). All fees are quoted in Nigerian Naira (NGN) or US Dollars (USD). Downloadable electronic invoices are issued for all settled transactions.
+            Fees for sessions, milestone packages, and monthly memberships are remitted in advance. All fees are clearly quoted in Nigerian Naira (NGN) or US Dollars (USD) prior to confirmation. Downloadable electronic invoices are issued for all confirmed transactions.
           </p>
         </section>
 
