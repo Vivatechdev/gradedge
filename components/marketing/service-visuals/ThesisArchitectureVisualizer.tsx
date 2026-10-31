@@ -178,3 +178,4 @@ export function ThesisArchitectureVisualizer({ className }: { className?: string
     </div>
   );
 }
+

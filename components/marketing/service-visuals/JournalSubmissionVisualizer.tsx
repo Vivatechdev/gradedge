@@ -141,3 +141,4 @@ export function JournalSubmissionVisualizer({ className }: { className?: string 
     </div>
   );
 }
+

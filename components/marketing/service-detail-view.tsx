@@ -141,7 +141,7 @@ export function ServiceDetailView({
   relatedPosts,
 }: ServiceDetailViewProps) {
   const [currency, setCurrency] = useState<"NGN" | "USD">("NGN");
-  
+
   const categoryConfig = CATEGORY_CONFIG[service.category] || CATEGORY_CONFIG["dissertation-support"];
   const navSections = categoryConfig.navSections;
   const [activeSection, setActiveSection] = useState(navSections[0].id);
@@ -201,11 +201,10 @@ export function ServiceDetailView({
                   <a
                     key={sec.id}
                     href={`#${sec.id}`}
-                    className={`px-3 py-1.5 rounded-[2px] font-medium whitespace-nowrap transition-colors shrink-0 ${
-                      isActive
+                    className={`px-3 py-1.5 rounded-[2px] font-medium whitespace-nowrap transition-colors shrink-0 ${isActive
                         ? "bg-navy text-white shadow-xs"
                         : "text-tone-muted hover:text-tone-heading hover:bg-cream/60"
-                    }`}
+                      }`}
                     aria-current={isActive ? "true" : undefined}
                   >
                     {sec.label}
@@ -238,7 +237,7 @@ export function ServiceDetailView({
                 <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl font-medium text-tone-heading leading-tight">
                   {service.title}
                 </h1>
-                
+
                 <p className="font-serif text-lg sm:text-xl text-tone-body leading-relaxed max-w-2xl">
                   {service.two_sentence_promise}
                 </p>
@@ -578,18 +577,16 @@ export function ServiceDetailView({
                   <button
                     type="button"
                     onClick={() => setCurrency("NGN")}
-                    className={`px-3 py-1 rounded-[1px] font-medium transition-colors cursor-pointer ${
-                      currency === "NGN" ? "bg-navy text-white" : "text-tone-muted hover:text-tone-heading"
-                    }`}
+                    className={`px-3 py-1 rounded-[1px] font-medium transition-colors cursor-pointer ${currency === "NGN" ? "bg-navy text-white" : "text-tone-muted hover:text-tone-heading"
+                      }`}
                   >
                     NGN (₦)
                   </button>
                   <button
                     type="button"
                     onClick={() => setCurrency("USD")}
-                    className={`px-3 py-1 rounded-[1px] font-medium transition-colors cursor-pointer ${
-                      currency === "USD" ? "bg-navy text-white" : "text-tone-muted hover:text-tone-heading"
-                    }`}
+                    className={`px-3 py-1 rounded-[1px] font-medium transition-colors cursor-pointer ${currency === "USD" ? "bg-navy text-white" : "text-tone-muted hover:text-tone-heading"
+                      }`}
                   >
                     USD ($)
                   </button>

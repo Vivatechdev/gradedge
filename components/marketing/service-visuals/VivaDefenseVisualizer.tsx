@@ -153,3 +153,4 @@ export function VivaDefenseVisualizer({ className }: { className?: string }) {
     </div>
   );
 }
+

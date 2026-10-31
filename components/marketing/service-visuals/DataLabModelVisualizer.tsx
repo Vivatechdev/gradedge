@@ -195,3 +195,4 @@ export function DataLabModelVisualizer({ className }: { className?: string }) {
     </div>
   );
 }
+
