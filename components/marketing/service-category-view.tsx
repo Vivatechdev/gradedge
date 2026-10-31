@@ -1,10 +1,20 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
 import { PageHero, PageBreadcrumb, CtaStrip, ArrowRight } from "@/components/marketing/page-components";
 import { Photo } from "@/components/ui/photo";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { Sparkles, ShieldCheck } from "lucide-react";
 import type { ServiceContentItem } from "@/lib/data/services-content";
+import {
+  ThesisArchitectureVisualizer,
+  DataLabModelVisualizer,
+  RedlineDiffVisualizer,
+  JournalSubmissionVisualizer,
+  VivaDefenseVisualizer,
+} from "@/components/marketing/service-visuals";
 
 interface CategoryFaq {
   question: string;
@@ -23,6 +33,7 @@ interface ServiceCategoryViewProps {
 }
 
 export function ServiceCategoryView({
+  categorySlug,
   categoryName,
   headerImage,
   headerImageAlt,
@@ -31,6 +42,22 @@ export function ServiceCategoryView({
   services,
   faqs,
 }: ServiceCategoryViewProps) {
+  const renderSignatureVisualizer = () => {
+    switch (categorySlug) {
+      case "data-analysis":
+        return <DataLabModelVisualizer />;
+      case "editing-and-writing-quality":
+        return <RedlineDiffVisualizer />;
+      case "publishing-and-career":
+        return <JournalSubmissionVisualizer />;
+      case "coaching-and-training":
+        return <VivaDefenseVisualizer />;
+      case "dissertation-support":
+      default:
+        return <ThesisArchitectureVisualizer />;
+    }
+  };
+
   return (
     <>
       <PageBreadcrumb
@@ -57,7 +84,29 @@ export function ServiceCategoryView({
       />
 
       <div className="site-container py-12 md:py-16 space-y-16">
-        {/* Editorial Index of Services */}
+        {/* ── INTERACTIVE SIGNATURE DEMONSTRATION ──────────────────────────── */}
+        <div className="space-y-6">
+          <div className="border-b border-tone-rule pb-3 flex flex-col sm:flex-row sm:items-baseline justify-between gap-2">
+            <div className="space-y-1">
+              <div className="flex items-center gap-1.5">
+                <Sparkles className="w-3.5 h-3.5 text-gold" />
+                <span className="type-micro text-gold">Methodology Demonstration</span>
+              </div>
+              <h2 className="font-serif text-2xl sm:text-3xl text-tone-heading font-medium">
+                The {categoryName} Standard in Practice
+              </h2>
+            </div>
+            <span className="text-xs text-tone-muted">
+              Interactive demonstration of our line-level academic guidance
+            </span>
+          </div>
+
+          <div>
+            {renderSignatureVisualizer()}
+          </div>
+        </div>
+
+        {/* ── EDITORIAL INDEX OF SERVICES ─────────────────────────────────── */}
         <div className="space-y-6">
           <div className="border-b border-tone-rule pb-3 flex items-baseline justify-between">
             <span className="type-micro text-tone-muted">
@@ -74,7 +123,7 @@ export function ServiceCategoryView({
               >
                 {/* Thumbnail */}
                 <div className="md:col-span-3">
-                  <div className="border border-tone-rule rounded-[2px] overflow-hidden">
+                  <div className="border border-tone-rule rounded-[2px] overflow-hidden shadow-xs">
                     <Photo
                       src={service.hero_image}
                       alt={service.hero_image_alt}
@@ -128,8 +177,8 @@ export function ServiceCategoryView({
           </div>
         </div>
 
-        {/* "Not Sure Which Service You Need?" Panel */}
-        <div className="p-8 sm:p-10 bg-cream border border-gold/40 rounded-[2px] flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+        {/* ── "NOT SURE WHICH SERVICE YOU NEED?" PANEL ────────────────────── */}
+        <div className="p-8 sm:p-10 bg-cream border border-gold/40 rounded-[2px] flex flex-col md:flex-row items-start md:items-center justify-between gap-6 shadow-xs">
           <div className="space-y-2 max-w-xl">
             <Badge variant="gold">Interactive Service Finder</Badge>
             <h3 className="font-serif text-2xl text-tone-heading font-medium">
@@ -144,7 +193,20 @@ export function ServiceCategoryView({
           </Button>
         </div>
 
-        {/* Category FAQs */}
+        {/* ── ACADEMIC INTEGRITY GUARANTEE PANEL ───────────────────────────── */}
+        <div className="p-6 bg-white border border-tone-rule rounded-[2px] flex items-start gap-4 shadow-xs">
+          <ShieldCheck className="w-6 h-6 text-gold shrink-0 mt-0.5" />
+          <div className="space-y-1 text-xs">
+            <strong className="text-tone-heading text-sm font-serif block">
+              GradEdge Academic Integrity Guarantee
+            </strong>
+            <p className="text-tone-body leading-relaxed">
+              GradEdge does not provide ghostwriting, fabricated data, or proxy examination services. Our PhD-qualified mentors guide your conceptual formulation, audit your computational models, and provide rigorous editorial review so you can defend your work independently with authority.
+            </p>
+          </div>
+        </div>
+
+        {/* ── CATEGORY FAQS ───────────────────────────────────────────────── */}
         {faqs.length > 0 && (
           <div className="space-y-6 pt-6 border-t border-tone-rule max-w-3xl">
             <div className="space-y-2">
@@ -191,4 +253,3 @@ export function ServiceCategoryView({
     </>
   );
 }
-

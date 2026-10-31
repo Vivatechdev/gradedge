@@ -5,8 +5,15 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Photo } from "@/components/ui/photo";
-import { Check } from "lucide-react";
+import { Check, ShieldCheck, Sparkles, BookOpen, Terminal, FileCode, Award, Users } from "lucide-react";
 import type { ServiceContentItem } from "@/lib/data/services-content";
+import {
+  ThesisArchitectureVisualizer,
+  DataLabModelVisualizer,
+  RedlineDiffVisualizer,
+  JournalSubmissionVisualizer,
+  VivaDefenseVisualizer,
+} from "@/components/marketing/service-visuals";
 
 interface ServiceDetailViewProps {
   service: ServiceContentItem;
@@ -19,15 +26,114 @@ interface ServiceDetailViewProps {
   }>;
 }
 
-const NAV_SECTIONS = [
-  { id: "overview", label: "Overview" },
-  { id: "is-this-for-you", label: "Is this for you?" },
-  { id: "what-you-get", label: "What you get" },
-  { id: "how-it-works", label: "How it works" },
-  { id: "example", label: "Example" },
-  { id: "packages", label: "Packages & Pricing" },
-  { id: "faq", label: "FAQ" },
-];
+interface CategoryConfig {
+  trackBadge: string;
+  heroPill: string;
+  visualizerTitle: string;
+  visualizerSubtitle: string;
+  icon: React.ComponentType<{ className?: string }>;
+  navSections: Array<{ id: string; label: string }>;
+  accentColor: string;
+  guaranteeText: string;
+}
+
+const CATEGORY_CONFIG: Record<string, CategoryConfig> = {
+  "dissertation-support": {
+    trackBadge: "Doctoral Manuscript Track",
+    heroPill: "Thesis Architecture & Chapter Roadmapping",
+    visualizerTitle: "Interactive Thesis Architecture & Milestone Navigator",
+    visualizerSubtitle: "Explore chapter-by-chapter supervisory hurdles, target word lengths, and our structured mentor interventions.",
+    icon: BookOpen,
+    accentColor: "border-gold/40 bg-gold/5 text-gold",
+    guaranteeText: "Chapter-by-chapter structural integrity with zero ghostwriting. 100% researcher-authored scholarship.",
+    navSections: [
+      { id: "overview", label: "Overview" },
+      { id: "interactive-lab", label: "Thesis Architecture" },
+      { id: "is-this-for-you", label: "Candidate Alignment" },
+      { id: "what-you-get", label: "Deliverables" },
+      { id: "how-it-works", label: "Workflow" },
+      { id: "example", label: "Mentor Feedback" },
+      { id: "packages", label: "Packages & Pricing" },
+      { id: "faq", label: "FAQ" },
+    ],
+  },
+  "data-analysis": {
+    trackBadge: "Empirical Laboratory Track",
+    heroPill: "Computational Modeling & Fit Diagnostics",
+    visualizerTitle: "Interactive Computational Workbench & Fit Diagnostics",
+    visualizerSubtitle: "Switch between statistical packages (R, Python, SPSS, Stata, SmartPLS) to inspect reproducible syntax and model fit indexes.",
+    icon: Terminal,
+    accentColor: "border-navy/40 bg-navy/5 text-navy",
+    guaranteeText: "Reproducible code repository with full dataset audit trails. Clear methodology reports with zero synthetic fabrication.",
+    navSections: [
+      { id: "overview", label: "Overview" },
+      { id: "interactive-lab", label: "Code & Diagnostics" },
+      { id: "is-this-for-you", label: "Empirical Scope" },
+      { id: "what-you-get", label: "Deliverables & Data" },
+      { id: "how-it-works", label: "Pipeline" },
+      { id: "example", label: "Audit Evidence" },
+      { id: "packages", label: "Packages & Pricing" },
+      { id: "faq", label: "FAQ" },
+    ],
+  },
+  "editing-and-writing-quality": {
+    trackBadge: "Editorial & Style Compliance Track",
+    heroPill: "Redline Proofroom & Style Manual Compliance",
+    visualizerTitle: "Scholarly Redline Proofroom & Tracked Changes Diff",
+    visualizerSubtitle: "Inspect line-level tracked changes, academic prose transformations, and strict style manual compliance (APA 7th, Chicago, IEEE, Harvard).",
+    icon: FileCode,
+    accentColor: "border-gold/50 bg-cream text-tone-heading",
+    guaranteeText: "Strict human editorial scholarship complying with publisher style guides. Double-blind peer-review formatting guaranteed.",
+    navSections: [
+      { id: "overview", label: "Overview" },
+      { id: "interactive-lab", label: "Redline Proofroom" },
+      { id: "is-this-for-you", label: "Editorial Standards" },
+      { id: "what-you-get", label: "Edited Deliverables" },
+      { id: "how-it-works", label: "Revision Cycles" },
+      { id: "example", label: "Annotations" },
+      { id: "packages", label: "Tiers & Turnaround" },
+      { id: "faq", label: "FAQ" },
+    ],
+  },
+  "publishing-and-career": {
+    trackBadge: "High-Impact Journal Dispatch Track",
+    heroPill: "Q1/Q2 Scopus Alignment & Peer Review Diplomacy",
+    visualizerTitle: "Journal Submission Blueprint & Author Rebuttal Simulator",
+    visualizerSubtitle: "Simulate rigorous point-by-point author rebuttals responding diplomatically to critical reviewer commentary.",
+    icon: Award,
+    accentColor: "border-gold/60 bg-gold/10 text-gold",
+    guaranteeText: "Target journal selection aligned with Scopus/Clarivate impact factors. Rigorous reviewer rebuttal diplomacy.",
+    navSections: [
+      { id: "overview", label: "Overview" },
+      { id: "interactive-lab", label: "Journal Rebuttal Matrix" },
+      { id: "is-this-for-you", label: "Target Tiering" },
+      { id: "what-you-get", label: "Dispatch Deliverables" },
+      { id: "how-it-works", label: "Submission Flow" },
+      { id: "example", label: "Reviewer Response Sample" },
+      { id: "packages", label: "Scope & Investment" },
+      { id: "faq", label: "FAQ" },
+    ],
+  },
+  "coaching-and-training": {
+    trackBadge: "Oral Examination & Defense Chamber Track",
+    heroPill: "Viva Voce Simulation & Committee Cross-Examination",
+    visualizerTitle: "Viva Voce Oral Defense Simulation Chamber",
+    visualizerSubtitle: "Practice structured academic responses against external examiner methodological traps, committee challenges, and policy translation probes.",
+    icon: Users,
+    accentColor: "border-navy/40 bg-cream text-navy",
+    guaranteeText: "Realistic 1-on-1 mock cross-examination by senior doctoral supervisors. Rehearsal slides and defense strategies.",
+    navSections: [
+      { id: "overview", label: "Overview" },
+      { id: "interactive-lab", label: "Defense Simulation" },
+      { id: "is-this-for-you", label: "Defense Readiness" },
+      { id: "what-you-get", label: "Coaching Materials" },
+      { id: "how-it-works", label: "Rehearsal Protocol" },
+      { id: "example", label: "Examiner Dialogue" },
+      { id: "packages", label: "Rehearsal Packages" },
+      { id: "faq", label: "FAQ" },
+    ],
+  },
+};
 
 export function ServiceDetailView({
   service,
@@ -35,15 +141,18 @@ export function ServiceDetailView({
   relatedPosts,
 }: ServiceDetailViewProps) {
   const [currency, setCurrency] = useState<"NGN" | "USD">("NGN");
-  const [activeSection, setActiveSection] = useState("overview");
+  
+  const categoryConfig = CATEGORY_CONFIG[service.category] || CATEGORY_CONFIG["dissertation-support"];
+  const navSections = categoryConfig.navSections;
+  const [activeSection, setActiveSection] = useState(navSections[0].id);
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollPosition = window.scrollY + 200;
-      for (let i = NAV_SECTIONS.length - 1; i >= 0; i--) {
-        const sectionEl = document.getElementById(NAV_SECTIONS[i].id);
+      const scrollPosition = window.scrollY + 220;
+      for (let i = navSections.length - 1; i >= 0; i--) {
+        const sectionEl = document.getElementById(navSections[i].id);
         if (sectionEl && sectionEl.offsetTop <= scrollPosition) {
-          setActiveSection(NAV_SECTIONS[i].id);
+          setActiveSection(navSections[i].id);
           break;
         }
       }
@@ -51,12 +160,30 @@ export function ServiceDetailView({
 
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [navSections]);
 
   const startingPriceDisplay =
     currency === "NGN"
       ? `₦${service.starting_price_ngn.toLocaleString()}`
       : `$${service.starting_price_usd}`;
+
+  const renderVisualizer = () => {
+    switch (service.category) {
+      case "data-analysis":
+        return <DataLabModelVisualizer />;
+      case "editing-and-writing-quality":
+        return <RedlineDiffVisualizer />;
+      case "publishing-and-career":
+        return <JournalSubmissionVisualizer />;
+      case "coaching-and-training":
+        return <VivaDefenseVisualizer />;
+      case "dissertation-support":
+      default:
+        return <ThesisArchitectureVisualizer />;
+    }
+  };
+
+  const TrackIcon = categoryConfig.icon;
 
   return (
     <div className="relative">
@@ -67,8 +194,8 @@ export function ServiceDetailView({
       >
         <div className="site-container">
           <div className="subnav-fade-mask relative">
-            <div className="flex items-center gap-1 sm:gap-4 overflow-x-auto py-2.5 subnav-track text-xs scroll-smooth px-2 sm:px-0">
-              {NAV_SECTIONS.map((sec) => {
+            <div className="flex items-center gap-1.5 sm:gap-4 overflow-x-auto py-2.5 subnav-track text-xs scroll-smooth px-2 sm:px-0">
+              {navSections.map((sec) => {
                 const isActive = activeSection === sec.id;
                 return (
                   <a
@@ -98,17 +225,27 @@ export function ServiceDetailView({
             {/* ── SECTION 1: OVERVIEW & HERO ──────────────────────────────── */}
             <section id="overview" className="scroll-mt-32 space-y-8">
               <div className="space-y-4">
-                <span className="type-micro text-gold">{service.category_name}</span>
+                <div className="flex flex-wrap items-center gap-2">
+                  <span className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-[2px] text-xs font-mono font-medium border ${categoryConfig.accentColor}`}>
+                    <TrackIcon className="w-3.5 h-3.5" />
+                    <span>{categoryConfig.trackBadge}</span>
+                  </span>
+                  <span className="type-micro text-tone-muted">
+                    {service.category_name}
+                  </span>
+                </div>
+
                 <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl font-medium text-tone-heading leading-tight">
                   {service.title}
                 </h1>
+                
                 <p className="font-serif text-lg sm:text-xl text-tone-body leading-relaxed max-w-2xl">
                   {service.two_sentence_promise}
                 </p>
               </div>
 
               {/* Hero Image (3:2) */}
-              <div className="rounded-[2px] overflow-hidden border border-tone-rule">
+              <div className="rounded-[2px] overflow-hidden border border-tone-rule shadow-sm">
                 <Photo
                   src={service.hero_image}
                   alt={service.hero_image_alt}
@@ -121,10 +258,10 @@ export function ServiceDetailView({
               {/* Action Buttons */}
               <div className="flex flex-wrap items-center gap-4 pt-2">
                 <Button variant="accent" size="lg" href={`/book?service=${service.slug}`}>
-                  Book a free 20-min call
+                  Book a free 20-min consultation
                 </Button>
                 <Button variant="secondary" size="lg" href={`/contact?subject=Service Inquiry: ${service.title}`}>
-                  Request service support
+                  Request custom scope quote
                 </Button>
               </div>
 
@@ -139,27 +276,61 @@ export function ServiceDetailView({
                   <span className="font-medium text-tone-heading block">{service.turnaround_text}</span>
                 </div>
                 <div className="space-y-1">
-                  <span className="type-micro text-tone-muted block">Best For</span>
+                  <span className="type-micro text-tone-muted block">Candidate Stage</span>
                   <span className="font-medium text-tone-heading block">{service.best_for}</span>
                 </div>
                 <div className="space-y-1">
-                  <span className="type-micro text-tone-muted block">Starting From</span>
+                  <span className="type-micro text-tone-muted block">Starting Investment</span>
                   <span className="font-semibold text-tone-heading block text-sm">
                     {startingPriceDisplay}
                   </span>
                 </div>
               </div>
+
+              {/* Category Guarantee Strip */}
+              <div className="p-4 bg-white border border-tone-rule rounded-[2px] flex items-start gap-3 shadow-xs">
+                <ShieldCheck className="w-5 h-5 text-gold shrink-0 mt-0.5" />
+                <div className="space-y-1">
+                  <span className="text-xs font-semibold text-tone-heading block">
+                    Academic Integrity & Quality Standard
+                  </span>
+                  <p className="text-xs text-tone-body leading-relaxed">
+                    {categoryConfig.guaranteeText}
+                  </p>
+                </div>
+              </div>
             </section>
 
-            {/* ── SECTION 2: IS THIS FOR YOU? ─────────────────────────────── */}
+            {/* ── SECTION 2: BESPOKE INTERACTIVE MODULE (POLYMORPHIC LAB) ──── */}
+            <section id="interactive-lab" className="scroll-mt-32 space-y-6 pt-8 border-t border-tone-rule">
+              <div className="space-y-2">
+                <div className="flex items-center gap-2">
+                  <Sparkles className="w-4 h-4 text-gold" />
+                  <span className="type-micro text-gold">Interactive Demonstration</span>
+                </div>
+                <h2 className="font-serif text-2xl sm:text-3xl text-tone-heading font-medium">
+                  {categoryConfig.visualizerTitle}
+                </h2>
+                <p className="text-xs sm:text-sm text-tone-muted max-w-2xl leading-relaxed">
+                  {categoryConfig.visualizerSubtitle}
+                </p>
+              </div>
+
+              {/* Dynamic Interactive Visualizer Module */}
+              <div className="pt-2">
+                {renderVisualizer()}
+              </div>
+            </section>
+
+            {/* ── SECTION 3: IS THIS FOR YOU? (CANDIDATE ALIGNMENT) ────────── */}
             <section id="is-this-for-you" className="scroll-mt-32 space-y-6 pt-8 border-t border-tone-rule">
               <div className="space-y-2">
-                <span className="type-micro text-tone-muted">Section 02</span>
+                <span className="type-micro text-tone-muted">Candidate Alignment</span>
                 <h2 className="font-serif text-2xl sm:text-3xl text-tone-heading font-medium">
-                  Is this service right for your project?
+                  Is this service right for your research?
                 </h2>
                 <p className="text-xs sm:text-sm text-tone-muted max-w-xl">
-                  Review these common scholar scenarios. If two or more apply to your research, this service is designed specifically for you.
+                  Review these common scholar scenarios. If two or more apply to your project, this service is calibrated for your exact milestone.
                 </p>
               </div>
 
@@ -178,7 +349,7 @@ export function ServiceDetailView({
               </div>
 
               <div className="p-4 bg-paper border border-tone-rule rounded-[2px] text-xs text-tone-muted space-y-2">
-                <strong className="text-tone-heading block">Who we mentor:</strong>
+                <strong className="text-tone-heading block">Who we mentor under this service:</strong>
                 <ul className="list-disc list-inside space-y-1">
                   {service.who_its_for.map((item, i) => (
                     <li key={i}>{item}</li>
@@ -187,10 +358,10 @@ export function ServiceDetailView({
               </div>
             </section>
 
-            {/* ── SECTION 3: WHAT YOU GET ─────────────────────────────────── */}
+            {/* ── SECTION 4: WHAT YOU GET (DOCUMENTED DELIVERABLES) ────────── */}
             <section id="what-you-get" className="scroll-mt-32 space-y-6 pt-8 border-t border-tone-rule">
               <div className="space-y-2">
-                <span className="type-micro text-tone-muted">Section 03</span>
+                <span className="type-micro text-tone-muted">Tangible Deliverables</span>
                 <h2 className="font-serif text-2xl sm:text-3xl text-tone-heading font-medium">
                   What you receive
                 </h2>
@@ -227,10 +398,10 @@ export function ServiceDetailView({
               </div>
             </section>
 
-            {/* ── SECTION 4: HOW IT WORKS ─────────────────────────────────── */}
+            {/* ── SECTION 5: HOW IT WORKS (WORKFLOW) ───────────────────────── */}
             <section id="how-it-works" className="scroll-mt-32 space-y-6 pt-8 border-t border-tone-rule">
               <div className="space-y-2">
-                <span className="type-micro text-tone-muted">Section 04</span>
+                <span className="type-micro text-tone-muted">Structured Workflow</span>
                 <h2 className="font-serif text-2xl sm:text-3xl text-tone-heading font-medium">
                   How the engagement works
                 </h2>
@@ -242,7 +413,6 @@ export function ServiceDetailView({
               <div className="relative border-l border-tone-rule ml-4 sm:ml-6 pl-6 sm:pl-8 space-y-8">
                 {service.process_steps.map((step) => (
                   <div key={step.step} className="relative group">
-                    {/* Serif Numeral Badge */}
                     <div className="absolute -left-[35px] sm:-left-[43px] top-0 w-8 h-8 rounded-full bg-paper border border-tone-rule flex items-center justify-center font-serif text-sm font-semibold text-navy group-hover:border-gold transition-colors">
                       0{step.step}
                     </div>
@@ -265,20 +435,20 @@ export function ServiceDetailView({
               </div>
             </section>
 
-            {/* ── SECTION 5: WHAT IT LOOKS LIKE (ILLUSTRATIVE EXAMPLE) ─────── */}
+            {/* ── SECTION 6: WHAT MENTOR FEEDBACK LOOKS LIKE ───────────────── */}
             <section id="example" className="scroll-mt-32 space-y-6 pt-8 border-t border-tone-rule">
               <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2">
-                <div>
-                  <span className="type-micro text-tone-muted">Section 05</span>
+                <div className="space-y-1">
+                  <span className="type-micro text-tone-muted">Annotated Sample</span>
                   <h2 className="font-serif text-2xl sm:text-3xl text-tone-heading font-medium">
                     What mentor feedback looks like
                   </h2>
                 </div>
-                <Badge variant="navy">Illustrative Example</Badge>
+                <Badge variant="navy">Illustrative Academic Example</Badge>
               </div>
 
               <div className="p-4 bg-cream/50 border border-tone-rule text-xs text-tone-muted rounded-[2px]">
-                <strong>Confidentiality Notice:</strong> The sample below is a fictionalized instructional demonstration of our line-level annotations. Under our strict Scholar Privacy Policy, client dissertations and empirical datasets are never displayed publicly.
+                <strong>Confidentiality Notice:</strong> The sample below is an instructional demonstration of our line-level annotations. Under our Scholar Privacy Policy, client dissertations and empirical datasets are never displayed publicly.
               </div>
 
               {/* Annotated Mock-up Card */}
@@ -334,7 +504,7 @@ export function ServiceDetailView({
               </div>
             </section>
 
-            {/* ── SECTION 6: TOOLS AND METHODS ────────────────────────────── */}
+            {/* ── SECTION 7: TOOLS AND METHODS ────────────────────────────── */}
             <section className="space-y-4 pt-8 border-t border-tone-rule">
               <span className="type-micro text-tone-muted">Methodology & Software</span>
               <h3 className="font-serif text-xl text-tone-heading font-medium">
@@ -352,7 +522,7 @@ export function ServiceDetailView({
               </div>
             </section>
 
-            {/* ── SECTION 7: WHAT WE WON'T DO (INTEGRITY PLEDGE) ───────────── */}
+            {/* ── SECTION 8: WHAT WE WON'T DO (INTEGRITY PLEDGE) ───────────── */}
             <section className="space-y-4 pt-8 border-t border-tone-rule">
               <div className="p-6 sm:p-8 bg-cream border border-gold/40 rounded-[2px] space-y-4">
                 <div className="flex items-center justify-between">
@@ -390,11 +560,11 @@ export function ServiceDetailView({
               </div>
             </section>
 
-            {/* ── SECTION 8: PACKAGES & PRICING COMPARISON TABLE ───────────── */}
+            {/* ── SECTION 9: PACKAGES & PRICING COMPARISON TABLE ───────────── */}
             <section id="packages" className="scroll-mt-32 space-y-6 pt-8 border-t border-tone-rule">
               <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
                 <div className="space-y-2">
-                  <span className="type-micro text-tone-muted">Section 08</span>
+                  <span className="type-micro text-tone-muted">Investment Tiers</span>
                   <h2 className="font-serif text-2xl sm:text-3xl text-tone-heading font-medium">
                     Packages & Pricing
                   </h2>
@@ -495,10 +665,10 @@ export function ServiceDetailView({
               </div>
             </section>
 
-            {/* ── SECTION 9: SERVICE FAQS WITH ACCORDION SEMANTICS ─────────── */}
+            {/* ── SECTION 10: SERVICE FAQS WITH ACCORDION SEMANTICS ────────── */}
             <section id="faq" className="scroll-mt-32 space-y-6 pt-8 border-t border-tone-rule">
               <div className="space-y-2">
-                <span className="type-micro text-tone-muted">Section 09</span>
+                <span className="type-micro text-tone-muted">Inquiries</span>
                 <h2 className="font-serif text-2xl sm:text-3xl text-tone-heading font-medium">
                   Frequently Asked Questions
                 </h2>
@@ -524,9 +694,8 @@ export function ServiceDetailView({
               </div>
             </section>
 
-            {/* ── SECTION 10: RELATED SERVICES & BLOG POSTS ────────────────── */}
+            {/* ── SECTION 11: RELATED SERVICES & BLOG POSTS ────────────────── */}
             <section className="space-y-8 pt-8 border-t border-tone-rule">
-              {/* Related Services */}
               <div className="space-y-4">
                 <span className="type-micro text-tone-muted">Complementary Support</span>
                 <h3 className="font-serif text-xl sm:text-2xl text-tone-heading font-medium">
@@ -572,7 +741,6 @@ export function ServiceDetailView({
                 </div>
               </div>
 
-              {/* Related Blog Posts */}
               {relatedPosts.length > 0 && (
                 <div className="space-y-4 pt-4">
                   <span className="type-micro text-tone-muted">Scholarly Guidance</span>
@@ -670,4 +838,3 @@ export function ServiceDetailView({
     </div>
   );
 }
-
