@@ -29,3 +29,4 @@ async function handleSignOut(request: NextRequest) {
 
   return NextResponse.redirect(loginUrl);
 }
+

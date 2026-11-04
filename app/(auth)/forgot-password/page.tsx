@@ -2,9 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import { AuthSplitLayout } from "@/components/auth/auth-split-layout";
-import { Button } from "@/components/ui/button";
-import { AlertCircle, CheckCircle2, ArrowLeft } from "lucide-react";
+import { AuthShell } from "@/components/auth/auth-shell";
 
 export default function ForgotPasswordPage() {
   const [email, setEmail] = useState("");
@@ -41,51 +39,38 @@ export default function ForgotPasswordPage() {
   };
 
   return (
-    <AuthSplitLayout
-      honestLine="No locked doors. We'll get you back into your drafts."
-      subtext="Enter the institutional or scholar email associated with your account, and we'll send a secure password reset link."
-      title="Reset Your Password"
-      subtitle={
-        <p>
-          Remember your password?{" "}
-          <Link
-            href="/login"
-            className="text-navy hover:text-gold transition-colors underline font-medium"
-          >
-            Sign in
-          </Link>
-        </p>
-      }
-    >
+    <AuthShell title="Reset your password">
       {submitted ? (
         <div className="space-y-5 text-center font-sans py-4">
-          <div className="w-12 h-12 rounded-full bg-forest/10 text-forest flex items-center justify-center mx-auto">
-            <CheckCircle2 className="w-6 h-6" />
+          <div className="w-12 h-12 rounded-[4px] bg-forest/10 text-forest flex items-center justify-center mx-auto text-xl font-serif">
+            ✓
           </div>
           <div className="space-y-2">
             <h2 className="font-serif text-xl font-medium text-tone-heading">
-              Check Your Inbox
+              Check your inbox
             </h2>
             <p className="text-xs sm:text-sm text-tone-muted leading-relaxed max-w-sm mx-auto">
-              If an account is registered with <strong className="text-tone-heading">{email}</strong>, we have sent a secure link to reset your password.
+              If an account is registered with <strong className="text-tone-heading">{email}</strong>, we have sent a link to reset your password.
             </p>
           </div>
 
           <div className="pt-4 border-t border-tone-rule">
-            <Button variant="secondary" href="/login" size="md" className="w-full">
+            <Link
+              href="/login"
+              className="inline-block w-full bg-cream hover:bg-cream/70 text-navy font-medium text-xs sm:text-sm py-2.5 px-4 rounded-[4px] border border-[#E4DFD5] transition-colors"
+            >
               Return to Sign In
-            </Button>
+            </Link>
           </div>
         </div>
       ) : (
-        <form onSubmit={handleSubmit} className="space-y-4 font-sans">
+        <form onSubmit={handleSubmit} className="space-y-4 font-sans text-xs sm:text-sm">
           {errorMessage && (
             <div
               role="alert"
-              className="p-3.5 bg-burgundy/10 border-l-2 border-burgundy text-xs text-tone-heading rounded-[1px] flex items-start gap-2.5"
+              className="p-3.5 bg-burgundy/10 border-l-2 border-burgundy text-xs text-tone-heading rounded-[4px] font-sans leading-relaxed"
             >
-              <AlertCircle className="w-4 h-4 text-burgundy shrink-0 mt-0.5" />
-              <div className="flex-1 leading-relaxed">{errorMessage}</div>
+              {errorMessage}
             </div>
           )}
 
@@ -94,7 +79,7 @@ export default function ForgotPasswordPage() {
               htmlFor="email"
               className="block text-xs font-semibold uppercase tracking-wider text-tone-heading"
             >
-              Account Email Address
+              Email Address
             </label>
             <input
               id="email"
@@ -104,32 +89,28 @@ export default function ForgotPasswordPage() {
               required
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              placeholder="scholar@university.edu"
-              className="block w-full border border-tone-rule bg-paper px-3.5 py-2.5 text-xs sm:text-sm text-tone-heading placeholder:text-tone-muted/60 focus:outline-2 focus:outline-navy rounded-[2px]"
+              className="block w-full border border-[#E4DFD5] bg-paper px-3.5 py-2.5 text-tone-heading rounded-[4px] focus:outline-none focus:ring-1 focus:ring-gold focus:border-gold transition-all"
             />
           </div>
 
           <div className="pt-2 space-y-3">
-            <Button
+            <button
               type="submit"
-              variant="accent"
-              size="lg"
               disabled={loading}
-              className="w-full text-xs font-semibold py-2.5"
+              className="w-full bg-gold hover:bg-gold-deep text-navy font-semibold text-xs sm:text-sm py-2.5 px-4 rounded-[4px] transition-colors disabled:opacity-60 cursor-pointer disabled:cursor-not-allowed"
             >
-              {loading ? "Sending reset instructions..." : "Send Password Reset Link \u2192"}
-            </Button>
+              {loading ? "Sending..." : "Send Reset Link"}
+            </button>
 
             <Link
               href="/login"
               className="inline-flex items-center justify-center gap-1.5 w-full text-xs text-tone-muted hover:text-tone-heading py-2 transition-colors"
             >
-              <ArrowLeft className="w-3.5 h-3.5" />
-              <span>Back to Sign In</span>
+              &larr; Back to Sign In
             </Link>
           </div>
         </form>
       )}
-    </AuthSplitLayout>
+    </AuthShell>
   );
 }

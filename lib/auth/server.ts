@@ -15,8 +15,24 @@ export interface UserProfile {
   field_of_study: string;
   timezone: string;
   marketing_opt_in: boolean;
+  terms_accepted_at?: string | null;
+  terms_version?: string | null;
+  profile_completed_at?: string | null;
   status: "active" | "suspended";
   created_at: string;
+}
+
+/**
+ * Checks whether a student profile has all required fields:
+ * study_level, field_of_study, institution, and terms_accepted_at.
+ */
+export function isProfileComplete(profile: Partial<UserProfile> | null | undefined): boolean {
+  if (!profile) return false;
+  const hasStudyLevel = Boolean(profile.study_level && profile.study_level.trim().length > 0);
+  const hasFieldOfStudy = Boolean(profile.field_of_study && profile.field_of_study.trim().length > 0);
+  const hasInstitution = Boolean(profile.institution && profile.institution.trim().length > 0);
+  const hasTerms = Boolean(profile.terms_accepted_at || profile.profile_completed_at);
+  return hasStudyLevel && hasFieldOfStudy && hasInstitution && hasTerms;
 }
 
 /**
@@ -70,6 +86,9 @@ export async function requireUser(returnTo?: string): Promise<{
       field_of_study: "Economics",
       timezone: "UTC",
       marketing_opt_in: false,
+      terms_accepted_at: new Date().toISOString(),
+      terms_version: "1.0",
+      profile_completed_at: new Date().toISOString(),
       status: "active",
       created_at: new Date().toISOString(),
     };
@@ -103,6 +122,12 @@ export async function requireRole(
     redirect("/login");
   }
 
+  // If role is student, ensure profile is complete
+  if (profile.role === "student" && !isProfileComplete(profile)) {
+    const dest = returnTo || "/student";
+    redirect(`/complete-profile?returnTo=${encodeURIComponent(dest)}`);
+  }
+
   // If user is admin, enforce 8-hour inactivity session check
   if (profile.role === "admin") {
     const cookieStore = await cookies();
@@ -119,8 +144,8 @@ export async function requireRole(
 }
 
 /**
- * In-memory Login Rate Limiter (sliding 15-minute window)
- * Enforces security without degrading UX.
+ * General In-memory Rate Limiter (sliding 15-minute window)
+ * Applied to login, register, forgot-password, and resend-verification.
  */
 interface RateLimitRecord {
   attempts: number;
@@ -128,23 +153,28 @@ interface RateLimitRecord {
   blockedUntil?: number;
 }
 
-const loginAttempts = new Map<string, RateLimitRecord>();
+const rateLimitBuckets = new Map<string, RateLimitRecord>();
 
 const MAX_ATTEMPTS = 5;
 const WINDOW_MS = 15 * 60 * 1000; // 15 minutes
 const BLOCK_DURATION_MS = 15 * 60 * 1000; // 15 minutes block
 
-export function checkLoginRateLimit(identifier: string): {
+export function checkRateLimit(
+  action: string,
+  identifier: string,
+  maxAttempts: number = MAX_ATTEMPTS,
+  windowMs: number = WINDOW_MS
+): {
   allowed: boolean;
   remainingAttempts: number;
   retryAfterSeconds?: number;
 } {
-  const cleanId = identifier.toLowerCase().trim();
+  const cleanKey = `${action}:${identifier.toLowerCase().trim()}`;
   const now = Date.now();
-  const record = loginAttempts.get(cleanId);
+  const record = rateLimitBuckets.get(cleanKey);
 
   if (!record) {
-    return { allowed: true, remainingAttempts: MAX_ATTEMPTS };
+    return { allowed: true, remainingAttempts: maxAttempts };
   }
 
   // Check if currently blocked
@@ -158,25 +188,31 @@ export function checkLoginRateLimit(identifier: string): {
   }
 
   // Reset if window has elapsed
-  if (now - record.firstAttempt > WINDOW_MS) {
-    loginAttempts.delete(cleanId);
-    return { allowed: true, remainingAttempts: MAX_ATTEMPTS };
+  if (now - record.firstAttempt > windowMs) {
+    rateLimitBuckets.delete(cleanKey);
+    return { allowed: true, remainingAttempts: maxAttempts };
   }
 
-  const remaining = Math.max(0, MAX_ATTEMPTS - record.attempts);
+  const remaining = Math.max(0, maxAttempts - record.attempts);
   return {
     allowed: remaining > 0,
     remainingAttempts: remaining,
   };
 }
 
-export function recordFailedLoginAttempt(identifier: string): void {
-  const cleanId = identifier.toLowerCase().trim();
+export function recordFailedAttempt(
+  action: string,
+  identifier: string,
+  maxAttempts: number = MAX_ATTEMPTS,
+  windowMs: number = WINDOW_MS,
+  blockDurationMs: number = BLOCK_DURATION_MS
+): void {
+  const cleanKey = `${action}:${identifier.toLowerCase().trim()}`;
   const now = Date.now();
-  const record = loginAttempts.get(cleanId);
+  const record = rateLimitBuckets.get(cleanKey);
 
-  if (!record || now - record.firstAttempt > WINDOW_MS) {
-    loginAttempts.set(cleanId, {
+  if (!record || now - record.firstAttempt > windowMs) {
+    rateLimitBuckets.set(cleanKey, {
       attempts: 1,
       firstAttempt: now,
     });
@@ -184,12 +220,26 @@ export function recordFailedLoginAttempt(identifier: string): void {
   }
 
   record.attempts += 1;
-  if (record.attempts >= MAX_ATTEMPTS) {
-    record.blockedUntil = now + BLOCK_DURATION_MS;
+  if (record.attempts >= maxAttempts) {
+    record.blockedUntil = now + blockDurationMs;
   }
-  loginAttempts.set(cleanId, record);
+  rateLimitBuckets.set(cleanKey, record);
 }
 
-export function resetLoginRateLimit(identifier: string): void {
-  loginAttempts.delete(identifier.toLowerCase().trim());
+export function resetRateLimit(action: string, identifier: string): void {
+  const cleanKey = `${action}:${identifier.toLowerCase().trim()}`;
+  rateLimitBuckets.delete(cleanKey);
+}
+
+// Backward-compatible wrappers for login
+export function checkLoginRateLimit(identifier: string) {
+  return checkRateLimit("login", identifier);
+}
+
+export function recordFailedLoginAttempt(identifier: string) {
+  recordFailedAttempt("login", identifier);
+}
+
+export function resetLoginRateLimit(identifier: string) {
+  resetRateLimit("login", identifier);
 }

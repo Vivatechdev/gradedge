@@ -24,6 +24,15 @@ export const metadata: Metadata = {
   },
   description:
     "Rigorous, ethical academic coaching, dissertation mentoring, research design, and data analysis support for postgraduate researchers worldwide.",
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon.png", type: "image/png", sizes: "512x512" },
+    ],
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+  },
 };
 
 export default function RootLayout({

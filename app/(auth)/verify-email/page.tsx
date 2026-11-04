@@ -1,80 +1,133 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { AuthSplitLayout } from "@/components/auth/auth-split-layout";
-import { Button } from "@/components/ui/button";
-import { Mail, CheckCircle2, ArrowRight } from "lucide-react";
+import { useSearchParams } from "next/navigation";
+import { AuthShell } from "@/components/auth/auth-shell";
 
 export default function VerifyEmailPage() {
+  const searchParams = useSearchParams();
+  const initialEmail = searchParams.get("email") || "";
+
+  const [email, setEmail] = useState(initialEmail);
   const [resending, setResending] = useState(false);
-  const [resent, setResent] = useState(false);
+  const [cooldown, setCooldown] = useState(0);
+  const [notice, setNotice] = useState<string | null>(null);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    let timer: NodeJS.Timeout;
+    if (cooldown > 0) {
+      timer = setTimeout(() => setCooldown((prev) => prev - 1), 1000);
+    }
+    return () => clearTimeout(timer);
+  }, [cooldown]);
 
   const handleResend = async () => {
+    if (cooldown > 0 || resending) return;
+
+    if (!email) {
+      setError("Please enter your email to receive a new verification link.");
+      return;
+    }
+
     setResending(true);
-    // Simulate / trigger resend confirmation
-    setTimeout(() => {
+    setError(null);
+    setNotice(null);
+
+    try {
+      const res = await fetch("/api/auth/resend-verification", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email }),
+      });
+
+      const data = await res.json();
+
+      if (!res.ok) {
+        setError(data.error || "Failed to resend verification email.");
+        setResending(false);
+        return;
+      }
+
+      setNotice("A new verification link has been sent to your email.");
+      setCooldown(60); // 60 seconds cooldown
       setResending(false);
-      setResent(true);
-    }, 800);
+    } catch {
+      setError("Unable to connect to service. Please try again.");
+      setResending(false);
+    }
   };
 
   return (
-    <AuthSplitLayout
-      honestLine="Academic work demands precision and trust."
-      subtext="We have dispatched a confirmation link to verify your institutional or scholar email address."
-      title="Verify Your Email Address"
-      subtitle={<p>One quick step before entering your researcher workspace.</p>}
-    >
+    <AuthShell title="Verify your email">
       <div className="space-y-6 text-center font-sans py-2">
-        <div className="w-14 h-14 rounded-full bg-cream border border-tone-rule text-gold flex items-center justify-center mx-auto">
-          <Mail className="w-6 h-6" />
+        <div className="w-12 h-12 rounded-[4px] bg-cream border border-[#E4DFD5] text-gold flex items-center justify-center mx-auto text-lg font-serif">
+          ✉
         </div>
 
         <div className="space-y-2 max-w-sm mx-auto">
-          <h2 className="font-serif text-lg font-medium text-tone-heading">
-            Confirmation Link Dispatched
-          </h2>
           <p className="text-xs sm:text-sm text-tone-muted leading-relaxed">
-            Please check your inbox and click the verification link to activate your scholar profile and thesis project portal.
+            A verification link has been sent to your email address. Please click the link to activate your account.
           </p>
         </div>
 
-        <div className="p-3.5 bg-paper border border-tone-rule text-xs text-tone-body rounded-[2px] text-left leading-relaxed">
-          <span className="font-semibold text-tone-heading block mb-1">
-            Didn&apos;t receive the email?
-          </span>
-          Check your institutional spam folder or filters. Academic mail systems (e.g. .edu, .ac.uk) may occasionally hold new automated dispatches for review.
-        </div>
-
-        {resent ? (
-          <div className="p-3 bg-forest/10 border border-forest/20 text-xs text-forest rounded-[2px] flex items-center justify-center gap-2">
-            <CheckCircle2 className="w-4 h-4" />
-            <span>A fresh verification link has been dispatched.</span>
-          </div>
-        ) : (
-          <Button
-            type="button"
-            variant="secondary"
-            size="md"
-            onClick={handleResend}
-            disabled={resending}
-            className="w-full text-xs"
+        {error && (
+          <div
+            role="alert"
+            className="p-3 bg-burgundy/10 border-l-2 border-burgundy text-xs text-tone-heading rounded-[4px] text-left leading-relaxed"
           >
-            {resending ? "Dispatching..." : "Resend Verification Email"}
-          </Button>
+            {error}
+          </div>
         )}
+
+        {notice && (
+          <div
+            role="status"
+            className="p-3 bg-forest/10 border-l-2 border-forest text-xs text-tone-heading rounded-[4px] text-left leading-relaxed"
+          >
+            {notice}
+          </div>
+        )}
+
+        <div className="space-y-3 pt-2 text-left">
+          <label
+            htmlFor="verify_email"
+            className="block text-xs font-semibold uppercase tracking-wider text-tone-heading"
+          >
+            Account Email
+          </label>
+          <input
+            id="verify_email"
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            placeholder="scholar@university.edu"
+            className="block w-full border border-[#E4DFD5] bg-paper px-3.5 py-2.5 text-tone-heading rounded-[4px] focus:outline-none focus:ring-1 focus:ring-gold focus:border-gold transition-all"
+          />
+          <button
+            type="button"
+            onClick={handleResend}
+            disabled={resending || cooldown > 0}
+            className="w-full bg-cream hover:bg-cream/70 text-navy font-semibold text-xs sm:text-sm py-2.5 px-4 rounded-[4px] border border-[#E4DFD5] transition-colors disabled:opacity-60 cursor-pointer disabled:cursor-not-allowed"
+          >
+            {resending
+              ? "Sending..."
+              : cooldown > 0
+              ? `Resend in ${cooldown}s`
+              : "Resend Verification Email"}
+          </button>
+        </div>
 
         <div className="pt-4 border-t border-tone-rule">
           <Link
             href="/login"
-            className="inline-flex items-center gap-1.5 text-xs text-navy hover:text-gold transition-colors font-medium"
+            className="text-xs text-navy hover:text-gold transition-colors font-medium underline"
           >
-            <span>Proceed to Sign In</span>
-            <ArrowRight className="w-3.5 h-3.5" />
+            Proceed to Sign In &rarr;
           </Link>
         </div>
       </div>
-    </AuthSplitLayout>
+    </AuthShell>
   );
 }

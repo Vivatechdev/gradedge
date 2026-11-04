@@ -11,6 +11,7 @@ const ROUTES = [
   { url: "http://localhost:3000/forgot-password", name: "auth-forgot-password" },
   { url: "http://localhost:3000/reset-password", name: "auth-reset-password" },
   { url: "http://localhost:3000/verify-email", name: "auth-verify-email" },
+  { url: "http://localhost:3000/complete-profile", name: "auth-complete-profile", cookie: { name: "mock_user_role", value: "student" } },
   { url: "http://localhost:3000/mentor", name: "auth-mentor-placeholder" },
 ];
 
@@ -21,10 +22,16 @@ async function verifyAuthPages() {
     headless: true,
   });
 
-  const page = await browser.newPage({ viewport: { width: 1280, height: 800 } });
+  const context = await browser.newContext({ viewport: { width: 1280, height: 800 } });
+  const page = await context.newPage();
 
   for (const item of ROUTES) {
     console.log(`\nTesting ${item.url}...`);
+    if (item.cookie) {
+      await context.addCookies([{ ...item.cookie, domain: "localhost", path: "/" }]);
+    } else {
+      await context.clearCookies();
+    }
     const res = await page.goto(item.url, { waitUntil: "networkidle" });
     console.log(`  HTTP status: ${res.status()}`);
 
@@ -57,3 +64,4 @@ verifyAuthPages().catch((e) => {
   console.error("Auth page visual audit failed:", e);
   process.exit(1);
 });
+

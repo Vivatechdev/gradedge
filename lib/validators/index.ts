@@ -68,27 +68,48 @@ export const BlogPostSchema = z.object({
 
 export type BlogPostInput = z.infer<typeof BlogPostSchema>;
 
-export const RegisterSchema = z.object({
-  full_name: z.string().min(2, "Please enter your full name"),
-  email: z.string().email("Please enter a valid institutional or personal email address"),
-  password: z
-    .string()
-    .min(8, "Password must be at least 8 characters long")
-    .regex(/[A-Za-z]/, "Password must contain at least one letter")
-    .regex(/[0-9]/, "Password must contain at least one number"),
+export const RegisterSchema = z
+  .object({
+    full_name: z.string().min(2, "Please enter your full name"),
+    email: z.string().email("Please enter a valid institutional or personal email address"),
+    password: z
+      .string()
+      .min(10, "Password must be at least 10 characters long"),
+    confirm_password: z.string().min(1, "Please confirm your password"),
+    study_level: z.enum(["undergraduate", "masters", "phd", "researcher", "other"], {
+      message: "Please select your current study level",
+    }),
+    institution: z.string().min(2, "Please enter your university or institution"),
+    field_of_study: z.string().min(2, "Please enter your discipline or field of study"),
+    timezone: z.string().default("UTC"),
+    terms_accepted: z.literal(true, {
+      message: "You must accept the Terms and Academic Integrity Policy to create an account.",
+    }),
+    terms_version: z.string().default("1.0"),
+    marketing_opt_in: z.boolean().default(false),
+  })
+  .refine((data) => data.password === data.confirm_password, {
+    message: "Passwords do not match",
+    path: ["confirm_password"],
+  });
+
+export type RegisterInput = z.infer<typeof RegisterSchema>;
+
+export const CompleteProfileSchema = z.object({
   study_level: z.enum(["undergraduate", "masters", "phd", "researcher", "other"], {
     message: "Please select your current study level",
   }),
   institution: z.string().min(2, "Please enter your university or institution"),
   field_of_study: z.string().min(2, "Please enter your discipline or field of study"),
-  timezone: z.string().min(1, "Please select your primary timezone"),
+  timezone: z.string().default("UTC"),
   terms_accepted: z.literal(true, {
-    message: "You must accept the Terms and Academic Integrity Policy to create an account.",
+    message: "You must accept the Terms and Academic Integrity Policy to continue.",
   }),
+  terms_version: z.string().default("1.0"),
   marketing_opt_in: z.boolean().default(false),
 });
 
-export type RegisterInput = z.infer<typeof RegisterSchema>;
+export type CompleteProfileInput = z.infer<typeof CompleteProfileSchema>;
 
 export const LoginSchema = z.object({
   email: z.string().email("Please enter a valid email address"),
@@ -103,14 +124,18 @@ export const ForgotPasswordSchema = z.object({
 
 export type ForgotPasswordInput = z.infer<typeof ForgotPasswordSchema>;
 
+export const ResendVerificationSchema = z.object({
+  email: z.string().email("Please enter a valid email address"),
+});
+
+export type ResendVerificationInput = z.infer<typeof ResendVerificationSchema>;
+
 export const ResetPasswordSchema = z
   .object({
     password: z
       .string()
-      .min(8, "Password must be at least 8 characters long")
-      .regex(/[A-Za-z]/, "Password must contain at least one letter")
-      .regex(/[0-9]/, "Password must contain at least one number"),
-    confirm_password: z.string(),
+      .min(10, "Password must be at least 10 characters long"),
+    confirm_password: z.string().min(1, "Please confirm your password"),
   })
   .refine((data) => data.password === data.confirm_password, {
     message: "Passwords do not match",

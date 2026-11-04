@@ -1,7 +1,7 @@
 import { NextResponse, type NextRequest } from "next/server";
 import { cookies } from "next/headers";
 import { createClient } from "@/lib/supabase/server";
-import { sendWelcomeEmail } from "@/lib/email";
+import { isProfileComplete } from "@/lib/auth/server";
 
 export async function GET(request: NextRequest) {
   const { searchParams, origin } = new URL(request.url);
@@ -15,44 +15,63 @@ export async function GET(request: NextRequest) {
     if (!error && data?.user) {
       const user = data.user;
 
-      // 1. Check if user already has a profile record
-      const { data: existingProfile } = await supabase
+      // 1. Check if user profile already exists by id OR by email (linking safety)
+      let { data: existingProfile } = await supabase
         .from("profiles")
-        .select("role, status")
+        .select("*")
         .eq("id", user.id)
-        .single();
+        .maybeSingle();
 
-      let userRole = existingProfile?.role || "student";
+      if (!existingProfile && user.email) {
+        const { data: profileByEmail } = await supabase
+          .from("profiles")
+          .select("*")
+          .eq("email", user.email)
+          .maybeSingle();
+
+        if (profileByEmail) {
+          // Link profile to user id safely
+          await supabase
+            .from("profiles")
+            .update({ id: user.id })
+            .eq("email", user.email);
+          existingProfile = { ...profileByEmail, id: user.id };
+        }
+      }
+
+      const fullName =
+        existingProfile?.full_name ||
+        user.user_metadata?.full_name ||
+        user.user_metadata?.name ||
+        user.email?.split("@")[0] ||
+        "Scholar";
 
       if (!existingProfile) {
-        // First-time sign-in via OAuth / Google
-        const fullName =
-          user.user_metadata?.full_name ||
-          user.user_metadata?.name ||
-          user.email?.split("@")[0] ||
-          "Scholar";
+        // Initialize minimal profile for Google sign-in
+        const { data: newProfile } = await supabase
+          .from("profiles")
+          .upsert(
+            {
+              id: user.id,
+              role: "student",
+              full_name: fullName,
+              email: user.email!,
+              institution: "",
+              study_level: "",
+              field_of_study: "",
+              timezone: "UTC",
+              marketing_opt_in: false,
+              status: "active",
+            },
+            { onConflict: "id" }
+          )
+          .select()
+          .single();
 
-        await supabase.from("profiles").upsert(
-          {
-            id: user.id,
-            role: "student",
-            full_name: fullName,
-            email: user.email!,
-            institution: "",
-            study_level: "masters",
-            field_of_study: "",
-            timezone: "UTC",
-            marketing_opt_in: false,
-            status: "active",
-          },
-          { onConflict: "id" }
-        );
-
-        sendWelcomeEmail({
-          to: user.email!,
-          name: fullName,
-        }).catch((err) => console.error("[OAuth Welcome Email Error]", err));
+        existingProfile = newProfile;
       }
+
+      const userRole = existingProfile?.role || "student";
 
       // If user is admin, set admin activity cookie
       if (userRole === "admin") {
@@ -65,12 +84,21 @@ export async function GET(request: NextRequest) {
         });
       }
 
-      // 2. If explicit 'next' parameter is provided (e.g. for /reset-password)
+      // Check if profile has all required fields: study level, field of study, institution, terms_accepted_at
+      const profileCompleted = isProfileComplete(existingProfile);
+
+      // If student and profile is incomplete, redirect to /complete-profile
+      if (userRole === "student" && !profileCompleted) {
+        const targetNext = next && next.startsWith("/") && !next.startsWith("//") ? next : "/student";
+        return NextResponse.redirect(`${origin}/complete-profile?returnTo=${encodeURIComponent(targetNext)}`);
+      }
+
+      // If explicit 'next' parameter is provided (e.g. for /reset-password)
       if (next && next.startsWith("/") && !next.startsWith("//")) {
         return NextResponse.redirect(`${origin}${next}`);
       }
 
-      // 3. Otherwise redirect based on role
+      // Otherwise redirect based on role
       if (userRole === "admin") {
         return NextResponse.redirect(`${origin}/admin`);
       } else if (userRole === "mentor") {
@@ -84,3 +112,4 @@ export async function GET(request: NextRequest) {
   // Return the user to login with error notice if code exchange fails
   return NextResponse.redirect(`${origin}/login?error=auth_callback_failed`);
 }
+

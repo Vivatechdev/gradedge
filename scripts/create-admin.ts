@@ -98,6 +98,7 @@ async function createAdmin() {
   }
 
   // Upsert profile record with role: 'admin'
+  const nowIso = new Date().toISOString();
   const { error: profileError } = await supabase.from("profiles").upsert(
     {
       id: userId,
@@ -109,6 +110,9 @@ async function createAdmin() {
       field_of_study: "Administration & Faculty Governance",
       timezone: "UTC",
       marketing_opt_in: false,
+      terms_accepted_at: nowIso,
+      terms_version: "1.0",
+      profile_completed_at: nowIso,
       status: "active",
     },
     { onConflict: "id" }
@@ -130,3 +134,4 @@ createAdmin().catch((err) => {
   console.error("Bootstrap script failure:", err);
   process.exit(1);
 });
+

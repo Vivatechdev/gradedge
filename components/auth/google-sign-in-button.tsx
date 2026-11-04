@@ -2,7 +2,6 @@
 
 import React, { useState } from "react";
 import { createClient } from "@/lib/supabase/client";
-import { Button } from "@/components/ui/button";
 
 interface GoogleSignInButtonProps {
   label?: string;
@@ -47,13 +46,11 @@ export function GoogleSignInButton({
 
   return (
     <div className="space-y-2">
-      <Button
+      <button
         type="button"
-        variant="secondary"
-        size="md"
         onClick={handleGoogleSignIn}
         disabled={loading}
-        className="w-full flex items-center justify-center gap-3 bg-white hover:bg-cream/40 border-tone-rule text-tone-heading font-medium text-xs sm:text-sm py-2.5"
+        className="w-full flex items-center justify-center gap-3 bg-white hover:bg-cream/40 border border-[#E4DFD5] text-tone-heading font-medium text-xs sm:text-sm py-2.5 px-4 rounded-[4px] transition-colors focus:outline-none focus:ring-1 focus:ring-gold focus:border-gold cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed"
       >
         <svg
           className="w-4 h-4 shrink-0"
@@ -78,10 +75,10 @@ export function GoogleSignInButton({
           />
         </svg>
         <span>{loading ? "Connecting to Google..." : label}</span>
-      </Button>
+      </button>
 
       {error && (
-        <p className="text-xs text-error font-sans text-center">
+        <p className="text-xs text-burgundy font-sans text-center">
           {error}
         </p>
       )}

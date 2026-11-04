@@ -3,10 +3,8 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
-import { AuthSplitLayout } from "@/components/auth/auth-split-layout";
+import { AuthShell } from "@/components/auth/auth-shell";
 import { GoogleSignInButton } from "@/components/auth/google-sign-in-button";
-import { Button } from "@/components/ui/button";
-import { Eye, EyeOff, AlertCircle, CheckCircle2 } from "lucide-react";
 
 export default function LoginPage() {
   const router = useRouter();
@@ -55,7 +53,6 @@ export default function LoginPage() {
         return;
       }
 
-      // Redirect to target workspace
       router.push(data.redirectTo || "/student");
       router.refresh();
     } catch {
@@ -65,51 +62,34 @@ export default function LoginPage() {
   };
 
   return (
-    <AuthSplitLayout
-      honestLine="Your research, your words, our guidance."
-      subtext="Access your dissertation chapters, annotated mentor feedback, and scheduled strategy consultations."
-      title="Scholar Portal Sign In"
-      subtitle={
-        <p>
-          New to GradEdge?{" "}
-          <Link
-            href="/register"
-            className="text-navy hover:text-gold transition-colors underline font-medium"
-          >
-            Create your researcher account
-          </Link>
-        </p>
-      }
-    >
+    <AuthShell title="Welcome back" activeTab="login">
       {/* Notifications */}
       {errorMessage && (
         <div
           role="alert"
-          className="p-3.5 bg-burgundy/10 border-l-2 border-burgundy text-xs text-tone-heading rounded-[1px] flex items-start gap-2.5 font-sans mb-5"
+          className="p-3.5 bg-burgundy/10 border-l-2 border-burgundy text-xs text-tone-heading rounded-[4px] font-sans mb-5 leading-relaxed"
         >
-          <AlertCircle className="w-4 h-4 text-burgundy shrink-0 mt-0.5" />
-          <div className="flex-1 leading-relaxed">{errorMessage}</div>
+          {errorMessage}
         </div>
       )}
 
       {successNotice && (
         <div
           role="status"
-          className="p-3.5 bg-forest/10 border-l-2 border-forest text-xs text-tone-heading rounded-[1px] flex items-start gap-2.5 font-sans mb-5"
+          className="p-3.5 bg-forest/10 border-l-2 border-forest text-xs text-tone-heading rounded-[4px] font-sans mb-5 leading-relaxed"
         >
-          <CheckCircle2 className="w-4 h-4 text-forest shrink-0 mt-0.5" />
-          <div className="flex-1 leading-relaxed">{successNotice}</div>
+          {successNotice}
         </div>
       )}
 
       {/* Login Form */}
-      <form onSubmit={handleSubmit} className="space-y-4 font-sans">
+      <form onSubmit={handleSubmit} className="space-y-4 font-sans text-xs sm:text-sm">
         <div className="space-y-1.5">
           <label
             htmlFor="email"
             className="block text-xs font-semibold uppercase tracking-wider text-tone-heading"
           >
-            Email Address
+            Email
           </label>
           <input
             id="email"
@@ -119,8 +99,7 @@ export default function LoginPage() {
             required
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            placeholder="researcher@university.edu"
-            className="block w-full border border-tone-rule bg-paper px-3.5 py-2.5 text-xs sm:text-sm text-tone-heading placeholder:text-tone-muted/60 focus:outline-2 focus:outline-navy rounded-[2px] transition-all"
+            className="block w-full border border-[#E4DFD5] bg-paper px-3.5 py-2.5 text-tone-heading rounded-[4px] focus:outline-none focus:ring-1 focus:ring-gold focus:border-gold transition-all"
           />
         </div>
 
@@ -132,45 +111,42 @@ export default function LoginPage() {
             >
               Password
             </label>
-            <Link
-              href="/forgot-password"
-              className="text-xs text-tone-muted hover:text-navy underline transition-colors"
-            >
-              Forgot password?
-            </Link>
+            <div className="flex items-center gap-3">
+              <button
+                type="button"
+                onClick={() => setShowPassword(!showPassword)}
+                className="text-xs text-tone-muted hover:text-tone-heading font-medium transition-colors"
+              >
+                {showPassword ? "Hide" : "Show"}
+              </button>
+              <Link
+                href="/forgot-password"
+                className="text-xs text-tone-muted hover:text-navy underline transition-colors"
+              >
+                Forgot password?
+              </Link>
+            </div>
           </div>
-          <div className="relative">
-            <input
-              id="password"
-              type={showPassword ? "text" : "password"}
-              name="password"
-              autoComplete="current-password"
-              required
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              className="block w-full border border-tone-rule bg-paper px-3.5 py-2.5 pr-10 text-xs sm:text-sm text-tone-heading placeholder:text-tone-muted/60 focus:outline-2 focus:outline-navy rounded-[2px] transition-all"
-            />
-            <button
-              type="button"
-              onClick={() => setShowPassword(!showPassword)}
-              aria-label={showPassword ? "Hide password" : "Show password"}
-              className="absolute right-3 top-1/2 -translate-y-1/2 text-tone-muted hover:text-tone-heading p-1 transition-colors"
-            >
-              {showPassword ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
-            </button>
-          </div>
+          <input
+            id="password"
+            type={showPassword ? "text" : "password"}
+            name="password"
+            autoComplete="current-password"
+            required
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            className="block w-full border border-[#E4DFD5] bg-paper px-3.5 py-2.5 text-tone-heading rounded-[4px] focus:outline-none focus:ring-1 focus:ring-gold focus:border-gold transition-all"
+          />
         </div>
 
         <div className="pt-2">
-          <Button
+          <button
             type="submit"
-            variant="accent"
-            size="lg"
             disabled={loading}
-            className="w-full text-xs font-semibold py-2.5"
+            className="w-full bg-gold hover:bg-gold-deep text-navy font-semibold text-xs sm:text-sm py-2.5 px-4 rounded-[4px] transition-colors disabled:opacity-60 cursor-pointer disabled:cursor-not-allowed"
           >
-            {loading ? "Authenticating..." : "Sign In to Workspace \u2192"}
-          </Button>
+            {loading ? "Signing in..." : "Sign In"}
+          </button>
         </div>
       </form>
 
@@ -185,6 +161,17 @@ export default function LoginPage() {
 
       {/* Google OAuth Button */}
       <GoogleSignInButton returnTo={returnTo} />
-    </AuthSplitLayout>
+
+      {/* Register link */}
+      <div className="mt-6 pt-4 border-t border-tone-rule text-center text-xs font-sans text-tone-muted">
+        Don&apos;t have an account?{" "}
+        <Link
+          href="/register"
+          className="text-navy hover:text-gold transition-colors underline font-medium"
+        >
+          Register
+        </Link>
+      </div>
+    </AuthShell>
   );
 }
