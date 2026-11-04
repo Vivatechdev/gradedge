@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 
-export type PhotoAspectRatio = "1:1" | "4:5" | "4:3" | "3:2" | "16:9" | "21:9";
+export type PhotoAspectRatio = "1:1" | "4:5" | "4:3" | "3:2" | "16:9" | "21:9" | "full";
 
 export interface PhotoProps {
   src: string;
@@ -26,6 +26,7 @@ const ASPECT_RATIO_CLASSES: Record<PhotoAspectRatio, string> = {
   "3:2": "aspect-[3/2]",
   "16:9": "aspect-[16/9]",
   "21:9": "aspect-[21/9]",
+  "full": "h-full w-full aspect-auto",
 };
 
 const DEFAULT_SIZES: Record<PhotoAspectRatio, string> = {
@@ -35,6 +36,7 @@ const DEFAULT_SIZES: Record<PhotoAspectRatio, string> = {
   "3:2": "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 720px",
   "16:9": "(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px",
   "21:9": "100vw",
+  "full": "(max-width: 768px) 100vw, 600px",
 };
 
 // Subtle warm-grey placeholder blur data URL
@@ -60,11 +62,12 @@ export function Photo({
   const labelText = placeholderText || caption || alt || src;
 
   return (
-    <figure className={cn("block w-full overflow-hidden", className)}>
+    <figure className={cn("block w-full overflow-hidden", aspectRatio === "full" && "h-full", className)}>
       <div
         className={cn(
           "relative w-full overflow-hidden bg-[#E4DFD5] rounded-[2px]",
-          aspectClass
+          aspectClass,
+          aspectRatio === "full" && "h-full"
         )}
       >
         {!loadError ? (

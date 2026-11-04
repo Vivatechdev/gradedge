@@ -10,13 +10,6 @@ export interface SectionLabelProps {
 }
 
 export function SectionLabel({ number, label, className }: SectionLabelProps) {
-  const formattedNumber =
-    number !== undefined
-      ? typeof number === "number"
-        ? String(number).padStart(2, "0")
-        : number
-      : null;
-
   return (
     <div
       className={cn(
@@ -24,12 +17,6 @@ export function SectionLabel({ number, label, className }: SectionLabelProps) {
         className
       )}
     >
-      {formattedNumber && (
-        <>
-          <span className="text-gold font-serif font-medium">{formattedNumber}</span>
-          <span className="opacity-40" style={{ color: "var(--tone-muted)" }}>/</span>
-        </>
-      )}
       <span>{label}</span>
     </div>
   );

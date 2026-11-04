@@ -9,6 +9,7 @@ import {
   SectionLabel,
   StepList,
 } from "@/components/ui/editorial";
+import { HomeServicesTabs } from "@/components/marketing/home-services-tabs";
 
 // ─── Metadata ────────────────────────────────────────────────────────────────
 
@@ -147,16 +148,16 @@ export default async function HomePage() {
       <Section
         tone="paper"
         aria-label="Introduction"
-        className="border-b border-tone-rule"
+        className="border-b border-tone-rule overflow-hidden"
       >
-        <div className="site-container py-16 md:py-20 lg:py-24">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-            {/* Left — 7 columns */}
-            <div className="lg:col-span-7 space-y-6">
-              <h1 className="type-display text-tone-heading max-w-xl">
-                Your thesis is yours.{" "}
-                <span className="relative inline-block">
-                  We help you finish it.
+        <div className="site-container py-12 sm:py-16 md:py-20 lg:py-24">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            {/* Left Column — Equal Weight */}
+            <div className="space-y-6 sm:space-y-8">
+              <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-[44px] xl:text-[50px] text-tone-heading leading-[1.14] tracking-tight">
+                Your thesis is yours. We help you{" "}
+                <span className="relative inline-block whitespace-nowrap">
+                  finish it.
                   <span
                     className="absolute -bottom-1 left-0 right-0 h-[3px] bg-gold"
                     aria-hidden="true"
@@ -164,43 +165,143 @@ export default async function HomePage() {
                 </span>
               </h1>
 
-              <p className="type-lead text-tone-body max-w-lg">
-                GradEdge is a mentoring and coaching service for
-                undergraduate, Masters and doctoral researchers. We give you
-                expert feedback at every stage of the research cycle, from
-                proposal to defense.
+              <p className="type-lead text-tone-body max-w-xl">
+                Expert written feedback and one-on-one mentoring from proposal to defense, in your discipline and your software.
               </p>
 
-              <div className="flex flex-wrap items-center gap-4">
+              <div className="flex flex-wrap items-center gap-4 sm:gap-6 pt-1">
                 <Button variant="accent" size="lg" href="/booking">
                   Book a free 20-minute call
                 </Button>
-                <Button variant="link" size="md" href="/about/how-it-works">
-                  See how mentoring works
-                </Button>
+                <Link
+                  href="#services"
+                  className="type-body text-tone-heading hover:text-navy transition-colors underline underline-offset-4 decoration-tone-rule hover:decoration-gold font-medium"
+                >
+                  Explore services
+                </Link>
               </div>
 
-              <p className="type-small text-tone-muted">
-                We work with researchers at undergraduate, Masters and doctoral
-                level, worldwide.
-              </p>
+              {/* Plain scope row separated by hairlines */}
+              <div className="pt-4 border-t border-tone-rule space-y-2">
+                <div className="flex flex-wrap items-center text-xs uppercase tracking-widest text-tone-muted font-sans font-semibold">
+                  <span className="pr-3 py-1">Proposal</span>
+                  <span className="h-3 w-px bg-tone-rule" aria-hidden="true" />
+                  <span className="px-3 py-1">Analysis</span>
+                  <span className="h-3 w-px bg-tone-rule" aria-hidden="true" />
+                  <span className="px-3 py-1">Writing</span>
+                  <span className="h-3 w-px bg-tone-rule" aria-hidden="true" />
+                  <span className="px-3 py-1">Publishing</span>
+                  <span className="h-3 w-px bg-tone-rule" aria-hidden="true" />
+                  <span className="pl-3 py-1">Defense</span>
+                </div>
+                <p className="type-small text-tone-muted">
+                  For undergraduate, Masters and doctoral researchers, worldwide.
+                </p>
+              </div>
             </div>
 
-            {/* Right — 5 columns: Hero photograph with annotated thesis card overlay */}
-            <div className="lg:col-span-5 relative">
-              <PhotoFrame offset={10} className="w-full max-w-md mx-auto lg:ml-auto">
-                <Photo
-                  src="/images/home/hero.jpg"
-                  alt="A focused doctoral researcher working at a wooden desk with annotated thesis manuscripts and laptop in natural light"
-                  aspectRatio="4:5"
-                  priority={true}
-                  navyWash={true}
-                />
-              </PhotoFrame>
+            {/* Right Column — Three-Image Mosaic & Floating Cards */}
+            <div className="relative w-full max-w-lg lg:max-w-none mx-auto pt-4 sm:pt-6 pb-6 sm:pb-8">
+              {/* Floating Card: Milestone card with three progress bars at top-right */}
+              <div className="absolute top-0 right-1 sm:-top-3 sm:-right-4 z-20 w-[210px] sm:w-[245px] max-w-[calc(100%-1rem)] bg-white border border-tone-rule rounded-[4px] p-3 sm:p-3.5 shadow-md space-y-2.5 text-xs font-sans">
+                <div className="flex items-center justify-between border-b border-tone-rule/80 pb-1.5 text-[10px] uppercase tracking-wider text-tone-muted font-semibold">
+                  <span className="text-tone-heading">Doctoral Milestones</span>
+                  <span className="text-gold font-mono font-medium">Stage 3 / 5</span>
+                </div>
+                <div className="space-y-2">
+                  <div>
+                    <div className="flex justify-between text-[11px] mb-1 font-medium text-tone-heading">
+                      <span>Ch 1: Framing & Scope</span>
+                      <span className="text-forest font-semibold">100%</span>
+                    </div>
+                    <div className="h-1.5 w-full bg-cream rounded-full overflow-hidden">
+                      <div className="h-full bg-forest rounded-full w-full" />
+                    </div>
+                  </div>
+                  <div>
+                    <div className="flex justify-between text-[11px] mb-1 font-medium text-tone-heading">
+                      <span>Ch 2: Literature Synthesis</span>
+                      <span className="text-forest font-semibold">100%</span>
+                    </div>
+                    <div className="h-1.5 w-full bg-cream rounded-full overflow-hidden">
+                      <div className="h-full bg-forest rounded-full w-full" />
+                    </div>
+                  </div>
+                  <div>
+                    <div className="flex justify-between text-[11px] mb-1 font-medium text-tone-heading">
+                      <span>Ch 3: Methodology & Syntax</span>
+                      <span className="text-gold font-semibold">68%</span>
+                    </div>
+                    <div className="h-1.5 w-full bg-cream rounded-full overflow-hidden">
+                      <div className="h-full bg-gold rounded-full w-[68%]" />
+                    </div>
+                  </div>
+                </div>
+              </div>
 
-              {/* Annotated thesis-page overlay card sitting on solid paper surface with hairline border */}
-              <div className="relative -mt-20 sm:-mt-28 ml-2 sm:-ml-8 mr-2 sm:mr-6 z-20">
-                <AnnotatedThesisCard />
+              {/* Three-Image Mosaic */}
+              <div className="grid grid-cols-12 gap-[14px] h-[480px] lg:h-[600px] rounded-[4px] overflow-hidden">
+                {/* Tall left image: hero.jpg */}
+                <div className="col-span-7 h-full relative rounded-[4px] overflow-hidden">
+                  <Photo
+                    src="/images/home/hero.jpg"
+                    alt="Focused doctoral researcher working at a wooden desk with annotated thesis manuscripts"
+                    aspectRatio="full"
+                    priority={true}
+                    className="h-full w-full"
+                  />
+                  {/* Thin Inset White Hairline Frame */}
+                  <div
+                    className="absolute inset-[10px] sm:inset-[14px] border border-white/50 rounded-[2px] pointer-events-none z-10"
+                    aria-hidden="true"
+                  />
+                </div>
+
+                {/* Right Stack: how-we-work.jpg (top) & integrity.jpg (bottom) */}
+                <div className="col-span-5 h-full flex flex-col gap-[14px]">
+                  <div className="h-1/2 relative rounded-[4px] overflow-hidden">
+                    <Photo
+                      src="/images/home/how-we-work.jpg"
+                      alt="Scholarly mentor reviewing draft chapter annotations"
+                      aspectRatio="full"
+                      priority={true}
+                      className="h-full w-full"
+                    />
+                  </div>
+                  <div className="h-1/2 relative rounded-[4px] overflow-hidden">
+                    <Photo
+                      src="/images/home/integrity.jpg"
+                      alt="Thesis manuscript with mentor margin notes"
+                      aspectRatio="full"
+                      className="h-full w-full"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              {/* Floating Card: Mentor-Review Card at bottom-left */}
+              <div className="absolute bottom-0 left-1 sm:-bottom-4 sm:-left-4 z-20 w-[270px] sm:w-[310px] max-w-[calc(100%-1rem)] bg-white border border-tone-rule rounded-[4px] p-3 sm:p-3.5 shadow-md space-y-2 text-xs font-sans">
+                <div className="flex items-center justify-between border-b border-tone-rule/80 pb-1.5 text-[10px] uppercase tracking-wider text-tone-muted font-semibold">
+                  <span className="text-tone-heading">Chapter 3 &middot; Line Review</span>
+                  <span className="text-gold font-mono font-medium">Mentor Margin Note</span>
+                </div>
+                {/* Strikethrough line */}
+                <p className="line-through text-tone-muted/65 text-[11px] sm:text-xs leading-relaxed font-sans">
+                  The survey data was correlated using standard regression models.
+                </p>
+                {/* Corrected line with gold left border */}
+                <div className="p-2 sm:p-2.5 bg-cream/70 border-l-2 border-gold text-[11px] sm:text-xs text-tone-heading font-sans rounded-[1px] leading-snug">
+                  Validated through exploratory factor analysis, followed by hierarchical regression{" "}
+                  <span className="text-[10px] font-mono text-gold font-semibold">
+                    (Field, 2018)
+                  </span>.
+                </div>
+                {/* Short margin comment */}
+                <div className="bg-paper border border-tone-rule/80 p-2 sm:p-2.5 rounded-[2px] text-[10px] sm:text-[11px] text-tone-body font-sans">
+                  <span className="italic block text-tone-heading font-medium leading-normal">
+                    &ldquo;Verify normality assumptions before estimating interaction coefficients.&rdquo;
+                  </span>
+                </div>
               </div>
             </div>
           </div>
@@ -210,7 +311,7 @@ export default async function HomePage() {
       {/* ── SECTION 01: WHERE STUDENTS GET STUCK ──────────────────────────── */}
       <Section tone="white" aria-labelledby="stuck-heading" className="border-b border-tone-rule">
         <div className="site-container py-16 md:py-20">
-          <SectionLabel number={1} label="Where researchers get stuck" />
+          <SectionLabel label="Where researchers get stuck" />
           <h2
             id="stuck-heading"
             className="type-h2 text-tone-heading mt-2 mb-8 max-w-xl"
@@ -256,7 +357,7 @@ export default async function HomePage() {
         className="border-b border-tone-rule"
       >
         <div className="site-container py-16 md:py-20">
-          <SectionLabel number={2} label="How we work" />
+          <SectionLabel label="How we work" />
           <h2
             id="how-heading"
             className="type-h2 text-tone-heading mt-2 mb-10 max-w-lg"
@@ -285,9 +386,9 @@ export default async function HomePage() {
       </Section>
 
       {/* ── SECTION 03: SERVICES ──────────────────────────────────────────── */}
-      <Section tone="white" aria-labelledby="services-heading" className="border-b border-tone-rule">
+      <Section id="services" tone="white" aria-labelledby="services-heading" className="border-b border-tone-rule">
         <div className="site-container py-16 md:py-20">
-          <SectionLabel number={3} label="What we do" />
+          <SectionLabel label="What we do" />
           <h2
             id="services-heading"
             className="type-h2 text-tone-heading mt-2 mb-10 max-w-lg"
@@ -295,52 +396,8 @@ export default async function HomePage() {
             Support matched to where you are in your research.
           </h2>
 
-          <div className="space-y-14">
-            {serviceGroups.map((group) => (
-              <div key={group.stage} className="border-t border-tone-rule pt-8 first:border-0 first:pt-0">
-                <p className="type-micro text-tone-muted mb-4 pb-2 border-b border-tone-rule">
-                  {group.stage}
-                </p>
-                <div className="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-10 items-start">
-                  <div className="md:col-span-4 shrink-0">
-                    <Photo
-                      src={serviceStageImages[group.stage] || "/images/services/stage-start.jpg"}
-                      alt={`Researchers and scholarly resources for ${group.stage}`}
-                      aspectRatio="3:2"
-                      navyWash={true}
-                    />
-                  </div>
-                  <div className="md:col-span-8">
-                    <ul className="divide-y divide-tone-rule">
-                      {group.services.map((svc) => (
-                        <li key={svc.name}>
-                          <Link
-                            href={svc.href}
-                            className="flex items-baseline justify-between gap-4 py-3 group hover:bg-cream/40 transition-colors duration-150 -mx-3 px-3"
-                          >
-                            <span className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-4 min-w-0">
-                              <span className="font-serif text-base text-tone-heading font-medium group-hover:text-navy shrink-0">
-                                {svc.name}
-                              </span>
-                              <span className="type-small text-tone-muted truncate">
-                                {svc.description}
-                              </span>
-                            </span>
-                            <span
-                              className="shrink-0 text-rule group-hover:text-gold transition-colors duration-150"
-                              aria-hidden="true"
-                            >
-                              <ArrowIcon />
-                            </span>
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+          {/* Interactive Services Tabs (2-column list of rows, stage tags, hover indicators) */}
+          <HomeServicesTabs />
 
           {/* Accelerator Program highlight block with 16:9 library photograph */}
           <div data-tone="navy-deep" className="tone-navy-deep mt-14 bg-navy-deep border-t-2 border-t-gold text-tone-body rounded-[2px] overflow-hidden">
@@ -381,7 +438,7 @@ export default async function HomePage() {
         className="border-b border-tone-rule"
       >
         <div className="site-container py-16 md:py-20">
-          <SectionLabel number={4} label="Academic integrity" />
+          <SectionLabel label="Academic integrity" />
           <h2
             id="integrity-heading"
             className="type-h2 text-tone-heading mt-2 max-w-xl"
@@ -442,7 +499,7 @@ export default async function HomePage() {
         className="border-b border-tone-rule"
       >
         <div className="site-container py-16 md:py-20">
-          <SectionLabel number={5} label="Our mentors" />
+          <SectionLabel label="Our mentors" />
           <h2
             id="team-heading"
             className="type-h2 text-tone-heading mt-2 mb-4 max-w-lg"
@@ -455,39 +512,33 @@ export default async function HomePage() {
           </p>
 
           <ul className="divide-y divide-tone-rule border-y border-tone-rule max-w-2xl">
-            <li className="py-5 flex items-baseline gap-5">
+            <li className="py-5 flex items-start gap-4">
               <span
-                className="font-serif text-2xl text-gold shrink-0"
+                className="w-1.5 h-1.5 rounded-full bg-gold shrink-0 mt-2.5"
                 aria-hidden="true"
-              >
-                01
-              </span>
+              />
               <p className="type-body text-tone-body">
                 Every mentor holds an earned postgraduate degree in their
                 discipline. Some hold doctorates. All have supervised or
                 assisted on research at university level.
               </p>
             </li>
-            <li className="py-5 flex items-baseline gap-5">
+            <li className="py-5 flex items-start gap-4">
               <span
-                className="font-serif text-2xl text-gold shrink-0"
+                className="w-1.5 h-1.5 rounded-full bg-gold shrink-0 mt-2.5"
                 aria-hidden="true"
-              >
-                02
-              </span>
+              />
               <p className="type-body text-tone-body">
                 We match you by subject area, by your research methodology
                 (qualitative, quantitative, mixed), and by the analysis software
                 you are using.
               </p>
             </li>
-            <li className="py-5 flex items-baseline gap-5">
+            <li className="py-5 flex items-start gap-4">
               <span
-                className="font-serif text-2xl text-gold shrink-0"
+                className="w-1.5 h-1.5 rounded-full bg-gold shrink-0 mt-2.5"
                 aria-hidden="true"
-              >
-                03
-              </span>
+              />
               <p className="type-body text-tone-body">
                 You see your mentor&apos;s name, background and brief bio inside
                 your student dashboard, after a mentor has been assigned to you.
@@ -506,7 +557,7 @@ export default async function HomePage() {
           className="border-b border-tone-rule"
         >
           <div className="site-container py-16 md:py-20">
-            <SectionLabel number={6} label="Student stories" />
+            <SectionLabel label="Student stories" />
             <h2
               id="stories-heading"
               className="type-h2 text-tone-heading mt-2 mb-10 max-w-lg"
@@ -555,7 +606,7 @@ export default async function HomePage() {
           className="border-b border-tone-rule"
         >
           <div className="site-container py-16 md:py-20">
-            <SectionLabel number={7} label="From the blog" />
+            <SectionLabel label="From the blog" />
             <div className="flex items-end justify-between gap-4 mt-2 mb-10">
               <h2
                 id="blog-heading"
@@ -641,7 +692,7 @@ export default async function HomePage() {
           className="border-b border-tone-rule"
         >
           <div className="site-container py-16 md:py-20">
-            <SectionLabel number={8} label="Common questions" />
+            <SectionLabel label="Common questions" />
             <div className="flex items-end justify-between gap-4 mt-2 mb-10">
               <h2
                 id="faq-heading"
@@ -770,91 +821,6 @@ const howWeWorkSteps = [
   },
 ];
 
-const serviceGroups = [
-  {
-    stage: "Starting out",
-    services: [
-      {
-        name: "Topic & Proposal Development",
-        description: "Narrow your focus, frame your research question, structure a defensible proposal.",
-        href: "/services/topic-proposal-development",
-      },
-      {
-        name: "Research Design & Ethics Support",
-        description: "Choose your methodology, plan your instruments, prepare ethics committee submissions.",
-        href: "/services/research-design-ethics",
-      },
-    ],
-  },
-  {
-    stage: "Doing the research",
-    services: [
-      {
-        name: "Literature Review Support",
-        description: "Move from summary to argument. Build a review that positions your study.",
-        href: "/services/literature-review-support",
-      },
-      {
-        name: "Data Analysis",
-        description: "SPSS, R, Python, Stata, NVivo, SmartPLS. We work in your software.",
-        href: "/services/data-analysis",
-      },
-      {
-        name: "One-on-One Tutoring",
-        description: "Focused sessions on methodology, statistics, qualitative coding or writing craft.",
-        href: "/services/one-on-one-tutoring",
-      },
-    ],
-  },
-  {
-    stage: "Writing it up",
-    services: [
-      {
-        name: "Dissertation & Thesis Mentoring",
-        description: "Chapter-by-chapter feedback on structure, argument, clarity and academic register.",
-        href: "/services/dissertation-thesis-mentoring",
-      },
-      {
-        name: "Academic Editing & Proofreading",
-        description: "Line-level review for grammar, consistency, referencing style and flow.",
-        href: "/services/academic-editing",
-      },
-      {
-        name: "Referencing & Similarity Review",
-        description: "Citation checks, reference formatting and similarity-report guidance.",
-        href: "/services/referencing-similarity",
-      },
-    ],
-  },
-  {
-    stage: "Getting it out",
-    services: [
-      {
-        name: "Journal Article & Publishing Support",
-        description: "Convert your thesis chapter or study into a journal submission.",
-        href: "/services/journal-publishing",
-      },
-      {
-        name: "Grant & Scholarship Coaching",
-        description: "Structure and sharpen funding applications for postgraduate and research grants.",
-        href: "/services/grant-scholarship-coaching",
-      },
-      {
-        name: "Presentation & Defense Coaching",
-        description: "Prepare for your viva, panel presentation or conference talk.",
-        href: "/services/presentation-defense-coaching",
-      },
-    ],
-  },
-];
-
-const serviceStageImages: Record<string, string> = {
-  "Starting out": "/images/services/stage-start.jpg",
-  "Doing the research": "/images/services/stage-research.jpg",
-  "Writing it up": "/images/services/stage-writing.jpg",
-  "Getting it out": "/images/services/stage-publishing.jpg",
-};
-
 // ─── Arrow icon ───────────────────────────────────────────────────────────────
 
 function ArrowIcon() {
@@ -875,39 +841,5 @@ function ArrowIcon() {
         strokeLinejoin="round"
       />
     </svg>
-  );
-}
-
-// ─── Annotated thesis overlay card ───────────────────────────────────────────
-
-function AnnotatedThesisCard() {
-  return (
-    <div className="bg-paper border border-tone-rule shadow-lg rounded-[2px] p-5 sm:p-6 text-xs text-tone-body space-y-3 font-sans">
-      <div className="flex items-center justify-between border-b border-tone-rule pb-2 text-[10px] uppercase tracking-wider text-tone-muted">
-        <span className="font-semibold text-tone-heading">Draft Chapter 3 — Methodology</span>
-        <span className="font-mono text-gold font-medium">Mentor Review #14</span>
-      </div>
-
-      {/* Tracked Edit & Citation */}
-      <div className="space-y-2 leading-relaxed">
-        <p className="line-through text-tone-muted/60 decoration-error/70">
-          The quantitative survey data was correlated using standard regression models.
-        </p>
-        <p className="bg-cream/80 p-2.5 border-l-2 border-gold text-tone-body rounded-[1px]">
-          The survey instruments were validated through exploratory factor analysis, followed by hierarchical regression{" "}
-          <mark className="bg-gold/25 text-tone-heading px-1 py-0.5 rounded-[1px] font-semibold font-mono text-[11px]">
-            (Creswell, 2014; Field, 2018)
-          </mark>.
-        </p>
-      </div>
-
-      {/* Mentor Margin Comment */}
-      <div className="bg-white border border-tone-rule p-3 rounded-[2px] text-tone-body text-[11px] shadow-xs">
-        <span className="font-semibold text-tone-heading block mb-1">Mentor Margin Comment:</span>
-        <p className="italic text-tone-body leading-normal">
-          &ldquo;Your research question and method don&apos;t match yet. See my note on p. 4 &mdash; verify assumptions of normality before computing coefficients.&rdquo;
-        </p>
-      </div>
-    </div>
   );
 }
