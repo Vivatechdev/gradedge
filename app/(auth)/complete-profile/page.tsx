@@ -1,11 +1,11 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Suspense } from "react";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { AuthShell } from "@/components/auth/auth-shell";
 
-export default function CompleteProfilePage() {
+function CompleteProfileForm() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const returnTo = searchParams.get("returnTo") || "/student";
@@ -285,5 +285,22 @@ export default function CompleteProfilePage() {
         </div>
       </form>
     </AuthShell>
+  );
+}
+
+export default function CompleteProfilePage() {
+  return (
+    <Suspense
+      fallback={
+        <AuthShell
+          title="Complete Your Academic Profile"
+          description="A few details to tailor your research mentoring."
+        >
+          <div className="py-12 text-center text-xs font-sans text-tone-muted">Loading profile details...</div>
+        </AuthShell>
+      }
+    >
+      <CompleteProfileForm />
+    </Suspense>
   );
 }

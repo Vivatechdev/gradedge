@@ -13,12 +13,74 @@ export const LeadSchema = z.object({
 export type LeadInput = z.infer<typeof LeadSchema>;
 
 export const BookingSchema = z.object({
-  service_id: z.string().uuid("Invalid service selection"),
+  service_id: z.string().uuid("Invalid service selection").optional(),
   starts_at: z.string().datetime("Invalid date/time format"),
   guest_name: z.string().min(2, "Please enter your name"),
   guest_email: z.string().email("Please enter a valid email address"),
+  guest_study_level: z.enum(["undergraduate", "masters", "phd", "researcher", "other"]).optional(),
+  guest_topic: z.string().optional(),
+  timezone: z.string().default("UTC"),
   notes: z.string().max(1000).optional(),
 });
+
+export type BookingInput = z.infer<typeof BookingSchema>;
+
+export const ConsultationBookingSchema = z.object({
+  starts_at: z.string().datetime("Please select a valid time slot"),
+  timezone: z.string().default("UTC"),
+  full_name: z.string().min(2, "Please enter your full name"),
+  email: z.string().email("Please enter a valid email address"),
+  study_level: z.enum(["undergraduate", "masters", "phd", "researcher", "other"], {
+    message: "Please select your study level",
+  }),
+  topic_help: z.string().min(3, "Please describe what you need help with"),
+  message: z.string().max(1500).optional(),
+});
+
+export type ConsultationBookingInput = z.infer<typeof ConsultationBookingSchema>;
+
+export const RescheduleBookingSchema = z.object({
+  token: z.string().min(8, "Invalid reschedule token"),
+  starts_at: z.string().datetime("Please select a valid time slot"),
+  timezone: z.string().default("UTC"),
+});
+
+export type RescheduleBookingInput = z.infer<typeof RescheduleBookingSchema>;
+
+export const CancelBookingSchema = z.object({
+  token: z.string().min(8, "Invalid cancellation token"),
+  reason: z.string().max(500).optional(),
+});
+
+export type CancelBookingInput = z.infer<typeof CancelBookingSchema>;
+
+export const PaidSessionBookingSchema = z.object({
+  service_id: z.string().min(1, "Please select a service"),
+  starts_at: z.string().datetime("Please select a valid time slot"),
+  timezone: z.string().default("UTC"),
+  notes: z.string().max(1000).optional(),
+});
+
+export type PaidSessionBookingInput = z.infer<typeof PaidSessionBookingSchema>;
+
+export const SupportRequestSchema = z.object({
+  service_id: z.string().min(1, "Please select a service"),
+  title: z.string().min(3, "Please enter a descriptive title for your request"),
+  brief: z.string().min(10, "Please describe the specific assistance or review you require"),
+  deadline: z.string().optional(),
+  files: z
+    .array(
+      z.object({
+        file_name: z.string(),
+        bucket_path: z.string(),
+        size_bytes: z.number(),
+        mime_type: z.string(),
+      })
+    )
+    .optional(),
+});
+
+export type SupportRequestInput = z.infer<typeof SupportRequestSchema>;
 
 export const NewsletterSchema = z.object({
   email: z.string().email("Please enter a valid email address"),
@@ -27,16 +89,21 @@ export const NewsletterSchema = z.object({
 });
 
 export const ProgramApplicationSchema = z.object({
-  full_name: z.string().min(2, "Please enter your name"),
+  name: z.string().min(2, "Please enter your name"),
   email: z.string().email("Please enter a valid academic email address"),
   institution: z.string().min(2, "Please enter your university or institution"),
-  study_level: z.enum(["phd", "masters", "other"]),
-  field_of_study: z.string().min(2, "Please enter your field of study"),
-  dissertation_title: z.string().min(3, "Please enter your working title"),
-  summary: z.string().min(10, "Please provide a research summary"),
-  supervisor_feedback: z.string().optional(),
-  timeline: z.string().min(2, "Please state your target timeline"),
-  heard_from: z.string().optional(),
+  doctoral_stage: z.string().min(2, "Please specify your doctoral stage"),
+  topic_summary: z.string().min(10, "Please provide a summary of your research topic"),
+  completed_summary: z.string().min(10, "Please outline what you have completed so far"),
+  desired_outcomes: z.string().min(10, "Please describe what you want from the accelerator program"),
+  preferred_start: z.string().min(2, "Please choose your preferred start timeframe"),
+  // Backward compatibility fields
+  full_name: z.string().optional(),
+  study_level: z.string().optional(),
+  field_of_study: z.string().optional(),
+  dissertation_title: z.string().optional(),
+  summary: z.string().optional(),
+  timeline: z.string().optional(),
 });
 
 export type ProgramApplicationInput = z.infer<typeof ProgramApplicationSchema>;
@@ -146,6 +213,11 @@ export type ResetPasswordInput = z.infer<typeof ResetPasswordSchema>;
 
 export const leadSchema = LeadSchema;
 export const bookingSchema = BookingSchema;
+export const consultationBookingSchema = ConsultationBookingSchema;
+export const rescheduleBookingSchema = RescheduleBookingSchema;
+export const cancelBookingSchema = CancelBookingSchema;
+export const paidSessionBookingSchema = PaidSessionBookingSchema;
+export const supportRequestSchema = SupportRequestSchema;
 export const newsletterSchema = NewsletterSchema;
 export const workshopRequestSchema = WorkshopRequestSchema;
 export const programApplicationSchema = ProgramApplicationSchema;

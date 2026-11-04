@@ -59,8 +59,8 @@ export default function RequestSupportPage() {
           </div>
 
           <div className="pt-2 flex flex-wrap gap-4">
-            <Button variant="accent" size="lg" href="/login">
-              Log in to Student Dashboard
+            <Button variant="accent" size="lg" href="/student/support-request">
+              Submit a Support Request
             </Button>
             <Button variant="primary" size="lg" href="/register">
               Create an Account

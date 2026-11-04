@@ -147,11 +147,11 @@ export default function StudentDashboardPage() {
           </div>
 
           <div className="flex items-center gap-3 shrink-0">
-            <Button href="/booking" variant="secondary" size="sm">
-              Schedule Extra Hour
+            <Button href="/student/book-session" variant="secondary" size="sm">
+              Book Paid Session
             </Button>
-            <Button href="/booking?mode=triage" variant="accent" size="sm">
-              Submit Next Draft
+            <Button href="/student/support-request" variant="accent" size="sm">
+              Submit Support Request
             </Button>
           </div>
         </div>

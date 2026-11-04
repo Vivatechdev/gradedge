@@ -35,7 +35,6 @@ export default function BookConsultationPage() {
       <PageBreadcrumb items={[{ label: "Home", href: "/" }, { label: "Book a Call" }]} />
 
       <PageHero
-        sectionNumber={1}
         sectionLabel="Initial Advisory"
         headline="Book a free 20-minute consultation."
         standfirst="Tell us about your project. We will evaluate your methodology and tell you honestly whether we can help."

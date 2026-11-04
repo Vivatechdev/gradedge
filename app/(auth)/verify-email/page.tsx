@@ -1,11 +1,11 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Suspense } from "react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { AuthShell } from "@/components/auth/auth-shell";
 
-export default function VerifyEmailPage() {
+function VerifyEmailContent() {
   const searchParams = useSearchParams();
   const initialEmail = searchParams.get("email") || "";
 
@@ -50,52 +50,57 @@ export default function VerifyEmailPage() {
         return;
       }
 
-      setNotice("A new verification link has been sent to your email.");
-      setCooldown(60); // 60 seconds cooldown
+      setNotice("A new confirmation email has been dispatched. Please check your inbox and institutional spam filters.");
+      setCooldown(60);
       setResending(false);
     } catch {
-      setError("Unable to connect to service. Please try again.");
+      setError("A network error occurred. Please try again.");
       setResending(false);
     }
   };
 
   return (
-    <AuthShell title="Verify your email">
-      <div className="space-y-6 text-center font-sans py-2">
-        <div className="w-12 h-12 rounded-[4px] bg-cream border border-[#E4DFD5] text-gold flex items-center justify-center mx-auto text-lg font-serif">
-          ✉
-        </div>
-
-        <div className="space-y-2 max-w-sm mx-auto">
-          <p className="text-xs sm:text-sm text-tone-muted leading-relaxed">
-            A verification link has been sent to your email address. Please click the link to activate your account.
-          </p>
-        </div>
-
-        {error && (
-          <div
-            role="alert"
-            className="p-3 bg-burgundy/10 border-l-2 border-burgundy text-xs text-tone-heading rounded-[4px] text-left leading-relaxed"
-          >
-            {error}
-          </div>
-        )}
-
+    <AuthShell
+      title="Check Your Academic Inbox"
+      description="We have dispatched a verification link to confirm your research workspace."
+    >
+      <div className="space-y-4">
         {notice && (
           <div
             role="status"
-            className="p-3 bg-forest/10 border-l-2 border-forest text-xs text-tone-heading rounded-[4px] text-left leading-relaxed"
+            className="p-3 bg-success/10 border border-success/30 rounded-[4px] text-xs font-sans text-tone-heading leading-relaxed"
           >
             {notice}
           </div>
         )}
 
-        <div className="space-y-3 pt-2 text-left">
-          <label
-            htmlFor="verify_email"
-            className="block text-xs font-semibold uppercase tracking-wider text-tone-heading"
+        {error && (
+          <div
+            role="alert"
+            className="p-3 bg-error/10 border border-error/30 rounded-[4px] text-xs font-sans text-error leading-relaxed"
           >
-            Account Email
+            {error}
+          </div>
+        )}
+
+        <div className="bg-[#FAF8F4] border border-[#E4DFD5] rounded-[4px] p-4 text-xs space-y-2 text-tone-muted">
+          <p className="font-semibold text-tone-heading">
+            Institutional Email Filter Guidance:
+          </p>
+          <p>
+            University spam filters occasionally flag automated confirmations. If you do not see the email within 2 minutes:
+          </p>
+          <ul className="list-disc pl-4 space-y-1">
+            <li>Inspect your institution&apos;s Junk, Spam, or Quarantine folder.</li>
+            <li>Whitelist <code>admissions@gradedge.com</code> with your IT department.</li>
+            <li>Or request another link below.</li>
+          </ul>
+        </div>
+
+        {/* Resend Form */}
+        <div className="pt-2 space-y-2">
+          <label htmlFor="verify_email" className="block text-xs font-semibold text-tone-heading">
+            Confirmation Email Address:
           </label>
           <input
             id="verify_email"
@@ -129,5 +134,22 @@ export default function VerifyEmailPage() {
         </div>
       </div>
     </AuthShell>
+  );
+}
+
+export default function VerifyEmailPage() {
+  return (
+    <Suspense
+      fallback={
+        <AuthShell
+          title="Check Your Academic Inbox"
+          description="We have dispatched a verification link to confirm your research workspace."
+        >
+          <div className="py-12 text-center text-xs font-sans text-tone-muted">Loading verification status...</div>
+        </AuthShell>
+      }
+    >
+      <VerifyEmailContent />
+    </Suspense>
   );
 }
