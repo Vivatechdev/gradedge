@@ -1,75 +1,80 @@
-import type { Metadata } from "next";
-import { buildMetadata } from "@/lib/metadata";
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
+"use client";
 
-export const metadata: Metadata = buildMetadata({
-  title: "Verify Your Email",
-  description: "Verify your GradEdge account email address.",
-  path: "/verify-email",
-  noIndex: true,
-});
+import React, { useState } from "react";
+import Link from "next/link";
+import { AuthSplitLayout } from "@/components/auth/auth-split-layout";
+import { Button } from "@/components/ui/button";
+import { Mail, CheckCircle2, ArrowRight } from "lucide-react";
 
 export default function VerifyEmailPage() {
+  const [resending, setResending] = useState(false);
+  const [resent, setResent] = useState(false);
+
+  const handleResend = async () => {
+    setResending(true);
+    // Simulate / trigger resend confirmation
+    setTimeout(() => {
+      setResending(false);
+      setResent(true);
+    }, 800);
+  };
+
   return (
-    <div className="min-h-screen bg-paper flex items-center justify-center px-4">
-      <div className="w-full max-w-sm space-y-8 text-center">
-        {/* Logo */}
-        <div>
-          <Link href="/" className="inline-flex items-center gap-2">
-            <span className="w-3 h-3 bg-gold block" aria-hidden="true" />
-            <span className="font-serif text-xl text-tone-heading font-semibold tracking-tight">
-              GradEdge
-            </span>
+    <AuthSplitLayout
+      honestLine="Academic work demands precision and trust."
+      subtext="We have dispatched a confirmation link to verify your institutional or scholar email address."
+      title="Verify Your Email Address"
+      subtitle={<p>One quick step before entering your researcher workspace.</p>}
+    >
+      <div className="space-y-6 text-center font-sans py-2">
+        <div className="w-14 h-14 rounded-full bg-cream border border-tone-rule text-gold flex items-center justify-center mx-auto">
+          <Mail className="w-6 h-6" />
+        </div>
+
+        <div className="space-y-2 max-w-sm mx-auto">
+          <h2 className="font-serif text-lg font-medium text-tone-heading">
+            Confirmation Link Dispatched
+          </h2>
+          <p className="text-xs sm:text-sm text-tone-muted leading-relaxed">
+            Please check your inbox and click the verification link to activate your scholar profile and thesis project portal.
+          </p>
+        </div>
+
+        <div className="p-3.5 bg-paper border border-tone-rule text-xs text-tone-body rounded-[2px] text-left leading-relaxed">
+          <span className="font-semibold text-tone-heading block mb-1">
+            Didn&apos;t receive the email?
+          </span>
+          Check your institutional spam folder or filters. Academic mail systems (e.g. .edu, .ac.uk) may occasionally hold new automated dispatches for review.
+        </div>
+
+        {resent ? (
+          <div className="p-3 bg-forest/10 border border-forest/20 text-xs text-forest rounded-[2px] flex items-center justify-center gap-2">
+            <CheckCircle2 className="w-4 h-4" />
+            <span>A fresh verification link has been dispatched.</span>
+          </div>
+        ) : (
+          <Button
+            type="button"
+            variant="secondary"
+            size="md"
+            onClick={handleResend}
+            disabled={resending}
+            className="w-full text-xs"
+          >
+            {resending ? "Dispatching..." : "Resend Verification Email"}
+          </Button>
+        )}
+
+        <div className="pt-4 border-t border-tone-rule">
+          <Link
+            href="/login"
+            className="inline-flex items-center gap-1.5 text-xs text-navy hover:text-gold transition-colors font-medium"
+          >
+            <span>Proceed to Sign In</span>
+            <ArrowRight className="w-3.5 h-3.5" />
           </Link>
         </div>
-
-        <div className="space-y-3">
-          <div
-            className="w-12 h-12 bg-success/10 border border-success/30 rounded-[4px] flex items-center justify-center mx-auto"
-            aria-hidden="true"
-          >
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              className="text-success"
-            >
-              <path
-                d="M20 6L9 17l-5-5"
-                stroke="currentColor"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </div>
-          <h1 className="type-h2 text-tone-heading">Check your email</h1>
-          <p className="type-body text-tone-muted">
-            We sent a verification link to your email address. Open it to
-            activate your account.
-          </p>
-        </div>
-
-        <div className="space-y-3">
-          <p className="type-small text-tone-muted">
-            Did not receive it? Check your spam folder. If it is not there,{" "}
-            <Link
-              href="/contact"
-              className="text-navy font-medium hover:text-tone-heading transition-colors duration-150"
-            >
-              contact us
-            </Link>
-            .
-          </p>
-
-          <Button variant="secondary" href="/login" className="w-full">
-            Back to sign in
-          </Button>
-        </div>
       </div>
-    </div>
+    </AuthSplitLayout>
   );
 }
-

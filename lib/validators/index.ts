@@ -68,6 +68,57 @@ export const BlogPostSchema = z.object({
 
 export type BlogPostInput = z.infer<typeof BlogPostSchema>;
 
+export const RegisterSchema = z.object({
+  full_name: z.string().min(2, "Please enter your full name"),
+  email: z.string().email("Please enter a valid institutional or personal email address"),
+  password: z
+    .string()
+    .min(8, "Password must be at least 8 characters long")
+    .regex(/[A-Za-z]/, "Password must contain at least one letter")
+    .regex(/[0-9]/, "Password must contain at least one number"),
+  study_level: z.enum(["undergraduate", "masters", "phd", "researcher", "other"], {
+    message: "Please select your current study level",
+  }),
+  institution: z.string().min(2, "Please enter your university or institution"),
+  field_of_study: z.string().min(2, "Please enter your discipline or field of study"),
+  timezone: z.string().min(1, "Please select your primary timezone"),
+  terms_accepted: z.literal(true, {
+    message: "You must accept the Terms and Academic Integrity Policy to create an account.",
+  }),
+  marketing_opt_in: z.boolean().default(false),
+});
+
+export type RegisterInput = z.infer<typeof RegisterSchema>;
+
+export const LoginSchema = z.object({
+  email: z.string().email("Please enter a valid email address"),
+  password: z.string().min(1, "Please enter your password"),
+});
+
+export type LoginInput = z.infer<typeof LoginSchema>;
+
+export const ForgotPasswordSchema = z.object({
+  email: z.string().email("Please enter a valid email address"),
+});
+
+export type ForgotPasswordInput = z.infer<typeof ForgotPasswordSchema>;
+
+export const ResetPasswordSchema = z
+  .object({
+    password: z
+      .string()
+      .min(8, "Password must be at least 8 characters long")
+      .regex(/[A-Za-z]/, "Password must contain at least one letter")
+      .regex(/[0-9]/, "Password must contain at least one number"),
+    confirm_password: z.string(),
+  })
+  .refine((data) => data.password === data.confirm_password, {
+    message: "Passwords do not match",
+    path: ["confirm_password"],
+  });
+
+export type ResetPasswordInput = z.infer<typeof ResetPasswordSchema>;
+
 export const leadSchema = LeadSchema;
 export const bookingSchema = BookingSchema;
 export const newsletterSchema = NewsletterSchema;
