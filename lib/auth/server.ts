@@ -15,6 +15,8 @@ export interface UserProfile {
   field_of_study: string;
   timezone: string;
   marketing_opt_in: boolean;
+  avatar_url?: string | null;
+  notification_preferences?: Record<string, any> | null;
   terms_accepted_at?: string | null;
   terms_version?: string | null;
   profile_completed_at?: string | null;

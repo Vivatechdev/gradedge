@@ -60,10 +60,13 @@ export function DashboardShell({
   const studentNav: DashboardNavSubItem[] = [
     { label: "Overview", href: "/student", icon: LayoutDashboard },
     { label: "My Projects", href: "/student/projects", icon: FolderKanban },
-    { label: "Consultations", href: "/student/bookings", icon: CalendarCheck },
+    { label: "Sessions", href: "/student/sessions", icon: CalendarCheck },
     { label: "Messages", href: "/student/messages", icon: MessageSquare },
     { label: "Files & Drafts", href: "/student/files", icon: FileText },
-    { label: "Billing & Invoices", href: "/student/billing", icon: CreditCard },
+    { label: "Accelerator", href: "/student/accelerator", icon: BookOpen },
+    { label: "Your Mentor", href: "/student/mentor", icon: Users },
+    { label: "Billing & Plans", href: "/student/billing", icon: CreditCard },
+    { label: "Settings", href: "/student/settings", icon: Settings },
   ];
 
   // Admin Navigation Items
@@ -166,14 +169,14 @@ export function DashboardShell({
           {/* Right Header items: Notifications & Profile Dropdown */}
           <div className="flex items-center gap-4">
             {/* Notification Bell */}
-            <button
-              type="button"
+            <Link
+              href={role === "admin" ? "/admin/notifications" : "/student/notifications"}
               aria-label="View notifications"
               className="relative p-2 text-tone-muted hover:text-tone-heading transition-colors rounded-[2px] border border-transparent hover:border-tone-rule"
             >
               <Bell className="h-4 w-4" />
               <span className="absolute top-1.5 right-1.5 h-1.5 w-1.5 bg-gold rounded-full" />
-            </button>
+            </Link>
 
             {/* Profile Menu Dropdown */}
             <DropdownMenu
@@ -193,11 +196,21 @@ export function DashboardShell({
                 <span className="block text-xs font-semibold text-tone-heading">{user.name}</span>
                 <span className="block text-[11px] text-tone-muted truncate">{user.email}</span>
               </div>
-              <DropdownItem onClick={() => {}}>Account Profile</DropdownItem>
-              <DropdownItem onClick={() => {}}>Notification Preferences</DropdownItem>
+              <DropdownItem onClick={() => { window.location.href = role === "admin" ? "/admin/settings" : "/student/settings"; }}>
+                Account Profile & Settings
+              </DropdownItem>
+              <DropdownItem onClick={() => { window.location.href = role === "admin" ? "/admin/settings" : "/student/settings?tab=notifications"; }}>
+                Notification Preferences
+              </DropdownItem>
               <DropdownSeparator />
-              <DropdownItem onClick={() => {}} className="text-error hover:text-error hover:bg-error/5">
-                <LogOut className="h-3.5 w-3.5" />
+              <DropdownItem
+                onClick={async () => {
+                  await fetch("/api/auth/signout", { method: "POST" });
+                  window.location.href = "/login?message=signed_out";
+                }}
+                className="text-error hover:text-error hover:bg-error/5"
+              >
+                <LogOut className="h-3.5 w-3.5 mr-2" />
                 <span>Sign out</span>
               </DropdownItem>
             </DropdownMenu>
