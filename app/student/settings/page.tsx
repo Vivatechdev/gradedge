@@ -54,10 +54,10 @@ function SettingsContent() {
     tabParam === "notifications"
       ? "notifications"
       : tabParam === "security"
-      ? "security"
-      : tabParam === "data"
-      ? "data"
-      : "profile"
+        ? "security"
+        : tabParam === "data"
+          ? "data"
+          : "profile"
   );
 
   const [loading, setLoading] = useState(true);
@@ -332,11 +332,10 @@ function SettingsContent() {
           <button
             type="button"
             onClick={() => setActiveTab("profile")}
-            className={`px-4 py-2.5 text-xs font-medium border-b-2 transition-all flex items-center gap-2 ${
-              activeTab === "profile"
-                ? "border-navy-deep text-navy-deep font-semibold"
-                : "border-transparent text-tone-muted hover:text-tone-heading hover:border-tone-rule"
-            }`}
+            className={`px-4 py-2.5 text-xs font-medium border-b-2 transition-all flex items-center gap-2 ${activeTab === "profile"
+              ? "border-navy-deep text-navy-deep font-semibold"
+              : "border-transparent text-tone-muted hover:text-tone-heading hover:border-tone-rule"
+              }`}
           >
             <User className="h-3.5 w-3.5" />
             <span>Profile & Institution</span>
@@ -344,11 +343,10 @@ function SettingsContent() {
           <button
             type="button"
             onClick={() => setActiveTab("security")}
-            className={`px-4 py-2.5 text-xs font-medium border-b-2 transition-all flex items-center gap-2 ${
-              activeTab === "security"
-                ? "border-navy-deep text-navy-deep font-semibold"
-                : "border-transparent text-tone-muted hover:text-tone-heading hover:border-tone-rule"
-            }`}
+            className={`px-4 py-2.5 text-xs font-medium border-b-2 transition-all flex items-center gap-2 ${activeTab === "security"
+              ? "border-navy-deep text-navy-deep font-semibold"
+              : "border-transparent text-tone-muted hover:text-tone-heading hover:border-tone-rule"
+              }`}
           >
             <KeyRound className="h-3.5 w-3.5" />
             <span>Password & Security</span>
@@ -356,11 +354,10 @@ function SettingsContent() {
           <button
             type="button"
             onClick={() => setActiveTab("notifications")}
-            className={`px-4 py-2.5 text-xs font-medium border-b-2 transition-all flex items-center gap-2 ${
-              activeTab === "notifications"
-                ? "border-navy-deep text-navy-deep font-semibold"
-                : "border-transparent text-tone-muted hover:text-tone-heading hover:border-tone-rule"
-            }`}
+            className={`px-4 py-2.5 text-xs font-medium border-b-2 transition-all flex items-center gap-2 ${activeTab === "notifications"
+              ? "border-navy-deep text-navy-deep font-semibold"
+              : "border-transparent text-tone-muted hover:text-tone-heading hover:border-tone-rule"
+              }`}
           >
             <Bell className="h-3.5 w-3.5" />
             <span>Notification Rules</span>
@@ -368,11 +365,10 @@ function SettingsContent() {
           <button
             type="button"
             onClick={() => setActiveTab("data")}
-            className={`px-4 py-2.5 text-xs font-medium border-b-2 transition-all flex items-center gap-2 ${
-              activeTab === "data"
-                ? "border-navy-deep text-navy-deep font-semibold"
-                : "border-transparent text-tone-muted hover:text-tone-heading hover:border-tone-rule"
-            }`}
+            className={`px-4 py-2.5 text-xs font-medium border-b-2 transition-all flex items-center gap-2 ${activeTab === "data"
+              ? "border-navy-deep text-navy-deep font-semibold"
+              : "border-transparent text-tone-muted hover:text-tone-heading hover:border-tone-rule"
+              }`}
           >
             <Shield className="h-3.5 w-3.5" />
             <span>Data & Privacy</span>
