@@ -1,10 +1,18 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { ShieldCheck, Lock, AlertCircle } from "lucide-react";
+import { ShieldCheck, Lock, AlertCircle, Info } from "lucide-react";
 import { Currency, PaymentPurpose, formatMoney } from "@/lib/payments/types";
+import {
+  SUPPORTED_CURRENCIES,
+  CURRENCY_METADATA,
+  SupportedCurrency,
+} from "@/lib/currency/config";
+import { formatPrice } from "@/lib/currency/format";
+import { DEFAULT_CANONICAL_PRICES } from "@/lib/currency/service";
+import { useCurrency } from "@/components/currency/currency-context";
 
 interface CheckoutFormProps {
   purpose: PaymentPurpose;
@@ -12,7 +20,7 @@ interface CheckoutFormProps {
   description: string;
   includes: string[];
   priceUsdMinor: number;
-  priceNgnMinor: number;
+  priceNgnMinor?: number;
   initialCurrency?: Currency;
   serviceSlug?: string;
   packageId?: string;
@@ -28,8 +36,7 @@ export function CheckoutForm({
   description,
   includes,
   priceUsdMinor,
-  priceNgnMinor,
-  initialCurrency = "USD",
+  initialCurrency,
   serviceSlug,
   packageId,
   bookingId,
@@ -37,17 +44,50 @@ export function CheckoutForm({
   allowInstallments = false,
   installmentTotal = 3,
 }: CheckoutFormProps) {
-  const [currency, setCurrency] = useState<Currency>(initialCurrency);
+  const { currency: contextCurrency, isLoaded } = useCurrency();
+  const [currency, setCurrency] = useState<Currency>(initialCurrency || contextCurrency || "USD");
   const [isInstallment, setIsInstallment] = useState(false);
   const [customerEmail, setCustomerEmail] = useState("");
   const [customerName, setCustomerName] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  const fullAmountMinor = currency === "USD" ? priceUsdMinor : priceNgnMinor;
+  // Sync with context on load if initialCurrency wasn't explicitly passed
+  useEffect(() => {
+    if (!initialCurrency && isLoaded && contextCurrency) {
+      setCurrency(contextCurrency as Currency);
+    }
+  }, [isLoaded, contextCurrency, initialCurrency]);
+
+  const activeCurrency = (currency || "USD") as SupportedCurrency;
+  const meta = CURRENCY_METADATA[activeCurrency] || CURRENCY_METADATA.USD;
+  const isDirect = meta.paystackDirectSupported;
+
+  // Resolve amount in selected currency
+  let fullAmountMinor = priceUsdMinor;
+  if (packageId && DEFAULT_CANONICAL_PRICES[packageId]) {
+    const itemPrices = DEFAULT_CANONICAL_PRICES[packageId];
+    fullAmountMinor = itemPrices[activeCurrency] ?? itemPrices.USD;
+  } else if (purpose === "booking") {
+    fullAmountMinor = DEFAULT_CANONICAL_PRICES["session-60"][activeCurrency] ?? 7500;
+  } else if (purpose === "program") {
+    fullAmountMinor = DEFAULT_CANONICAL_PRICES["accelerator-full"][activeCurrency] ?? 120000;
+  } else {
+    // Benchmark conversion for packages not in static dictionary
+    const rate = meta.approximateExchangeFromUsd;
+    const usdMajor = priceUsdMinor / 100;
+    fullAmountMinor = Math.round(usdMajor * rate * 100);
+  }
+
   const installmentAmountMinor = Math.round(fullAmountMinor / installmentTotal);
   const currentPayAmountMinor = isInstallment ? installmentAmountMinor : fullAmountMinor;
-  const formattedButtonAmount = formatMoney(currentPayAmountMinor, currency);
+  const formattedDisplayAmount = formatPrice(currentPayAmountMinor, activeCurrency);
+
+  // Authoritative USD charge amount for non-direct currencies
+  const currentUsdAmountMinor = isInstallment
+    ? Math.round(priceUsdMinor / installmentTotal)
+    : priceUsdMinor;
+  const formattedUsdAmount = formatPrice(currentUsdAmountMinor, "USD");
 
   async function handleCheckout(e: React.FormEvent) {
     e.preventDefault();
@@ -60,7 +100,7 @@ export function CheckoutForm({
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           purpose,
-          currency,
+          currency: activeCurrency,
           customerEmail: customerEmail.trim() || undefined,
           customerName: customerName.trim() || undefined,
           serviceSlug,
@@ -90,7 +130,7 @@ export function CheckoutForm({
   }
 
   return (
-    <form onSubmit={handleCheckout} className="bg-white border border-tone-rule rounded-[2px] p-6 sm:p-8 text-left space-y-6 shadow-xs">
+    <form onSubmit={handleCheckout} className="bg-white border border-tone-rule rounded-[2px] p-6 sm:p-8 text-left space-y-6 shadow-xs font-sans">
       {/* Purpose & Inclusions */}
       <div className="space-y-3 pb-5 border-b border-tone-rule">
         <span className="type-micro text-gold">Item Summary</span>
@@ -98,49 +138,69 @@ export function CheckoutForm({
         <p className="text-xs text-tone-muted leading-relaxed">{description}</p>
 
         {includes.length > 0 && (
-          <div className="pt-3 space-y-2">
-            <span className="text-[11px] font-semibold uppercase tracking-wider text-tone-heading">
-              What is included:
-            </span>
-            <ul className="space-y-1.5 text-xs text-tone-body">
-              {includes.map((inc, i) => (
-                <li key={i} className="flex items-start gap-2">
-                  <span className="text-gold font-bold">&check;</span>
-                  <span>{inc}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
+          <ul className="space-y-1.5 pt-2 text-xs text-tone-body">
+            {includes.map((inc, i) => (
+              <li key={i} className="flex items-start gap-2">
+                <span className="text-gold font-bold">&check;</span>
+                <span>{inc}</span>
+              </li>
+            ))}
+          </ul>
         )}
       </div>
 
-      {/* Currency Switcher */}
+      {/* Currency Selector (Rule 1 & 5) */}
       <div className="space-y-2">
-        <label className="text-xs font-semibold text-tone-heading">Select Billing Currency</label>
-        <div className="grid grid-cols-2 gap-2">
-          <button
-            type="button"
-            onClick={() => setCurrency("USD")}
-            className={`py-2 px-3 text-xs font-medium rounded-[2px] border transition-colors ${
-              currency === "USD"
-                ? "border-navy bg-navy text-white"
-                : "border-tone-rule bg-paper text-tone-heading hover:bg-tone-rule/20"
-            }`}
-          >
-            US Dollar (USD $)
-          </button>
-          <button
-            type="button"
-            onClick={() => setCurrency("NGN")}
-            className={`py-2 px-3 text-xs font-medium rounded-[2px] border transition-colors ${
-              currency === "NGN"
-                ? "border-navy bg-navy text-white"
-                : "border-tone-rule bg-paper text-tone-heading hover:bg-tone-rule/20"
-            }`}
-          >
-            Nigerian Naira (NGN ₦)
-          </button>
+        <div className="flex items-center justify-between">
+          <label className="text-xs font-semibold text-tone-heading">
+            Billing Currency
+          </label>
+          <span className="text-[10px] text-tone-muted font-mono uppercase">
+            Auto-detected or override
+          </span>
         </div>
+
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
+          {SUPPORTED_CURRENCIES.map((code) => {
+            const isSelected = code === activeCurrency;
+            const cMeta = CURRENCY_METADATA[code];
+            return (
+              <button
+                key={code}
+                type="button"
+                onClick={() => setCurrency(code as Currency)}
+                className={`py-2 px-2.5 text-xs font-mono font-medium rounded-[2px] border transition-colors cursor-pointer flex items-center justify-between ${
+                  isSelected
+                    ? "border-navy bg-navy text-white"
+                    : "border-tone-rule bg-paper text-tone-heading hover:bg-tone-rule/20"
+                }`}
+              >
+                <span>{code}</span>
+                <span className={isSelected ? "text-gold" : "text-tone-muted"}>
+                  {cMeta.symbol}
+                </span>
+              </button>
+            );
+          })}
+        </div>
+
+        {/* Currency Support Notice (Rule 5) */}
+        {!isDirect && (
+          <div className="p-3 bg-paper border border-tone-rule rounded-[2px] flex items-start gap-2 text-[11px] text-tone-muted leading-relaxed">
+            <Info className="w-4 h-4 text-gold shrink-0 mt-0.5" />
+            <div>
+              <strong className="text-tone-heading block font-sans">
+                Payment Processed in USD
+              </strong>
+              <span>
+                Our Paystack merchant gateway bills this transaction directly in USD as{" "}
+                <strong className="text-navy font-mono">{formattedUsdAmount}</strong>. The figure{" "}
+                <strong className="font-mono">{formattedDisplayAmount}</strong> is an{" "}
+                <em className="text-tone-heading font-medium">approx. only</em> local conversion.
+              </span>
+            </div>
+          </div>
+        )}
       </div>
 
       {/* Optional Installment Selector for Accelerator */}
@@ -157,7 +217,7 @@ export function CheckoutForm({
                 className="text-navy"
               />
               <span className="text-tone-heading">
-                Full Program Tuition — <strong>{formatMoney(fullAmountMinor, currency)}</strong>
+                Full Program Tuition — <strong>{formattedDisplayAmount}</strong>
               </span>
             </label>
             <label className="flex items-center gap-2 cursor-pointer">
@@ -169,7 +229,7 @@ export function CheckoutForm({
                 className="text-navy"
               />
               <span className="text-tone-heading">
-                3-Part Installment Plan — <strong>{formatMoney(installmentAmountMinor, currency)}</strong> today, then 2 monthly installments
+                3-Part Installment Plan — <strong>{formatPrice(installmentAmountMinor, activeCurrency)}</strong> today, then 2 monthly installments
               </span>
             </label>
           </div>
@@ -214,9 +274,16 @@ export function CheckoutForm({
       {/* Total Due Callout */}
       <div className="pt-3 border-t border-tone-rule flex items-baseline justify-between">
         <span className="text-xs text-tone-muted">Total Due Now:</span>
-        <span className="font-serif text-2xl font-semibold text-tone-heading">
-          {formattedButtonAmount}
-        </span>
+        <div className="text-right">
+          <span className="font-serif text-2xl font-semibold text-tone-heading block">
+            {isDirect ? formattedDisplayAmount : formattedUsdAmount}
+          </span>
+          {!isDirect && (
+            <span className="text-[11px] text-tone-muted block font-mono">
+              approx. {formattedDisplayAmount}
+            </span>
+          )}
+        </div>
       </div>
 
       {error && (
@@ -236,7 +303,13 @@ export function CheckoutForm({
           className="w-full font-semibold text-xs py-3 flex items-center justify-center gap-2"
         >
           <Lock className="w-3.5 h-3.5" />
-          <span>{loading ? "Preparing Secure Checkout..." : `Pay ${formattedButtonAmount} securely`}</span>
+          <span>
+            {loading
+              ? "Preparing Secure Checkout..."
+              : isDirect
+              ? `Pay ${formattedDisplayAmount} securely`
+              : `Pay ${formattedUsdAmount} securely (approx. ${formattedDisplayAmount})`}
+          </span>
         </Button>
 
         <p className="text-[11px] text-center text-tone-muted">

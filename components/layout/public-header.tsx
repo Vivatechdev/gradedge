@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Logo } from "./logo";
 import { Button } from "@/components/ui/button";
+import { CurrencySelector } from "@/components/currency/currency-selector";
 import { cn } from "@/lib/utils";
 
 export const SERVICE_CATEGORIES = [
@@ -180,7 +181,9 @@ export function PublicHeader({
           </div>
 
           {/* Right Action buttons */}
-          <div className="hidden lg:flex items-center gap-5">
+          <div className="hidden lg:flex items-center gap-4">
+            <CurrencySelector />
+
             {isLoggedIn ? (
               <Link
                 href={dashboardHref}
@@ -270,7 +273,12 @@ export function PublicHeader({
               ))}
             </div>
 
-            <div className="pt-4 border-t border-tone-rule">
+            <div className="pt-4 border-t border-tone-rule flex items-center justify-between">
+              <span className="text-xs text-tone-muted font-medium">Select Currency</span>
+              <CurrencySelector />
+            </div>
+
+            <div className="pt-3 border-t border-tone-rule">
               {isLoggedIn ? (
                 <Link
                   href={dashboardHref}

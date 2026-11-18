@@ -1,5 +1,14 @@
 import type { Metadata } from "next";
 import { Fraunces, Instrument_Sans } from "next/font/google";
+import { cookies } from "next/headers";
+import { CurrencyProvider } from "@/components/currency/currency-context";
+import {
+  CURRENCY_COOKIE_NAME,
+  DEFAULT_CURRENCY,
+  SupportedCurrency,
+  isSupportedCurrency,
+} from "@/lib/currency/config";
+import { CookieNotice } from "@/components/privacy/cookie-notice";
 import "./globals.css";
 
 const fraunces = Fraunces({
@@ -35,15 +44,34 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const cookieStore = await cookies();
+  const rawCurrency = cookieStore.get(CURRENCY_COOKIE_NAME)?.value;
+  const initialCurrency: SupportedCurrency =
+    rawCurrency && isSupportedCurrency(rawCurrency)
+      ? (rawCurrency.toUpperCase() as SupportedCurrency)
+      : DEFAULT_CURRENCY;
+
   return (
     <html lang="en" className={`${fraunces.variable} ${instrumentSans.variable} h-full antialiased`}>
+      <head>
+        {process.env.NEXT_PUBLIC_PLAUSIBLE_DOMAIN && (
+          <script
+            defer
+            data-domain={process.env.NEXT_PUBLIC_PLAUSIBLE_DOMAIN}
+            src="https://plausible.io/js/script.js"
+          />
+        )}
+      </head>
       <body className="min-h-full flex flex-col bg-paper text-tone-body font-sans">
-        {children}
+        <CurrencyProvider initialCurrency={initialCurrency}>
+          {children}
+          <CookieNotice />
+        </CurrencyProvider>
       </body>
     </html>
   );

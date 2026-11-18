@@ -55,7 +55,7 @@ async function runAccessControlTests() {
 
   try {
     // Unauthenticated GET /admin
-    const adminRes = await fetch("http://localhost:3000/admin", {
+    const adminRes = await fetch("http://localhost:3005/admin", {
       redirect: "manual",
     });
     const adminLocation = adminRes.headers.get("location") || "";
@@ -76,7 +76,7 @@ async function runAccessControlTests() {
     );
 
     // Unauthenticated GET /student
-    const studentRes = await fetch("http://localhost:3000/student", {
+    const studentRes = await fetch("http://localhost:3005/student", {
       redirect: "manual",
     });
     const studentLocation = studentRes.headers.get("location") || "";
@@ -98,7 +98,7 @@ async function runAccessControlTests() {
     );
 
     // Student attempting to access /admin
-    const studentToAdminRes = await fetch("http://localhost:3000/admin", {
+    const studentToAdminRes = await fetch("http://localhost:3005/admin", {
       headers: { Cookie: "mock_user_role=student" },
       redirect: "manual",
     });
@@ -164,7 +164,7 @@ async function runAccessControlTests() {
 
   try {
     // Middleware gate test: Incomplete student profile visiting /student redirects to /complete-profile
-    const incompleteGateRes = await fetch("http://localhost:3000/student", {
+    const incompleteGateRes = await fetch("http://localhost:3005/student", {
       headers: { Cookie: "mock_user_role=student; mock_incomplete_profile=true" },
       redirect: "manual",
     });

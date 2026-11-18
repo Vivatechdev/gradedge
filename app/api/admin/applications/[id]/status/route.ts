@@ -52,7 +52,7 @@ export async function POST(
 
     // On acceptance, email applicant with secure payment link
     if (status === "accepted") {
-      const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+      const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://gradedge.com";
       const paymentUrl =
         application.secure_payment_url ||
         `${siteUrl}/checkout/accelerator?token=${application.secure_payment_token || application.id}`;
@@ -64,6 +64,15 @@ export async function POST(
         note,
       });
     }
+
+    // Audit log admin status change
+    await supabase.from("audit_log").insert({
+      actor_id: admin.user.id,
+      action: "application_status_updated",
+      entity: "program_application",
+      entity_id: id,
+      metadata: { status, note },
+    });
 
     return NextResponse.json({
       success: true,
@@ -77,4 +86,3 @@ export async function POST(
     return NextResponse.json({ error: "Internal server error" }, { status: 500 });
   }
 }
-

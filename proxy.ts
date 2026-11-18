@@ -1,5 +1,40 @@
 import { NextResponse, type NextRequest } from "next/server";
 import { createServerClient } from "@supabase/ssr";
+import {
+  CURRENCY_COOKIE_NAME,
+  DEFAULT_CURRENCY,
+  isSupportedCurrency,
+  resolveCurrencyFromCountry,
+  SupportedCurrency,
+} from "@/lib/currency/config";
+
+function applyCurrencyHeaders(request: NextRequest, res: NextResponse): NextResponse {
+  const existingCookie = request.cookies.get(CURRENCY_COOKIE_NAME)?.value;
+  let resolvedCurrency: SupportedCurrency = DEFAULT_CURRENCY;
+
+  if (existingCookie && isSupportedCurrency(existingCookie)) {
+    resolvedCurrency = existingCookie.toUpperCase() as SupportedCurrency;
+  } else {
+    const country =
+      request.headers.get("x-vercel-ip-country") ||
+      request.headers.get("cf-ipcountry") ||
+      request.headers.get("x-country");
+    resolvedCurrency = resolveCurrencyFromCountry(country);
+    res.cookies.set({
+      name: CURRENCY_COOKIE_NAME,
+      value: resolvedCurrency,
+      path: "/",
+      maxAge: 60 * 60 * 24 * 365,
+      sameSite: "lax",
+      httpOnly: false,
+    });
+  }
+
+  res.headers.set("x-gradedge-currency", resolvedCurrency);
+  res.headers.append("Vary", "Cookie");
+  res.headers.append("Vary", "x-vercel-ip-country");
+  return res;
+}
 
 export default async function proxy(request: NextRequest) {
   const { pathname, search } = request.nextUrl;
@@ -81,7 +116,7 @@ export default async function proxy(request: NextRequest) {
       const dest = request.nextUrl.searchParams.get("returnTo");
       return NextResponse.redirect(new URL(dest || "/student", request.url));
     }
-    return response;
+    return applyCurrencyHeaders(request, response);
   }
 
   const isProtectedPath =
@@ -90,7 +125,7 @@ export default async function proxy(request: NextRequest) {
     pathname.startsWith("/mentor");
 
   if (!isProtectedPath) {
-    return response;
+    return applyCurrencyHeaders(request, response);
   }
 
   // 1. Unauthenticated visitors accessing protected routes are redirected to /login with returnTo
@@ -147,7 +182,7 @@ export default async function proxy(request: NextRequest) {
     }
   }
 
-  return response;
+  return applyCurrencyHeaders(request, response);
 }
 
 export const config = {

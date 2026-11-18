@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { leadSchema } from "@/lib/validators";
 import { createServiceRoleClient } from "@/lib/supabase/service-role";
+import { checkRateLimit } from "@/lib/auth/server";
 
 export async function POST(request: NextRequest) {
   try {
@@ -9,6 +10,15 @@ export async function POST(request: NextRequest) {
     // Honeypot check
     if (body.website) {
       return NextResponse.json({ error: "Spam detected" }, { status: 400 });
+    }
+
+    const ip = request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || "anonymous";
+    const rl = checkRateLimit("contact_form", ip, 5, 10 * 60 * 1000);
+    if (!rl.allowed) {
+      return NextResponse.json(
+        { error: "Too many messages sent. Please wait a few minutes before contacting us again." },
+        { status: 429 }
+      );
     }
 
     const parsed = leadSchema.safeParse(body);

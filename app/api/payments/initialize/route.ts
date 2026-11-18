@@ -41,8 +41,12 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: "A valid payment purpose is required." }, { status: 400 });
     }
 
-    if (currency !== "USD" && currency !== "NGN") {
-      return NextResponse.json({ error: "Only USD and NGN currencies are supported." }, { status: 400 });
+    const normCurrency = (currency || "USD").toUpperCase() as Currency;
+    if (!["USD", "NGN", "GBP", "EUR", "GHS", "ZAR", "KES"].includes(normCurrency)) {
+      return NextResponse.json(
+        { error: `Currency ${currency} is not supported. Supported currencies: USD, NGN, GBP, EUR, GHS, ZAR, KES.` },
+        { status: 400 }
+      );
     }
 
     // 2. Identify logged-in user if present
@@ -82,14 +86,17 @@ export async function POST(req: Request) {
         ? applicationId
         : null;
 
+    const chargeCurrency = priceInfo.chargeCurrency || priceInfo.currency;
+    const chargeAmountMinor = priceInfo.chargeAmountMinor || priceInfo.amountMinor;
+
     // 5. Store initiated payment record
     await createPaymentRecord({
       userId: user?.id || null,
       customerEmail: email,
       customerName: name,
       purpose: purpose as PaymentPurpose,
-      currency: priceInfo.currency,
-      amountMinor: priceInfo.amountMinor,
+      currency: chargeCurrency,
+      amountMinor: chargeAmountMinor,
       reference,
       relatedId,
       metadata: {
@@ -102,20 +109,24 @@ export async function POST(req: Request) {
         plan_id: planId,
         booking_id: bookingId,
         application_id: applicationId,
+        display_currency: priceInfo.currency,
+        display_amount_minor: priceInfo.amountMinor,
+        is_approximate: Boolean(priceInfo.isApproximate),
       },
     });
 
     // 6. Initialize transaction with Paystack provider
     const initResult = await paymentProvider.initializePayment({
       email,
-      amountMinor: priceInfo.amountMinor,
-      currency: priceInfo.currency,
+      amountMinor: chargeAmountMinor,
+      currency: chargeCurrency,
       reference,
       callbackUrl,
       metadata: {
         custom_fields: [
           { display_name: "Purpose", variable_name: "purpose", value: priceInfo.title },
           { display_name: "Student Name", variable_name: "student_name", value: name },
+          { display_name: "Display Amount", variable_name: "display_amount", value: `${priceInfo.currency} ${priceInfo.amountMinor / 100}` },
         ],
       },
     });

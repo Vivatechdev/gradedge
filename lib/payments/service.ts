@@ -11,6 +11,8 @@ import { getServiceBySlug, SERVICES_CONTENT, ServicePackage } from "@/lib/data/s
 import { sendPaymentReceiptEmail, sendRefundConfirmationEmail, sendBookingConfirmationEmail } from "@/lib/email";
 import { generateICSString } from "@/lib/booking/calendar-ics";
 import { assignMentorForBooking } from "@/lib/booking/mentor-assignment";
+import { getPriceForItem } from "@/lib/currency/service";
+import { SupportedCurrency, CURRENCY_METADATA } from "@/lib/currency/config";
 
 export interface PriceLookupParams {
   purpose: PaymentPurpose;
@@ -30,6 +32,9 @@ export interface PriceLookupResult {
   description: string;
   items: InvoiceItem[];
   metadata: Record<string, unknown>;
+  chargeCurrency?: Currency;
+  chargeAmountMinor?: number;
+  isApproximate?: boolean;
 }
 
 /**
@@ -42,16 +47,37 @@ export async function lookupPrice(params: PriceLookupParams): Promise<PriceLooku
 
   // 1. Paid Session Booking (60-minute one-on-one consultation/tutoring)
   if (purpose === "booking") {
-    const amountMinor = currency === "USD" ? 7500 : 3500000; // $75.00 or ₦35,000
+    const priceRes = await getPriceForItem("session-60", currency as SupportedCurrency);
+    const amountMinor = priceRes.amountMinor;
     const title = "Paid Academic Mentoring Session (60 mins)";
     const description = "One-on-one doctoral consultation, thesis critique, or methodology review.";
+
+    let chargeCurrency: Currency = priceRes.currency;
+    let chargeAmountMinor = amountMinor;
+    let isApproximate = false;
+
+    if (!priceRes.paystackDirectSupported) {
+      const usdRes = await getPriceForItem("session-60", "USD");
+      chargeCurrency = "USD";
+      chargeAmountMinor = usdRes.amountMinor;
+      isApproximate = true;
+    }
+
     return {
       amountMinor,
-      currency,
+      currency: priceRes.currency,
+      chargeCurrency,
+      chargeAmountMinor,
+      isApproximate,
       title,
       description,
       items: [{ description: title, quantity: 1, amountMinor }],
-      metadata: { session_duration_minutes: 60, service_slug: params.serviceSlug },
+      metadata: {
+        session_duration_minutes: 60,
+        service_slug: params.serviceSlug,
+        paystack_direct_supported: priceRes.paystackDirectSupported,
+        is_fallback_usd: priceRes.isFallbackUsd,
+      },
     };
   }
 
@@ -88,15 +114,36 @@ export async function lookupPrice(params: PriceLookupParams): Promise<PriceLooku
       throw new Error(`Package '${params.packageId}' not found for pricing verification.`);
     }
 
-    const amountMinor =
-      currency === "USD" ? matchedPackage.price_usd * 100 : matchedPackage.price_ngn * 100;
+    const priceRes = await getPriceForItem(matchedPackage.id, currency as SupportedCurrency);
+    let amountMinor = priceRes.amountMinor;
+
+    // If no explicit DB or fallback price for this package id, use package default price
+    if (priceRes.isFallbackUsd && currency === "NGN") {
+      amountMinor = matchedPackage.price_ngn * 100;
+    } else if (priceRes.isFallbackUsd && currency === "USD") {
+      amountMinor = matchedPackage.price_usd * 100;
+    }
+
+    let chargeCurrency: Currency = priceRes.currency;
+    let chargeAmountMinor = amountMinor;
+    let isApproximate = false;
+
+    if (!priceRes.paystackDirectSupported) {
+      const usdRes = await getPriceForItem(matchedPackage.id, "USD");
+      chargeCurrency = "USD";
+      chargeAmountMinor = usdRes.amountMinor || matchedPackage.price_usd * 100;
+      isApproximate = true;
+    }
 
     const title = `${serviceTitle} — ${matchedPackage.name}`;
     const description = matchedPackage.description;
 
     return {
       amountMinor,
-      currency,
+      currency: priceRes.currency,
+      chargeCurrency,
+      chargeAmountMinor,
+      isApproximate,
       title,
       description,
       items: [{ description: `${matchedPackage.name} (${serviceTitle})`, quantity: 1, amountMinor }],
@@ -106,26 +153,40 @@ export async function lookupPrice(params: PriceLookupParams): Promise<PriceLooku
         service_slug: params.serviceSlug,
         turnaround: matchedPackage.turnaround,
         rounds_of_feedback: matchedPackage.rounds_of_feedback,
+        paystack_direct_supported: priceRes.paystackDirectSupported,
       },
     };
   }
 
   // 3. Accelerator Program (Full or Installments)
   if (purpose === "program") {
-    const totalMinor = currency === "USD" ? 120000 : 120000000; // $1,200 or ₦1,200,000
-    const installmentTotal = params.installmentTotal || 3;
     const isInstallment = Boolean(params.isInstallment);
+    const installmentTotal = params.installmentTotal || 3;
 
     if (isInstallment) {
-      const parts = splitInstallments(totalMinor, installmentTotal);
+      const priceRes = await getPriceForItem("accelerator-installment", currency as SupportedCurrency);
+      const partAmountMinor = priceRes.amountMinor;
       const installmentNum = Math.max(1, Math.min(params.installmentNumber || 1, installmentTotal));
-      const partAmountMinor = parts[installmentNum - 1];
       const title = `12-Week Doctoral Accelerator (Installment ${installmentNum} of ${installmentTotal})`;
       const description = `Milestone payment for comprehensive doctoral dissertation accelerator cohort.`;
 
+      let chargeCurrency: Currency = priceRes.currency;
+      let chargeAmountMinor = partAmountMinor;
+      let isApproximate = false;
+
+      if (!priceRes.paystackDirectSupported) {
+        const usdRes = await getPriceForItem("accelerator-installment", "USD");
+        chargeCurrency = "USD";
+        chargeAmountMinor = usdRes.amountMinor;
+        isApproximate = true;
+      }
+
       return {
         amountMinor: partAmountMinor,
-        currency,
+        currency: priceRes.currency,
+        chargeCurrency,
+        chargeAmountMinor,
+        isApproximate,
         title,
         description,
         items: [{ description: title, quantity: 1, amountMinor: partAmountMinor }],
@@ -134,15 +195,33 @@ export async function lookupPrice(params: PriceLookupParams): Promise<PriceLooku
           is_installment: true,
           installment_number: installmentNum,
           installment_total: installmentTotal,
-          full_program_total_minor: totalMinor,
+          full_program_total_minor: partAmountMinor * installmentTotal,
+          paystack_direct_supported: priceRes.paystackDirectSupported,
         },
       };
     } else {
+      const priceRes = await getPriceForItem("accelerator-full", currency as SupportedCurrency);
+      const totalMinor = priceRes.amountMinor;
       const title = "12-Week Doctoral Research Accelerator (Full Tuition)";
       const description = "Comprehensive 12-week dissertation writing, methodology, and defense cohort.";
+
+      let chargeCurrency: Currency = priceRes.currency;
+      let chargeAmountMinor = totalMinor;
+      let isApproximate = false;
+
+      if (!priceRes.paystackDirectSupported) {
+        const usdRes = await getPriceForItem("accelerator-full", "USD");
+        chargeCurrency = "USD";
+        chargeAmountMinor = usdRes.amountMinor;
+        isApproximate = true;
+      }
+
       return {
         amountMinor: totalMinor,
-        currency,
+        currency: priceRes.currency,
+        chargeCurrency,
+        chargeAmountMinor,
+        isApproximate,
         title,
         description,
         items: [{ description: title, quantity: 1, amountMinor: totalMinor }],
@@ -152,6 +231,7 @@ export async function lookupPrice(params: PriceLookupParams): Promise<PriceLooku
           installment_number: 1,
           installment_total: 1,
           full_program_total_minor: totalMinor,
+          paystack_direct_supported: priceRes.paystackDirectSupported,
         },
       };
     }
@@ -161,24 +241,34 @@ export async function lookupPrice(params: PriceLookupParams): Promise<PriceLooku
   if (purpose === "membership") {
     const planKey = (params.planId || "scholar").toLowerCase();
     const isFellow = planKey.includes("fellow") || planKey.includes("doctoral");
+    const itemId = isFellow ? "fellow" : "scholar";
 
-    let amountMinor: number;
-    let title: string;
-    let description: string;
+    const priceRes = await getPriceForItem(itemId, currency as SupportedCurrency);
+    const amountMinor = priceRes.amountMinor;
+    const title = isFellow
+      ? `Doctoral Fellow Membership (${priceRes.currency})`
+      : `Scholar Membership (${priceRes.currency})`;
+    const description = isFellow
+      ? "Bi-weekly 60-minute video coaching, developmental reviews, syntax audits, pre-defense mock viva."
+      : "Up to 2 written draft critiques per month, dedicated discipline advisor, monthly 60-min methodology call.";
 
-    if (isFellow) {
-      amountMinor = currency === "USD" ? 18000 : 8500000; // $180.00 or ₦85,000
-      title = `Doctoral Fellow Membership (${currency})`;
-      description = "Bi-weekly 60-minute video coaching, developmental reviews, syntax audits, pre-defense mock viva.";
-    } else {
-      amountMinor = currency === "USD" ? 9500 : 4500000; // $95.00 or ₦45,000
-      title = `Scholar Membership (${currency})`;
-      description = "Up to 2 written draft critiques per month, dedicated discipline advisor, monthly 60-min methodology call.";
+    let chargeCurrency: Currency = priceRes.currency;
+    let chargeAmountMinor = amountMinor;
+    let isApproximate = false;
+
+    if (!priceRes.paystackDirectSupported) {
+      const usdRes = await getPriceForItem(itemId, "USD");
+      chargeCurrency = "USD";
+      chargeAmountMinor = usdRes.amountMinor;
+      isApproximate = true;
     }
 
     return {
       amountMinor,
-      currency,
+      currency: priceRes.currency,
+      chargeCurrency,
+      chargeAmountMinor,
+      isApproximate,
       title,
       description,
       items: [{ description: title, quantity: 1, amountMinor }],
@@ -186,6 +276,7 @@ export async function lookupPrice(params: PriceLookupParams): Promise<PriceLooku
         tier: isFellow ? "fellow" : "scholar",
         plan_id: params.planId,
         interval: "month",
+        paystack_direct_supported: priceRes.paystackDirectSupported,
       },
     };
   }

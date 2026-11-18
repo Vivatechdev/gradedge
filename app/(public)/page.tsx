@@ -17,23 +17,25 @@ export const metadata: Metadata = {
   metadataBase: new URL(
     process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"
   ),
-  title:
-    "GradEdge Academic Solutions | Dissertation Mentoring & Research Coaching",
+  title: {
+    absolute: "GradEdge | Thesis mentoring and research coaching",
+    default: "GradEdge | Thesis mentoring and research coaching",
+  },
   description:
-    "GradEdge coaches undergraduate, Masters and PhD students and academic researchers through every stage of research. Dissertation mentoring, proposal development, data analysis, academic editing and more. You write. We guide.",
+    "Expert thesis mentoring for graduate students. Get written feedback, data analysis help and defense coaching from a mentor in your field.",
   openGraph: {
     type: "website",
-    title: "GradEdge Academic Solutions | Dissertation Mentoring & Research Coaching",
+    title: "GradEdge | Thesis mentoring and research coaching",
     description:
-      "Expert mentoring for dissertation and thesis students worldwide. Research design, data analysis, academic editing and presentation coaching. Your work. Your words.",
+      "Expert thesis mentoring for graduate students. Get written feedback, data analysis help and defense coaching from a mentor in your field.",
     siteName: "GradEdge Academic Solutions",
     url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://gradedge.com",
   },
   twitter: {
     card: "summary_large_image",
-    title: "GradEdge Academic Solutions | Dissertation Mentoring & Research Coaching",
+    title: "GradEdge | Thesis mentoring and research coaching",
     description:
-      "Expert mentoring for dissertation and thesis students worldwide. Research design, data analysis, academic editing and presentation coaching.",
+      "Expert thesis mentoring for graduate students. Get written feedback, data analysis help and defense coaching from a mentor in your field.",
   },
   alternates: {
     canonical: "/",
@@ -151,156 +153,144 @@ export default async function HomePage() {
         className="border-b border-tone-rule overflow-hidden"
       >
         <div className="site-container py-12 sm:py-16 md:py-20 lg:py-24">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            {/* Left Column — Equal Weight */}
-            <div className="space-y-6 sm:space-y-8">
-              <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-[44px] xl:text-[50px] text-tone-heading leading-[1.14] tracking-tight">
-                Your thesis is yours. We help you{" "}
-                <span className="relative inline-block whitespace-nowrap">
-                  finish it.
-                  <span
-                    className="absolute -bottom-1 left-0 right-0 h-[3px] bg-gold"
-                    aria-hidden="true"
-                  />
-                </span>
+          <div className="grid grid-cols-1 lg:grid-cols-[7fr_5fr] gap-12 lg:gap-14 items-center">
+            {/* Left Column */}
+            <div>
+              <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-[44px] xl:text-[50px] text-tone-heading font-semibold leading-[1.1] tracking-tight">
+                Thesis mentoring from{" "}
+                <u className="underline decoration-gold decoration-[0.08em] underline-offset-[0.12em]">
+                  proposal to defense.
+                </u>
               </h1>
 
-              <p className="type-lead text-tone-body max-w-xl">
-                Expert written feedback and one-on-one mentoring from proposal to defense, in your discipline and your software.
+              <p className="type-lead text-tone-muted my-6 sm:my-8 leading-relaxed max-w-[62ch]">
+                GradEdge pairs you with an expert in your field for written feedback, data analysis and defense coaching. You write it. We help you get it right.
               </p>
 
-              <div className="flex flex-wrap items-center gap-4 sm:gap-6 pt-1">
-                <Button variant="accent" size="lg" href="/booking">
+              <div className="flex items-center gap-5 flex-wrap">
+                <Button variant="accent" size="lg" href="/book">
                   Book a free 20-minute call
                 </Button>
                 <Link
                   href="#services"
-                  className="type-body text-tone-heading hover:text-navy transition-colors underline underline-offset-4 decoration-tone-rule hover:decoration-gold font-medium"
+                  className="type-body text-tone-heading hover:text-navy transition-colors font-medium"
                 >
                   Explore services
                 </Link>
               </div>
 
               {/* Plain scope row separated by hairlines */}
-              <div className="pt-4 border-t border-tone-rule space-y-2">
-                <div className="flex flex-wrap items-center text-xs uppercase tracking-widest text-tone-muted font-sans font-semibold">
-                  <span className="pr-3 py-1">Proposal</span>
+              <div className="mt-8 pt-6 border-t border-tone-rule max-w-[560px]">
+                <div className="flex flex-wrap items-center text-sm text-tone-body font-medium">
+                  <span className="pr-3">Proposal</span>
                   <span className="h-3 w-px bg-tone-rule" aria-hidden="true" />
-                  <span className="px-3 py-1">Analysis</span>
+                  <span className="px-3">Analysis</span>
                   <span className="h-3 w-px bg-tone-rule" aria-hidden="true" />
-                  <span className="px-3 py-1">Writing</span>
+                  <span className="px-3">Writing</span>
                   <span className="h-3 w-px bg-tone-rule" aria-hidden="true" />
-                  <span className="px-3 py-1">Publishing</span>
+                  <span className="px-3">Publishing</span>
                   <span className="h-3 w-px bg-tone-rule" aria-hidden="true" />
-                  <span className="pl-3 py-1">Defense</span>
+                  <span className="pl-3">Defense</span>
                 </div>
-                <p className="type-small text-tone-muted">
+                <p className="mt-3 text-xs sm:text-sm text-tone-muted">
                   For undergraduate, Masters and doctoral researchers, worldwide.
                 </p>
               </div>
             </div>
 
-            {/* Right Column — Three-Image Mosaic & Floating Cards */}
-            <div className="relative w-full max-w-lg lg:max-w-none mx-auto pt-4 sm:pt-6 pb-6 sm:pb-8">
-              {/* Floating Card: Milestone card with three progress bars at top-right */}
-              <div className="absolute top-0 right-1 sm:-top-3 sm:-right-4 z-20 w-[210px] sm:w-[245px] max-w-[calc(100%-1rem)] bg-white border border-tone-rule rounded-[4px] p-3 sm:p-3.5 shadow-md space-y-2.5 text-xs font-sans">
-                <div className="flex items-center justify-between border-b border-tone-rule/80 pb-1.5 text-[10px] uppercase tracking-wider text-tone-muted font-semibold">
-                  <span className="text-tone-heading">Doctoral Milestones</span>
-                  <span className="text-gold font-mono font-medium">Stage 3 / 5</span>
-                </div>
-                <div className="space-y-2">
-                  <div>
-                    <div className="flex justify-between text-[11px] mb-1 font-medium text-tone-heading">
-                      <span>Ch 1: Framing & Scope</span>
-                      <span className="text-forest font-semibold">100%</span>
-                    </div>
-                    <div className="h-1.5 w-full bg-cream rounded-full overflow-hidden">
-                      <div className="h-full bg-forest rounded-full w-full" />
-                    </div>
-                  </div>
-                  <div>
-                    <div className="flex justify-between text-[11px] mb-1 font-medium text-tone-heading">
-                      <span>Ch 2: Literature Synthesis</span>
-                      <span className="text-forest font-semibold">100%</span>
-                    </div>
-                    <div className="h-1.5 w-full bg-cream rounded-full overflow-hidden">
-                      <div className="h-full bg-forest rounded-full w-full" />
-                    </div>
-                  </div>
-                  <div>
-                    <div className="flex justify-between text-[11px] mb-1 font-medium text-tone-heading">
-                      <span>Ch 3: Methodology & Syntax</span>
-                      <span className="text-gold font-semibold">68%</span>
-                    </div>
-                    <div className="h-1.5 w-full bg-cream rounded-full overflow-hidden">
-                      <div className="h-full bg-gold rounded-full w-[68%]" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Three-Image Mosaic */}
-              <div className="grid grid-cols-12 gap-[14px] h-[480px] lg:h-[600px] rounded-[4px] overflow-hidden">
-                {/* Tall left image: hero.jpg */}
-                <div className="col-span-7 h-full relative rounded-[4px] overflow-hidden">
+            {/* Right Column: Three-image mosaic with floating cards */}
+            <div
+              className="relative h-[480px] lg:h-[600px] w-full"
+              aria-label="Overview of thesis mentoring and research coaching in practice"
+            >
+              {/* Mosaic grid: 14px gaps, 4px corners */}
+              <div className="grid grid-cols-2 grid-rows-2 gap-[14px] h-full w-full">
+                {/* Tall left image */}
+                <div className="row-span-2 h-full w-full rounded-[4px] overflow-hidden">
                   <Photo
                     src="/images/home/hero.jpg"
-                    alt="Focused doctoral researcher working at a wooden desk with annotated thesis manuscripts"
+                    alt="Graduate researcher working through thesis revisions with mentor feedback"
                     aspectRatio="full"
                     priority={true}
+                    sizes="(max-width: 1024px) 50vw, 320px"
                     className="h-full w-full"
-                  />
-                  {/* Thin Inset White Hairline Frame */}
-                  <div
-                    className="absolute inset-[10px] sm:inset-[14px] border border-white/50 rounded-[2px] pointer-events-none z-10"
-                    aria-hidden="true"
                   />
                 </div>
 
-                {/* Right Stack: how-we-work.jpg (top) & integrity.jpg (bottom) */}
-                <div className="col-span-5 h-full flex flex-col gap-[14px]">
-                  <div className="h-1/2 relative rounded-[4px] overflow-hidden">
-                    <Photo
-                      src="/images/home/how-we-work.jpg"
-                      alt="Scholarly mentor reviewing draft chapter annotations"
-                      aspectRatio="full"
-                      priority={true}
-                      className="h-full w-full"
-                    />
-                  </div>
-                  <div className="h-1/2 relative rounded-[4px] overflow-hidden">
-                    <Photo
-                      src="/images/home/integrity.jpg"
-                      alt="Thesis manuscript with mentor margin notes"
-                      aspectRatio="full"
-                      className="h-full w-full"
-                    />
-                  </div>
+                {/* Top right image */}
+                <div className="h-full w-full rounded-[4px] overflow-hidden">
+                  <Photo
+                    src="/images/home/how-we-work.jpg"
+                    alt="Academic mentor conducting in-depth research methodology consultation"
+                    aspectRatio="full"
+                    sizes="(max-width: 1024px) 50vw, 320px"
+                    className="h-full w-full"
+                  />
+                </div>
+
+                {/* Bottom right image */}
+                <div className="h-full w-full rounded-[4px] overflow-hidden">
+                  <Photo
+                    src="/images/home/integrity.jpg"
+                    alt="Scholarly library research and academic writing references"
+                    aspectRatio="full"
+                    sizes="(max-width: 1024px) 50vw, 320px"
+                    className="h-full w-full"
+                  />
                 </div>
               </div>
 
-              {/* Floating Card: Mentor-Review Card at bottom-left */}
-              <div className="absolute bottom-0 left-1 sm:-bottom-4 sm:-left-4 z-20 w-[270px] sm:w-[310px] max-w-[calc(100%-1rem)] bg-white border border-tone-rule rounded-[4px] p-3 sm:p-3.5 shadow-md space-y-2 text-xs font-sans">
-                <div className="flex items-center justify-between border-b border-tone-rule/80 pb-1.5 text-[10px] uppercase tracking-wider text-tone-muted font-semibold">
-                  <span className="text-tone-heading">Chapter 3 &middot; Line Review</span>
-                  <span className="text-gold font-mono font-medium">Mentor Margin Note</span>
+              {/* Floating Card 1: Mentor-review card */}
+              <div className="absolute top-3 sm:top-6 left-2 sm:left-4 lg:-left-6 z-20 w-[calc(100%-16px)] max-w-[270px] sm:max-w-[300px] bg-white border border-tone-rule rounded-[4px] p-3 sm:p-4 shadow-[0_10px_30px_rgba(20,38,63,0.12)]">
+                <div className="text-[0.72rem] sm:text-[0.78rem] text-tone-muted font-semibold border-b border-tone-rule pb-1.5 mb-2">
+                  Chapter 3 · Methodology Review
                 </div>
-                {/* Strikethrough line */}
-                <p className="line-through text-tone-muted/65 text-[11px] sm:text-xs leading-relaxed font-sans">
-                  The survey data was correlated using standard regression models.
+                <p className="line-through text-tone-muted decoration-[#C0392B] text-xs sm:text-[0.84rem] leading-relaxed mb-1.5">
+                  The survey sample was correlated using standard linear regression models.
                 </p>
-                {/* Corrected line with gold left border */}
-                <div className="p-2 sm:p-2.5 bg-cream/70 border-l-2 border-gold text-[11px] sm:text-xs text-tone-heading font-sans rounded-[1px] leading-snug">
-                  Validated through exploratory factor analysis, followed by hierarchical regression{" "}
-                  <span className="text-[10px] font-mono text-gold font-semibold">
-                    (Field, 2018)
-                  </span>.
+                <p className="border-l-[3px] border-gold pl-2.5 py-0.5 text-xs sm:text-[0.84rem] text-tone-heading font-medium leading-relaxed">
+                  Instruments were validated via exploratory factor analysis, followed by hierarchical regression.
+                </p>
+                <div className="mt-2.5 p-2 bg-cream border border-tone-rule rounded-[3px] text-[0.75rem] sm:text-[0.8rem] text-tone-muted">
+                  <strong className="block text-tone-heading font-semibold mb-0.5">Mentor comment</strong>
+                  Check normality assumptions before running the coefficient tests.
                 </div>
-                {/* Short margin comment */}
-                <div className="bg-paper border border-tone-rule/80 p-2 sm:p-2.5 rounded-[2px] text-[10px] sm:text-[11px] text-tone-body font-sans">
-                  <span className="italic block text-tone-heading font-medium leading-normal">
-                    &ldquo;Verify normality assumptions before estimating interaction coefficients.&rdquo;
-                  </span>
+              </div>
+
+              {/* Floating Card 2: Milestone card with three progress bars */}
+              <div className="absolute bottom-3 sm:bottom-6 right-2 sm:right-4 lg:-right-6 z-20 w-[calc(100%-16px)] max-w-[210px] sm:max-w-[230px] bg-white border border-tone-rule rounded-[4px] p-3.5 sm:p-4 shadow-[0_10px_30px_rgba(20,38,63,0.12)]">
+                <strong className="block text-tone-heading font-semibold text-xs sm:text-sm mb-2.5">
+                  Research milestones
+                </strong>
+
+                <div className="mb-2">
+                  <div className="flex justify-between text-[0.75rem] text-tone-body font-medium mb-1">
+                    <span>Proposal approved</span>
+                    <span className="text-tone-muted">100%</span>
+                  </div>
+                  <div className="h-1.5 bg-tone-rule rounded-[3px] overflow-hidden">
+                    <span className="block h-full bg-gold rounded-[3px] w-full" />
+                  </div>
+                </div>
+
+                <div className="mb-2">
+                  <div className="flex justify-between text-[0.75rem] text-tone-body font-medium mb-1">
+                    <span>Methodology draft</span>
+                    <span className="text-tone-muted">60%</span>
+                  </div>
+                  <div className="h-1.5 bg-tone-rule rounded-[3px] overflow-hidden">
+                    <span className="block h-full bg-gold rounded-[3px] w-[60%]" />
+                  </div>
+                </div>
+
+                <div>
+                  <div className="flex justify-between text-[0.75rem] text-tone-body font-medium mb-1">
+                    <span>Analysis chapter</span>
+                    <span className="text-tone-muted">25%</span>
+                  </div>
+                  <div className="h-1.5 bg-tone-rule rounded-[3px] overflow-hidden">
+                    <span className="block h-full bg-gold rounded-[3px] w-[25%]" />
+                  </div>
                 </div>
               </div>
             </div>

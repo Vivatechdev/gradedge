@@ -7,6 +7,14 @@ import { Badge } from "@/components/ui/badge";
 import { Photo } from "@/components/ui/photo";
 import { Check, ShieldCheck, Sparkles, BookOpen, Terminal, FileCode, Award, Users } from "lucide-react";
 import type { ServiceContentItem } from "@/lib/data/services-content";
+import { useCurrency } from "@/components/currency/currency-context";
+import { formatPrice } from "@/lib/currency/format";
+import {
+  SUPPORTED_CURRENCIES,
+  CURRENCY_METADATA,
+  SupportedCurrency,
+} from "@/lib/currency/config";
+import { DEFAULT_CANONICAL_PRICES } from "@/lib/currency/service";
 import {
   ThesisArchitectureVisualizer,
   DataLabModelVisualizer,
@@ -140,7 +148,10 @@ export function ServiceDetailView({
   relatedServices,
   relatedPosts,
 }: ServiceDetailViewProps) {
-  const [currency, setCurrency] = useState<"NGN" | "USD">("NGN");
+  const { currency: contextCurrency, setCurrency: setContextCurrency } = useCurrency();
+  const currency: SupportedCurrency = (contextCurrency || "USD") as SupportedCurrency;
+  const meta = CURRENCY_METADATA[currency] || CURRENCY_METADATA.USD;
+  const setCurrency = (c: any) => setContextCurrency(c);
 
   const categoryConfig = CATEGORY_CONFIG[service.category] || CATEGORY_CONFIG["dissertation-support"];
   const navSections = categoryConfig.navSections;
@@ -162,10 +173,15 @@ export function ServiceDetailView({
     return () => window.removeEventListener("scroll", handleScroll);
   }, [navSections]);
 
-  const startingPriceDisplay =
-    currency === "NGN"
-      ? `₦${service.starting_price_ngn.toLocaleString()}`
-      : `$${service.starting_price_usd}`;
+  let startingPriceMinor = 0;
+  if (currency === "USD") {
+    startingPriceMinor = service.starting_price_usd * 100;
+  } else if (currency === "NGN") {
+    startingPriceMinor = service.starting_price_ngn * 100;
+  } else {
+    startingPriceMinor = Math.round(service.starting_price_usd * meta.approximateExchangeFromUsd * 100);
+  }
+  const startingPriceDisplay = formatPrice(startingPriceMinor, currency);
 
   const renderVisualizer = () => {
     switch (service.category) {
@@ -573,23 +589,19 @@ export function ServiceDetailView({
                 </div>
 
                 {/* Currency Toggle */}
-                <div className="flex items-center gap-1 bg-white border border-tone-rule p-1 rounded-[2px] text-xs shrink-0">
-                  <button
-                    type="button"
-                    onClick={() => setCurrency("NGN")}
-                    className={`px-3 py-1 rounded-[1px] font-medium transition-colors cursor-pointer ${currency === "NGN" ? "bg-navy text-white" : "text-tone-muted hover:text-tone-heading"
+                <div className="flex items-center gap-1 bg-white border border-tone-rule p-1 rounded-[2px] text-xs shrink-0 overflow-x-auto max-w-full">
+                  {SUPPORTED_CURRENCIES.map((code) => (
+                    <button
+                      key={code}
+                      type="button"
+                      onClick={() => setCurrency(code)}
+                      className={`px-2.5 py-1 rounded-[1px] font-mono font-medium transition-colors cursor-pointer text-xs ${
+                        currency === code ? "bg-navy text-white" : "text-tone-muted hover:text-tone-heading"
                       }`}
-                  >
-                    NGN (₦)
-                  </button>
-                  <button
-                    type="button"
-                    onClick={() => setCurrency("USD")}
-                    className={`px-3 py-1 rounded-[1px] font-medium transition-colors cursor-pointer ${currency === "USD" ? "bg-navy text-white" : "text-tone-muted hover:text-tone-heading"
-                      }`}
-                  >
-                    USD ($)
-                  </button>
+                    >
+                      {code}
+                    </button>
+                  ))}
                 </div>
               </div>
 
@@ -608,10 +620,17 @@ export function ServiceDetailView({
                     </thead>
                     <tbody className="divide-y divide-tone-rule">
                       {service.packages.map((pkg) => {
-                        const price =
-                          currency === "NGN"
-                            ? `₦${pkg.price_ngn.toLocaleString()}`
-                            : `$${pkg.price_usd}`;
+                        let pkgMinor = 0;
+                        if (DEFAULT_CANONICAL_PRICES[pkg.id] && DEFAULT_CANONICAL_PRICES[pkg.id][currency]) {
+                          pkgMinor = DEFAULT_CANONICAL_PRICES[pkg.id][currency];
+                        } else if (currency === "USD") {
+                          pkgMinor = pkg.price_usd * 100;
+                        } else if (currency === "NGN") {
+                          pkgMinor = pkg.price_ngn * 100;
+                        } else {
+                          pkgMinor = Math.round(pkg.price_usd * meta.approximateExchangeFromUsd * 100);
+                        }
+                        const price = formatPrice(pkgMinor, currency);
 
                         return (
                           <tr key={pkg.id} className="hover:bg-paper/60 transition-colors">
@@ -724,7 +743,14 @@ export function ServiceDetailView({
 
                       <div className="pt-2 border-t border-tone-rule flex items-center justify-between text-xs">
                         <span className="text-[11px] text-tone-muted">
-                          From ₦{rel.starting_price_ngn.toLocaleString()}
+                          From {formatPrice(
+                            currency === "USD"
+                              ? rel.starting_price_usd * 100
+                              : currency === "NGN"
+                              ? rel.starting_price_ngn * 100
+                              : Math.round(rel.starting_price_usd * meta.approximateExchangeFromUsd * 100),
+                            currency
+                          )}
                         </span>
                         <Link
                           href={`/services/${rel.slug}`}

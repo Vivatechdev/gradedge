@@ -1,10 +1,17 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Calculator, ShieldCheck, Check, Sparkles } from "lucide-react";
+import { Calculator, ShieldCheck, Check, Sparkles, ChevronDown } from "lucide-react";
+import { useCurrency } from "@/components/currency/currency-context";
+import { formatPrice } from "@/lib/currency/format";
+import {
+  SUPPORTED_CURRENCIES,
+  CURRENCY_METADATA,
+  SupportedCurrency,
+} from "@/lib/currency/config";
 
 interface ScopeTier {
   id: string;
@@ -68,23 +75,42 @@ const SPEED_OPTIONS = [
 ];
 
 export function PricingScopeCalculator() {
+  const { currency: contextCurrency, setCurrency: setContextCurrency, isLoaded } = useCurrency();
   const [degreeLevel, setDegreeLevel] = useState("phd");
   const [milestone, setMilestone] = useState("data-empirical");
   const [speed, setSpeed] = useState("standard");
-  const [currency, setCurrency] = useState<"NGN" | "USD">("NGN");
+  const [currency, setLocalCurrency] = useState<SupportedCurrency>("USD");
+
+  useEffect(() => {
+    if (isLoaded && contextCurrency) {
+      setLocalCurrency(contextCurrency);
+    }
+  }, [isLoaded, contextCurrency]);
 
   const selectedDegree = DEGREE_LEVELS.find((d) => d.id === degreeLevel) || DEGREE_LEVELS[0];
   const selectedMilestone = RESEARCH_MILESTONES.find((m) => m.id === milestone) || RESEARCH_MILESTONES[0];
   const selectedSpeed = SPEED_OPTIONS.find((s) => s.id === speed) || SPEED_OPTIONS[0];
 
   const totalMultiplier = selectedDegree.multiplier * selectedSpeed.multiplier;
-  const calculatedNgn = Math.round((selectedMilestone.baseNgn * totalMultiplier) / 1000) * 1000;
-  const calculatedUsd = Math.round(selectedMilestone.baseUsd * totalMultiplier);
+  const meta = CURRENCY_METADATA[currency] || CURRENCY_METADATA.USD;
 
-  const displayPrice =
-    currency === "NGN"
-      ? `₦${calculatedNgn.toLocaleString()}`
-      : `$${calculatedUsd.toLocaleString()}`;
+  let calculatedMajor = 0;
+  if (currency === "USD") {
+    calculatedMajor = Math.round(selectedMilestone.baseUsd * totalMultiplier);
+  } else if (currency === "NGN") {
+    calculatedMajor = Math.round((selectedMilestone.baseNgn * totalMultiplier) / 1000) * 1000;
+  } else {
+    const usdEquivalent = selectedMilestone.baseUsd * totalMultiplier;
+    calculatedMajor = Math.round(usdEquivalent * meta.approximateExchangeFromUsd);
+  }
+
+  const calculatedMinor = Math.round(calculatedMajor * 100);
+  const displayPrice = formatPrice(calculatedMinor, currency);
+
+  const handleCurrencyChange = (c: SupportedCurrency) => {
+    setLocalCurrency(c);
+    setContextCurrency(c);
+  };
 
   return (
     <div className="border border-tone-rule bg-white rounded-[2px] p-6 sm:p-8 shadow-xs space-y-6">
@@ -103,25 +129,19 @@ export function PricingScopeCalculator() {
         </div>
 
         {/* Currency Switcher */}
-        <div className="flex items-center gap-1 bg-cream border border-tone-rule p-1 rounded-[2px] text-xs self-start sm:self-auto">
-          <button
-            type="button"
-            onClick={() => setCurrency("NGN")}
-            className={`px-3 py-1 rounded-[1px] font-medium transition-colors cursor-pointer ${
-              currency === "NGN" ? "bg-navy text-white" : "text-tone-muted hover:text-tone-heading"
-            }`}
-          >
-            NGN (₦)
-          </button>
-          <button
-            type="button"
-            onClick={() => setCurrency("USD")}
-            className={`px-3 py-1 rounded-[1px] font-medium transition-colors cursor-pointer ${
-              currency === "USD" ? "bg-navy text-white" : "text-tone-muted hover:text-tone-heading"
-            }`}
-          >
-            USD ($)
-          </button>
+        <div className="flex items-center gap-1 bg-cream border border-tone-rule p-1 rounded-[2px] text-xs self-start sm:self-auto overflow-x-auto max-w-full">
+          {SUPPORTED_CURRENCIES.map((code) => (
+            <button
+              key={code}
+              type="button"
+              onClick={() => handleCurrencyChange(code)}
+              className={`px-2.5 py-1 rounded-[1px] font-mono font-medium transition-colors cursor-pointer text-xs ${
+                currency === code ? "bg-navy text-white" : "text-tone-muted hover:text-tone-heading"
+              }`}
+            >
+              {code}
+            </button>
+          ))}
         </div>
       </div>
 

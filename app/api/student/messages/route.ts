@@ -1,6 +1,8 @@
 import { NextResponse } from "next/server";
 import { requireUser } from "@/lib/auth/server";
 import { createServiceRoleClient } from "@/lib/supabase/service-role";
+import { sendNewMessageDigestEmail } from "@/lib/email";
+import { createNotification } from "@/lib/notifications/service";
 
 export async function GET(req: Request) {
   try {
@@ -130,6 +132,48 @@ export async function POST(req: Request) {
       .eq("thread_id", activeThreadId)
       .neq("sender_id", user.id)
       .is("read_at", null);
+
+    // Fetch thread and sender profile for notification & email digest
+    const { data: threadData } = await supabase
+      .from("message_threads")
+      .select("id, subject, student_id, mentor_id")
+      .eq("id", activeThreadId)
+      .single();
+
+    if (threadData) {
+      const recipientId = user.id === threadData.student_id ? threadData.mentor_id : threadData.student_id;
+      const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://gradedge.com";
+      const senderName = user.user_metadata?.full_name || "Research Colleague";
+
+      if (recipientId) {
+        // Fetch recipient email
+        const { data: recipientProfile } = await supabase
+          .from("profiles")
+          .select("email, full_name")
+          .eq("id", recipientId)
+          .single();
+
+        if (recipientProfile?.email) {
+          await sendNewMessageDigestEmail({
+            to: recipientProfile.email,
+            name: recipientProfile.full_name || "Researcher",
+            senderName,
+            threadSubject: threadData.subject,
+            messagePreview: messageBody.trim(),
+            threadUrl: `${siteUrl}/student/messages?thread=${activeThreadId}`,
+          });
+        }
+
+        // Create in-app notification for recipient
+        await createNotification({
+          userId: recipientId,
+          type: "mentor_message",
+          title: `New Message: ${threadData.subject}`,
+          body: `${senderName}: ${messageBody.trim().slice(0, 100)}`,
+          link: `/student/messages?thread=${activeThreadId}`,
+        });
+      }
+    }
 
     return NextResponse.json({ success: true, message: newMsg, threadId: activeThreadId });
   } catch (err: any) {

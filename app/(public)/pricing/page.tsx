@@ -1,8 +1,16 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { cookies } from "next/headers";
 import { buildMetadata } from "@/lib/metadata";
 import { createClient } from "@/lib/supabase/server";
-import { formatCurrency } from "@/lib/utils";
+import { formatPrice } from "@/lib/currency/format";
+import {
+  CURRENCY_COOKIE_NAME,
+  DEFAULT_CURRENCY,
+  SupportedCurrency,
+  isSupportedCurrency,
+} from "@/lib/currency/config";
+import { getPriceForItem } from "@/lib/currency/service";
 import {
   PageHero,
   PageBreadcrumb,
@@ -41,6 +49,13 @@ interface PlanItem {
 }
 
 export default async function PricingPage() {
+  const cookieStore = await cookies();
+  const rawCurrency = cookieStore.get(CURRENCY_COOKIE_NAME)?.value;
+  const currency: SupportedCurrency =
+    rawCurrency && isSupportedCurrency(rawCurrency)
+      ? (rawCurrency.toUpperCase() as SupportedCurrency)
+      : DEFAULT_CURRENCY;
+
   let services: ServiceItem[] = [];
   let plans: PlanItem[] = [];
 
@@ -84,10 +99,24 @@ export default async function PricingPage() {
 
   if (plans.length === 0) {
     plans = [
+      { slug: "scholar", name: "Scholar Membership", price_monthly_minor: 4500000, price_annual_minor: 45000000, currency: "NGN" },
+      { slug: "fellow", name: "Fellow Tier", price_monthly_minor: 8500000, price_annual_minor: 85000000, currency: "NGN" },
       { slug: "foundation", name: "Research Foundation", price_monthly_minor: 3500000, price_annual_minor: 35000000, currency: "NGN" },
-      { slug: "advanced-scholar", name: "Advanced Scholar", price_monthly_minor: 6500000, price_annual_minor: 65000000, currency: "NGN" },
-      { slug: "doctoral-completion", name: "Doctoral Completion", price_monthly_minor: 11000000, price_annual_minor: 110000000, currency: "NGN" },
     ];
+  }
+
+  // Resolve explicit local currency price for each item (falling back to USD if unset)
+  for (const svc of services) {
+    const priceRes = await getPriceForItem(svc.slug, currency);
+    svc.price_from_minor = priceRes.amountMinor;
+    svc.currency = priceRes.currency;
+  }
+
+  for (const p of plans) {
+    const monthlyRes = await getPriceForItem(p.slug, currency);
+    p.price_monthly_minor = monthlyRes.amountMinor;
+    p.price_annual_minor = monthlyRes.amountMinor * 10; // Standard 2 months free for annual
+    p.currency = monthlyRes.currency;
   }
 
   return (
@@ -147,7 +176,7 @@ export default async function PricingPage() {
                         </span>
                       </td>
                       <td className="py-3 px-4 font-mono font-medium text-tone-body">
-                        {formatCurrency(svc.price_from_minor, svc.currency)}
+                        {formatPrice(svc.price_from_minor, svc.currency)}
                       </td>
                       <td className="py-3 px-4 text-right">
                         <Link
@@ -189,10 +218,10 @@ export default async function PricingPage() {
                         {p.name}
                       </td>
                       <td className="py-3 px-4 font-mono font-medium text-tone-body">
-                        {formatCurrency(p.price_monthly_minor, p.currency)}
+                        {formatPrice(p.price_monthly_minor, p.currency)}
                       </td>
                       <td className="py-3 px-4 font-mono font-medium text-tone-body">
-                        {formatCurrency(p.price_annual_minor, p.currency)}
+                        {formatPrice(p.price_annual_minor, p.currency)}
                       </td>
                       <td className="py-3 px-4 text-right">
                         <Link

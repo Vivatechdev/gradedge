@@ -267,7 +267,7 @@ export function AuthShell({
             )}
           >
             {/* The Manuscript Card Container */}
-            <div className="anim-manuscript-card bg-[#FAF8F4] text-[#14263F] rounded-[4px] p-5 sm:p-6 border border-[#E4DFD5] shadow-[0_14px_32px_rgba(10,22,38,0.45),0_3px_8px_rgba(10,22,38,0.25)] relative transition-all">
+            <div className="anim-manuscript-card bg-[#FAF8F4] text-[#14263F] rounded-[4px] p-5 sm:p-6 border border-[#E4DFD5] shadow-[8px_8px_0_#0D1B2D,0_12px_24px_rgba(10,22,38,0.35)] relative transition-all">
               {/* Handwritten Sticky Tab Note at card's edge */}
               <div
                 className="anim-sticky-tab absolute -right-3 sm:-right-4 top-10 z-30 bg-[#FFFDE7] border border-[#FDE047]/70 rounded-[2px] px-3 py-1 shadow-md origin-top-right pointer-events-none"

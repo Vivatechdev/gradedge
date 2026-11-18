@@ -6,13 +6,13 @@ const ARTIFACT_DIR = path.resolve(
 );
 
 const ROUTES = [
-  { url: "http://localhost:3000/login", name: "auth-login" },
-  { url: "http://localhost:3000/register", name: "auth-register" },
-  { url: "http://localhost:3000/forgot-password", name: "auth-forgot-password" },
-  { url: "http://localhost:3000/reset-password", name: "auth-reset-password" },
-  { url: "http://localhost:3000/verify-email", name: "auth-verify-email" },
-  { url: "http://localhost:3000/complete-profile", name: "auth-complete-profile", cookie: { name: "mock_user_role", value: "student" } },
-  { url: "http://localhost:3000/mentor", name: "auth-mentor-placeholder" },
+  { url: "http://localhost:3005/login", name: "auth-login" },
+  { url: "http://localhost:3005/register", name: "auth-register" },
+  { url: "http://localhost:3005/forgot-password", name: "auth-forgot-password" },
+  { url: "http://localhost:3005/reset-password", name: "auth-reset-password" },
+  { url: "http://localhost:3005/verify-email", name: "auth-verify-email" },
+  { url: "http://localhost:3005/complete-profile", name: "auth-complete-profile", cookie: { name: "mock_user_role", value: "student" } },
+  { url: "http://localhost:3005/mentor", name: "auth-mentor-placeholder" },
 ];
 
 async function verifyAuthPages() {
@@ -51,7 +51,7 @@ async function verifyAuthPages() {
   // Also test mobile 360px on /register to verify responsive layout
   console.log("\nTesting /register on mobile (360x800)...");
   await page.setViewportSize({ width: 360, height: 800 });
-  await page.goto("http://localhost:3000/register", { waitUntil: "networkidle" });
+  await page.goto("http://localhost:3005/register", { waitUntil: "networkidle" });
   const overflow = await page.evaluate(() => document.documentElement.scrollWidth > document.documentElement.clientWidth);
   console.log(`  Mobile 360px horizontal overflow: ${overflow ? "FAIL" : "PASS (none)"}`);
   await page.screenshot({ path: path.join(ARTIFACT_DIR, "auth-register-mobile-360.png") });

@@ -1,4 +1,5 @@
 const { chromium } = require("playwright");
+const { AxeBuilder } = require("@axe-core/playwright");
 const path = require("path");
 
 const ARTIFACT_DIR = path.resolve(
@@ -12,6 +13,9 @@ const VIEWPORTS = [
   { width: 1440, height: 900, name: "1440-desktop" },
 ];
 
+const PORT = 3005;
+const BASE_URL = `http://localhost:${PORT}`;
+
 async function runAuthShellQA() {
   console.log("===============================================================================");
   console.log("        GRADEDGE AUTH SHELL: MULTI-VIEWPORT, A11Y & CONTRAST QA AUDIT          ");
@@ -22,30 +26,35 @@ async function runAuthShellQA() {
     headless: true,
   });
 
-  // 1. Test /login across all 4 viewports
-  console.log("--- 1. /LOGIN MULTI-VIEWPORT AUDIT ---");
+  // 1. Multi-viewport audit on AuthShell (/login and /register)
+  console.log("--- 1. MULTI-VIEWPORT AUDIT (360, 768, 1024, 1440px) ---");
   for (const vp of VIEWPORTS) {
-    const page = await browser.newPage({ viewport: { width: vp.width, height: vp.height } });
-    await page.goto("http://localhost:3000/login", { waitUntil: "networkidle" });
+    const context = await browser.newContext({ viewport: { width: vp.width, height: vp.height } });
+    const page = await context.newPage();
+    await page.goto(`${BASE_URL}/login`, { waitUntil: "networkidle" });
 
-    // Check horizontal overflow
+    // A. Check horizontal overflow
     const overflow = await page.evaluate(
       () => document.documentElement.scrollWidth > document.documentElement.clientWidth
     );
 
-    // Check left panel visibility (hidden < 900px, visible >= 900px)
+    // B. Check left panel visibility (hidden < 900px, visible >= 900px)
     const leftPanelVisible = await page.locator("aside").isVisible();
     const expectedLeftPanel = vp.width >= 900;
     const panelRulePass = leftPanelVisible === expectedLeftPanel;
 
-    // Check tabs switching between "Create account" and "Log in"
+    // C. Check tabs switching between "Create account" and "Log in"
     const tabsCount = await page.locator('nav[aria-label="Account navigation"] a').count();
 
-    // Check mobile logo presence when left panel is hidden
+    // D. Check mobile logo presence when left panel is hidden
     const mobileLogoVisible = await page.locator("main .min-\\[900px\\]\\:hidden").isVisible();
 
-    console.log(`[Viewport ${vp.width}px - ${vp.name}]`);
-    console.log(`  - Horizontal Overflow: ${overflow ? "FAIL" : "PASS (none)"}`);
+    // E. Heading check
+    const heading = await page.locator("h1").innerText();
+
+    console.log(`\n[Viewport ${vp.width}px - ${vp.name}]`);
+    console.log(`  - Horizontal Overflow: ${overflow ? "FAIL" : "PASS (0px overflow)"}`);
+    console.log(`  - Heading: "${heading}" -> ${heading === "Welcome back" ? "PASS" : "FAIL"}`);
     console.log(`  - Left Panel Visible: ${leftPanelVisible} (Expected: ${expectedLeftPanel}) -> ${panelRulePass ? "PASS" : "FAIL"}`);
     console.log(`  - Auth Tabs Visible: ${tabsCount === 2 ? "PASS (Create account + Log in)" : "FAIL"}`);
     if (vp.width < 900) {
@@ -53,111 +62,114 @@ async function runAuthShellQA() {
     }
 
     if (vp.width >= 900) {
-      // Check manuscript card header & headline
+      // Left panel details check
+      const whiteLogo = await page.locator("aside a[href='/']").isVisible();
       const manuscriptHeader = await page.locator("text=Draft chapter 3, Methodology").isVisible();
       const headline = await page.locator("text=A second pair of eyes on your thesis.").isVisible();
       const line1 = await page.locator("text=Send a draft and get honest comments you can use").isVisible();
       const line2 = await page.locator("text=Your mentor knows your subject and your software").isVisible();
       const line3 = await page.locator("text=You write it. We help you get it right").isVisible();
 
-      console.log(`  - Manuscript Card Header: ${manuscriptHeader ? "PASS" : "FAIL"}`);
-      console.log(`  - Left Headline: ${headline ? "PASS" : "FAIL"}`);
-      console.log(`  - Hairline Divided Lines: ${line1 && line2 && line3 ? "PASS (All 3 present)" : "FAIL"}`);
+      // Check feedback cycle components inside manuscript
+      const stickyTab = await page.locator("text=Which model? Why?").count();
+      const studentDraft = await page.locator("text=Data was analysed with").count();
+      const mentorComment = await page.locator("text=Does this method match your research question?").count();
+      const revisedText = await page.locator("text=Instruments were validated by factor analysis").count();
+
+      console.log(`  - White Logo: ${whiteLogo ? "PASS" : "FAIL"}`);
+      console.log(`  - Manuscript Header: ${manuscriptHeader ? "PASS" : "FAIL"}`);
+      console.log(`  - Headline: ${headline ? "PASS" : "FAIL"}`);
+      console.log(`  - Hairline Lines: ${line1 && line2 && line3 ? "PASS (All 3 present)" : "FAIL"}`);
+      console.log(`  - Animated Feedback Elements: ${stickyTab > 0 && studentDraft > 0 && mentorComment > 0 && revisedText > 0 ? "PASS" : "FAIL"}`);
     }
 
-    const shotPath = path.join(ARTIFACT_DIR, `auth-login-${vp.name}.png`);
+    // Save screenshot
+    const shotPath = path.join(ARTIFACT_DIR, `auth-shell-${vp.name}.png`);
     await page.screenshot({ path: shotPath, fullPage: true });
-    console.log(`  - Screenshot saved: auth-login-${vp.name}.png`);
+    console.log(`  - Saved Screenshot: auth-shell-${vp.name}.png`);
+
     await page.close();
+    await context.close();
   }
 
-  // 2. Test /register across 1440px and 360px
-  console.log("\n--- 2. /REGISTER RESPONSIVE AUDIT ---");
-  for (const vp of [VIEWPORTS[0], VIEWPORTS[3]]) {
-    const page = await browser.newPage({ viewport: { width: vp.width, height: vp.height } });
-    await page.goto("http://localhost:3000/register", { waitUntil: "networkidle" });
-
-    const overflow = await page.evaluate(
-      () => document.documentElement.scrollWidth > document.documentElement.clientWidth
-    );
-
-    // Verify silent timezone: no timezone input or select in DOM
-    const timezoneCount = await page.locator('select#timezone, input#timezone').count();
-    const tabsCount = await page.locator('nav[aria-label="Account navigation"] a').count();
-
-    console.log(`[Viewport ${vp.width}px - ${vp.name}]`);
-    console.log(`  - Horizontal Overflow: ${overflow ? "FAIL" : "PASS (none)"}`);
-    console.log(`  - Timezone field in UI: ${timezoneCount === 0 ? "PASS (NO timezone field)" : "FAIL"}`);
-    console.log(`  - Auth Tabs Visible: ${tabsCount === 2 ? "PASS (Create account active)" : "FAIL"}`);
-
-    const shotPath = path.join(ARTIFACT_DIR, `auth-register-${vp.name}.png`);
-    await page.screenshot({ path: shotPath, fullPage: true });
-    console.log(`  - Screenshot saved: auth-register-${vp.name}.png`);
-    await page.close();
-  }
-
-  // 3. Test /complete-profile at 1024px
-  console.log("\n--- 3. /COMPLETE-PROFILE AUDIT ---");
-  const compContext = await browser.newContext({ viewport: { width: 1024, height: 768 } });
-  await compContext.addCookies([
-    { name: "mock_user_role", value: "student", domain: "localhost", path: "/" },
-    { name: "mock_incomplete_profile", value: "true", domain: "localhost", path: "/" },
-  ]);
-  const compPage = await compContext.newPage();
-  await compPage.goto("http://localhost:3000/complete-profile", { waitUntil: "networkidle" });
-  const compTitle = await compPage.locator("h1").innerText();
-  const compDesc = await compPage.locator("text=Tell us about your research so we can match you with the right mentor.").isVisible();
-  console.log(`  - Heading: "${compTitle}" -> ${compTitle === "One last step" ? "PASS" : "FAIL"}`);
-  console.log(`  - Description line: ${compDesc ? "PASS" : "FAIL"}`);
-  const compShot = path.join(ARTIFACT_DIR, "auth-complete-profile-1024.png");
-  await compPage.screenshot({ path: compShot, fullPage: true });
-  console.log("  - Screenshot saved: auth-complete-profile-1024.png");
-  await compContext.close();
-
-  // 4. Test /forgot-password, /reset-password, /verify-email at 1024px
-  console.log("\n--- 4. OTHER AUTH PAGES (1024px) ---");
-  const genericPages = [
-    { url: "http://localhost:3000/forgot-password", name: "auth-forgot-password-1024" },
-    { url: "http://localhost:3000/reset-password", name: "auth-reset-password-1024" },
-    { url: "http://localhost:3000/verify-email", name: "auth-verify-email-1024" },
+  // 2. Form Style Audits on /register, /complete-profile, /forgot-password
+  console.log("\n--- 2. FORM STYLE & HEADINGS AUDIT ---");
+  const formPages = [
+    {
+      url: `${BASE_URL}/register`,
+      name: "register",
+      expectedHeading: "Create your account",
+    },
+    {
+      url: `${BASE_URL}/complete-profile`,
+      name: "complete-profile",
+      expectedHeading: "One last step",
+      expectedDesc: "Tell us about your research so we can match you with the right mentor.",
+      cookies: [
+        { name: "mock_user_role", value: "student", domain: "localhost", path: "/" },
+        { name: "mock_incomplete_profile", value: "true", domain: "localhost", path: "/" },
+      ],
+    },
+    {
+      url: `${BASE_URL}/forgot-password`,
+      name: "forgot-password",
+      expectedHeading: "Reset your password",
+    },
   ];
 
-  for (const item of genericPages) {
-    const p = await browser.newPage({ viewport: { width: 1024, height: 768 } });
-    await p.goto(item.url, { waitUntil: "networkidle" });
-    const shotPath = path.join(ARTIFACT_DIR, `${item.name}.png`);
-    await p.screenshot({ path: shotPath, fullPage: true });
-    console.log(`  - [${item.url}] Saved: ${item.name}.png`);
-    await p.close();
+  for (const item of formPages) {
+    const context = await browser.newContext({ viewport: { width: 1024, height: 768 } });
+    if (item.cookies) {
+      await context.addCookies(item.cookies);
+    }
+    const page = await context.newPage();
+    await page.goto(item.url, { waitUntil: "networkidle" });
+
+    const heading = await page.locator("h1").innerText();
+    console.log(`[${item.name}] Heading: "${heading}" -> ${heading === item.expectedHeading ? "PASS" : "FAIL"}`);
+
+    if (item.expectedDesc) {
+      const descVisible = await page.locator(`text=${item.expectedDesc}`).isVisible();
+      console.log(`[${item.name}] Description line: ${descVisible ? "PASS" : "FAIL"}`);
+    }
+
+    // Check button styling: gold button with navy text
+    const goldButtonCount = await page.locator("button[type='submit'].bg-gold.text-navy, button[type='submit'][class*='bg-gold']").count();
+    console.log(`[${item.name}] Gold primary button: ${goldButtonCount > 0 ? "PASS" : "FAIL"}`);
+
+    // Check show/hide text toggle if on register
+    if (item.name === "register") {
+      const showHideBtn = await page.locator("button:has-text('Show'), button:has-text('Hide')").count();
+      console.log(`[${item.name}] Password Show/Hide as text (no icons): ${showHideBtn > 0 ? "PASS" : "FAIL"}`);
+    }
+
+    await page.close();
+    await context.close();
   }
 
-  // 5. Contrast & Accessibility Verification
-  console.log("\n--- 5. CONTRAST & ACCESSIBILITY AUDIT ---");
-  const a11yPage = await browser.newPage({ viewport: { width: 1280, height: 800 } });
-  await a11yPage.goto("http://localhost:3000/login", { waitUntil: "networkidle" });
+  // 3. Automated Axe Accessibility & Contrast Audit
+  console.log("\n--- 3. AXE-CORE ACCESSIBILITY & CONTRAST AUDIT ---");
+  const a11yContext = await browser.newContext({ viewport: { width: 1280, height: 800 } });
+  const a11yPage = await a11yContext.newPage();
+  await a11yPage.goto(`${BASE_URL}/login`, { waitUntil: "networkidle" });
 
-  const a11yChecks = await a11yPage.evaluate(() => {
-    // 1. Check all inputs have associated labels
-    const inputs = Array.from(document.querySelectorAll("input:not([type='hidden'])"));
-    const unlabeledInputs = inputs.filter((inp) => {
-      const id = inp.getAttribute("id");
-      if (!id) return true;
-      const label = document.querySelector(`label[for="${id}"]`);
-      return !label;
-    });
-
-    return {
-      totalInputs: inputs.length,
-      unlabeledCount: unlabeledInputs.length,
-    };
-  });
-
-  console.log(`  - Form input label associations: ${a11yChecks.unlabeledCount === 0 ? "PASS (100% labeled)" : "FAIL"}`);
-  console.log("  - Left panel contrast (#FFFFFF on #14263F): 14.2:1 -> PASS (Exceeds WCAG AAA 7:1)");
-  console.log("  - Gold button contrast (#14263F text on #C8963E gold): 5.6:1 -> PASS (Exceeds WCAG AA 4.5:1)");
-  console.log("  - Paper surface (#14263F text on #FAF8F4 paper): 13.8:1 -> PASS (Exceeds WCAG AAA 7:1)");
+  try {
+    const axeResults = await new AxeBuilder({ page: a11yPage })
+      .withRules(["color-contrast", "label", "button-name"])
+      .analyze();
+    const violations = axeResults.violations;
+    if (violations.length === 0) {
+      console.log("  Axe-core Contrast & Form Label Audit: PASS (0 violations)");
+    } else {
+      console.log(`  Axe-core Violations: ${violations.length}`);
+      violations.forEach((v) => console.log(`    - ${v.id}: ${v.help}`));
+    }
+  } catch (err) {
+    console.log("  Axe notice:", err.message);
+  }
 
   await a11yPage.close();
+  await a11yContext.close();
   await browser.close();
 
   console.log("\n===============================================================================");

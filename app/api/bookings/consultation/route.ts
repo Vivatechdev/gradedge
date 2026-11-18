@@ -12,6 +12,7 @@ import {
   sendBookingAdminNotificationEmail,
 } from "@/lib/email";
 import { createServiceRoleClient } from "@/lib/supabase/service-role";
+import { checkRateLimit } from "@/lib/auth/server";
 
 export async function POST(request: NextRequest) {
   try {
@@ -27,6 +28,17 @@ export async function POST(request: NextRequest) {
 
     const { starts_at, timezone, full_name, email, study_level, topic_help, message } =
       parsed.data;
+
+    // Rate limiting (max 5 bookings per 15 minutes per IP/email)
+    const ip = request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || "anonymous";
+    const rl = checkRateLimit("booking_consultation", `${ip}_${email.toLowerCase().trim()}`, 5, 15 * 60 * 1000);
+    if (!rl.allowed) {
+      const minutes = Math.ceil((rl.retryAfterSeconds || 900) / 60);
+      return NextResponse.json(
+        { error: `Too many booking requests. Please wait ${minutes} minute(s) before trying again.` },
+        { status: 429 }
+      );
+    }
     const settings = await getBookingSettings();
 
     const startTime = new Date(starts_at);

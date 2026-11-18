@@ -407,10 +407,10 @@ export default function StudentMentorPage() {
             <div className="space-y-2">
               <span className="type-micro text-gold">Matching in Progress</span>
               <h2 className="font-serif text-2xl font-medium text-tone-heading">
-                We are matching you with a faculty mentor
+                We&apos;re matching you with a mentor in your field
               </h2>
               <p className="text-xs text-tone-muted leading-relaxed font-sans max-w-lg mx-auto">
-                GradEdge pairs doctoral candidates and researchers with mentors based on precise discipline, research methodology, and statistical software requirements.
+                We&apos;re matching you with a mentor in your field. You&apos;ll see their details here within {matchingWindow}.
               </p>
             </div>
 

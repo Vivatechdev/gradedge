@@ -278,7 +278,7 @@ function CompleteProfileForm() {
           <button
             type="submit"
             disabled={loading}
-            className="w-full bg-gold hover:bg-gold-deep text-navy font-semibold text-xs sm:text-sm py-2.5 px-4 rounded-[4px] transition-colors disabled:opacity-60 cursor-pointer disabled:cursor-not-allowed"
+            className="w-full bg-gold hover:bg-gold-deep text-[#14263F] font-bold text-xs sm:text-sm py-2.5 px-4 rounded-[4px] transition-colors disabled:opacity-60 cursor-pointer disabled:cursor-not-allowed"
           >
             {loading ? "Saving profile..." : "Complete Profile & Continue"}
           </button>
@@ -293,8 +293,8 @@ export default function CompleteProfilePage() {
     <Suspense
       fallback={
         <AuthShell
-          title="Complete Your Academic Profile"
-          description="A few details to tailor your research mentoring."
+          title="One last step"
+          description="Tell us about your research so we can match you with the right mentor."
         >
           <div className="py-12 text-center text-xs font-sans text-tone-muted">Loading profile details...</div>
         </AuthShell>

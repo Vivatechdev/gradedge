@@ -44,7 +44,20 @@ export async function GET() {
       }
     }
 
-    // 4. Fetch unread counts (messages & notifications)
+    // 4. Fetch unread counts (messages, notifications & pending invoices)
+    const { data: threads } = await supabase
+      .from("message_threads")
+      .select("id, messages(id, sender_id, read_at)")
+      .eq("student_id", user.id);
+
+    let unreadMessages = 0;
+    if (threads) {
+      for (const t of threads) {
+        const msgs = (t as any).messages || [];
+        unreadMessages += msgs.filter((m: any) => m.sender_id !== user.id && !m.read_at).length;
+      }
+    }
+
     const { count: unreadNotifications } = await supabase
       .from("notifications")
       .select("id", { count: "exact", head: true })
@@ -84,6 +97,7 @@ export async function GET() {
       nextSession,
       activeProject,
       milestoneProgress,
+      unreadMessages,
       unreadNotifications: unreadNotifications || 0,
       pendingInvoices: pendingInvoices || 0,
       recentActivity,

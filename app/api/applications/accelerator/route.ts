@@ -6,6 +6,7 @@ import {
   sendAcceleratorApplicationAcknowledgement,
   sendAcceleratorAdminNotification,
 } from "@/lib/email";
+import { checkRateLimit } from "@/lib/auth/server";
 
 export async function POST(request: NextRequest) {
   try {
@@ -32,6 +33,16 @@ export async function POST(request: NextRequest) {
     }
 
     const data = parsed.data;
+
+    // Rate limiting (max 3 accelerator applications per 15 mins per IP/email)
+    const ip = request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || "anonymous";
+    const rl = checkRateLimit("accelerator_app", `${ip}_${data.email.toLowerCase().trim()}`, 3, 15 * 60 * 1000);
+    if (!rl.allowed) {
+      return NextResponse.json(
+        { error: "Too many application submissions. Please try again later." },
+        { status: 429 }
+      );
+    }
     const applicationId = crypto.randomUUID();
     const securePaymentToken = crypto.randomBytes(24).toString("hex");
     const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";

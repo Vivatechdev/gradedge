@@ -70,7 +70,7 @@ function LoginForm() {
 
   return (
     <AuthShell
-      title="Welcome Back to GradEdge"
+      title="Welcome back"
       description="Sign in to your researcher workspace."
       activeTab="login"
     >
@@ -109,7 +109,7 @@ function LoginForm() {
             autoComplete="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="w-full h-10 px-3 text-sm font-sans bg-white border border-tone-rule rounded-[2px] text-tone-heading placeholder:text-stone-400 focus:outline-none focus:border-navy focus:ring-1 focus:ring-navy transition-all"
+            className="w-full h-10 px-3 text-sm font-sans bg-white border border-tone-rule rounded-[4px] text-tone-heading placeholder:text-stone-400 focus:outline-none focus:border-gold focus:ring-1 focus:ring-gold transition-all"
             placeholder="you@university.edu"
           />
         </div>
@@ -138,13 +138,13 @@ function LoginForm() {
               autoComplete="current-password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="w-full h-10 px-3 pr-16 text-sm font-sans bg-white border border-tone-rule rounded-[2px] text-tone-heading placeholder:text-stone-400 focus:outline-none focus:border-navy focus:ring-1 focus:ring-navy transition-all"
+              className="w-full h-10 px-3 pr-16 text-sm font-sans bg-white border border-tone-rule rounded-[4px] text-tone-heading placeholder:text-stone-400 focus:outline-none focus:border-gold focus:ring-1 focus:ring-gold transition-all"
               placeholder="Your password"
             />
             <button
               type="button"
               onClick={() => setShowPassword(!showPassword)}
-              className="absolute right-3 top-1/2 -translate-y-1/2 text-xs font-sans font-medium text-stone-500 hover:text-navy transition-colors select-none"
+              className="absolute right-3 top-1/2 -translate-y-1/2 text-xs font-sans font-medium text-stone-500 hover:text-navy transition-colors select-none cursor-pointer"
               aria-label={showPassword ? "Hide password text" : "Show password text"}
             >
               {showPassword ? "Hide" : "Show"}
@@ -157,7 +157,7 @@ function LoginForm() {
           <button
             type="submit"
             disabled={loading}
-            className="w-full h-11 bg-navy text-paper font-sans text-sm font-medium rounded-[2px] hover:bg-navy/95 active:bg-navy focus:outline-none focus:ring-2 focus:ring-gold focus:ring-offset-2 transition-all disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
+            className="w-full h-11 bg-gold text-[#14263F] hover:bg-[#D6A650] font-sans text-sm font-bold rounded-[4px] focus:outline-none focus:ring-2 focus:ring-gold focus:ring-offset-2 transition-all disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
           >
             {loading ? "Signing in..." : "Sign In to Workspace"}
           </button>

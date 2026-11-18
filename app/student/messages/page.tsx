@@ -18,7 +18,11 @@ import {
   CheckCircle2,
   FileText,
   Plus,
+  Flag,
+  Check,
+  CheckCheck,
 } from "lucide-react";
+import { createClient } from "@/lib/supabase/client";
 
 export default function StudentMessagesPage() {
   const student = useStudent();
@@ -40,6 +44,116 @@ export default function StudentMessagesPage() {
   const [showNewThreadModal, setShowNewThreadModal] = useState(false);
   const [newSubject, setNewSubject] = useState("");
   const [initialMsg, setInitialMsg] = useState("");
+
+  // Integrity Flag Modal
+  const [flagModalOpen, setFlagModalOpen] = useState(false);
+  const [flaggingMessage, setFlaggingMessage] = useState<any | null>(null);
+  const [flagReason, setFlagReason] = useState("Plagiarism or Uncited Material");
+  const [flagSeverity, setFlagSeverity] = useState<"low" | "medium" | "high" | "critical">("medium");
+  const [flagNotes, setFlagNotes] = useState("");
+  const [submittingFlag, setSubmittingFlag] = useState(false);
+
+  const handleOpenFlagModal = (msg: any) => {
+    setFlaggingMessage(msg);
+    setFlagReason("Plagiarism or Uncited Material");
+    setFlagSeverity("medium");
+    setFlagNotes("");
+    setFlagModalOpen(true);
+  };
+
+  const handleSubmitFlag = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!flaggingMessage) return;
+
+    setSubmittingFlag(true);
+    try {
+      const res = await fetch("/api/messages/flag", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          messageId: flaggingMessage.id,
+          reason: flagReason,
+          severity: flagSeverity,
+          notes: flagNotes,
+        }),
+      });
+
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || "Failed to submit integrity flag.");
+
+      toast({
+        title: "Integrity Review Initiated",
+        message: "Your concern has been registered and submitted to academic leadership.",
+        type: "info",
+      });
+      setFlagModalOpen(false);
+      setFlaggingMessage(null);
+    } catch (err: any) {
+      toast({
+        title: "Submission Error",
+        message: err.message,
+        type: "error",
+      });
+    } finally {
+      setSubmittingFlag(false);
+    }
+  };
+
+  // Realtime messages subscription
+  useEffect(() => {
+    if (!activeThreadId) return;
+
+    try {
+      const supabase = createClient();
+      const channel = supabase
+        .channel(`public:messages:thread_${activeThreadId}`)
+        .on(
+          "postgres_changes",
+          {
+            event: "INSERT",
+            schema: "public",
+            table: "messages",
+            filter: `thread_id=eq.${activeThreadId}`,
+          },
+          (payload: any) => {
+            const newRow = payload.new;
+            if (newRow && newRow.sender_id !== student.id) {
+              setThreads((prev) =>
+                prev.map((t) => {
+                  if (t.id === activeThreadId) {
+                    if (t.messages.some((m: any) => m.id === newRow.id)) return t;
+                    return {
+                      ...t,
+                      lastMessageAt: newRow.created_at,
+                      messages: [
+                        ...t.messages,
+                        {
+                          id: newRow.id,
+                          senderId: newRow.sender_id,
+                          isMe: false,
+                          body: newRow.body,
+                          createdAt: newRow.created_at,
+                          readAt: null,
+                          attachment: null,
+                        },
+                      ],
+                    };
+                  }
+                  return t;
+                })
+              );
+            }
+          }
+        )
+        .subscribe();
+
+      return () => {
+        supabase.removeChannel(channel);
+      };
+    } catch {
+      // Offline fallback
+    }
+  }, [activeThreadId, student.id]);
 
   const loadMessages = async () => {
     try {
@@ -301,6 +415,26 @@ export default function StudentMessagesPage() {
                             minute: "2-digit",
                           })}
                         </span>
+                        {m.isMe && (
+                          <span title={m.readAt ? "Read by recipient" : "Delivered"}>
+                            {m.readAt ? (
+                              <CheckCheck className="w-3 h-3 text-gold" aria-label="Read" />
+                            ) : (
+                              <Check className="w-3 h-3 text-stone-400" aria-label="Delivered" />
+                            )}
+                          </span>
+                        )}
+                        {!m.isMe && (
+                          <button
+                            type="button"
+                            onClick={() => handleOpenFlagModal(m)}
+                            title="Flag message for academic integrity review"
+                            className="text-stone-400 hover:text-red-600 transition-colors ml-1 p-0.5 rounded"
+                            aria-label="Flag message for academic integrity review"
+                          >
+                            <Flag className="w-2.5 h-2.5" />
+                          </button>
+                        )}
                       </div>
 
                       <div
@@ -410,6 +544,97 @@ export default function StudentMessagesPage() {
                     disabled={sending || !newSubject.trim() || !initialMsg.trim()}
                   >
                     {sending ? "Creating..." : "Start Thread"}
+                  </Button>
+                </div>
+              </form>
+            </div>
+          </div>
+        )}
+        {/* INTEGRITY FLAGGING MODAL */}
+        {flagModalOpen && flaggingMessage && (
+          <div className="fixed inset-0 z-50 bg-navy/70 backdrop-blur-xs flex items-center justify-center p-4">
+            <div className="bg-white border border-tone-rule rounded-[2px] w-full max-w-lg p-6 space-y-4 shadow-2xl">
+              <div className="border-b border-tone-rule pb-3">
+                <div className="flex items-center gap-2 text-red-600 mb-1">
+                  <ShieldCheck className="w-4 h-4" />
+                  <span className="type-micro font-semibold uppercase tracking-wider">Academic Integrity Review</span>
+                </div>
+                <h3 className="font-serif text-lg font-medium text-tone-heading">
+                  Flag Message for Academic Integrity
+                </h3>
+                <p className="text-xs text-tone-muted">
+                  Flags are investigated confidentially by GradEdge Academic Directors.
+                </p>
+              </div>
+
+              <div className="p-3 bg-paper border border-tone-rule rounded-[2px] text-xs space-y-1">
+                <span className="text-[10px] uppercase font-semibold text-tone-muted block">Message Excerpt:</span>
+                <p className="italic text-tone-heading font-serif">
+                  &ldquo;{flaggingMessage.body.slice(0, 180)}{flaggingMessage.body.length > 180 ? "..." : ""}&rdquo;
+                </p>
+              </div>
+
+              <form onSubmit={handleSubmitFlag} className="space-y-3.5 text-xs font-sans">
+                <div className="space-y-1">
+                  <label className="font-semibold text-tone-heading block">Primary Reason</label>
+                  <select
+                    value={flagReason}
+                    onChange={(e) => setFlagReason(e.target.value)}
+                    className="w-full h-9 px-3 text-xs bg-white border border-tone-rule rounded-[2px] focus:outline-none focus:border-navy"
+                  >
+                    <option value="Plagiarism or Uncited Material">Plagiarism or Uncited Material</option>
+                    <option value="Unethical Ghostwriting or Contract Cheating Solicitation">Unethical Ghostwriting / Contract Cheating Solicitation</option>
+                    <option value="Fabricated or Falsified Data">Fabricated or Falsified Empirical Data</option>
+                    <option value="Breach of Institutional Ethics Protocol">Breach of Institutional Ethics Protocol</option>
+                    <option value="Other Academic Misconduct Concern">Other Academic Misconduct Concern</option>
+                  </select>
+                </div>
+
+                <div className="space-y-1">
+                  <label className="font-semibold text-tone-heading block">Severity Level</label>
+                  <select
+                    value={flagSeverity}
+                    onChange={(e) => setFlagSeverity(e.target.value as any)}
+                    className="w-full h-9 px-3 text-xs bg-white border border-tone-rule rounded-[2px] focus:outline-none focus:border-navy"
+                  >
+                    <option value="low">Low (Clarification required)</option>
+                    <option value="medium">Medium (Suspected ethics variance)</option>
+                    <option value="high">High (Substantial integrity breach)</option>
+                    <option value="critical">Critical (Direct violation of academic policy)</option>
+                  </select>
+                </div>
+
+                <div className="space-y-1">
+                  <label className="font-semibold text-tone-heading block">Additional Notes / Evidence (Optional)</label>
+                  <textarea
+                    rows={3}
+                    value={flagNotes}
+                    onChange={(e) => setFlagNotes(e.target.value)}
+                    placeholder="Provide relevant context or reference citations..."
+                    className="w-full p-2.5 text-xs bg-white border border-tone-rule rounded-[2px] focus:outline-none focus:border-navy"
+                  />
+                </div>
+
+                <div className="flex justify-end gap-2 pt-2 border-t border-tone-rule">
+                  <Button
+                    type="button"
+                    variant="secondary"
+                    size="sm"
+                    onClick={() => {
+                      setFlagModalOpen(false);
+                      setFlaggingMessage(null);
+                    }}
+                  >
+                    Cancel
+                  </Button>
+                  <Button
+                    type="submit"
+                    variant="primary"
+                    size="sm"
+                    disabled={submittingFlag}
+                    className="bg-red-700 hover:bg-red-800 text-white"
+                  >
+                    {submittingFlag ? "Submitting..." : "Submit Confidential Flag"}
                   </Button>
                 </div>
               </form>

@@ -1,4 +1,7 @@
-export type Currency = "USD" | "NGN";
+import { formatPrice } from "@/lib/currency/format";
+export { formatPrice };
+
+export type Currency = "USD" | "NGN" | "GBP" | "EUR" | "GHS" | "ZAR" | "KES";
 
 export type PaymentPurpose = "booking" | "package" | "program" | "membership";
 
@@ -107,21 +110,7 @@ export function fromMinorUnits(amountMinor: number): number {
 }
 
 export function formatMoney(amountMinor: number, currency: Currency): string {
-  const major = fromMinorUnits(amountMinor);
-  if (currency === "USD") {
-    return new Intl.NumberFormat("en-US", {
-      style: "currency",
-      currency: "USD",
-      minimumFractionDigits: major % 1 === 0 ? 0 : 2,
-      maximumFractionDigits: 2,
-    }).format(major);
-  } else {
-    // NGN formatting with ₦ symbol
-    return `₦${new Intl.NumberFormat("en-NG", {
-      minimumFractionDigits: 0,
-      maximumFractionDigits: 0,
-    }).format(major)}`;
-  }
+  return formatPrice(amountMinor, currency);
 }
 
 /**

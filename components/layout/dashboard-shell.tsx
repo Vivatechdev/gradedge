@@ -7,6 +7,7 @@ import { Logo } from "./logo";
 import { Avatar } from "@/components/ui/avatar";
 import { DropdownMenu, DropdownItem, DropdownSeparator } from "@/components/ui/dropdown";
 import { cn } from "@/lib/utils";
+import { NotificationBell } from "@/components/notifications/notification-bell";
 import {
   LayoutDashboard,
   FolderKanban,
@@ -35,6 +36,7 @@ export interface DashboardShellProps {
   children: React.ReactNode;
   role?: "student" | "admin";
   user?: {
+    id?: string;
     name: string;
     email: string;
     institution?: string;
@@ -46,6 +48,7 @@ export function DashboardShell({
   children,
   role = "student",
   user = {
+    id: "",
     name: "Freedom Sola",
     email: "freedom.sola@university.edu",
     institution: "Postgraduate Researcher",
@@ -75,6 +78,7 @@ export function DashboardShell({
     { label: "Support Requests", href: "/admin/projects", icon: FolderKanban },
     { label: "Bookings & Pool", href: "/admin/bookings", icon: CalendarCheck },
     { label: "Researchers", href: "/admin/students", icon: Users },
+    { label: "Currency & Prices", href: "/admin/prices", icon: CreditCard },
     { label: "Content & Blog", href: "/admin/blog", icon: BookOpen },
     { label: "Academic Integrity", href: "/admin/integrity", icon: ShieldCheck },
     { label: "Platform Settings", href: "/admin/settings", icon: Settings },
@@ -168,15 +172,8 @@ export function DashboardShell({
 
           {/* Right Header items: Notifications & Profile Dropdown */}
           <div className="flex items-center gap-4">
-            {/* Notification Bell */}
-            <Link
-              href={role === "admin" ? "/admin/notifications" : "/student/notifications"}
-              aria-label="View notifications"
-              className="relative p-2 text-tone-muted hover:text-tone-heading transition-colors rounded-[2px] border border-transparent hover:border-tone-rule"
-            >
-              <Bell className="h-4 w-4" />
-              <span className="absolute top-1.5 right-1.5 h-1.5 w-1.5 bg-gold rounded-full" />
-            </Link>
+            {/* Realtime Notification Bell */}
+            <NotificationBell userId={user.id} role={role} />
 
             {/* Profile Menu Dropdown */}
             <DropdownMenu

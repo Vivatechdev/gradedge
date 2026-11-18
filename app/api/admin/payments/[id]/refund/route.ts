@@ -34,9 +34,17 @@ export async function POST(
     });
   } catch (error: any) {
     console.error("[Admin Payment Refund Error]", error);
+    const isAuthError =
+      error.digest?.startsWith("NEXT_REDIRECT") ||
+      error.message?.toLowerCase().includes("auth") ||
+      error.message?.toLowerCase().includes("unauthor") ||
+      error.message?.toLowerCase().includes("forbidden") ||
+      error.message?.toLowerCase().includes("role");
+    const status = isAuthError ? 403 : (error.status || 500);
+
     return NextResponse.json(
       { error: error.message || "Failed to execute refund." },
-      { status: error.status || 500 }
+      { status }
     );
   }
 }

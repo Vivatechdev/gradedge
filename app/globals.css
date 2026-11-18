@@ -356,6 +356,12 @@ body {
   outline-offset: 2px !important;
 }
 
+/* Global keyboard navigation focus ring */
+:focus-visible {
+  outline: 2px solid var(--color-gold, #C8963E);
+  outline-offset: 2px;
+}
+
 /* Gold button: background #C8963E, text #14263F (never white). Hover #D6A650 */
 .btn-accent {
   background-color: #C8963E;

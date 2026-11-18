@@ -53,6 +53,8 @@ export default function StudentOverviewPage() {
       student.timezone || "UTC"
     );
     nextHeadline = `Your next session is ${slot.localDate} at ${slot.localTime} (${slot.timezoneShort}).`;
+  } else if (data?.unreadMessages > 0) {
+    nextHeadline = `You have ${data.unreadMessages} unread message${data.unreadMessages === 1 ? "" : "s"} from your advisory mentor.`;
   } else if (data?.milestoneProgress?.nextTitle) {
     nextHeadline = `Your current milestone "${data.milestoneProgress.nextTitle}" is in progress.`;
   } else if (data?.activeProject) {
@@ -218,6 +220,27 @@ export default function StudentOverviewPage() {
                         className="text-[11px] text-navy hover:text-gold font-medium shrink-0"
                       >
                         Review scope &rarr;
+                      </Link>
+                    </div>
+                  )}
+
+                  {/* Unread messages item */}
+                  {data?.unreadMessages > 0 && (
+                    <div className="py-3 flex items-start justify-between gap-4">
+                      <div className="space-y-1">
+                        <span className="font-semibold text-tone-heading flex items-center gap-1.5">
+                          <MessageSquare className="w-3.5 h-3.5 text-navy" />
+                          Unread Faculty Critique ({data.unreadMessages} new {data.unreadMessages === 1 ? "message" : "messages"})
+                        </span>
+                        <p className="text-tone-muted text-[11px]">
+                          Your mentor has responded to your research consultation thread.
+                        </p>
+                      </div>
+                      <Link
+                        href="/student/messages"
+                        className="text-[11px] text-navy hover:text-gold font-medium shrink-0"
+                      >
+                        Read messages &rarr;
                       </Link>
                     </div>
                   )}
