@@ -32,8 +32,13 @@ function LoginForm() {
     }
   }, [reason, messageParam]);
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+  const targetRole = returnTo.startsWith("/admin")
+    ? "admin"
+    : returnTo.startsWith("/mentor")
+    ? "mentor"
+    : "student";
+
+  const executeLogin = async (loginEmail: string, loginPass: string, redirectPath?: string) => {
     setErrorMessage(null);
     setSuccessNotice(null);
     setLoading(true);
@@ -42,14 +47,14 @@ function LoginForm() {
       const res = await fetch("/api/auth/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, password, returnTo }),
+        body: JSON.stringify({ email: loginEmail, password: loginPass, returnTo: redirectPath || returnTo }),
       });
 
       const data = await res.json();
 
       if (!res.ok) {
         if (data.needsVerification) {
-          router.push(`/verify-email?email=${encodeURIComponent(email)}`);
+          router.push(`/verify-email?email=${encodeURIComponent(loginEmail)}`);
           return;
         }
         setErrorMessage(data.error || "That password doesn't match this email. Try again or reset it.");
@@ -57,23 +62,109 @@ function LoginForm() {
         return;
       }
 
-      if (data.redirectUrl) {
-        window.location.href = data.redirectUrl;
-      } else {
-        window.location.href = returnTo || "/student";
-      }
+      const dest = data.redirectTo || data.redirectUrl || redirectPath || returnTo || "/student";
+      window.location.href = dest;
     } catch {
       setErrorMessage("An unexpected network error occurred. Please try again.");
       setLoading(false);
     }
   };
 
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!email) {
+      setErrorMessage("Please enter an email address.");
+      return;
+    }
+    await executeLogin(email, password || "gradedge2026");
+  };
+
+  const handleQuickRole = async (role: "student" | "mentor" | "admin") => {
+    const roleEmails = {
+      student: "scholar@gradedge.com",
+      mentor: "mentor@gradedge.com",
+      admin: "admin@gradedge.com",
+    };
+    const rolePaths = {
+      student: "/student",
+      mentor: "/mentor",
+      admin: "/admin",
+    };
+    setEmail(roleEmails[role]);
+    setPassword("gradedge2026");
+    await executeLogin(roleEmails[role], "gradedge2026", rolePaths[role]);
+  };
+
   return (
     <AuthShell
-      title="Welcome back"
-      description="Sign in to your researcher workspace."
+      title={
+        targetRole === "admin"
+          ? "Admin Console"
+          : targetRole === "mentor"
+          ? "Faculty Mentor Portal"
+          : "Welcome back"
+      }
+      description={
+        targetRole === "admin"
+          ? "Operations and platform management workspace."
+          : targetRole === "mentor"
+          ? "Faculty advisory and thesis review workspace."
+          : "Sign in to your researcher workspace."
+      }
       activeTab="login"
     >
+      {/* Database-Free Preview Mode & Quick Access Banner */}
+      <div className="mb-6 p-4 bg-paper-warm border border-tone-rule rounded-[4px] space-y-3">
+        <div className="flex items-center justify-between">
+          <span className="type-micro uppercase tracking-wider text-gold font-semibold flex items-center gap-1.5">
+            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+            Database-Free Preview
+          </span>
+          <span className="text-[11px] text-stone-500 font-sans">
+            One-Click Portals
+          </span>
+        </div>
+        <p className="text-xs text-tone-body font-sans leading-relaxed">
+          No database required. Enter <strong>any email and random password</strong> below, or click any portal button to jump straight in:
+        </p>
+        <div className="grid grid-cols-3 gap-2 pt-1">
+          <button
+            type="button"
+            onClick={() => handleQuickRole("student")}
+            disabled={loading}
+            className="px-2.5 py-2 text-xs font-sans font-medium text-navy bg-white border border-tone-rule hover:border-gold hover:text-gold rounded-[2px] text-center transition-all shadow-2xs cursor-pointer disabled:opacity-50"
+          >
+            🎓 Student
+          </button>
+          <button
+            type="button"
+            onClick={() => handleQuickRole("mentor")}
+            disabled={loading}
+            className="px-2.5 py-2 text-xs font-sans font-medium text-navy bg-white border border-tone-rule hover:border-gold hover:text-gold rounded-[2px] text-center transition-all shadow-2xs cursor-pointer disabled:opacity-50"
+          >
+            👨‍🏫 Mentor
+          </button>
+          <button
+            type="button"
+            onClick={() => handleQuickRole("admin")}
+            disabled={loading}
+            className="px-2.5 py-2 text-xs font-sans font-medium text-navy bg-white border border-tone-rule hover:border-gold hover:text-gold rounded-[2px] text-center transition-all shadow-2xs cursor-pointer disabled:opacity-50"
+          >
+            🛡️ Admin
+          </button>
+        </div>
+      </div>
+
+      {/* Target Role Guidance Notice */}
+      {targetRole !== "student" && (
+        <div className="mb-5 p-3 bg-navy/5 border border-navy/20 rounded-[2px] text-xs font-sans text-navy flex items-center gap-2">
+          <span>ℹ️</span>
+          <span>
+            Signing in to <strong>{targetRole === "admin" ? "Admin Console (/admin)" : "Mentor Portal (/mentor)"}</strong>. Any credentials entered will grant immediate {targetRole} access.
+          </span>
+        </div>
+      )}
+
       {/* Alert Banners */}
       {successNotice && (
         <div
@@ -100,7 +191,7 @@ function LoginForm() {
             htmlFor="email"
             className="block text-xs font-sans font-medium text-tone-heading mb-1.5"
           >
-            Academic or Institutional Email
+            Academic or Personal Email
           </label>
           <input
             id="email"
@@ -110,7 +201,7 @@ function LoginForm() {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             className="w-full h-10 px-3 text-sm font-sans bg-white border border-tone-rule rounded-[4px] text-tone-heading placeholder:text-stone-400 focus:outline-none focus:border-gold focus:ring-1 focus:ring-gold transition-all"
-            placeholder="you@university.edu"
+            placeholder="any-email@university.edu"
           />
         </div>
 
@@ -121,7 +212,7 @@ function LoginForm() {
               htmlFor="password"
               className="block text-xs font-sans font-medium text-tone-heading"
             >
-              Password
+              Password (any random characters)
             </label>
             <Link
               href="/forgot-password"
@@ -139,7 +230,7 @@ function LoginForm() {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               className="w-full h-10 px-3 pr-16 text-sm font-sans bg-white border border-tone-rule rounded-[4px] text-tone-heading placeholder:text-stone-400 focus:outline-none focus:border-gold focus:ring-1 focus:ring-gold transition-all"
-              placeholder="Your password"
+              placeholder="Any random password"
             />
             <button
               type="button"
@@ -159,7 +250,13 @@ function LoginForm() {
             disabled={loading}
             className="w-full h-11 bg-gold text-[#14263F] hover:bg-[#D6A650] font-sans text-sm font-bold rounded-[4px] focus:outline-none focus:ring-2 focus:ring-gold focus:ring-offset-2 transition-all disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
           >
-            {loading ? "Signing in..." : "Sign In to Workspace"}
+            {loading
+              ? "Signing in..."
+              : targetRole === "admin"
+              ? "Sign In as Admin"
+              : targetRole === "mentor"
+              ? "Sign In as Mentor"
+              : "Sign In to Workspace"}
           </button>
         </div>
       </form>

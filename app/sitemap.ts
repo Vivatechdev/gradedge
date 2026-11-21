@@ -26,7 +26,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       ]);
 
       if (servicesRes.data) {
-        servicesRes.data.forEach((s) => {
+        servicesRes.data.forEach((s: any) => {
           routes.push({
             url: `${siteUrl}/services/${s.slug}`,
             lastModified: new Date("2026-10-28"),
@@ -37,7 +37,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       }
 
       if (subjectsRes.data) {
-        subjectsRes.data.forEach((sub) => {
+        subjectsRes.data.forEach((sub: any) => {
           routes.push({
             url: `${siteUrl}/subjects/${sub.slug}`,
             lastModified: new Date("2026-10-28"),
@@ -48,7 +48,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       }
 
       if (postsRes.data) {
-        postsRes.data.forEach((p) => {
+        postsRes.data.forEach((p: any) => {
           routes.push({
             url: `${siteUrl}/blog/${p.slug}`,
             lastModified: p.published_at ? new Date(p.published_at) : new Date("2026-10-28"),

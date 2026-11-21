@@ -37,7 +37,7 @@ export async function GET() {
         .order("published_at", { ascending: false })
         .limit(25);
       if (data && data.length > 0) {
-        items = data.map((d) => ({
+        items = data.map((d: any) => ({
           title: d.title,
           slug: d.slug,
           description: d.standfirst ?? d.title,

@@ -143,12 +143,24 @@ export default function AdminDashboardPage() {
             </p>
           </div>
 
-          <div className="flex items-center gap-3 shrink-0">
+          <div className="flex flex-wrap items-center gap-2 shrink-0">
+            <Link
+              href="/student"
+              className="px-2.5 py-1.5 text-xs font-sans text-navy bg-white border border-tone-rule rounded-[2px] hover:border-gold hover:text-gold transition-colors inline-flex items-center gap-1 shadow-2xs"
+            >
+              🎓 Student Workspace
+            </Link>
+            <Link
+              href="/mentor"
+              className="px-2.5 py-1.5 text-xs font-sans text-navy bg-white border border-tone-rule rounded-[2px] hover:border-gold hover:text-gold transition-colors inline-flex items-center gap-1 shadow-2xs"
+            >
+              👨‍🏫 Mentor Portal
+            </Link>
             <Button href="/admin/integrity" variant="secondary" size="sm">
-              Audit Session Logs
+              Audit Logs
             </Button>
             <Button href="/admin/projects?mode=new" variant="accent" size="sm">
-              Assign Incoming Brief
+              Assign Brief
             </Button>
           </div>
         </div>

@@ -115,7 +115,7 @@ export async function generateStaticParams() {
       .select("slug")
       .is("parent_id", null)
       .neq("slug", "health-sciences");
-    return (data ?? []).map((s) => ({ slug: s.slug }));
+    return (data ?? []).map((s: any) => ({ slug: s.slug }));
   } catch {
     return [];
   }

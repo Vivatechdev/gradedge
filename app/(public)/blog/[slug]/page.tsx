@@ -29,7 +29,7 @@ export async function generateStaticParams() {
       .from("blog_posts")
       .select("slug")
       .eq("status", "published");
-    return (data ?? []).map((p) => ({ slug: p.slug }));
+    return (data ?? []).map((p: any) => ({ slug: p.slug }));
   } catch {
     return [];
   }

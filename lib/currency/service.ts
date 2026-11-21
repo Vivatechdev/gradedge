@@ -212,8 +212,9 @@ export async function getAllPricesGrouped(): Promise<
         if (!results[row.item_id]) {
           results[row.item_id] = { ...DEFAULT_CANONICAL_PRICES["session-60"] };
         }
-        if (isSupportedCurrency(row.currency)) {
-          results[row.item_id][row.currency] = Number(row.amount_minor);
+        const curr = row.currency as SupportedCurrency;
+        if (isSupportedCurrency(curr)) {
+          results[row.item_id][curr] = Number(row.amount_minor);
         }
       }
     }

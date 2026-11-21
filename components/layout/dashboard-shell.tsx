@@ -200,6 +200,13 @@ export function DashboardShell({
                 Notification Preferences
               </DropdownItem>
               <DropdownSeparator />
+              <DropdownItem onClick={() => { window.location.href = role === "admin" ? "/student" : "/admin"; }}>
+                {role === "admin" ? "Switch to Student Workspace" : "Switch to Admin Console"}
+              </DropdownItem>
+              <DropdownItem onClick={() => { window.location.href = "/mentor"; }}>
+                Switch to Faculty Mentor Portal
+              </DropdownItem>
+              <DropdownSeparator />
               <DropdownItem
                 onClick={async () => {
                   await fetch("/api/auth/signout", { method: "POST" });

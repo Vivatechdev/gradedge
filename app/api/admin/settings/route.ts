@@ -12,7 +12,7 @@ export async function GET() {
     const { data: settingsRows } = await supabase.from("settings").select("key, value");
 
     const settingsMap: Record<string, any> = {};
-    (settingsRows || []).forEach((row) => {
+    (settingsRows || []).forEach((row: any) => {
       settingsMap[row.key] = row.value;
     });
 

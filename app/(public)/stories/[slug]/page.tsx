@@ -28,7 +28,7 @@ export async function generateStaticParams() {
       .select("slug")
       .eq("is_published", true)
       .eq("consent_confirmed", true);
-    return (data ?? []).map((s) => ({ slug: s.slug }));
+    return (data ?? []).map((s: any) => ({ slug: s.slug }));
   } catch {
     return [];
   }

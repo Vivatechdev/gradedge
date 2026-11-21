@@ -90,15 +90,18 @@ export default async function proxy(request: NextRequest) {
 
       isProfileCompleted = hasStudyLevel && hasFieldOfStudy && hasInstitution && hasTerms;
     }
-  } else {
-    // When Supabase credentials are not set in environment (e.g. testing), check test session cookie
-    const authCookie =
+  }
+
+  // Fallback to mock session cookies (when database is not configured or in preview mode)
+  if (!user) {
+    const mockRole =
       request.cookies.get("mock_user_role")?.value ||
       request.cookies.get("sb-access-token")?.value;
 
-    if (authCookie) {
-      user = { id: "test-user-id", email: "scholar@gradedge.com" };
-      role = authCookie;
+    if (mockRole) {
+      const mockEmail = request.cookies.get("mock_user_email")?.value || "scholar@gradedge.com";
+      user = { id: "mock-user-id", email: mockEmail };
+      role = mockRole;
       const mockIncomplete = request.cookies.get("mock_incomplete_profile")?.value === "true";
       isProfileCompleted = !mockIncomplete;
     }
@@ -139,9 +142,10 @@ export default async function proxy(request: NextRequest) {
   // 2. Admin routes protection
   if (pathname.startsWith("/admin")) {
     if (role !== "admin") {
-      // Students or mentors cannot access /admin
-      const redirectTarget = role === "mentor" ? "/mentor" : "/student";
-      return NextResponse.redirect(new URL(redirectTarget, request.url));
+      // If not currently signed in as admin, redirect to login with returnTo=/admin
+      const loginUrl = new URL("/login", request.url);
+      loginUrl.searchParams.set("returnTo", pathname + search);
+      return NextResponse.redirect(loginUrl);
     }
 
     // Check admin session inactivity timeout (8 hours)

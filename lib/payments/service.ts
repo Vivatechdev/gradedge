@@ -396,7 +396,7 @@ export async function processPaymentSuccess({
 
   // 3. Fetch business details for invoicing from settings
   const { data: settingsRows } = await supabase.from("settings").select("key, value");
-  const settingsMap = new Map((settingsRows || []).map((r) => [r.key, r.value]));
+  const settingsMap = new Map((settingsRows || []).map((r: any) => [r.key, r.value]));
 
   const businessDetails = {
     legalName: (settingsMap.get("business_legal_name") as string) || "GradEdge Academic Solutions Ltd",

@@ -57,7 +57,7 @@ export default async function AcceleratorFaqPage() {
         .ilike("category", "%accelerator%")
         .order("sort_order");
       if (data && data.length > 0) {
-        faqs = data.map((f) => ({ q: f.question, a: f.answer }));
+        faqs = data.map((f: any) => ({ q: f.question, a: f.answer }));
       }
     } catch {
       // Use fallback

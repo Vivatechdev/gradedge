@@ -46,7 +46,7 @@ export async function getBookingSettings(): Promise<BookingSettings> {
       return DEFAULT_BOOKING_SETTINGS;
     }
 
-    const settingsMap = new Map(data.map((item) => [item.key, item.value]));
+    const settingsMap = new Map((data || []).map((item: any) => [item.key, item.value]));
 
     return {
       minNoticeHours: Number(settingsMap.get("booking_min_notice_hours")) || DEFAULT_BOOKING_SETTINGS.minNoticeHours,

@@ -49,54 +49,64 @@ export async function requireUser(returnTo?: string): Promise<{
   const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 
   if (supabaseUrl && supabaseAnonKey) {
-    const supabase = await createClient();
-    const {
-      data: { user },
-      error,
-    } = await supabase.auth.getUser();
+    try {
+      const supabase = await createClient();
+      const {
+        data: { user },
+        error,
+      } = await supabase.auth.getUser();
 
-    if (error || !user) {
-      const query = returnTo ? `?returnTo=${encodeURIComponent(returnTo)}` : "";
-      redirect(`/login${query}`);
+      if (!error && user) {
+        // Fetch role and profile details
+        const { data: profile } = await supabase
+          .from("profiles")
+          .select("*")
+          .eq("id", user.id)
+          .single();
+
+        return { user, profile: (profile as UserProfile) || null };
+      }
+    } catch {
+      // Fall through to mock session
     }
-
-    // Fetch role and profile details
-    const { data: profile } = await supabase
-      .from("profiles")
-      .select("*")
-      .eq("id", user.id)
-      .single();
-
-    return { user, profile: (profile as UserProfile) || null };
-  } else {
-    // Test/local mode fallback without Supabase credentials
-    const cookieStore = await cookies();
-    const roleCookie = cookieStore.get("mock_user_role")?.value;
-
-    if (!roleCookie) {
-      const query = returnTo ? `?returnTo=${encodeURIComponent(returnTo)}` : "";
-      redirect(`/login${query}`);
-    }
-
-    const mockProfile: UserProfile = {
-      id: "mock-user-id",
-      role: (roleCookie as UserRole) || "student",
-      full_name: "Test Scholar",
-      email: "scholar@gradedge.com",
-      institution: "Cambridge",
-      study_level: "phd",
-      field_of_study: "Economics",
-      timezone: "UTC",
-      marketing_opt_in: false,
-      terms_accepted_at: new Date().toISOString(),
-      terms_version: "1.0",
-      profile_completed_at: new Date().toISOString(),
-      status: "active",
-      created_at: new Date().toISOString(),
-    };
-
-    return { user: { id: "mock-user-id", email: "scholar@gradedge.com" }, profile: mockProfile };
   }
+
+  // Test/local mode fallback without Supabase credentials
+  const cookieStore = await cookies();
+  const roleCookie = cookieStore.get("mock_user_role")?.value;
+
+  if (!roleCookie) {
+    const query = returnTo ? `?returnTo=${encodeURIComponent(returnTo)}` : "";
+    redirect(`/login${query}`);
+  }
+
+  const mockEmail = cookieStore.get("mock_user_email")?.value || "scholar@gradedge.com";
+  const mockName =
+    cookieStore.get("mock_user_name")?.value ||
+    (roleCookie === "admin"
+      ? "System Administrator"
+      : roleCookie === "mentor"
+      ? "Dr. Eleanor Vance"
+      : "Doctoral Scholar");
+
+  const mockProfile: UserProfile = {
+    id: "mock-user-id",
+    role: (roleCookie as UserRole) || "student",
+    full_name: mockName,
+    email: mockEmail,
+    institution: roleCookie === "admin" ? "GradEdge Operations" : "University of Cambridge",
+    study_level: "phd",
+    field_of_study: "Research Methodology",
+    timezone: "UTC",
+    marketing_opt_in: false,
+    terms_accepted_at: new Date().toISOString(),
+    terms_version: "1.0",
+    profile_completed_at: new Date().toISOString(),
+    status: "active",
+    created_at: new Date().toISOString(),
+  };
+
+  return { user: { id: "mock-user-id", email: mockEmail }, profile: mockProfile };
 }
 
 /**
@@ -112,16 +122,9 @@ export async function requireRole(
   const roles = Array.isArray(allowedRoles) ? allowedRoles : [allowedRoles];
 
   if (!profile || !roles.includes(profile.role)) {
-    // If a student tries to access admin routes, redirect to student dashboard
-    if (profile?.role === "student") {
-      redirect("/student");
-    }
-    // If a mentor tries to access admin routes, redirect to mentor portal
-    if (profile?.role === "mentor") {
-      redirect("/mentor");
-    }
-    // Fallback: redirect to login
-    redirect("/login");
+    // If user's role is not in allowedRoles, redirect to /login with returnTo
+    const query = returnTo ? `?returnTo=${encodeURIComponent(returnTo)}` : "";
+    redirect(`/login${query}`);
   }
 
   // If role is student, ensure profile is complete

@@ -74,8 +74,8 @@ export async function assignMentorForBooking(
       .lt("starts_at", slotEnd)
       .gt("ends_at", slotStart);
 
-    const busyMentorIds = new Set(busyBookings?.map((b) => b.mentor_id) || []);
-    const availableMentors = mentors.filter((m) => !busyMentorIds.has(m.profile_id));
+    const busyMentorIds = new Set((busyBookings || []).map((b: any) => b.mentor_id));
+    const availableMentors = mentors.filter((m: any) => !busyMentorIds.has(m.profile_id));
 
     if (availableMentors.length === 0) {
       return {
@@ -88,7 +88,7 @@ export async function assignMentorForBooking(
     // 3. Discipline match: Check if fieldOfStudy matches mentor discipline or subjects
     if (fieldOfStudy) {
       const normalizedField = fieldOfStudy.toLowerCase();
-      const disciplineMatches = availableMentors.filter((m) => {
+      const disciplineMatches = availableMentors.filter((m: any) => {
         const disc = (m.discipline || "").toLowerCase();
         const subs = (m.subjects || []).map((s: string) => s.toLowerCase());
         return (

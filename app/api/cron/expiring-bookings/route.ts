@@ -37,7 +37,7 @@ async function handleJob(request: NextRequest) {
 
     return {
       releasedHolds: expiredBookings?.length || 0,
-      expiredBookingIds: (expiredBookings || []).map((b) => b.id),
+      expiredBookingIds: (expiredBookings || []).map((b: any) => b.id),
       executedAt: now.toISOString(),
     };
   });

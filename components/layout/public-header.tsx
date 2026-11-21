@@ -278,22 +278,40 @@ export function PublicHeader({
               <CurrencySelector />
             </div>
 
-            <div className="pt-3 border-t border-tone-rule">
-              {isLoggedIn ? (
+            <div className="pt-3 border-t border-tone-rule space-y-2">
+              <span className="text-[10px] uppercase tracking-widest text-tone-muted font-semibold block">
+                Workspaces &amp; Portals
+              </span>
+              <div className="flex flex-col gap-1.5 text-xs font-sans">
                 <Link
-                  href={dashboardHref}
-                  className="block text-sm font-semibold uppercase tracking-wider text-navy"
+                  href="/student"
+                  className="text-navy font-semibold hover:text-gold transition-colors flex items-center justify-between"
                 >
-                  Go to Dashboard &rarr;
+                  <span>🎓 Student Dashboard</span>
+                  <span>&rarr;</span>
                 </Link>
-              ) : (
+                <Link
+                  href="/mentor"
+                  className="text-navy font-semibold hover:text-gold transition-colors flex items-center justify-between"
+                >
+                  <span>👨‍🏫 Faculty Mentor Portal</span>
+                  <span>&rarr;</span>
+                </Link>
+                <Link
+                  href="/admin"
+                  className="text-navy font-semibold hover:text-gold transition-colors flex items-center justify-between"
+                >
+                  <span>🛡️ Admin Console</span>
+                  <span>&rarr;</span>
+                </Link>
                 <Link
                   href="/login"
-                  className="block text-sm font-semibold uppercase tracking-wider text-navy"
+                  className="text-gold font-semibold hover:text-navy transition-colors flex items-center justify-between"
                 >
-                  Student & Researcher Login &rarr;
+                  <span>Sign In (Any Random Email &amp; Password)</span>
+                  <span>&rarr;</span>
                 </Link>
-              )}
+              </div>
             </div>
           </div>
 

@@ -11,21 +11,31 @@ export async function GET() {
       const cookieStore = await cookies();
       const mockRole = cookieStore.get("mock_user_role")?.value;
       if (mockRole) {
+        const mockEmail = cookieStore.get("mock_user_email")?.value || "scholar@gradedge.com";
+        const mockName =
+          cookieStore.get("mock_user_name")?.value ||
+          (mockRole === "admin"
+            ? "System Administrator"
+            : mockRole === "mentor"
+            ? "Dr. Eleanor Vance"
+            : "Doctoral Scholar");
+
         return NextResponse.json({
           user: {
-            id: "mock-google-user",
-            email: "google.scholar@university.edu",
-            full_name: "Google Scholar",
+            id: "mock-user-id",
+            email: mockEmail,
+            full_name: mockName,
           },
           profile: {
-            id: "mock-google-user",
-            full_name: "Google Scholar",
-            email: "google.scholar@university.edu",
+            id: "mock-user-id",
+            full_name: mockName,
+            email: mockEmail,
             role: mockRole,
-            study_level: "",
-            field_of_study: "",
-            institution: "",
-            terms_accepted_at: null,
+            study_level: "phd",
+            field_of_study: "Research Methodology",
+            institution: mockRole === "admin" ? "GradEdge Operations" : "University of Cambridge",
+            terms_accepted_at: new Date().toISOString(),
+            profile_completed_at: new Date().toISOString(),
           },
         });
       }

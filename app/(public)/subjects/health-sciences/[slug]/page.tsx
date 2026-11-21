@@ -61,7 +61,7 @@ export async function generateStaticParams() {
       .from("subjects")
       .select("slug")
       .eq("parent_id", hub.id);
-    return (data ?? []).map((s) => ({ slug: s.slug }));
+    return (data ?? []).map((s: any) => ({ slug: s.slug }));
   } catch {
     return [];
   }
