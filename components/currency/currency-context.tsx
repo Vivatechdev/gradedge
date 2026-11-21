@@ -42,6 +42,57 @@ function setCookie(name: string, value: string, days: number = 365) {
   document.cookie = `${name}=${encodeURIComponent(value)}; expires=${expires}; path=/; SameSite=Lax`;
 }
 
+/**
+ * Automatically infers local currency using browser timezone & locale
+ * when IP headers are not available (e.g. localhost, client-first mount).
+ */
+function inferCurrencyFromClient(): SupportedCurrency | null {
+  if (typeof window === "undefined") return null;
+  try {
+    const tz = Intl.DateTimeFormat().resolvedOptions().timeZone || "";
+    if (tz.includes("Lagos") || tz.includes("Nigeria")) return "NGN";
+    if (tz.includes("London") || tz.includes("Belfast")) return "GBP";
+    if (tz.includes("Nairobi")) return "KES";
+    if (tz.includes("Accra")) return "GHS";
+    if (tz.includes("Johannesburg")) return "ZAR";
+    if (
+      tz.includes("Paris") ||
+      tz.includes("Berlin") ||
+      tz.includes("Dublin") ||
+      tz.includes("Amsterdam") ||
+      tz.includes("Madrid") ||
+      tz.includes("Rome") ||
+      tz.includes("Brussels") ||
+      tz.includes("Vienna") ||
+      tz.includes("Lisbon") ||
+      tz.includes("Helsinki") ||
+      tz.includes("Athens")
+    ) {
+      return "EUR";
+    }
+
+    const lang = (navigator.language || "").toLowerCase();
+    if (lang.endsWith("-ng")) return "NGN";
+    if (lang.endsWith("-gb")) return "GBP";
+    if (lang.endsWith("-ke")) return "KES";
+    if (lang.endsWith("-gh")) return "GHS";
+    if (lang.endsWith("-za")) return "ZAR";
+    if (
+      lang.startsWith("fr") ||
+      lang.startsWith("de") ||
+      lang.startsWith("es") ||
+      lang.startsWith("it") ||
+      lang.startsWith("nl") ||
+      lang.endsWith("-ie")
+    ) {
+      return "EUR";
+    }
+  } catch {
+    // Graceful fallback
+  }
+  return null;
+}
+
 export function CurrencyProvider({
   initialCurrency,
   children,
@@ -55,10 +106,17 @@ export function CurrencyProvider({
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
-    // Read cookie on client mount
+    // 1. Read existing cookie if user previously set or received one
     const saved = getCookie(CURRENCY_COOKIE_NAME);
     if (saved && isSupportedCurrency(saved)) {
       setCurrencyState(saved.toUpperCase() as SupportedCurrency);
+    } else {
+      // 2. Automatically detect based on user's device timezone and browser locale
+      const autoInferred = inferCurrencyFromClient();
+      if (autoInferred) {
+        setCurrencyState(autoInferred);
+        setCookie(CURRENCY_COOKIE_NAME, autoInferred);
+      }
     }
     setIsLoaded(true);
   }, []);
