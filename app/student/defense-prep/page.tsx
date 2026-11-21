@@ -19,6 +19,9 @@ import {
   ChevronRight,
   Sparkles,
   BookOpen,
+  Printer,
+  Download,
+  X,
 } from "lucide-react";
 
 interface VivaQuestion {
@@ -71,6 +74,7 @@ export default function StudentDefensePrepPage() {
   const [selectedQuestion, setSelectedQuestion] = useState<VivaQuestion>(VIVA_QUESTIONS[0]);
   const [candidateNotes, setCandidateNotes] = useState("");
   const [activeTab, setActiveTab] = useState<string>("all");
+  const [printModalOpen, setPrintModalOpen] = useState(false);
 
   const filteredQuestions = VIVA_QUESTIONS.filter(
     (q) => activeTab === "all" || q.category === activeTab
@@ -78,6 +82,12 @@ export default function StudentDefensePrepPage() {
 
   const handleSaveNotes = () => {
     showToast("Defense talking points and rehearsal notes saved.", "success");
+  };
+
+  const handleTriggerPrint = () => {
+    if (typeof window !== "undefined") {
+      window.print();
+    }
   };
 
   return (
@@ -94,6 +104,14 @@ export default function StudentDefensePrepPage() {
             </p>
           </div>
           <div className="flex items-center gap-2">
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={() => setPrintModalOpen(true)}
+            >
+              <Printer className="w-3.5 h-3.5 mr-1.5" />
+              Defense Study Guide (Print/PDF)
+            </Button>
             <Button variant="accent" href="/student/sessions" size="sm">
               <Calendar className="w-3.5 h-3.5 mr-1.5" />
               Book Mock Viva with Mentor
@@ -262,6 +280,103 @@ export default function StudentDefensePrepPage() {
             </Card>
           </div>
         </div>
+
+        {/* Printable Defense Study Guide Modal */}
+        {printModalOpen && (
+          <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-xs flex items-center justify-center p-4 overflow-y-auto">
+            <div className="bg-white max-w-3xl w-full rounded-[2px] border border-tone-rule shadow-2xl overflow-hidden my-8">
+              {/* Modal Action Bar (Hidden when printed) */}
+              <div className="print:hidden p-4 bg-navy-deep text-white flex items-center justify-between border-b border-white/10">
+                <div className="flex items-center gap-2">
+                  <Award className="w-5 h-5 text-gold" />
+                  <span className="font-serif font-bold text-sm">
+                    Doctoral Viva Voce Defense Dossier
+                  </span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Button
+                    variant="accent"
+                    size="sm"
+                    onClick={handleTriggerPrint}
+                  >
+                    <Printer className="w-3.5 h-3.5 mr-1.5" />
+                    Print / Save as PDF
+                  </Button>
+                  <button
+                    type="button"
+                    onClick={() => setPrintModalOpen(false)}
+                    className="p-1.5 text-white/70 hover:text-white rounded-[2px]"
+                  >
+                    <X className="w-4 h-4" />
+                  </button>
+                </div>
+              </div>
+
+              {/* Printable Body */}
+              <div className="p-8 space-y-6 text-stone-900 font-sans print:p-0">
+                {/* Academic Header */}
+                <div className="border-b-2 border-tone-heading pb-4 flex justify-between items-start">
+                  <div>
+                    <span className="text-[10px] uppercase font-bold tracking-widest text-gold block">
+                      GradEdge Doctoral Advisory Services &bull; Viva Voce Preparation
+                    </span>
+                    <h1 className="font-serif text-2xl font-bold text-tone-heading mt-1">
+                      Oral Examination Question Bank &amp; Defense Notes
+                    </h1>
+                    <p className="text-xs text-stone-600 mt-0.5">
+                      Candidate: <strong>{student.name}</strong> &bull; {student.institution}
+                    </p>
+                  </div>
+                  <div className="text-right text-xs">
+                    <span className="text-stone-400 block text-[10px] uppercase">Generated Date</span>
+                    <strong className="text-stone-800">November 2026</strong>
+                  </div>
+                </div>
+
+                {/* Question Items in Document */}
+                <div className="space-y-6">
+                  {VIVA_QUESTIONS.map((q, idx) => (
+                    <div key={q.id} className="space-y-2 border-b border-stone-200 pb-5 last:border-none">
+                      <div className="flex items-center justify-between">
+                        <span className="text-[11px] font-bold uppercase tracking-wider text-navy">
+                          Section {idx + 1}: {q.categoryLabel}
+                        </span>
+                        <span className="text-[10px] text-stone-400 font-mono">Q-REF: {q.id.toUpperCase()}</span>
+                      </div>
+                      <p className="font-serif font-bold text-base text-stone-900 leading-snug">
+                        &ldquo;{q.question}&rdquo;
+                      </p>
+
+                      <div className="bg-stone-50 p-3 rounded-[2px] border border-stone-200 space-y-1.5 text-xs">
+                        <div>
+                          <strong className="text-navy text-[11px] block">Examiner Intent:</strong>
+                          <p className="text-stone-600 text-[11px]">{q.examinerFocus}</p>
+                        </div>
+                        <div>
+                          <strong className="text-stone-800 text-[11px] block">Recommended 2-Minute Defense Structure:</strong>
+                          <p className="text-stone-600 text-[11px]">{q.recommendedStructure}</p>
+                        </div>
+                      </div>
+
+                      {selectedQuestion.id === q.id && candidateNotes && (
+                        <div className="p-3 bg-paper rounded-[2px] border border-gold/40 text-xs">
+                          <strong className="text-gold font-semibold text-[11px] block">Your Rehearsal Notes:</strong>
+                          <p className="text-stone-800 mt-1 whitespace-pre-wrap">{candidateNotes}</p>
+                        </div>
+                      )}
+                    </div>
+                  ))}
+                </div>
+
+                {/* Footer Disclaimers */}
+                <div className="pt-4 border-t border-stone-200 text-[10px] text-stone-400 flex justify-between items-center">
+                  <span>Confidential Doctoral Study Asset &bull; GradEdge Academic Coaching</span>
+                  <span>Page 1 of 1</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </DashboardShell>
   );

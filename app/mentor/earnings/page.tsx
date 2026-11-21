@@ -29,6 +29,15 @@ interface PayoutTransaction {
   referenceId: string;
 }
 
+const CURRENCY_RATES: Record<string, { symbol: string; rate: number; name: string }> = {
+  GBP: { symbol: "£", rate: 1.0, name: "British Pound" },
+  USD: { symbol: "$", rate: 1.28, name: "US Dollar" },
+  EUR: { symbol: "€", rate: 1.17, name: "Euro" },
+  NGN: { symbol: "₦", rate: 2050, name: "Nigerian Naira" },
+  KES: { symbol: "KSh ", rate: 168, name: "Kenyan Shilling" },
+  ZAR: { symbol: "R ", rate: 23.4, name: "South African Rand" },
+};
+
 const TRANSACTIONS: PayoutTransaction[] = [
   {
     id: "tx-401",
@@ -86,17 +95,23 @@ export default function MentorEarningsPage() {
   const { showToast } = useToast();
   const [selectedCurrency, setSelectedCurrency] = useState("GBP");
 
-  const totalCleared = TRANSACTIONS.filter((t) => t.status === "cleared").reduce(
+  const totalClearedGbp = TRANSACTIONS.filter((t) => t.status === "cleared").reduce(
     (sum, t) => sum + t.amount,
     0
   );
-  const totalProcessing = TRANSACTIONS.filter((t) => t.status === "processing").reduce(
+  const totalProcessingGbp = TRANSACTIONS.filter((t) => t.status === "processing").reduce(
     (sum, t) => sum + t.amount,
     0
   );
 
+  const convertAmount = (gbpAmount: number) => {
+    const cfg = CURRENCY_RATES[selectedCurrency] || CURRENCY_RATES.GBP;
+    const converted = Math.round(gbpAmount * cfg.rate);
+    return `${cfg.symbol}${converted.toLocaleString()}`;
+  };
+
   const handleExportCSV = () => {
-    showToast("Faculty Honorarium Statement (CSV) generated and downloaded.", "success");
+    showToast(`Faculty Honorarium Statement (${selectedCurrency}) downloaded.`, "success");
   };
 
   return (
@@ -121,10 +136,29 @@ export default function MentorEarningsPage() {
               Transparent, milestone-based compensation for doctoral mentoring, manuscript redlining, and oral defense coaching.
             </p>
           </div>
-          <div className="flex items-center gap-2">
+          <div className="flex flex-wrap items-center gap-2">
+            <div className="flex items-center bg-white border border-tone-rule rounded-[2px] p-0.5 text-xs">
+              {Object.keys(CURRENCY_RATES).map((curr) => (
+                <button
+                  key={curr}
+                  type="button"
+                  onClick={() => {
+                    setSelectedCurrency(curr);
+                    showToast(`Disbursement ledger converted to ${CURRENCY_RATES[curr].name} (${curr})`, "info");
+                  }}
+                  className={`px-2 py-1 rounded-[2px] font-medium transition-colors ${
+                    selectedCurrency === curr
+                      ? "bg-navy-deep text-white font-semibold"
+                      : "text-stone-600 hover:text-stone-900"
+                  }`}
+                >
+                  {curr}
+                </button>
+              ))}
+            </div>
             <Button variant="outline" size="sm" onClick={handleExportCSV}>
               <Download className="w-3.5 h-3.5 mr-1.5" />
-              Download Statement (.CSV)
+              Statement (.CSV)
             </Button>
           </div>
         </div>
@@ -138,14 +172,14 @@ export default function MentorEarningsPage() {
               </span>
               <div className="flex items-center justify-between pt-1">
                 <span className="font-serif text-3xl font-bold text-tone-heading">
-                  £{(totalCleared + totalProcessing).toLocaleString()}
+                  {convertAmount(totalClearedGbp + totalProcessingGbp)}
                 </span>
                 <TrendingUp className="w-5 h-5 text-gold" />
               </div>
             </CardHeader>
             <CardContent>
               <span className="text-[11px] text-stone-500 font-sans">
-                Across 5 completed doctoral milestones
+                Across 5 completed doctoral milestones ({selectedCurrency})
               </span>
             </CardContent>
           </Card>
@@ -157,14 +191,14 @@ export default function MentorEarningsPage() {
               </span>
               <div className="flex items-center justify-between pt-1">
                 <span className="font-serif text-3xl font-bold text-emerald-700">
-                  £{totalCleared.toLocaleString()}
+                  {convertAmount(totalClearedGbp)}
                 </span>
                 <CheckCircle2 className="w-5 h-5 text-emerald-600" />
               </div>
             </CardHeader>
             <CardContent>
               <span className="text-[11px] text-stone-500 font-sans">
-                Transferred via Wise UK Direct Debit
+                Transferred via Wise Direct Debit
               </span>
             </CardContent>
           </Card>
@@ -176,7 +210,7 @@ export default function MentorEarningsPage() {
               </span>
               <div className="flex items-center justify-between pt-1">
                 <span className="font-serif text-3xl font-bold text-amber-700">
-                  £{totalProcessing.toLocaleString()}
+                  {convertAmount(totalProcessingGbp)}
                 </span>
                 <Clock className="w-5 h-5 text-amber-600" />
               </div>
@@ -201,8 +235,8 @@ export default function MentorEarningsPage() {
               </p>
             </div>
             <div className="flex items-center gap-1 text-xs">
-              <span className="text-stone-400">Display Currency:</span>
-              <span className="font-semibold text-navy">GBP (£)</span>
+              <span className="text-stone-400">Ledger Currency:</span>
+              <span className="font-semibold text-navy">{selectedCurrency} ({CURRENCY_RATES[selectedCurrency].symbol})</span>
             </div>
           </CardHeader>
 
@@ -213,7 +247,7 @@ export default function MentorEarningsPage() {
                   <th className="py-3 px-4 font-semibold">Date &amp; Ref</th>
                   <th className="py-3 px-4 font-semibold">Doctoral Candidate</th>
                   <th className="py-3 px-4 font-semibold">Milestone / Scope</th>
-                  <th className="py-3 px-4 font-semibold text-right">Amount</th>
+                  <th className="py-3 px-4 font-semibold text-right">Amount ({selectedCurrency})</th>
                   <th className="py-3 px-4 font-semibold text-right">Status</th>
                 </tr>
               </thead>
@@ -231,7 +265,7 @@ export default function MentorEarningsPage() {
                       {tx.milestoneTitle}
                     </td>
                     <td className="py-3 px-4 text-right font-serif font-bold text-stone-900">
-                      £{tx.amount}
+                      {convertAmount(tx.amount)}
                     </td>
                     <td className="py-3 px-4 text-right">
                       {tx.status === "cleared" ? (

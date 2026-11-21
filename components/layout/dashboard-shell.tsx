@@ -248,6 +248,9 @@ export function DashboardShell({
                   Switch to Admin Console
                 </DropdownItem>
               )}
+              <DropdownItem onClick={() => { window.location.href = "/supervisor"; }}>
+                Switch to University Supervisor View
+              </DropdownItem>
               <DropdownSeparator />
               <DropdownItem
                 onClick={async () => {

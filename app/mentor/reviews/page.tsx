@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { DashboardShell } from "@/components/layout/dashboard-shell";
+import { RedlineDiffViewer } from "@/components/reviews/redline-diff-viewer";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -223,6 +224,15 @@ export default function MentorReviewsPage() {
                     <Download className="w-3.5 h-3.5 mr-1" />
                     Download Draft
                   </Button>
+                </div>
+
+                {/* Interactive Redline & Track Changes Workbench */}
+                <div className="space-y-2">
+                  <RedlineDiffViewer
+                    candidateName={selectedReview.candidateName}
+                    chapterTitle={selectedReview.chapter}
+                    similarityScore={selectedReview.similarityScore}
+                  />
                 </div>
 
                 {/* Rubric Assessment Scoring */}

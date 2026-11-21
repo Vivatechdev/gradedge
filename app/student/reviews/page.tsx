@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { DashboardShell } from "@/components/layout/dashboard-shell";
 import { useStudent } from "@/components/layout/student-context";
+import { RedlineDiffViewer } from "@/components/reviews/redline-diff-viewer";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -188,6 +189,18 @@ export default function StudentReviewsPage() {
                   <div className="p-4 bg-paper rounded-[2px] border border-tone-rule text-stone-700 leading-relaxed text-xs">
                     {selectedReview.feedbackSummary}
                   </div>
+                </div>
+
+                {/* Interactive Track Changes / Redline Viewer */}
+                <div className="space-y-2">
+                  <span className="font-semibold uppercase tracking-wider text-tone-heading text-[11px] block">
+                    Interactive Manuscript Redlines &amp; Margin Notes
+                  </span>
+                  <RedlineDiffViewer
+                    candidateName={student.name}
+                    chapterTitle={selectedReview.chapterTitle}
+                    similarityScore={selectedReview.similarityIndex}
+                  />
                 </div>
 
                 {/* Action Required if any */}
