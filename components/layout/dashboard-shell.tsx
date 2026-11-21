@@ -78,6 +78,7 @@ export function DashboardShell({
     { label: "Support Requests", href: "/admin/projects", icon: FolderKanban },
     { label: "Bookings & Pool", href: "/admin/bookings", icon: CalendarCheck },
     { label: "Researchers", href: "/admin/students", icon: Users },
+    { label: "Services Catalog", href: "/admin/services", icon: FileText },
     { label: "Currency & Prices", href: "/admin/prices", icon: CreditCard },
     { label: "Content & Blog", href: "/admin/blog", icon: BookOpen },
     { label: "Academic Integrity", href: "/admin/integrity", icon: ShieldCheck },

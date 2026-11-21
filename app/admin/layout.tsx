@@ -1,4 +1,5 @@
 import { requireRole } from "@/lib/auth/server";
+import { ToastProvider } from "@/components/ui/toast";
 
 export default async function AdminLayout({
   children,
@@ -6,5 +7,5 @@ export default async function AdminLayout({
   children: React.ReactNode;
 }) {
   await requireRole("admin", "/admin");
-  return <>{children}</>;
+  return <ToastProvider>{children}</ToastProvider>;
 }
