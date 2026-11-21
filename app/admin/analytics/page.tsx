@@ -167,7 +167,7 @@ export default function AdminAnalyticsPage() {
             </p>
           </CardHeader>
           <CardContent className="p-0 overflow-x-auto">
-            <table className="w-full text-xs font-sans text-left">
+            <table className="w-full min-w-[600px] text-xs font-sans text-left">
               <thead className="bg-paper border-b border-tone-rule text-stone-500 uppercase tracking-wide text-[10px]">
                 <tr>
                   <th className="py-3 px-4 font-semibold">Currency</th>

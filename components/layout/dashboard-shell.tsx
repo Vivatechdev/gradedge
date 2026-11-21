@@ -192,11 +192,11 @@ export function DashboardShell({
       </aside>
 
       {/* Main Content Area */}
-      <div className="flex-1 flex flex-col min-w-0 pb-16 md:pb-0">
+      <div className="flex-1 flex flex-col min-w-0 pb-16 md:pb-0 overflow-x-hidden">
         {/* Top Header Bar */}
-        <header className="h-16 bg-white border-b border-tone-rule px-6 flex items-center justify-between sticky top-0 z-20">
-          <div className="flex items-center gap-4">
-            <h1 className="font-serif text-xl font-medium text-tone-heading">{title}</h1>
+        <header className="h-16 bg-white border-b border-tone-rule px-4 sm:px-6 flex items-center justify-between sticky top-0 z-20">
+          <div className="flex items-center gap-3 min-w-0">
+            <h1 className="font-serif text-lg sm:text-xl font-medium text-tone-heading truncate">{title}</h1>
           </div>
 
           {/* Right Header items: Notifications & Profile Dropdown */}
@@ -264,7 +264,7 @@ export function DashboardShell({
         </header>
 
         {/* Page Content Body */}
-        <main className="flex-1 p-6 sm:p-8 max-w-6xl w-full mx-auto">{children}</main>
+        <main className="flex-1 p-4 sm:p-6 md:p-8 max-w-6xl w-full mx-auto min-w-0">{children}</main>
       </div>
 
       {/* Mobile Bottom Tab Bar (Student Dashboard) */}
