@@ -5,7 +5,7 @@ import Link from "next/link";
 import { cn } from "@/lib/utils";
 
 export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: "primary" | "accent" | "secondary" | "link";
+  variant?: "primary" | "accent" | "secondary" | "outline" | "link";
   size?: "sm" | "md" | "lg";
   isLoading?: boolean;
   href?: string;
@@ -36,6 +36,8 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       accent:
         "btn-accent shadow-none font-semibold",
       secondary:
+        "btn-secondary shadow-none",
+      outline:
         "btn-secondary shadow-none",
       link:
         "bg-transparent p-0 border-none rounded-none link-editorial inline-block",

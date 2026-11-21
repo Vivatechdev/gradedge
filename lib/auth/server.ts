@@ -121,6 +121,14 @@ export async function requireRole(
 
   const roles = Array.isArray(allowedRoles) ? allowedRoles : [allowedRoles];
 
+  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+  const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+
+  // In test/mock mode without active Supabase credentials, allow seamless switching between portals
+  if ((!supabaseUrl || !supabaseAnonKey) && profile && !roles.includes(profile.role)) {
+    profile.role = roles[0];
+  }
+
   if (!profile || !roles.includes(profile.role)) {
     // If user's role is not in allowedRoles, redirect to /login with returnTo
     const query = returnTo ? `?returnTo=${encodeURIComponent(returnTo)}` : "";

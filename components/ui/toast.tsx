@@ -15,6 +15,7 @@ export interface Toast {
 
 interface ToastContextType {
   toast: (options: Omit<Toast, "id">) => void;
+  showToast: (title: string, type?: ToastType, message?: string) => void;
   removeToast: (id: string) => void;
 }
 
@@ -41,8 +42,15 @@ export function ToastProvider({ children }: { children: React.ReactNode }) {
     [removeToast]
   );
 
+  const showToast = useCallback(
+    (title: string, type: ToastType = "info", message?: string) => {
+      toast({ title, message, type });
+    },
+    [toast]
+  );
+
   return (
-    <ToastContext.Provider value={{ toast, removeToast }}>
+    <ToastContext.Provider value={{ toast, showToast, removeToast }}>
       {children}
       <div
         aria-live="polite"

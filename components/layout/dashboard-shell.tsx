@@ -24,6 +24,13 @@ import {
   BookOpen,
   MoreHorizontal,
   X,
+  Award,
+  BarChart3,
+  Library,
+  CheckSquare,
+  Scale,
+  Building2,
+  FileCheck,
 } from "lucide-react";
 
 export interface DashboardNavSubItem {
@@ -34,7 +41,7 @@ export interface DashboardNavSubItem {
 
 export interface DashboardShellProps {
   children: React.ReactNode;
-  role?: "student" | "admin";
+  role?: "student" | "admin" | "mentor";
   user?: {
     id?: string;
     name: string;
@@ -66,6 +73,10 @@ export function DashboardShell({
     { label: "Sessions", href: "/student/sessions", icon: CalendarCheck },
     { label: "Messages", href: "/student/messages", icon: MessageSquare },
     { label: "Files & Drafts", href: "/student/files", icon: FileText },
+    { label: "Chapter Reviews", href: "/student/reviews", icon: CheckSquare },
+    { label: "Viva Defense Prep", href: "/student/defense-prep", icon: Award },
+    { label: "Writing Velocity", href: "/student/analytics", icon: BarChart3 },
+    { label: "Resource Vault", href: "/student/resources", icon: Library },
     { label: "Accelerator", href: "/student/accelerator", icon: BookOpen },
     { label: "Your Mentor", href: "/student/mentor", icon: Users },
     { label: "Billing & Plans", href: "/student/billing", icon: CreditCard },
@@ -75,9 +86,14 @@ export function DashboardShell({
   // Admin Navigation Items
   const adminNav: DashboardNavSubItem[] = [
     { label: "Operations", href: "/admin", icon: LayoutDashboard },
+    { label: "Admissions Desk", href: "/admin/applications", icon: FileCheck },
     { label: "Support Requests", href: "/admin/projects", icon: FolderKanban },
     { label: "Bookings & Pool", href: "/admin/bookings", icon: CalendarCheck },
+    { label: "Faculty Mentors", href: "/admin/mentors", icon: Award },
     { label: "Researchers", href: "/admin/students", icon: Users },
+    { label: "Quality & Disputes", href: "/admin/disputes", icon: Scale },
+    { label: "Institutional B2B", href: "/admin/institutions", icon: Building2 },
+    { label: "Operations Analytics", href: "/admin/analytics", icon: BarChart3 },
     { label: "Services Catalog", href: "/admin/services", icon: FileText },
     { label: "Currency & Prices", href: "/admin/prices", icon: CreditCard },
     { label: "Content & Blog", href: "/admin/blog", icon: BookOpen },
@@ -85,7 +101,19 @@ export function DashboardShell({
     { label: "Platform Settings", href: "/admin/settings", icon: Settings },
   ];
 
-  const navItems = role === "admin" ? adminNav : studentNav;
+  // Mentor Navigation Items
+  const mentorNav: DashboardNavSubItem[] = [
+    { label: "Faculty Desk", href: "/mentor", icon: LayoutDashboard },
+    { label: "Doctoral Mentees", href: "/mentor/mentees", icon: Users },
+    { label: "Manuscript Reviews", href: "/mentor/reviews", icon: FileText },
+    { label: "Consultation Schedule", href: "/mentor/schedule", icon: CalendarCheck },
+    { label: "Honorarium & Payouts", href: "/mentor/earnings", icon: CreditCard },
+    { label: "Academic Integrity", href: "/mentor/integrity", icon: ShieldCheck },
+    { label: "Faculty Settings", href: "/mentor/settings", icon: Settings },
+  ];
+
+  const navItems = role === "admin" ? adminNav : role === "mentor" ? mentorNav : studentNav;
+  const homeHref = role === "admin" ? "/admin" : role === "mentor" ? "/mentor" : "/student";
 
   return (
     <div className="min-h-screen bg-paper flex flex-col md:flex-row text-tone-body">
@@ -101,10 +129,10 @@ export function DashboardShell({
           {/* Sidebar Top: Logo Symbol / Full */}
           <div className="h-16 flex items-center px-4 border-b border-tone-rule justify-between">
             {collapsed ? (
-              <Logo variant="symbol" href={role === "admin" ? "/admin" : "/student"} />
+              <Logo variant="symbol" href={homeHref} />
             ) : (
               <div className="flex items-center gap-2">
-                <Logo variant="full-white" href={role === "admin" ? "/admin" : "/student"} />
+                <Logo variant="full-white" href={homeHref} />
                 <span className="text-[10px] uppercase tracking-wider px-1.5 py-0.5 bg-white/10 text-tone-body rounded-[2px]">
                   {role}
                 </span>
@@ -194,19 +222,32 @@ export function DashboardShell({
                 <span className="block text-xs font-semibold text-tone-heading">{user.name}</span>
                 <span className="block text-[11px] text-tone-muted truncate">{user.email}</span>
               </div>
-              <DropdownItem onClick={() => { window.location.href = role === "admin" ? "/admin/settings" : "/student/settings"; }}>
+              <DropdownItem onClick={() => { 
+                window.location.href = role === "admin" ? "/admin/settings" : role === "mentor" ? "/mentor/settings" : "/student/settings"; 
+              }}>
                 Account Profile & Settings
               </DropdownItem>
-              <DropdownItem onClick={() => { window.location.href = role === "admin" ? "/admin/settings" : "/student/settings?tab=notifications"; }}>
+              <DropdownItem onClick={() => { 
+                window.location.href = role === "admin" ? "/admin/settings" : role === "mentor" ? "/mentor/settings" : "/student/settings?tab=notifications"; 
+              }}>
                 Notification Preferences
               </DropdownItem>
               <DropdownSeparator />
-              <DropdownItem onClick={() => { window.location.href = role === "admin" ? "/student" : "/admin"; }}>
-                {role === "admin" ? "Switch to Student Workspace" : "Switch to Admin Console"}
-              </DropdownItem>
-              <DropdownItem onClick={() => { window.location.href = "/mentor"; }}>
-                Switch to Faculty Mentor Portal
-              </DropdownItem>
+              {role !== "student" && (
+                <DropdownItem onClick={() => { window.location.href = "/student"; }}>
+                  Switch to Student Workspace
+                </DropdownItem>
+              )}
+              {role !== "mentor" && (
+                <DropdownItem onClick={() => { window.location.href = "/mentor"; }}>
+                  Switch to Faculty Mentor Portal
+                </DropdownItem>
+              )}
+              {role !== "admin" && (
+                <DropdownItem onClick={() => { window.location.href = "/admin"; }}>
+                  Switch to Admin Console
+                </DropdownItem>
+              )}
               <DropdownSeparator />
               <DropdownItem
                 onClick={async () => {

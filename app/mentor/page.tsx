@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { Logo } from "@/components/layout/logo";
+import { DashboardShell } from "@/components/layout/dashboard-shell";
 import { Button } from "@/components/ui/button";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -15,7 +15,6 @@ import {
   CheckCircle2,
   Video,
   ArrowRight,
-  LogOut,
   Shield,
   GraduationCap,
 } from "lucide-react";
@@ -76,51 +75,17 @@ const MENTEES: MenteeBrief[] = [
 
 export default function MentorPortalPage() {
   return (
-    <div className="min-h-screen bg-paper flex flex-col text-tone-body">
-      {/* Top Header */}
-      <header className="sticky top-0 z-30 bg-paper border-b border-tone-rule px-4 sm:px-8 py-3.5 flex items-center justify-between">
-        <div className="flex items-center gap-6">
-          <Logo variant="full" href="/" />
-          <div className="hidden sm:flex items-center gap-2 pl-4 border-l border-tone-rule text-xs font-sans">
-            <Badge variant="gold">Faculty Mentor Portal</Badge>
-            <span className="text-tone-muted">Preview Workspace</span>
-          </div>
-        </div>
-
-        {/* Quick Portal Switcher & User Actions */}
-        <div className="flex items-center gap-3">
-          <div className="hidden md:flex items-center gap-2 text-xs font-sans">
-            <span className="text-stone-400">Switch workspace:</span>
-            <Link
-              href="/student"
-              className="inline-flex items-center gap-1 px-2.5 py-1 bg-white border border-tone-rule rounded-[2px] text-tone-heading hover:text-gold hover:border-gold transition-colors"
-            >
-              <GraduationCap className="w-3.5 h-3.5" />
-              Student
-            </Link>
-            <Link
-              href="/admin"
-              className="inline-flex items-center gap-1 px-2.5 py-1 bg-white border border-tone-rule rounded-[2px] text-tone-heading hover:text-gold hover:border-gold transition-colors"
-            >
-              <Shield className="w-3.5 h-3.5" />
-              Admin
-            </Link>
-          </div>
-
-          <form action="/api/auth/signout" method="POST">
-            <button
-              type="submit"
-              className="inline-flex items-center gap-1.5 text-xs font-sans text-tone-muted hover:text-navy px-3 py-1.5 rounded-[2px] border border-tone-rule bg-white hover:bg-cream transition-colors cursor-pointer"
-            >
-              <LogOut className="w-3.5 h-3.5" />
-              <span>Sign Out</span>
-            </button>
-          </form>
-        </div>
-      </header>
-
-      {/* Main Content */}
-      <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
+    <DashboardShell
+      role="mentor"
+      title="Faculty Overview"
+      user={{
+        id: "mentor-101",
+        name: "Dr. Eleanor Vance",
+        email: "e.vance@gradedge.org",
+        institution: "Senior Faculty Mentor",
+      }}
+    >
+      <div className="space-y-8">
         {/* Banner Greeting */}
         <div className="border-b border-tone-rule pb-6 flex flex-col md:flex-row md:items-end justify-between gap-4">
           <div>
@@ -135,11 +100,11 @@ export default function MentorPortalPage() {
             </p>
           </div>
           <div className="flex items-center gap-3">
-            <Button variant="secondary" href="/student" size="sm">
-              View Student Experience &rarr;
+            <Button variant="secondary" href="/mentor/reviews" size="sm">
+              Review Queue (2) &rarr;
             </Button>
-            <Button variant="accent" href="/" size="sm">
-              Public Homepage
+            <Button variant="accent" href="/mentor/schedule" size="sm">
+              Office Hours
             </Button>
           </div>
         </div>
@@ -329,7 +294,7 @@ export default function MentorPortalPage() {
             </div>
           </div>
         </div>
-      </main>
-    </div>
+      </div>
+    </DashboardShell>
   );
 }

@@ -7,7 +7,7 @@ import { createClient } from "@/lib/supabase/client";
 
 interface NotificationBellProps {
   userId?: string;
-  role?: "admin" | "student";
+  role?: "admin" | "student" | "mentor";
   initialCount?: number;
 }
 
@@ -17,7 +17,7 @@ export function NotificationBell({
   initialCount = 0,
 }: NotificationBellProps) {
   const [unreadCount, setUnreadCount] = useState<number>(initialCount);
-  const href = role === "admin" ? "/admin/notifications" : "/student/notifications";
+  const href = role === "admin" ? "/admin/notifications" : role === "mentor" ? "/mentor/reviews" : "/student/notifications";
 
   useEffect(() => {
     // 1. Initial fetch from unread count endpoint
