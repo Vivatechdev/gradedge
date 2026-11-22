@@ -424,7 +424,7 @@ export const SERVICES_CONTENT: Record<string, ServiceContentItem> = {
     category_name: "Dissertation Support",
     two_sentence_promise:
       "Synthesize complex scholarly debates, identify verified empirical gaps, and build a cohesive theoretical framework. We train you to move beyond descriptive book reports into critical, thematic academic argumentation.",
-    hero_image: "/images/services/service-dissertation-mentoring.jpg",
+    hero_image: "/images/services/service-literature-review.jpg",
     hero_image_alt: "Scholarly synthesis matrix table with highlighted peer-reviewed academic papers",
     hero_summary:
       "A weak literature review simply summarizes papers one by one ('Smith said X, then Jones said Y'). We guide you in constructing thematic synthesis matrices that pit opposing perspectives against each other to demonstrate why your study is necessary.",
@@ -655,7 +655,7 @@ export const SERVICES_CONTENT: Record<string, ServiceContentItem> = {
     category_name: "Data Analysis",
     two_sentence_promise:
       "Master statistical testing, assumption verification, regression modeling, and APA-compliant results presentation. We audit your syntax scripts and teach you how to interpret every coefficient and p-value with total confidence.",
-    hero_image: "/images/services/stage-research.jpg",
+    hero_image: "/images/services/service-statistical-consulting.jpg",
     hero_image_alt: "Statistical programming code editor in R and SPSS regression output tables on monitor",
     hero_summary:
       "Running statistical code without understanding the underlying mathematical assumptions leaves you vulnerable in your defense. We provide hands-on mentoring in SPSS, R, Python, and Stata so you understand exactly what your data reveals.",
@@ -1129,7 +1129,7 @@ export const SERVICES_CONTENT: Record<string, ServiceContentItem> = {
     category_name: "Editing & Writing Quality",
     two_sentence_promise:
       "Refine your scholarly tone, sentence rhythm, and argument coherence while preserving your authentic intellectual voice. We eliminate ambiguity, typographical errors, and clumsy phrasing to meet the highest university press standards.",
-    hero_image: "/images/services/service-dissertation-mentoring.jpg",
+    hero_image: "/images/services/service-developmental-editing.jpg",
     hero_image_alt: "Academic dissertation page with line-level developmental editing marks in red and blue ink",
     hero_summary:
       "A substantive academic edit goes far beyond basic spellchecking. We examine paragraph unity, transition mechanics, discipline-appropriate register, and academic rigor to ensure your dissertation reads like the work of an established researcher.",
