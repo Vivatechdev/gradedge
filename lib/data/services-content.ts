@@ -1471,7 +1471,7 @@ export const SERVICES_CONTENT: Record<string, ServiceContentItem> = {
     category_name: "Editing & Writing Quality",
     two_sentence_promise:
       "Bridge the gap between complex research thinking and native-level English academic prose. We coach multilingual researchers on disciplinary idioms, article usage, hedging conventions, and rhetorical argument structures.",
-    hero_image: "/images/services/service-dissertation-mentoring.jpg",
+    hero_image: "/images/services/service-esl-writing.jpg",
     hero_image_alt: "Bilingual academic notes and English research manuscript with register guidance marks",
     hero_summary:
       "Non-native English scholars frequently produce brilliant empirical research that gets dismissed because of subtle linguistic friction. We provide specialized developmental mentoring that sharpens your English scholarly register while preserving your intellectual ownership.",
