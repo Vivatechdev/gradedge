@@ -125,12 +125,6 @@ export function Photo({
           </div>
         )}
       </div>
-
-      {caption && (
-        <figcaption className="mt-2 text-xs text-tone-muted italic leading-relaxed">
-          {caption}
-        </figcaption>
-      )}
     </figure>
   );
 }
