@@ -1258,7 +1258,7 @@ export const SERVICES_CONTENT: Record<string, ServiceContentItem> = {
     category_name: "Editing & Writing Quality",
     two_sentence_promise:
       "Guarantee absolute concordance between your in-text citations and reference list entries, while formatting your manuscript to exact university press guidelines. We audit APA 7, Harvard, Chicago, Vancouver, and institutional style books.",
-    hero_image: "/images/services/service-dissertation-mentoring.jpg",
+    hero_image: "/images/services/service-referencing-compliance.jpg",
     hero_image_alt: "Academic bibliography reference list with citation cross-checks and DOI verification",
     hero_summary:
       "Reference list inconsistencies and formatting non-compliance cause last-minute dissertation rejections at the graduate school office. We cross-check every single citation, verify DOIs, format preliminary pages, and align your layout with institutional requirements.",
@@ -1364,7 +1364,7 @@ export const SERVICES_CONTENT: Record<string, ServiceContentItem> = {
     category_name: "Editing & Writing Quality",
     two_sentence_promise:
       "Interpret your similarity report with academic precision and learn ethical paraphrasing techniques to eliminate unintended text overlap. We teach you how to synthesize source material without risking accidental plagiarism allegations.",
-    hero_image: "/images/services/service-dissertation-mentoring.jpg",
+    hero_image: "/images/services/service-similarity-audit.jpg",
     hero_image_alt: "Similarity audit report review document with highlighted text strings and paraphrasing notes",
     hero_summary:
       "A raw percentage on a similarity report tells you almost nothing about academic integrity. We review highlighted text strings with you, distinguish between benign common methodology formulas and problematic text recycling, and train you in rigorous scholarly paraphrasing.",
@@ -2139,7 +2139,7 @@ export const SERVICES_CONTENT: Record<string, ServiceContentItem> = {
     category_name: "Coaching & Training",
     two_sentence_promise:
       "Overcome chronic academic procrastination, manage unstructured research schedules, and establish sustainable daily writing habits. We provide bi-weekly milestone accountability and workflow systems tailored to graduate researchers.",
-    hero_image: "/images/services/stage-start.jpg",
+    hero_image: "/images/services/service-productivity-timeline.jpg",
     hero_image_alt: "Academic research semester planning calendar with milestone writing sprints and tracking charts",
     hero_summary:
       "Graduate research offers vast unstructured time, which frequently leads to isolation, guilt, and stalled progress. We help you design realistic semester milestones, implement focus writing sprints, and establish objective accountability to regain momentum.",
@@ -2249,7 +2249,7 @@ export const SERVICES_CONTENT: Record<string, ServiceContentItem> = {
     category_name: "Coaching & Training",
     two_sentence_promise:
       "Master your specific statistical software through dedicated one-on-one screen-share training using your actual research dataset. We teach you syntax scripting, data transformation, diagnostics, and graphical output generation.",
-    hero_image: "/images/services/stage-research.jpg",
+    hero_image: "/images/services/service-software-intensive.jpg",
     hero_image_alt: "1-on-1 live screen-share tutorial showing RStudio statistical script coding and visualization",
     hero_summary:
       "Generic YouTube tutorials and canned textbook datasets rarely prepare you for the messy reality of your own research data. We provide customized 1-on-1 live coding intensives using your actual variables and research questions.",
@@ -2361,7 +2361,7 @@ export const SERVICES_CONTENT: Record<string, ServiceContentItem> = {
     category_name: "Coaching & Training",
     two_sentence_promise:
       "Transition from doctoral candidate to employed academic researcher. We coach you on crafting competitive academic CVs, research statements, teaching philosophies, and preparing for faculty job talk presentations.",
-    hero_image: "/images/services/stage-publishing.jpg",
+    hero_image: "/images/services/service-career-guidance.jpg",
     hero_image_alt: "Academic CV portfolio, teaching philosophy statement, and faculty application dossier",
     hero_summary:
       "Navigating the academic job market demands framing your research as an ongoing, fundable research agenda rather than just a finished student dissertation. We help you assemble a competitive faculty application dossier and prepare for academic interviews.",
