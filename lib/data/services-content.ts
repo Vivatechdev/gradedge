@@ -542,7 +542,7 @@ export const SERVICES_CONTENT: Record<string, ServiceContentItem> = {
     category_name: "Dissertation Support",
     two_sentence_promise:
       "Audit your methodological paradigm, sampling strategy, data collection instruments, and IRB/ethics protocol before institutional submission. We ensure your research design is methodologically sound and fully defensible.",
-    hero_image: "/images/services/stage-research.jpg",
+    hero_image: "/images/services/service-research-design.jpg",
     hero_image_alt: "Methodological framework blueprint and institutional ethics review documentation",
     hero_summary:
       "Methodological ambiguity and ethics committee rejections can stall research by six months or more. We review your participant consent forms, risk mitigation protocols, and measurement instruments to guarantee institutional compliance and academic rigor.",
@@ -1578,7 +1578,7 @@ export const SERVICES_CONTENT: Record<string, ServiceContentItem> = {
     category_name: "Publishing & Career",
     two_sentence_promise:
       "Condense an exhaustive 60-page dissertation chapter into a focused, high-impact 7,000-word peer-reviewed journal manuscript. We help you reposition your literature, sharpen your contribution, and target suitable indexed journals.",
-    hero_image: "/images/services/stage-publishing.jpg",
+    hero_image: "/images/services/service-journal-conversion.jpg",
     hero_image_alt: "Peer-reviewed journal publication manuscript draft with editorial condensing markers",
     hero_summary:
       "Dissertations and journal articles serve entirely different audiences. While a thesis proves you read everything, a journal article must argue a single distinct theoretical contribution concisely. We guide you through the condensation and repositioning process.",
@@ -1695,7 +1695,7 @@ export const SERVICES_CONTENT: Record<string, ServiceContentItem> = {
     category_name: "Publishing & Career",
     two_sentence_promise:
       "Avoid predatory publishers and rapid desk rejections by identifying indexed, reputable journals that genuinely match your paper's scope. We audit your draft against explicit journal criteria before you submit.",
-    hero_image: "/images/services/stage-publishing.jpg",
+    hero_image: "/images/services/service-journal-selection.jpg",
     hero_image_alt: "Academic journal metrics indexing report (Scopus, Web of Science) and manuscript audit checklist",
     hero_summary:
       "Desk rejections waste months of academic momentum. We review your manuscript's theoretical contribution, methodology, and citation network to recommend three verified Scopus / Web of Science indexed journals with realistic acceptance profiles.",
@@ -1801,7 +1801,7 @@ export const SERVICES_CONTENT: Record<string, ServiceContentItem> = {
     category_name: "Publishing & Career",
     two_sentence_promise:
       "Craft a respectful, authoritative point-by-point response letter to peer reviewers and implement requested revisions. We help you navigate contradictory referee feedback and defend your methodology diplomatically.",
-    hero_image: "/images/services/stage-publishing.jpg",
+    hero_image: "/images/services/service-reviewer-response.jpg",
     hero_image_alt: "Peer reviewer decision letter with point-by-point author response matrix and track-changed revisions",
     hero_summary:
       "A 'Revise and Resubmit' decision is an invitation to publish, but defensive or vague author responses frequently lead to final rejection. We help you structure a rigorous, courteous response letter that demonstrates compliance with every referee comment.",
@@ -1911,7 +1911,7 @@ export const SERVICES_CONTENT: Record<string, ServiceContentItem> = {
     category_name: "Publishing & Career",
     two_sentence_promise:
       "Craft persuasive research funding applications, fellowship proposals, and academic scholarship statements. We coach you on framing intellectual merit, broader societal impact, and budgetary feasibility to satisfy competitive evaluation panels.",
-    hero_image: "/images/services/stage-publishing.jpg",
+    hero_image: "/images/services/service-grant-coaching.jpg",
     hero_image_alt: "Academic research grant proposal document with evaluation rubrics and budget allocation sheets",
     hero_summary:
       "Winning academic research funding requires articulating why your project matters not just to your narrow sub-field, but to funding panel reviewers who may be generalists. We teach you how to translate scholarly concepts into compelling, high-scoring proposals.",
