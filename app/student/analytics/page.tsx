@@ -88,7 +88,7 @@ export default function StudentAnalyticsPage() {
               Dissertation Burndown &amp; Writing Velocity
             </h2>
             <p className="text-xs text-tone-muted mt-1">
-              Live word count metrics, milestone trajectory, and estimated viva defense timeline.
+              Live word count metrics, milestone trajectory, and estimated oral defense timeline.
             </p>
           </div>
           <div className="flex items-center gap-2">

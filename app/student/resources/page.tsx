@@ -77,7 +77,7 @@ const RESOURCES: DoctoralResource[] = [
     category: "qualitative",
     categoryLabel: "Qualitative Codebooks",
     title: "NVivo & ATLAS.ti Thematic Coding Matrix & Audit Trail Template",
-    description: "Rigorous template for Braun & Clarke 6-stage reflexive thematic analysis, inter-coder agreement indices, and audit trail documentation for viva examiners.",
+    description: "Rigorous template for Braun & Clarke 6-stage reflexive thematic analysis, inter-coder agreement indices, and audit trail documentation for defense examiners.",
     fileFormat: "Excel / NVivo .nvp",
     fileSize: "1.2 MB",
     lastUpdated: "Oct 2026",

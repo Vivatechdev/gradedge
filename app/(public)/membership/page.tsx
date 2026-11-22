@@ -95,7 +95,7 @@ export default async function MembershipPage() {
           "Weekly written review cycles (up to 15,000 words monthly)",
           "4 live 45-minute advisory consultations per month",
           "Pre-submission structural and referencing compliance checks",
-          "Dedicated Viva voce simulation panel",
+          "Dedicated Oral Defense simulation panel",
           "Priority emergency review turnaround (48 hours)",
         ],
       },

@@ -37,7 +37,7 @@ const GLOSSARY_TERMS: GlossaryTerm[] = [
   { term: "Triangulation", definition: "The application of multiple data sources, methodologies, or theoretical perspectives to corroborate empirical findings and strengthen research credibility." },
   { term: "Type I error", definition: "The incorrect rejection of a true null hypothesis (a false positive finding). Controlled by setting the alpha significance threshold." },
   { term: "Type II error", definition: "The failure to reject a false null hypothesis (a false negative finding). Inversely related to statistical test power." },
-  { term: "Viva voce", definition: "The formal oral defense of a doctoral thesis conducted before an academic examination committee. Also referred to as an oral defense." },
+  { term: "Oral Defense", definition: "The formal oral defense of a doctoral thesis conducted before an academic examination committee. Also referred to as an oral defense." },
 ];
 
 export default function GlossaryPage() {

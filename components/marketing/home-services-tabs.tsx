@@ -132,7 +132,7 @@ export const HOME_SERVICES: HomeServiceItem[] = [
   // Skills and training
   {
     slug: "defense-presentation-coaching",
-    title: "Defense & Viva Voce Coaching",
+    title: "Defense & Oral Defense Coaching",
     stage: "Skills and training",
     stageId: "skills-training",
     description: "Prepare for your oral examination with mock questions, defense slides, and examiner handling.",

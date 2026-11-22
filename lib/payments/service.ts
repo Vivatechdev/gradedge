@@ -249,7 +249,7 @@ export async function lookupPrice(params: PriceLookupParams): Promise<PriceLooku
       ? `Doctoral Fellow Membership (${priceRes.currency})`
       : `Scholar Membership (${priceRes.currency})`;
     const description = isFellow
-      ? "Bi-weekly 60-minute video coaching, developmental reviews, syntax audits, pre-defense mock viva."
+      ? "Bi-weekly 60-minute video coaching, developmental reviews, syntax audits, pre-defense mock examination."
       : "Up to 2 written draft critiques per month, dedicated discipline advisor, monthly 60-min methodology call.";
 
     let chargeCurrency: Currency = priceRes.currency;

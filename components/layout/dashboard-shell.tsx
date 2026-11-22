@@ -74,7 +74,7 @@ export function DashboardShell({
     { label: "Messages", href: "/student/messages", icon: MessageSquare },
     { label: "Files & Drafts", href: "/student/files", icon: FileText },
     { label: "Chapter Reviews", href: "/student/reviews", icon: CheckSquare },
-    { label: "Viva Defense Prep", href: "/student/defense-prep", icon: Award },
+    { label: "Oral Defense Prep", href: "/student/defense-prep", icon: Award },
     { label: "Writing Velocity", href: "/student/analytics", icon: BarChart3 },
     { label: "Resource Vault", href: "/student/resources", icon: Library },
     { label: "Accelerator", href: "/student/accelerator", icon: BookOpen },

@@ -80,8 +80,8 @@ export default async function BlogIndexPage() {
     },
     {
       id: "fb-4",
-      slug: "viva-voce-defense-methodological-traps",
-      title: "The Viva Voce Defense: How External Examiners Frame Methodological Traps",
+      slug: "doctoral-oral-defense-methodological-traps",
+      title: "The Doctoral Oral Defense: How External Examiners Frame Methodological Traps",
       standfirst: "The three standard lines of questioning external examiners use to probe doctoral rigor — and the 3-part response framework that satisfies committees.",
       published_at: "2026-10-10T11:00:00Z",
       reading_time_minutes: 9,

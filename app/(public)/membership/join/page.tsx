@@ -46,7 +46,7 @@ function PlanSelector() {
       description: "For scholars within 6 months of defense requiring weekly revision audits.",
       price_monthly_minor: 11000000,
       currency: "NGN",
-      features: ["Weekly written review cycles", "4 consultations monthly", "Mock viva simulation"],
+      features: ["Weekly written review cycles", "4 consultations monthly", "mock defense simulation"],
     },
   ]);
 

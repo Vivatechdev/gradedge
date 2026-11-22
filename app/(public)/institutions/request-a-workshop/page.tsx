@@ -160,7 +160,7 @@ function WorkshopFormContent() {
             <option value="Ethics in Research: IRB Applications">
               Ethics in Research: IRB Applications
             </option>
-            <option value="Preparing for the Viva Voce">Preparing for the Viva Voce</option>
+            <option value="Preparing for the Oral Defense">Preparing for the Oral Defense</option>
             <option value="Turning Your Thesis into a Journal Article">
               Turning Your Thesis into a Journal Article
             </option>

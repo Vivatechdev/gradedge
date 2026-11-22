@@ -22,7 +22,7 @@ const SERVICES = [
   { id: "topic-proposal-development", title: "Topic Framing & Proposal Architecture" },
   { id: "literature-review-support", title: "Literature Review Synthesis & Matrix" },
   { id: "data-analysis", title: "Quantitative & Qualitative Data Analysis (R, SPSS, Python)" },
-  { id: "defense-preparation", title: "Oral Defense & Mock Viva Coaching" },
+  { id: "defense-preparation", title: "Oral Defense & mock defense Coaching" },
   { id: "editing-and-writing-quality", title: "Academic Proofreading & Structural Edit" },
 ];
 

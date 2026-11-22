@@ -59,7 +59,7 @@ export function VivaDefenseVisualizer({ className }: { className?: string }) {
         <div className="flex items-center gap-2">
           <Users className="w-4 h-4 text-gold shrink-0" />
           <span className="type-micro font-semibold text-tone-heading tracking-wider">
-            Oral Viva Voce &amp; Defense Simulation Chamber
+            Oral Defense & Examination Chamber
           </span>
         </div>
         <span className="text-[11px] text-tone-muted font-mono">

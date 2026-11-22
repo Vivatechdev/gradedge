@@ -91,13 +91,13 @@ export default function StudentDefensePrepPage() {
   };
 
   return (
-    <DashboardShell role="student" title="Viva Defense Prep" user={student}>
+    <DashboardShell role="student" title="Oral Defense Prep" user={student}>
       <div className="space-y-6">
         {/* Header */}
         <div className="border-b border-tone-rule pb-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div>
             <h2 className="font-serif text-2xl font-medium text-tone-heading">
-              Viva Voce &amp; Oral Defense Simulator
+              Oral Defense & Examination Simulator
             </h2>
             <p className="text-xs text-tone-muted mt-1">
               Prepare for rigorous doctoral examination with real examiner questions, structure rubrics, and mock committee interrogations.
@@ -114,7 +114,7 @@ export default function StudentDefensePrepPage() {
             </Button>
             <Button variant="accent" href="/student/sessions" size="sm">
               <Calendar className="w-3.5 h-3.5 mr-1.5" />
-              Book Mock Viva with Mentor
+              Book mock defense with Mentor
             </Button>
           </div>
         </div>
@@ -204,10 +204,10 @@ export default function StudentDefensePrepPage() {
             <Card className="bg-paper border-tone-rule">
               <CardContent className="p-4 space-y-2 text-xs font-sans">
                 <span className="font-serif font-semibold text-tone-heading block">
-                  15-Slide Viva Presentation Standard
+                  15-Slide defense Presentation Standard
                 </span>
                 <p className="text-stone-600 text-[11px] leading-relaxed">
-                  Doctoral viva presentations should not exceed 20 minutes (1 slide per 75 seconds). Avoid text-dense bullet lists; prioritize causal diagrams and regression coefficient charts.
+                  Doctoral defense presentations should not exceed 20 minutes (1 slide per 75 seconds). Avoid text-dense bullet lists; prioritize causal diagrams and regression coefficient charts.
                 </p>
                 <div className="pt-1">
                   <a
@@ -290,7 +290,7 @@ export default function StudentDefensePrepPage() {
                 <div className="flex items-center gap-2">
                   <Award className="w-5 h-5 text-gold" />
                   <span className="font-serif font-bold text-sm">
-                    Doctoral Viva Voce Defense Dossier
+                    Doctoral Oral Defense Dossier
                   </span>
                 </div>
                 <div className="flex items-center gap-2">
@@ -318,7 +318,7 @@ export default function StudentDefensePrepPage() {
                 <div className="border-b-2 border-tone-heading pb-4 flex justify-between items-start">
                   <div>
                     <span className="text-[10px] uppercase font-bold tracking-widest text-gold block">
-                      GradEdge Doctoral Advisory Services &bull; Viva Voce Preparation
+                      GradEdge Doctoral Advisory Services &bull; Oral Defense Preparation
                     </span>
                     <h1 className="font-serif text-2xl font-bold text-tone-heading mt-1">
                       Oral Examination Question Bank &amp; Defense Notes

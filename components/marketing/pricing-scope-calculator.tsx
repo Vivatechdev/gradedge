@@ -60,12 +60,12 @@ const RESEARCH_MILESTONES = [
     recommendedPackage: "Literature Synthesis Sprint",
   },
   {
-    id: "viva",
-    label: "Viva Voce & Mock Committee Defense",
+    id: "defense",
+    label: "Oral Defense & Mock Committee Defense",
     baseNgn: 95000,
     baseUsd: 95,
     turnaround: "1 week intensive",
-    recommendedPackage: "Viva Voce Defense Chamber",
+    recommendedPackage: "Oral Defense Defense Chamber",
   },
 ];
 

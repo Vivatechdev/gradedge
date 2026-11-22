@@ -32,7 +32,7 @@ export const SERVICE_CATEGORIES = [
   {
     name: "Coaching & Training",
     href: "/services/coaching-and-training",
-    summary: "One-on-one tutoring, institutional workshops, viva defense coaching",
+    summary: "One-on-one tutoring, institutional workshops, oral defense coaching",
   },
 ];
 

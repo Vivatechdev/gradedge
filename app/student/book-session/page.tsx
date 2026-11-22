@@ -30,7 +30,7 @@ const PAID_SERVICES = [
   },
   {
     id: "serv-defense",
-    name: "Mock Defense Presentation & Viva Coaching",
+    name: "Mock Defense Presentation & defense Coaching",
     duration: "60 minutes",
     fee: "$180 / session",
     desc: "Simulated committee questioning, slide review, and defense strategy.",

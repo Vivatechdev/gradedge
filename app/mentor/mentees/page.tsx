@@ -132,7 +132,7 @@ export default function MentorMenteesPage() {
               Assigned Doctoral Candidates
             </h2>
             <p className="text-xs text-tone-muted mt-1">
-              Supervising 4 doctoral researchers across methodology design, empirical validation, and viva preparation.
+              Supervising 4 doctoral researchers across methodology design, empirical validation, and defense preparation.
             </p>
           </div>
           <div className="flex items-center gap-2">

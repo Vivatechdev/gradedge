@@ -23,7 +23,7 @@ export default function InstitutionsOverviewPage() {
   const offerings = [
     {
       title: "Cohort Research Workshops",
-      desc: "Half-day and multi-day intensives covering research design, statistical modeling, NVivo qualitative coding, and viva defense strategies.",
+      desc: "Half-day and multi-day intensives covering research design, statistical modeling, NVivo qualitative coding, and oral defense strategies.",
     },
     {
       title: "Embedded Faculty Mentoring",

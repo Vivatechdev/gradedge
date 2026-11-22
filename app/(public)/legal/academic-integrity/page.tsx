@@ -59,7 +59,7 @@ export default function LegalAcademicIntegrityPage() {
             <li>Methodological auditing of sampling plans, research designs, and ethical review applications.</li>
             <li>Statistical syntax coaching (SPSS, R, Stata, NVivo, SmartPLS) and diagnostic output interpretation.</li>
             <li>Copyediting and proofreading for academic register, flow, and citation style compliance (APA, Harvard, Chicago, IEEE).</li>
-            <li>Simulated viva voce examinations and presentation coaching.</li>
+            <li>Simulated Oral Defense examinations and presentation coaching.</li>
           </ul>
         </section>
 

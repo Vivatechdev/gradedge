@@ -10,7 +10,7 @@ import { SectionLabel } from "@/components/ui/editorial";
 export const metadata: Metadata = buildMetadata({
   title: "Downloadable Research & Methodology Guides",
   description:
-    "Comprehensive PDF guides on quantitative diagnostics, qualitative coding, and viva preparation.",
+    "Comprehensive PDF guides on quantitative diagnostics, qualitative coding, and defense preparation.",
   path: "/resources/guides",
 });
 

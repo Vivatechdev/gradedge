@@ -27,7 +27,7 @@ interface ConsultationSession {
   timeStr: string;
   durationMinutes: number;
   meetUrl: string;
-  type: "viva_prep" | "methodology_review" | "proposal_refinement";
+  type: "defense_prep" | "methodology_review" | "proposal_refinement";
   status: "confirmed" | "completed";
   prepNote: string;
 }
@@ -60,14 +60,14 @@ const UPCOMING_SESSIONS: ConsultationSession[] = [
   {
     id: "sess-303",
     candidateName: "Chidi Okafor",
-    topic: "Qualitative Viva Defense Simulation: Defending Thematic Saturation",
+    topic: "Qualitative Oral Defense Simulation: Defending Thematic Saturation",
     dateStr: "Tuesday, Dec 02, 2026",
     timeStr: "15:30 - 16:30 UTC",
     durationMinutes: 60,
     meetUrl: "https://meet.google.com/uvw-xyza-bcd",
-    type: "viva_prep",
+    type: "defense_prep",
     status: "confirmed",
-    prepNote: "Mock viva examiner interrogation focusing on epistemology and researcher bias.",
+    prepNote: "mock defense examiner interrogation focusing on epistemology and researcher bias.",
   },
 ];
 
@@ -141,8 +141,8 @@ export default function MentorSchedulePage() {
                         <span className="font-serif font-bold text-base text-tone-heading">
                           {session.candidateName}
                         </span>
-                        <Badge variant={session.type === "viva_prep" ? "gold" : "outline"} className="text-[10px]">
-                          {session.type === "viva_prep" ? "Viva Mock Defense" : "Methodology Advisory"}
+                        <Badge variant={session.type === "defense_prep" ? "gold" : "outline"} className="text-[10px]">
+                          {session.type === "defense_prep" ? "defense Mock Defense" : "Methodology Advisory"}
                         </Badge>
                       </div>
                       <p className="text-xs font-serif text-stone-700 leading-snug">

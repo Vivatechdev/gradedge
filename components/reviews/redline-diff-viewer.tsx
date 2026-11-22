@@ -55,7 +55,7 @@ const SAMPLE_PARAGRAPHS: RedlineParagraph[] = [
     ],
     mentorComment: {
       author: "Dr. Eleanor Vance",
-      note: "Viva examiners will question a 0.2 raw score vs 0.2 SD of the logit. Austin (2011) provides empirical justification for the standard deviation specification.",
+      note: "defense examiners will question a 0.2 raw score vs 0.2 SD of the logit. Austin (2011) provides empirical justification for the standard deviation specification.",
       severity: "citation",
     },
   },

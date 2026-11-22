@@ -55,7 +55,7 @@ export const SELECTOR_QUESTIONS: SelectorQuestion[] = [
       {
         id: "defense",
         label: "Oral Defense & Examination",
-        description: "Preparing slides, practicing viva questioning, or converting thesis to journal papers.",
+        description: "Preparing slides, practicing oral defense questioning, or converting thesis to journal papers.",
       },
     ],
   },
@@ -195,7 +195,7 @@ export const RECOMMENDATION_RULES: RecommendationRule[] = [
   {
     stageId: "defense",
     recommendedSlug: "defense-presentation-coaching",
-    reason: "Simulated mock viva examinations and slide audits prepare you to handle probing committee challenges with composure.",
+    reason: "Simulated mock oral defense examinations and slide audits prepare you to handle probing committee challenges with composure.",
   },
   {
     stageId: "defense",

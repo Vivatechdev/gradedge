@@ -122,7 +122,7 @@ export default function AcademicIntegrityPage() {
 
         {/* Quote */}
         <PullQuote
-          quote="The skills you build working with a GradEdge mentor are the skills you carry into your viva, your next paper, and your research career."
+          quote="The skills you build working with a GradEdge mentor are the skills you carry into your defense, your next paper, and your research career."
           attribution="GradEdge Academic Integrity Framework"
         />
 

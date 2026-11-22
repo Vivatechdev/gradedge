@@ -29,7 +29,7 @@ export default function MentorSettingsPage() {
     "Panel Econometrics",
     "Stata & R Programming",
     "Survival Analysis",
-    "Viva Defense Interrogation",
+    "Oral Defense Interrogation",
   ]);
   const [notifySubmissions, setNotifySubmissions] = useState(true);
   const [notifySessions, setNotifySessions] = useState(true);

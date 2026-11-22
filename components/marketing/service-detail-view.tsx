@@ -124,8 +124,8 @@ const CATEGORY_CONFIG: Record<string, CategoryConfig> = {
   },
   "coaching-and-training": {
     trackBadge: "Oral Examination & Defense Chamber Track",
-    heroPill: "Viva Voce Simulation & Committee Cross-Examination",
-    visualizerTitle: "Viva Voce Oral Defense Simulation Chamber",
+    heroPill: "Oral Defense Simulation & Committee Cross-Examination",
+    visualizerTitle: "Oral Defense Oral Defense Simulation Chamber",
     visualizerSubtitle: "Practice structured academic responses against external examiner methodological traps, committee challenges, and policy translation probes.",
     icon: Users,
     accentColor: "border-navy/40 bg-cream text-navy",

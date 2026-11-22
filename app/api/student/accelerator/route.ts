@@ -74,7 +74,7 @@ export async function GET() {
         {
           week: "Week 12",
           date: "Feb 8, 2027",
-          topic: "Final Viva Mock Clearance & Thesis Defense Sign-off",
+          topic: "Final defense Mock Clearance & Thesis Defense Sign-off",
           time: "3:00 PM UTC",
         },
       ],

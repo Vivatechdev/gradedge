@@ -26,7 +26,7 @@ export default async function AcceleratorCheckoutPage({
     "Bi-weekly 60-minute one-on-one video coaching calls with your faculty mentor",
     "Line-level developmental critique across all chapters (Ch 1–5)",
     "Statistical syntax audits and empirical model validation (R, Python, SPSS, Stata)",
-    "Comprehensive pre-defense mock viva clearance with mock examiners",
+    "Comprehensive pre-defense mock defense clearance with mock examiners",
     "Private workspace repository audit and ethics protocol guidance",
   ];
 

@@ -51,7 +51,7 @@ export default function InstitutionalWorkshopsPage() {
       summary: "Drafting institutional ethics protocols, risk mitigations, anonymization standards, and responding to committee revisions.",
     },
     {
-      title: "Preparing for the Viva Voce: Mock Defense Simulation",
+      title: "Preparing for the Oral Defense: Mock Defense Simulation",
       duration: "3 hours",
       audience: "Candidates within 6 months of thesis submission",
       summary: "Deconstructing committee questioning patterns, defending methodological limitations, and presenting slides with scholarly authority.",

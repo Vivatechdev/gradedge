@@ -60,7 +60,7 @@ export default function AcceleratorOverviewPage() {
         "Address committee revisions and tighten overall dissertation cohesion.",
     },
     {
-      title: "Viva voce simulation and defense prep",
+      title: "Committee defense simulation and preparation",
       description:
         "Structured mock defense with discipline-specific inquiry and slide coaching.",
     },
@@ -173,7 +173,7 @@ export default function AcceleratorOverviewPage() {
                 desc: "Direct messaging access to your advisor for timely methodological queries.",
               },
               {
-                title: "Viva preparation suite",
+                title: "Oral defense preparation suite",
                 desc: "Simulated oral defense panel and slide deck review included prior to submission.",
               },
             ].map((item, i) => (

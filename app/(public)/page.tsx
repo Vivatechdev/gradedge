@@ -453,7 +453,7 @@ export default async function HomePage() {
               <p className="type-body text-tone-body">
                 This is not a restriction we reluctantly comply with. It is the
                 whole point. The skills you build working with a GradEdge mentor
-                are the skills you carry into your viva, your next paper, and
+                are the skills you carry into your defense, your next paper, and
                 your research career.
               </p>
               <div className="pt-2">

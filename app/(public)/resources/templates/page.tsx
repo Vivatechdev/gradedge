@@ -28,7 +28,7 @@ export default function TemplatesPage() {
     },
     {
       title: "Dissertation Defense Slide Deck (PowerPoint / Keynote)",
-      desc: "Clean, university-press aesthetic slide deck calibrated for a 20-minute viva presentation.",
+      desc: "Clean, university-press aesthetic slide deck calibrated for a 20-minute defense presentation.",
       available: false,
     },
   ];

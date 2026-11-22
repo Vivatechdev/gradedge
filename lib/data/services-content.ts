@@ -106,7 +106,7 @@ export const CATEGORY_METADATA: Record<
   "coaching-and-training": {
     name: "Coaching & Training",
     description:
-      "One-on-one presentation practice for oral defenses and vivas, timeline management, and practical software intensives with experienced academic mentors.",
+      "One-on-one presentation practice for oral and committee defenses, timeline management, and practical software intensives with experienced academic mentors.",
     image: "/images/services/cat-coaching.jpg",
     image_alt: "Academic seminar presentation room, defense slides, and one-on-one scholarly coaching notes",
   },
@@ -268,7 +268,7 @@ export const SERVICES_CONTENT: Record<string, ServiceContentItem> = {
           "Six 60-minute strategy consultations",
           "Comprehensive methodology and findings alignment audit",
           "Pre-submission committee readiness review",
-          "Mock viva / defense oral preparation session",
+          "Oral defense preparation session",
         ],
       },
     ],
@@ -286,7 +286,7 @@ export const SERVICES_CONTENT: Record<string, ServiceContentItem> = {
     category_name: "Dissertation Support",
     two_sentence_promise:
       "Transform broad intellectual interests into a well-bounded, defensible research question and an institutionally compliant dissertation proposal. We evaluate theoretical feasibility, empirical access, and methodological alignment before you submit to your committee.",
-    hero_image: "/images/services/stage-start.jpg",
+    hero_image: "/images/services/service-proposal-architecture.jpg",
     hero_image_alt: "Academic research proposal outline with conceptual frameworks and literature cards",
     hero_summary:
       "A failed dissertation proposal costs an average of two semesters in administrative delays. We work with you to demarcate your problem statement, articulate your scholarly contribution, and craft a proposal your committee can approve with confidence.",
@@ -794,7 +794,7 @@ export const SERVICES_CONTENT: Record<string, ServiceContentItem> = {
     category_name: "Data Analysis",
     two_sentence_promise:
       "Construct defensible coding hierarchies, conduct reflexive thematic analysis, and extract compelling qualitative evidence. We mentor you in NVivo and ATLAS.ti, ensuring your qualitative findings are conceptual, rigorous, and audit-ready.",
-    hero_image: "/images/services/stage-research.jpg",
+    hero_image: "/images/services/service-qualitative-analysis.jpg",
     hero_image_alt: "Qualitative coding tree diagram in NVivo and interview transcript annotations",
     hero_summary:
       "Qualitative research often falters when transcripts are treated descriptively rather than analytically. We teach you how to develop codebooks, maintain reflexive audit trails, and synthesize themes that address your research questions with philosophical depth.",
@@ -906,7 +906,7 @@ export const SERVICES_CONTENT: Record<string, ServiceContentItem> = {
     category_name: "Data Analysis",
     two_sentence_promise:
       "Design and validate complex measurement and structural path models using PLS-SEM or CB-SEM. We guide you through indicator reliability, convergent and discriminant validity (HTMT), and multi-group mediation/moderation analysis.",
-    hero_image: "/images/services/stage-research.jpg",
+    hero_image: "/images/services/service-sem-modeling.jpg",
     hero_image_alt: "Structural equation model path diagram in SmartPLS with latent constructs and regression coefficients",
     hero_summary:
       "Structural Equation Modeling requires rigorous two-stage evaluation: first confirming your measurement model, then testing structural paths. We teach you how to satisfy reporting standards in AMOS and SmartPLS with complete mathematical justification.",
@@ -1018,7 +1018,7 @@ export const SERVICES_CONTENT: Record<string, ServiceContentItem> = {
     category_name: "Data Analysis",
     two_sentence_promise:
       "Integrate quantitative and qualitative findings into a rigorous, cohesive mixed-methods study. We guide you in selecting convergent, explanatory, or exploratory sequential designs and constructing integrated joint displays.",
-    hero_image: "/images/services/stage-research.jpg",
+    hero_image: "/images/services/service-mixed-methods.jpg",
     hero_image_alt: "Mixed methods research design flow chart showing quantitative and qualitative data integration",
     hero_summary:
       "A genuine mixed-methods dissertation is not simply two separate studies bound together. We train you how to integrate qualitative insights with statistical results using joint displays and defensible methodological notation (Creswell & Plano Clark standards).",
@@ -2017,15 +2017,15 @@ export const SERVICES_CONTENT: Record<string, ServiceContentItem> = {
   // ── CATEGORY 5: COACHING & TRAINING ──────────────────────────────────────────
   "defense-presentation-coaching": {
     slug: "defense-presentation-coaching",
-    title: "Presentation & Oral Defense (Viva) Coaching",
+    title: "Presentation & Oral Defense Coaching",
     category: "coaching-and-training",
     category_name: "Coaching & Training",
     two_sentence_promise:
-      "Prepare for your doctoral viva voce or oral defense with simulated mock examinations and slide deck refinement. We train you how to respond to adversarial committee questioning with composure, academic precision, and intellectual authority.",
-    hero_image: "/images/services/stage-start.jpg",
+      "Prepare for your doctoral oral defense and committee examination with simulated mock sessions and slide deck refinement. We train you how to respond to adversarial committee questioning with composure, academic precision, and intellectual authority.",
+    hero_image: "/images/services/service-oral-defense.jpg",
     hero_image_alt: "Doctoral oral defense presentation slides with mock committee question evaluation rubric",
     hero_summary:
-      "Walking into your defense without practicing out loud under simulated examination conditions is a high-risk gamble. We conduct realistic mock vivas, probe your methodology for vulnerabilities, and teach you how to field unexpected questions without becoming defensive.",
+      "Walking into your defense without practicing out loud under simulated examination conditions is a high-risk gamble. We conduct realistic mock defense sessions, probe your methodology for vulnerabilities, and teach you how to field unexpected questions without becoming defensive.",
     format_text: "Slide deck audit + 90-minute live simulated mock defense",
     turnaround_text: "3 to 5 working days",
     best_for: "Candidates with an approved dissertation scheduled for defense within 1 to 8 weeks",
@@ -2079,7 +2079,7 @@ export const SERVICES_CONTENT: Record<string, ServiceContentItem> = {
       },
       {
         step: 3,
-        title: "Live 90-Minute Mock Viva Session",
+        title: "Live 90-Minute Mock Defense Session",
         description: "Simulated oral defense examination with real-time questioning, followed by immediate debrief.",
         typical_duration: "Day 4",
       },
@@ -2107,28 +2107,28 @@ export const SERVICES_CONTENT: Record<string, ServiceContentItem> = {
     ],
     faqs: [
       {
-        question: "Can you tailor the mock defense to UK viva voce vs US defense formats?",
-        answer: "Yes. UK vivas involve closed-door dialogue with internal and external examiners, while US defenses typically feature a public presentation followed by closed committee interrogation. We configure the mock session to match your exact institutional format.",
+        question: "Can you tailor the mock defense to European vs North American examination formats?",
+        answer: "Yes. European doctoral oral exams often involve closed-door dialogue with appointed internal and external examiners, while North American defenses typically feature a public presentation followed by closed committee interrogation. We configure the mock session to match your exact institutional format.",
       },
     ],
     related_service_slugs: ["dissertation-thesis-mentoring", "research-productivity-coaching", "academic-editing-proofreading"],
-    related_post_slugs: ["how-to-survive-your-doctoral-viva", "designing-effective-defense-slides"],
+    related_post_slugs: ["how-to-survive-your-doctoral-defense", "designing-effective-defense-slides"],
     packages: [
       {
         id: "defense-intensive",
         name: "Complete Mock Defense & Slide Coaching",
-        description: "Slide deck audit, custom question inventory, 90-minute recorded mock viva, and debrief memo.",
+        description: "Slide deck audit, custom question inventory, 90-minute recorded mock examination, and debrief memo.",
         price_ngn: 180000,
         price_usd: 125,
         rounds_of_feedback: "1 slide audit + 90-min live mock exam + debrief",
         turnaround: "4 working days",
-        includes: ["Slide deck line-level review", "25 tailored committee questions", "90-minute live mock viva session", "Written performance debrief memo"],
+        includes: ["Slide deck line-level review", "25 tailored committee questions", "90-minute live mock defense session", "Written performance debrief memo"],
       },
     ],
     seo: {
-      meta_title: "Oral Defense & Viva Voce Coaching — GradEdge",
+      meta_title: "Oral Defense & Presentation Coaching — GradEdge",
       meta_description:
-        "Prepare for your doctoral defense with simulated mock vivas, slide deck audits, and committee question inventories with experienced academic mentors.",
+        "Prepare for your doctoral defense with simulated mock examinations, slide deck audits, and committee question inventories with experienced academic mentors.",
     },
   },
 

@@ -270,7 +270,7 @@ export default function SupervisorPortalPage() {
             </CardHeader>
             <CardContent className="p-4 space-y-2 text-xs font-sans text-stone-600 leading-relaxed">
               <p>
-                GradEdge acts in direct alignment with university advisory standards. Mentors provide editorial critique, methodological verification, and viva preparation. All original intellectual inquiry and prose generation remains 100% the candidate&apos;s own.
+                GradEdge acts in direct alignment with university advisory standards. Mentors provide editorial critique, methodological verification, and defense preparation. All original intellectual inquiry and prose generation remains 100% the candidate&apos;s own.
               </p>
               <div className="pt-2 flex items-center justify-between text-[11px] text-stone-500">
                 <span>Accreditation Code: <strong>UKRI-DTP-2026</strong></span>
