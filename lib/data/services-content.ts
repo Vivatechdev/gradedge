@@ -79,35 +79,35 @@ export const CATEGORY_METADATA: Record<
     name: "Dissertation Support",
     description:
       "Structured, longitudinal developmental feedback across every stage of your thesis — from research questions and conceptual framework to full chapter drafts.",
-    image: "/images/services/stage-writing.jpg",
+    image: "/images/services/cat-dissertation.jpg",
     image_alt: "Academic research manuscripts with handwritten marginal annotations on a quiet study desk",
   },
   "data-analysis": {
     name: "Data Analysis",
     description:
       "Methodological and statistical guidance for quantitative, qualitative, and mixed-methods research. We audit assumptions, guide syntax execution, and teach output interpretation.",
-    image: "/images/services/stage-research.jpg",
+    image: "/images/services/cat-data.jpg",
     image_alt: "Statistical analysis charts, open software syntax scripts, and econometric data notebooks",
   },
   "editing-and-writing-quality": {
     name: "Editing & Writing Quality",
     description:
       "Line-level developmental editing, referencing compliance, and academic style refinement. We strengthen argument structure and scholarly register while protecting your intellectual voice.",
-    image: "/images/services/stage-writing.jpg",
+    image: "/images/services/cat-editing.jpg",
     image_alt: "Close-up of academic thesis manuscript with line-level editorial marks and precision references",
   },
   "publishing-and-career": {
     name: "Publishing & Career",
     description:
       "Transform exhaustive dissertation chapters into competitive journal submissions, craft grant applications, and prepare responses to peer review.",
-    image: "/images/services/stage-publishing.jpg",
+    image: "/images/services/cat-publishing.jpg",
     image_alt: "Peer-reviewed academic journals, accepted paper proofs, and grant application proposals",
   },
   "coaching-and-training": {
     name: "Coaching & Training",
     description:
       "One-on-one presentation practice for oral defenses and vivas, timeline management, and practical software intensives with experienced academic mentors.",
-    image: "/images/services/stage-start.jpg",
+    image: "/images/services/cat-coaching.jpg",
     image_alt: "Academic seminar presentation room, defense slides, and one-on-one scholarly coaching notes",
   },
 };
@@ -121,7 +121,7 @@ export const SERVICES_CONTENT: Record<string, ServiceContentItem> = {
     category_name: "Dissertation Support",
     two_sentence_promise:
       "Receive line-level developmental written feedback and one-on-one strategy calls through every chapter of your doctoral or master's thesis. We help you clarify arguments, structure empirical evidence, and defend your research with independent authority.",
-    hero_image: "/images/services/stage-writing.jpg",
+    hero_image: "/images/services/service-dissertation-mentoring.jpg",
     hero_image_alt: "Open dissertation draft manuscript with mentor marginal notes beside a laptop",
     hero_summary:
       "Our flagship mentoring engagement pairs you with an experienced academic mentor who reviews your draft chapters in structured cycles. We do not write your thesis; we train you to think, write, and defend like an established scholar.",
@@ -424,7 +424,7 @@ export const SERVICES_CONTENT: Record<string, ServiceContentItem> = {
     category_name: "Dissertation Support",
     two_sentence_promise:
       "Synthesize complex scholarly debates, identify verified empirical gaps, and build a cohesive theoretical framework. We train you to move beyond descriptive book reports into critical, thematic academic argumentation.",
-    hero_image: "/images/services/stage-writing.jpg",
+    hero_image: "/images/services/service-dissertation-mentoring.jpg",
     hero_image_alt: "Scholarly synthesis matrix table with highlighted peer-reviewed academic papers",
     hero_summary:
       "A weak literature review simply summarizes papers one by one ('Smith said X, then Jones said Y'). We guide you in constructing thematic synthesis matrices that pit opposing perspectives against each other to demonstrate why your study is necessary.",
@@ -1129,7 +1129,7 @@ export const SERVICES_CONTENT: Record<string, ServiceContentItem> = {
     category_name: "Editing & Writing Quality",
     two_sentence_promise:
       "Refine your scholarly tone, sentence rhythm, and argument coherence while preserving your authentic intellectual voice. We eliminate ambiguity, typographical errors, and clumsy phrasing to meet the highest university press standards.",
-    hero_image: "/images/services/stage-writing.jpg",
+    hero_image: "/images/services/service-dissertation-mentoring.jpg",
     hero_image_alt: "Academic dissertation page with line-level developmental editing marks in red and blue ink",
     hero_summary:
       "A substantive academic edit goes far beyond basic spellchecking. We examine paragraph unity, transition mechanics, discipline-appropriate register, and academic rigor to ensure your dissertation reads like the work of an established researcher.",
@@ -1258,7 +1258,7 @@ export const SERVICES_CONTENT: Record<string, ServiceContentItem> = {
     category_name: "Editing & Writing Quality",
     two_sentence_promise:
       "Guarantee absolute concordance between your in-text citations and reference list entries, while formatting your manuscript to exact university press guidelines. We audit APA 7, Harvard, Chicago, Vancouver, and institutional style books.",
-    hero_image: "/images/services/stage-writing.jpg",
+    hero_image: "/images/services/service-dissertation-mentoring.jpg",
     hero_image_alt: "Academic bibliography reference list with citation cross-checks and DOI verification",
     hero_summary:
       "Reference list inconsistencies and formatting non-compliance cause last-minute dissertation rejections at the graduate school office. We cross-check every single citation, verify DOIs, format preliminary pages, and align your layout with institutional requirements.",
@@ -1364,7 +1364,7 @@ export const SERVICES_CONTENT: Record<string, ServiceContentItem> = {
     category_name: "Editing & Writing Quality",
     two_sentence_promise:
       "Interpret your similarity report with academic precision and learn ethical paraphrasing techniques to eliminate unintended text overlap. We teach you how to synthesize source material without risking accidental plagiarism allegations.",
-    hero_image: "/images/services/stage-writing.jpg",
+    hero_image: "/images/services/service-dissertation-mentoring.jpg",
     hero_image_alt: "Similarity audit report review document with highlighted text strings and paraphrasing notes",
     hero_summary:
       "A raw percentage on a similarity report tells you almost nothing about academic integrity. We review highlighted text strings with you, distinguish between benign common methodology formulas and problematic text recycling, and train you in rigorous scholarly paraphrasing.",
@@ -1471,7 +1471,7 @@ export const SERVICES_CONTENT: Record<string, ServiceContentItem> = {
     category_name: "Editing & Writing Quality",
     two_sentence_promise:
       "Bridge the gap between complex research thinking and native-level English academic prose. We coach multilingual researchers on disciplinary idioms, article usage, hedging conventions, and rhetorical argument structures.",
-    hero_image: "/images/services/stage-writing.jpg",
+    hero_image: "/images/services/service-dissertation-mentoring.jpg",
     hero_image_alt: "Bilingual academic notes and English research manuscript with register guidance marks",
     hero_summary:
       "Non-native English scholars frequently produce brilliant empirical research that gets dismissed because of subtle linguistic friction. We provide specialized developmental mentoring that sharpens your English scholarly register while preserving your intellectual ownership.",
