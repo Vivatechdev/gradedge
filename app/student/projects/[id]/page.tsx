@@ -165,11 +165,10 @@ export default function ProjectDetailPage({
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id as any)}
-                className={`py-2 px-3 font-medium transition-colors border-b-2 -mb-px shrink-0 cursor-pointer ${
-                  activeTab === tab.id
+                className={`py-2 px-3 font-medium transition-colors border-b-2 -mb-px shrink-0 cursor-pointer ${activeTab === tab.id
                     ? "border-navy text-navy font-semibold"
                     : "border-transparent text-tone-muted hover:text-tone-heading"
-                }`}
+                  }`}
               >
                 {tab.label}
               </button>
@@ -258,11 +257,10 @@ export default function ProjectDetailPage({
                       <div className="flex items-start justify-between gap-3">
                         <div className="flex items-start gap-3">
                           <div
-                            className={`w-5 h-5 rounded-[2px] border flex items-center justify-center shrink-0 mt-0.5 ${
-                              isDone
+                            className={`w-5 h-5 rounded-[2px] border flex items-center justify-center shrink-0 mt-0.5 ${isDone
                                 ? "bg-success border-success text-white"
                                 : "border-tone-rule bg-white text-transparent"
-                            }`}
+                              }`}
                           >
                             &check;
                           </div>

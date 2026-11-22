@@ -310,13 +310,12 @@ export default async function HomePage() {
           </h2>
 
           {/* Editorial Wide Image Band (16:9) */}
-          <div className="mb-10 max-w-4xl">
+          <div className="mb-10 max-w-3xl rounded-[3px] overflow-hidden shadow-[0_4px_20px_rgba(20,38,63,0.06)] border border-tone-rule">
             <Photo
               src="/images/home/stuck.jpg"
-              alt="An open dissertation analysis chapter and methodology handbook on a quiet library desk"
+              alt="Empirical survey data sheets and Chapter 4 statistical analysis draft on an academic research desk"
               aspectRatio="16:9"
-              navyWash={true}
-              caption="The gap between raw data collection and a completed analysis chapter is where most projects stall."
+              navyWash={false}
             />
           </div>
 
