@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { buildMetadata } from "@/lib/metadata";
-import { createClient } from "@/lib/supabase/server";
 import {
   PageHero,
   PageBreadcrumb,
@@ -105,32 +104,73 @@ interface SubjectData {
   description: string;
 }
 
+const SUBJECTS_DATA_MAP: Record<string, SubjectData> = {
+  "social-sciences-education": {
+    slug: "social-sciences-education",
+    title: "Social Sciences & Education",
+    summary: "Sociology, anthropology, pedagogy, education policy, and curriculum studies.",
+    description: "GradEdge supports researchers in Social Sciences & Education through research proposal formulation, quantitative and qualitative data analysis, developmental chapter reviews, and defense preparation.",
+  },
+  "business-management-finance": {
+    slug: "business-management-finance",
+    title: "Business, Management & Finance",
+    summary: "Corporate strategy, econometrics, organizational behavior, and marketing research.",
+    description: "GradEdge supports researchers in Business, Management & Finance through empirical modeling, survey validation, econometrics, and publication guidance.",
+  },
+  "humanities-literature-history": {
+    slug: "humanities-literature-history",
+    title: "Humanities, Literature & History",
+    summary: "Cultural studies, philosophical inquiries, historiography, and literary analysis.",
+    description: "GradEdge supports researchers in Humanities, Literature & History with archival inquiry, qualitative discourse analysis, and developmental prose editing.",
+  },
+  "computer-science-it": {
+    slug: "computer-science-it",
+    title: "Computer Science & Information Technology",
+    summary: "Machine learning, data science, human-computer interaction, and software systems.",
+    description: "GradEdge supports researchers in Computer Science & IT with algorithmic benchmarking, experiment design, syntax auditing, and IEEE/ACM journal structuring.",
+  },
+  "engineering-physical-sciences": {
+    slug: "engineering-physical-sciences",
+    title: "Engineering & Physical Sciences",
+    summary: "Mechanical, electrical, civil engineering, physics, and applied mathematics.",
+    description: "GradEdge supports researchers in Engineering & Physical Sciences with mathematical modeling, experimental design, and technical writing.",
+  },
+  "environmental-sciences-agriculture": {
+    slug: "environmental-sciences-agriculture",
+    title: "Environmental Sciences & Agriculture",
+    summary: "Ecology, climate adaptation, agronomy, and sustainability policy.",
+    description: "GradEdge supports researchers in Environmental Sciences & Agriculture through field trial designs, geospatial analyses, and policy synthesis.",
+  },
+  "law-criminology-policy": {
+    slug: "law-criminology-policy",
+    title: "Law, Criminology & Policy Studies",
+    summary: "Jurisprudence, comparative law, criminal justice, and public administration.",
+    description: "GradEdge supports researchers in Law, Criminology & Policy with doctrinal legal inquiry, statutory analysis, and socio-legal frameworks.",
+  },
+  "psychology-behavioural-sciences": {
+    slug: "psychology-behavioural-sciences",
+    title: "Psychology & Behavioural Sciences",
+    summary: "Clinical psychology, cognitive science, psychometrics, and experimental psychology.",
+    description: "GradEdge supports researchers in Psychology & Behavioural Sciences through psychometric scale validation, experimental design, and APA 7 results reporting.",
+  },
+};
+
+const FALLBACK_SERVICES = [
+  { slug: "dissertation-thesis-mentoring", title: "Dissertation & Thesis Mentoring", summary: "One-on-one developmental chapter feedback." },
+  { slug: "quantitative-data-analysis", title: "Quantitative Data Analysis", summary: "Statistical syntax audits and results interpretation in SPSS, R, and Stata." },
+  { slug: "qualitative-data-analysis", title: "Qualitative Data Analysis", summary: "Thematic coding, codebook development, and NVivo/ATLAS.ti mentoring." },
+  { slug: "academic-editing-proofreading", title: "Academic Editing & Proofreading", summary: "Substantive line-level editing and academic register refinement." },
+];
+
 export async function generateMetadata({
   params,
 }: {
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  let title = slug.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
-  let description = "Specialized postgraduate research mentoring.";
-
-  if (process.env.NEXT_PUBLIC_SUPABASE_URL) {
-    try {
-      const supabase = await createClient();
-      const { data } = await supabase
-        .from("subjects")
-        .select("title, description")
-        .eq("slug", slug)
-        .is("parent_id", null)
-        .single();
-      if (data) {
-        title = data.title;
-        description = data.description;
-      }
-    } catch {
-      // Keep fallback
-    }
-  }
+  const known = SUBJECTS_DATA_MAP[slug];
+  const title = known ? known.title : slug.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
+  const description = known ? known.summary : "Specialized postgraduate research mentoring.";
 
   return buildMetadata({
     title: `${title} — Research Mentoring`,
@@ -165,47 +205,14 @@ export default async function SubjectDetailPage({
 }) {
   const { slug } = await params;
 
-  let subject: SubjectData | null = null;
-  let services: { slug: string; title: string; summary: string }[] = [];
+  let subject: SubjectData = SUBJECTS_DATA_MAP[slug] ?? {
+    slug,
+    title: slug.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase()),
+    summary: `Research mentoring and methodological advisory for ${slug.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase())}.`,
+    description: `GradEdge supports researchers through research proposal formulation, quantitative and qualitative data analysis, developmental chapter reviews, and defense preparation.`,
+  };
 
-  if (process.env.NEXT_PUBLIC_SUPABASE_URL && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY) {
-    try {
-      const supabase = await createClient();
-      const [sRes, svcRes] = await Promise.all([
-        supabase
-          .from("subjects")
-          .select("*")
-          .eq("slug", slug)
-          .is("parent_id", null)
-          .single(),
-        supabase
-          .from("services")
-          .select("slug, title, summary")
-          .eq("is_active", true)
-          .limit(4),
-      ]);
-      if (sRes.data) {
-        subject = sRes.data as SubjectData;
-      }
-      services = (svcRes.data ?? []) as typeof services;
-    } catch {
-      subject = null;
-    }
-  }
-
-  // Fallback
-  if (!subject) {
-    const fallbackTitle = slug
-      .replace(/-/g, " ")
-      .replace(/\b\w/g, (c) => c.toUpperCase());
-
-    subject = {
-      slug,
-      title: fallbackTitle,
-      summary: `Research mentoring and methodological advisory for ${fallbackTitle}.`,
-      description: `GradEdge supports researchers in ${fallbackTitle} through research proposal formulation, quantitative and qualitative data analysis, developmental chapter reviews, and defense preparation.`,
-    };
-  }
+  let services = FALLBACK_SERVICES;
 
   const methodology = METHODOLOGIES_MAP[slug] ?? {
     methods: [
