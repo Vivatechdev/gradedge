@@ -10,8 +10,7 @@ import {
 } from "@/components/marketing/page-components";
 import { SectionLabel } from "@/components/ui/editorial";
 
-export const revalidate = 3600;
-export const dynamicParams = true;
+export const dynamic = "force-dynamic";
 
 const METHODOLOGIES_MAP: Record<
   string,
@@ -104,21 +103,6 @@ interface SubjectData {
   title: string;
   summary: string;
   description: string;
-}
-
-export async function generateStaticParams() {
-  if (!process.env.NEXT_PUBLIC_SUPABASE_URL) return [];
-  try {
-    const supabase = await createClient();
-    const { data } = await supabase
-      .from("subjects")
-      .select("slug")
-      .is("parent_id", null)
-      .neq("slug", "health-sciences");
-    return (data ?? []).map((s: any) => ({ slug: s.slug }));
-  } catch {
-    return [];
-  }
 }
 
 export async function generateMetadata({
