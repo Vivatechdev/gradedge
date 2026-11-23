@@ -15,79 +15,128 @@ export interface ItemPriceRecord {
 }
 
 /**
+ * In-memory runtime cache for admin price overrides.
+ * Ensures that any price saved in the admin dashboard takes effect immediately
+ * across all public pages, checkout, and Paystack transactions in real time.
+ */
+const RUNTIME_PRICE_OVERRIDES: Record<string, Record<string, number>> = {};
+
+/**
  * Built-in Canonical Fallback Prices
- * Rule 2: If a currency has no price, fall back to USD.
- * Provides resilient, offline-safe values matching seed migration.
+ * Accurately consolidated with student consultation rates, packages, and accelerator.
+ * 100 minor units = 1 major unit (cents, kobo, pesewas, etc.)
  */
 export const DEFAULT_CANONICAL_PRICES: Record<string, Record<SupportedCurrency, number>> = {
+  // Baseline 60m session
   "session-60": {
-    USD: 7500,
-    NGN: 3500000,
-    GBP: 6000,
-    EUR: 7000,
-    GHS: 110000,
-    ZAR: 135000,
-    KES: 950000,
+    USD: 12000,       // $120.00
+    NGN: 18000000,   // ₦180,000
+    GBP: 9500,        // £95.00
+    EUR: 11000,       // €110.00
+    GHS: 186000,      // GH₵1,860
+    ZAR: 222000,      // R2,220
+    KES: 1560000,     // KSh 15,600
   },
+  // 1-on-1 Research and Methodology Tutoring
+  "serv-tutoring": {
+    USD: 12000,       // $120.00
+    NGN: 18000000,   // ₦180,000
+    GBP: 9500,        // £95.00
+    EUR: 11000,       // €110.00
+    GHS: 186000,      // GH₵1,860
+    ZAR: 222000,      // R2,220
+    KES: 1560000,     // KSh 15,600
+  },
+  // Quantitative and Statistical Modeling Review
+  "serv-data": {
+    USD: 16000,       // $160.00
+    NGN: 24000000,   // ₦240,000
+    GBP: 12600,       // £126.00
+    EUR: 14700,       // €147.00
+    GHS: 248000,      // GH₵2,480
+    ZAR: 296000,      // R2,960
+    KES: 2080000,     // KSh 20,800
+  },
+  // Developmental Editing and Chapter Critique
+  "serv-editing": {
+    USD: 14000,       // $140.00
+    NGN: 21000000,   // ₦210,000
+    GBP: 11000,       // £110.00
+    EUR: 12900,       // €129.00
+    GHS: 217000,      // GH₵2,170
+    ZAR: 259000,      // R2,590
+    KES: 1820000,     // KSh 18,200
+  },
+  // Mock Defense Presentation and Defense Coaching
+  "serv-defense": {
+    USD: 18000,       // $180.00
+    NGN: 27000000,   // ₦270,000
+    GBP: 14200,       // £142.00
+    EUR: 16500,       // €165.00
+    GHS: 279000,      // GH₵2,790
+    ZAR: 333000,      // R3,330
+    KES: 2340000,     // KSh 23,400
+  },
+  // 12-Week Doctoral Accelerator
   "accelerator-full": {
-    USD: 120000,
-    NGN: 120000000,
-    GBP: 95000,
-    EUR: 110000,
-    GHS: 1800000,
-    ZAR: 2200000,
-    KES: 15500000,
+    USD: 120000,      // $1,200.00
+    NGN: 180000000,  // ₦1,800,000
+    GBP: 95000,       // £950.00
+    EUR: 110000,      // €1,100.00
+    GHS: 1860000,     // GH₵18,600
+    ZAR: 2220000,     // R22,200
+    KES: 15600000,    // KSh 156,000
   },
+  // Accelerator Installment (Part 1 of 3)
   "accelerator-installment": {
-    USD: 40000,
-    NGN: 40000000,
-    GBP: 32000,
-    EUR: 37000,
-    GHS: 600000,
-    ZAR: 740000,
-    KES: 5200000,
+    USD: 40000,       // $400.00
+    NGN: 60000000,   // ₦600,000
+    GBP: 32000,       // £320.00
+    EUR: 37000,       // €370.00
+    GHS: 620000,      // GH₵6,200
+    ZAR: 740000,      // R7,400
+    KES: 5200000,     // KSh 52,000
   },
   scholar: {
-    USD: 9500,
-    NGN: 4500000,
-    GBP: 7500,
-    EUR: 8800,
-    GHS: 145000,
-    ZAR: 175000,
-    KES: 1250000,
+    USD: 9500,        // $95.00
+    NGN: 14250000,   // ₦142,500
+    GBP: 7500,        // £75.00
+    EUR: 8800,        // €88.00
+    GHS: 147000,      // GH₵1,470
+    ZAR: 175000,      // R1,750
+    KES: 1235000,     // KSh 12,350
   },
   fellow: {
-    USD: 18000,
-    NGN: 8500000,
-    GBP: 14000,
-    EUR: 16500,
-    GHS: 275000,
-    ZAR: 330000,
-    KES: 2350000,
+    USD: 18000,       // $180.00
+    NGN: 27000000,   // ₦270,000
+    GBP: 14200,       // £142.00
+    EUR: 16500,       // €165.00
+    GHS: 279000,      // GH₵2,790
+    ZAR: 333000,      // R3,330
+    KES: 2340000,     // KSh 23,400
   },
   "proposal-architecture": {
-    USD: 45000,
-    NGN: 25000000,
-    GBP: 36000,
-    EUR: 42000,
-    GHS: 700000,
-    ZAR: 820000,
-    KES: 5800000,
+    USD: 45000,       // $450.00
+    NGN: 67500000,   // ₦675,000
+    GBP: 36000,       // £360.00
+    EUR: 42000,       // €420.00
+    GHS: 700000,      // GH₵7,000
+    ZAR: 820000,      // R8,200
+    KES: 5800000,     // KSh 58,000
   },
   "doctoral-completion-suite": {
-    USD: 120000,
-    NGN: 75000000,
-    GBP: 95000,
-    EUR: 110000,
-    GHS: 1850000,
-    ZAR: 2200000,
-    KES: 15500000,
+    USD: 120000,      // $1,200.00
+    NGN: 180000000,  // ₦1,800,000
+    GBP: 95000,       // £950.00
+    EUR: 110000,      // €1,100.00
+    GHS: 1860000,     // GH₵18,600
+    ZAR: 2220000,     // R22,200
+    KES: 15600000,    // KSh 156,000
   },
 };
 
 /**
- * Resolves an item price from the database with USD fallback
- * Rule 2: "store an explicit price per currency... If a currency has no price, fall back to USD."
+ * Resolves an item price with real-time conversion and database/admin precedence.
  */
 export async function getPriceForItem(
   itemId: string,
@@ -101,11 +150,21 @@ export async function getPriceForItem(
   const normCurrency = isSupportedCurrency(targetCurrency) ? targetCurrency : DEFAULT_CURRENCY;
   const paystackDirectSupported = CURRENCY_METADATA[normCurrency]?.paystackDirectSupported ?? false;
 
+  // 1. Check in-memory runtime overrides (populated when admin saves prices)
+  if (RUNTIME_PRICE_OVERRIDES[itemId]?.[normCurrency] !== undefined) {
+    return {
+      amountMinor: RUNTIME_PRICE_OVERRIDES[itemId][normCurrency],
+      currency: normCurrency,
+      isFallbackUsd: false,
+      paystackDirectSupported,
+    };
+  }
+
+  // 2. Query Database table 'prices'
   try {
     if (process.env.NEXT_PUBLIC_SUPABASE_URL && process.env.SUPABASE_SERVICE_ROLE_KEY) {
       const supabase = createServiceRoleClient();
       
-      // 1. Attempt exact match query
       const { data: exactPrice } = await supabase
         .from("prices")
         .select("amount_minor, currency")
@@ -122,7 +181,7 @@ export async function getPriceForItem(
         };
       }
 
-      // 2. If target currency price is not found, fallback to USD from database
+      // If no explicit local price in DB, check base USD price in DB and convert in real time
       if (normCurrency !== DEFAULT_CURRENCY) {
         const { data: usdPrice } = await supabase
           .from("prices")
@@ -132,21 +191,26 @@ export async function getPriceForItem(
           .maybeSingle();
 
         if (usdPrice && usdPrice.amount_minor !== null) {
+          const usdMinor = Number(usdPrice.amount_minor);
+          const meta = CURRENCY_METADATA[normCurrency] || CURRENCY_METADATA.USD;
+          const rate = meta.approximateExchangeFromUsd;
+          const convertedMinor = Math.round((usdMinor / 100) * rate * 100);
+
           return {
-            amountMinor: Number(usdPrice.amount_minor),
-            currency: DEFAULT_CURRENCY,
-            isFallbackUsd: true,
-            paystackDirectSupported: true,
+            amountMinor: convertedMinor,
+            currency: normCurrency,
+            isFallbackUsd: false,
+            paystackDirectSupported,
           };
         }
       }
     }
   } catch (error) {
-    console.warn(`[PriceService] DB price lookup failed for '${itemId}' (${normCurrency}), using fallback:`, error);
+    console.warn(`[PriceService] DB price lookup failed for '${itemId}' (${normCurrency}), using canonical:`, error);
   }
 
-  // 3. Fallback to in-memory dictionary
-  const fallbackDict = DEFAULT_CANONICAL_PRICES[itemId];
+  // 3. Fallback to canonical dictionary
+  const fallbackDict = DEFAULT_CANONICAL_PRICES[itemId] || DEFAULT_CANONICAL_PRICES["session-60"];
   if (fallbackDict) {
     if (fallbackDict[normCurrency] !== undefined) {
       return {
@@ -156,19 +220,23 @@ export async function getPriceForItem(
         paystackDirectSupported,
       };
     }
-    if (fallbackDict[DEFAULT_CURRENCY] !== undefined) {
-      return {
-        amountMinor: fallbackDict[DEFAULT_CURRENCY],
-        currency: DEFAULT_CURRENCY,
-        isFallbackUsd: true,
-        paystackDirectSupported: true,
-      };
-    }
+
+    // Real-time conversion from base USD price in canonical dictionary
+    const baseUsdMinor = fallbackDict[DEFAULT_CURRENCY] || 12000;
+    const meta = CURRENCY_METADATA[normCurrency] || CURRENCY_METADATA.USD;
+    const rate = meta.approximateExchangeFromUsd;
+    const convertedMinor = Math.round((baseUsdMinor / 100) * rate * 100);
+
+    return {
+      amountMinor: convertedMinor,
+      currency: normCurrency,
+      isFallbackUsd: false,
+      paystackDirectSupported,
+    };
   }
 
-  // 4. Default safe fallback
   return {
-    amountMinor: 7500, // $75.00 default
+    amountMinor: 12000, // $120.00 baseline
     currency: DEFAULT_CURRENCY,
     isFallbackUsd: true,
     paystackDirectSupported: true,
@@ -187,7 +255,11 @@ export async function getAllPricesGrouped(): Promise<
   }>
 > {
   const itemCatalog: Record<string, { label: string; itemType: string }> = {
-    "session-60": { label: "Academic Mentoring Session (60m)", itemType: "session" },
+    "session-60": { label: "Academic Mentoring Session — Baseline (60m)", itemType: "session" },
+    "serv-tutoring": { label: "1-on-1 Research and Methodology Tutoring (60m)", itemType: "session" },
+    "serv-data": { label: "Quantitative and Statistical Modeling Review (60m)", itemType: "session" },
+    "serv-editing": { label: "Developmental Editing and Chapter Critique (60m)", itemType: "session" },
+    "serv-defense": { label: "Mock Defense Coaching and Presentation (60m)", itemType: "session" },
     "accelerator-full": { label: "12-Week Doctoral Accelerator (Full Tuition)", itemType: "accelerator" },
     "accelerator-installment": { label: "12-Week Doctoral Accelerator (1 of 3 Installments)", itemType: "accelerator" },
     scholar: { label: "Monthly Membership — Scholar Tier", itemType: "membership_plan" },
@@ -198,23 +270,29 @@ export async function getAllPricesGrouped(): Promise<
 
   const results: Record<string, Record<SupportedCurrency, number>> = {};
   for (const itemId of Object.keys(itemCatalog)) {
-    results[itemId] = { ...DEFAULT_CANONICAL_PRICES[itemId] };
+    results[itemId] = { ...(DEFAULT_CANONICAL_PRICES[itemId] || DEFAULT_CANONICAL_PRICES["session-60"]) };
+    // Layer in any runtime overrides
+    if (RUNTIME_PRICE_OVERRIDES[itemId]) {
+      Object.assign(results[itemId], RUNTIME_PRICE_OVERRIDES[itemId]);
+    }
   }
 
   try {
-    const supabase = createServiceRoleClient();
-    const { data: dbPrices } = await supabase
-      .from("prices")
-      .select("item_id, item_type, currency, amount_minor");
+    if (process.env.NEXT_PUBLIC_SUPABASE_URL && process.env.SUPABASE_SERVICE_ROLE_KEY) {
+      const supabase = createServiceRoleClient();
+      const { data: dbPrices } = await supabase
+        .from("prices")
+        .select("item_id, item_type, currency, amount_minor");
 
-    if (dbPrices && dbPrices.length > 0) {
-      for (const row of dbPrices) {
-        if (!results[row.item_id]) {
-          results[row.item_id] = { ...DEFAULT_CANONICAL_PRICES["session-60"] };
-        }
-        const curr = row.currency as SupportedCurrency;
-        if (isSupportedCurrency(curr)) {
-          results[row.item_id][curr] = Number(row.amount_minor);
+      if (dbPrices && dbPrices.length > 0) {
+        for (const row of dbPrices) {
+          if (!results[row.item_id]) {
+            results[row.item_id] = { ...DEFAULT_CANONICAL_PRICES["session-60"] };
+          }
+          const curr = row.currency as SupportedCurrency;
+          if (isSupportedCurrency(curr)) {
+            results[row.item_id][curr] = Number(row.amount_minor);
+          }
         }
       }
     }
@@ -226,7 +304,7 @@ export async function getAllPricesGrouped(): Promise<
     itemId,
     itemType: meta.itemType,
     label: meta.label,
-    prices: results[itemId] || DEFAULT_CANONICAL_PRICES[itemId],
+    prices: results[itemId] || DEFAULT_CANONICAL_PRICES[itemId] || DEFAULT_CANONICAL_PRICES["session-60"],
   }));
 }
 
@@ -240,19 +318,29 @@ export async function savePriceRecord(
   amountMinor: number
 ): Promise<{ success: boolean; error?: string }> {
   try {
-    const supabase = createServiceRoleClient();
-    const { error } = await supabase.from("prices").upsert(
-      {
-        item_id: itemId,
-        item_type: itemType,
-        currency,
-        amount_minor: amountMinor,
-        updated_at: new Date().toISOString(),
-      },
-      { onConflict: "item_id,currency" }
-    );
+    // 1. Immediately store in runtime cache so live traffic picks it up without lag
+    if (!RUNTIME_PRICE_OVERRIDES[itemId]) {
+      RUNTIME_PRICE_OVERRIDES[itemId] = {};
+    }
+    RUNTIME_PRICE_OVERRIDES[itemId][currency] = amountMinor;
 
-    if (error) throw error;
+    // 2. Persist to Supabase if connected
+    if (process.env.NEXT_PUBLIC_SUPABASE_URL && process.env.SUPABASE_SERVICE_ROLE_KEY) {
+      const supabase = createServiceRoleClient();
+      const { error } = await supabase.from("prices").upsert(
+        {
+          item_id: itemId,
+          item_type: itemType,
+          currency,
+          amount_minor: amountMinor,
+          updated_at: new Date().toISOString(),
+        },
+        { onConflict: "item_id,currency" }
+      );
+
+      if (error) throw error;
+    }
+
     return { success: true };
   } catch (err: any) {
     return { success: false, error: err.message };

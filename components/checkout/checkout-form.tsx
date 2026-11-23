@@ -53,6 +53,36 @@ export function CheckoutForm({
   const [isEditingContact, setIsEditingContact] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [liveAmountMinor, setLiveAmountMinor] = useState<number | null>(null);
+
+  const activeCurrency = (currency || "USD") as SupportedCurrency;
+  const meta = CURRENCY_METADATA[activeCurrency] || CURRENCY_METADATA.USD;
+  const isDirect = meta.paystackDirectSupported;
+
+  const targetItemId = packageId || serviceSlug || (purpose === "program" ? "accelerator-full" : purpose === "booking" ? "session-60" : "");
+
+  // Real-time price fetch from /api/prices
+  useEffect(() => {
+    if (!targetItemId) return;
+    let isSubscribed = true;
+    async function fetchLivePrice() {
+      try {
+        const res = await fetch(`/api/prices?itemId=${encodeURIComponent(targetItemId)}&currency=${activeCurrency}`);
+        if (res.ok) {
+          const json = await res.json();
+          if (isSubscribed && typeof json?.amountMinor === "number") {
+            setLiveAmountMinor(json.amountMinor);
+          }
+        }
+      } catch {
+        // Fall back to canonical dictionary
+      }
+    }
+    fetchLivePrice();
+    return () => {
+      isSubscribed = false;
+    };
+  }, [targetItemId, activeCurrency]);
 
   // Auto-fill customer details if user is already signed in
   useEffect(() => {
@@ -83,24 +113,22 @@ export function CheckoutForm({
     }
   }, [isLoaded, contextCurrency, initialCurrency]);
 
-  const activeCurrency = (currency || "USD") as SupportedCurrency;
-  const meta = CURRENCY_METADATA[activeCurrency] || CURRENCY_METADATA.USD;
-  const isDirect = meta.paystackDirectSupported;
-
-  // Resolve amount in selected currency
-  let fullAmountMinor = priceUsdMinor;
-  if (packageId && DEFAULT_CANONICAL_PRICES[packageId]) {
-    const itemPrices = DEFAULT_CANONICAL_PRICES[packageId];
-    fullAmountMinor = itemPrices[activeCurrency] ?? itemPrices.USD;
-  } else if (purpose === "booking") {
-    fullAmountMinor = DEFAULT_CANONICAL_PRICES["session-60"][activeCurrency] ?? 7500;
-  } else if (purpose === "program") {
-    fullAmountMinor = DEFAULT_CANONICAL_PRICES["accelerator-full"][activeCurrency] ?? 120000;
-  } else {
-    // Benchmark conversion for packages not in static dictionary
-    const rate = meta.approximateExchangeFromUsd;
-    const usdMajor = priceUsdMinor / 100;
-    fullAmountMinor = Math.round(usdMajor * rate * 100);
+  // Resolve amount in selected currency with real-time precedence
+  let fullAmountMinor = liveAmountMinor ?? priceUsdMinor;
+  if (liveAmountMinor === null) {
+    if (packageId && DEFAULT_CANONICAL_PRICES[packageId]) {
+      const itemPrices = DEFAULT_CANONICAL_PRICES[packageId];
+      fullAmountMinor = itemPrices[activeCurrency] ?? itemPrices.USD;
+    } else if (purpose === "booking") {
+      const sessionKey = packageId || serviceSlug || "session-60";
+      fullAmountMinor = DEFAULT_CANONICAL_PRICES[sessionKey]?.[activeCurrency] ?? DEFAULT_CANONICAL_PRICES["session-60"][activeCurrency] ?? priceUsdMinor;
+    } else if (purpose === "program") {
+      fullAmountMinor = DEFAULT_CANONICAL_PRICES["accelerator-full"][activeCurrency] ?? 120000;
+    } else {
+      const rate = meta.approximateExchangeFromUsd;
+      const usdMajor = priceUsdMinor / 100;
+      fullAmountMinor = Math.round(usdMajor * rate * 100);
+    }
   }
 
   const installmentAmountMinor = Math.round(fullAmountMinor / installmentTotal);

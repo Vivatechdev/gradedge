@@ -47,9 +47,19 @@ export async function lookupPrice(params: PriceLookupParams): Promise<PriceLooku
 
   // 1. Paid Session Booking (60-minute one-on-one consultation/tutoring)
   if (purpose === "booking") {
-    const priceRes = await getPriceForItem("session-60", currency as SupportedCurrency);
+    const itemId = params.packageId || params.serviceSlug || "session-60";
+    const priceRes = await getPriceForItem(itemId, currency as SupportedCurrency);
     const amountMinor = priceRes.amountMinor;
-    const title = "Paid Academic Mentoring Session (60 mins)";
+
+    const titlesMap: Record<string, string> = {
+      "serv-tutoring": "One-on-One Research and Methodology Tutoring (60 mins)",
+      "serv-data": "Quantitative and Statistical Modeling Review (60 mins)",
+      "serv-editing": "Developmental Editing and Chapter Critique (60 mins)",
+      "serv-defense": "Mock Defense Presentation and Defense Coaching (60 mins)",
+      "session-60": "Paid Academic Mentoring Session (60 mins)",
+    };
+
+    const title = titlesMap[itemId] || "Paid Academic Mentoring Session (60 mins)";
     const description = "One-on-one doctoral consultation, thesis critique, or methodology review.";
 
     let chargeCurrency: Currency = priceRes.currency;
@@ -57,7 +67,7 @@ export async function lookupPrice(params: PriceLookupParams): Promise<PriceLooku
     let isApproximate = false;
 
     if (!priceRes.paystackDirectSupported) {
-      const usdRes = await getPriceForItem("session-60", "USD");
+      const usdRes = await getPriceForItem(itemId, "USD");
       chargeCurrency = "USD";
       chargeAmountMinor = usdRes.amountMinor;
       isApproximate = true;
@@ -74,6 +84,7 @@ export async function lookupPrice(params: PriceLookupParams): Promise<PriceLooku
       items: [{ description: title, quantity: 1, amountMinor }],
       metadata: {
         session_duration_minutes: 60,
+        service_id: itemId,
         service_slug: params.serviceSlug,
         paystack_direct_supported: priceRes.paystackDirectSupported,
         is_fallback_usd: priceRes.isFallbackUsd,

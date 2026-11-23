@@ -5,43 +5,48 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { DashboardShell } from "@/components/layout/dashboard-shell";
 import { type DaySlots, type TimeSlot } from "@/lib/booking/availability";
+import { useCurrency } from "@/components/currency/currency-context";
+import { formatPrice } from "@/lib/currency/format";
 import { Clock } from "lucide-react";
 
-const PAID_SERVICES = [
+const BASE_SERVICES = [
   {
     id: "serv-tutoring",
     name: "One-on-One Research and Methodology Tutoring",
     duration: "60 minutes",
-    fee: "$120 / session",
+    defaultFeeUsd: "$120 / session",
     desc: "Intensive methodological consultation with an assigned discipline specialist.",
   },
   {
     id: "serv-data",
     name: "Quantitative and Statistical Modeling Review",
     duration: "60 minutes",
-    fee: "$160 / session",
+    defaultFeeUsd: "$160 / session",
     desc: "Syntax audit, regression diagnostics, or structural equation model coaching.",
   },
   {
     id: "serv-editing",
     name: "Developmental Editing and Chapter Critique",
     duration: "60 minutes",
-    fee: "$140 / session",
+    defaultFeeUsd: "$140 / session",
     desc: "Line-by-line structural, rhetorical, and argument coherence review.",
   },
   {
     id: "serv-defense",
-    name: "Mock Defense Presentation and defense Coaching",
+    name: "Mock Defense Presentation and Defense Coaching",
     duration: "60 minutes",
-    fee: "$180 / session",
+    defaultFeeUsd: "$180 / session",
     desc: "Simulated committee questioning, slide review, and defense strategy.",
   },
 ];
 
 export default function BookPaidSessionPage() {
   const router = useRouter();
+  const { currency, isLoaded } = useCurrency();
+  const activeCurrency = currency || "USD";
 
-  const [serviceId, setServiceId] = useState(PAID_SERVICES[0].id);
+  const [livePrices, setLivePrices] = useState<Record<string, string>>({});
+  const [serviceId, setServiceId] = useState(BASE_SERVICES[0].id);
   const [timezone, setTimezone] = useState("UTC");
   const [daySlots, setDaySlots] = useState<DaySlots[]>([]);
   const [loadingSlots, setLoadingSlots] = useState(true);
@@ -56,6 +61,33 @@ export default function BookPaidSessionPage() {
     expiresAt: string;
     startsAt: string;
   } | null>(null);
+
+  // Fetch real-time prices for selected currency
+  useEffect(() => {
+    async function fetchLivePrices() {
+      try {
+        const res = await fetch(`/api/prices?currency=${activeCurrency}`);
+        if (res.ok) {
+          const json = await res.json();
+          if (json?.prices) {
+            const formattedMap: Record<string, string> = {};
+            for (const [id, val] of Object.entries(json.prices as Record<string, any>)) {
+              formattedMap[id] = `${val.formatted} / session`;
+            }
+            setLivePrices(formattedMap);
+          }
+        }
+      } catch (err) {
+        console.warn("[BookPaidSession] Real-time price fetch failed, using fallback:", err);
+      }
+    }
+    fetchLivePrices();
+  }, [activeCurrency]);
+
+  const paidServices = BASE_SERVICES.map((s) => ({
+    ...s,
+    fee: livePrices[s.id] || s.defaultFeeUsd,
+  }));
 
   useEffect(() => {
     try {
@@ -132,7 +164,7 @@ export default function BookPaidSessionPage() {
     }
   };
 
-  const selectedServiceObj = PAID_SERVICES.find((s) => s.id === serviceId) || PAID_SERVICES[0];
+  const selectedServiceObj = paidServices.find((s) => s.id === serviceId) || paidServices[0];
 
   return (
     <DashboardShell role="student">
@@ -189,7 +221,7 @@ export default function BookPaidSessionPage() {
             <div className="pt-2 flex justify-center gap-4">
               <button
                 type="button"
-                onClick={() => router.push(`/checkout?bookingId=${reservation.bookingId}`)}
+                onClick={() => router.push(`/checkout?bookingId=${reservation.bookingId}&packageId=${serviceId}&purpose=booking`)}
                 className="px-8 py-2.5 bg-gold text-navy font-semibold text-xs sm:text-sm rounded-[4px] hover:bg-gold/90 transition-colors shadow-xs"
               >
                 Proceed to Payment &rarr;
@@ -213,7 +245,7 @@ export default function BookPaidSessionPage() {
                 1. Select Coaching Service
               </span>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                {PAID_SERVICES.map((serv) => {
+                {paidServices.map((serv) => {
                   const isSelected = serv.id === serviceId;
                   return (
                     <button

@@ -4,6 +4,7 @@ import { buildMetadata } from "@/lib/metadata";
 import { PageBreadcrumb } from "@/components/marketing/page-components";
 import { CheckoutForm } from "@/components/checkout/checkout-form";
 import { PaymentPurpose, Currency } from "@/lib/payments/types";
+import { getPriceForItem } from "@/lib/currency/service";
 
 export const metadata: Metadata = buildMetadata({
   title: "Secure Academic Checkout — GradEdge",
@@ -41,19 +42,36 @@ export default async function CheckoutPage({
     "Comprehensive written marginal commentary",
     "Turnaround with clear revision milestones",
   ];
-  let priceUsdMinor = 7500;
-  let priceNgnMinor = 3500000;
+  let priceUsdMinor = 12000;
+  let priceNgnMinor = 18000000;
 
   if (currentPurpose === "booking") {
-    title = "Paid Academic Mentoring Session (60 mins)";
+    const itemId = packageId || serviceSlug || "session-60";
+    const usdPrice = await getPriceForItem(itemId, "USD");
+    const ngnPrice = await getPriceForItem(itemId, "NGN");
+
+    const titlesMap: Record<string, string> = {
+      "serv-tutoring": "One-on-One Research and Methodology Tutoring (60 mins)",
+      "serv-data": "Quantitative and Statistical Modeling Review (60 mins)",
+      "serv-editing": "Developmental Editing and Chapter Critique (60 mins)",
+      "serv-defense": "Mock Defense Presentation and Defense Coaching (60 mins)",
+      "session-60": "Paid Academic Mentoring Session (60 mins)",
+    };
+
+    title = titlesMap[itemId] || "Paid Academic Mentoring Session (60 mins)";
     description = "One-on-one doctoral consultation, thesis critique, or methodology review.";
     includes = [
       "60-minute direct live session with assigned discipline mentor",
       "Written session summary and actionable revision roadmap",
       "Follow-up clarification window",
     ];
-    priceUsdMinor = 7500;
-    priceNgnMinor = 3500000;
+    priceUsdMinor = usdPrice.amountMinor;
+    priceNgnMinor = ngnPrice.amountMinor;
+  } else if (packageId) {
+    const usdPrice = await getPriceForItem(packageId, "USD");
+    const ngnPrice = await getPriceForItem(packageId, "NGN");
+    priceUsdMinor = usdPrice.amountMinor;
+    priceNgnMinor = ngnPrice.amountMinor;
   }
 
   return (
