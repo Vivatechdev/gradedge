@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { ShieldCheck, Lock, AlertCircle, Info } from "lucide-react";
+import { ShieldCheck, Lock, AlertCircle, Info, CheckCircle2, UserCheck } from "lucide-react";
 import { Currency, PaymentPurpose, formatMoney } from "@/lib/payments/types";
 import {
   SUPPORTED_CURRENCIES,
@@ -49,8 +49,32 @@ export function CheckoutForm({
   const [isInstallment, setIsInstallment] = useState(false);
   const [customerEmail, setCustomerEmail] = useState("");
   const [customerName, setCustomerName] = useState("");
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isEditingContact, setIsEditingContact] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+
+  // Auto-fill customer details if user is already signed in
+  useEffect(() => {
+    async function loadCurrentUser() {
+      try {
+        const res = await fetch("/api/auth/me");
+        if (res.ok) {
+          const json = await res.json();
+          const email = json?.profile?.email || json?.user?.email || "";
+          const name = json?.profile?.full_name || json?.user?.full_name || "";
+          if (email) {
+            setCustomerEmail(email);
+            setCustomerName(name);
+            setIsLoggedIn(true);
+          }
+        }
+      } catch {
+        // Fall back to manual guest checkout entry
+      }
+    }
+    loadCurrentUser();
+  }, []);
 
   // Sync with context on load if initialCurrency wasn't explicitly passed
   useEffect(() => {
@@ -238,37 +262,72 @@ export function CheckoutForm({
 
       {/* Customer Details Intake */}
       <div className="space-y-3 pt-2">
-        <div className="space-y-1">
-          <label htmlFor="customerName" className="text-xs font-medium text-tone-heading">
-            Your Full Name
-          </label>
-          <input
-            id="customerName"
-            type="text"
-            required
-            value={customerName}
-            onChange={(e) => setCustomerName(e.target.value)}
-            placeholder="e.g. Dr. Jane Doe"
-            className="w-full text-xs px-3 py-2 border border-tone-rule rounded-[2px] bg-white focus:outline-none focus:border-navy"
-          />
-        </div>
-        <div className="space-y-1">
-          <label htmlFor="customerEmail" className="text-xs font-medium text-tone-heading">
-            Academic / Billing Email
-          </label>
-          <input
-            id="customerEmail"
-            type="email"
-            required
-            value={customerEmail}
-            onChange={(e) => setCustomerEmail(e.target.value)}
-            placeholder="e.g. j.doe@oxford.ac.uk"
-            className="w-full text-xs px-3 py-2 border border-tone-rule rounded-[2px] bg-white focus:outline-none focus:border-navy"
-          />
-          <span className="text-[10px] text-tone-muted">
-            Your official PDF tax invoice and access links are dispatched to this address.
-          </span>
-        </div>
+        {isLoggedIn && !isEditingContact ? (
+          <div className="p-3 bg-paper border border-tone-rule rounded-[2px] flex items-center justify-between">
+            <div className="space-y-0.5">
+              <span className="text-[10px] uppercase font-mono tracking-wider font-semibold text-gold block flex items-center gap-1">
+                <CheckCircle2 className="w-3 h-3 text-gold" />
+                Signed In &bull; Billing Profile Connected
+              </span>
+              <p className="text-xs font-semibold text-tone-heading">
+                {customerName || "Doctoral Scholar"}
+              </p>
+              <p className="text-[11px] text-tone-muted">{customerEmail}</p>
+            </div>
+            <button
+              type="button"
+              onClick={() => setIsEditingContact(true)}
+              className="text-[11px] text-navy hover:text-gold underline font-medium cursor-pointer"
+            >
+              Change Details
+            </button>
+          </div>
+        ) : (
+          <>
+            <div className="space-y-1">
+              <div className="flex items-center justify-between">
+                <label htmlFor="customerName" className="text-xs font-medium text-tone-heading">
+                  Your Full Name
+                </label>
+                {isLoggedIn && (
+                  <button
+                    type="button"
+                    onClick={() => setIsEditingContact(false)}
+                    className="text-[10px] text-tone-muted hover:text-navy underline cursor-pointer"
+                  >
+                    Cancel Edit
+                  </button>
+                )}
+              </div>
+              <input
+                id="customerName"
+                type="text"
+                required
+                value={customerName}
+                onChange={(e) => setCustomerName(e.target.value)}
+                placeholder="e.g. Dr. Jane Doe"
+                className="w-full text-xs px-3 py-2 border border-tone-rule rounded-[2px] bg-white focus:outline-none focus:border-navy"
+              />
+            </div>
+            <div className="space-y-1">
+              <label htmlFor="customerEmail" className="text-xs font-medium text-tone-heading">
+                Academic / Billing Email
+              </label>
+              <input
+                id="customerEmail"
+                type="email"
+                required
+                value={customerEmail}
+                onChange={(e) => setCustomerEmail(e.target.value)}
+                placeholder="e.g. j.doe@oxford.ac.uk"
+                className="w-full text-xs px-3 py-2 border border-tone-rule rounded-[2px] bg-white focus:outline-none focus:border-navy"
+              />
+              <span className="text-[10px] text-tone-muted">
+                Your official PDF tax invoice and access links are dispatched to this address.
+              </span>
+            </div>
+          </>
+        )}
       </div>
 
       {/* Total Due Callout */}

@@ -8,6 +8,35 @@ const nextConfig: NextConfig = {
   images: {
     formats: ["image/avif", "image/webp"],
   },
+  async redirects() {
+    return [
+      {
+        source: "/terms",
+        destination: "/legal/terms",
+        permanent: true,
+      },
+      {
+        source: "/privacy",
+        destination: "/legal/privacy",
+        permanent: true,
+      },
+      {
+        source: "/cookies",
+        destination: "/legal/cookies",
+        permanent: true,
+      },
+      {
+        source: "/refunds",
+        destination: "/legal/refunds",
+        permanent: true,
+      },
+      {
+        source: "/academic-integrity",
+        destination: "/legal/academic-integrity",
+        permanent: true,
+      },
+    ];
+  },
   async headers() {
     return [
       {
