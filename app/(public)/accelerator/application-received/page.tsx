@@ -25,12 +25,12 @@ export default function ApplicationReceivedPage() {
         "We identify a mentor with an advanced degree in your field who has availability for the nine-month period.",
     },
     {
-      title: "Admissions decision & tuition notice",
+      title: "Admissions decision and tuition notice",
       description:
         "You will receive an email detailing your admissions decision, confirmed start date, and tuition invoice.",
     },
     {
-      title: "Mentor onboarding & dashboard access",
+      title: "Mentor onboarding and dashboard access",
       description:
         "Once payment is confirmed, your student portal is unlocked and your initial diagnostic session is scheduled.",
     },

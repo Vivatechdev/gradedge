@@ -13,7 +13,7 @@ import { SectionLabel, StepList } from "@/components/ui/editorial";
 export const revalidate = 3600;
 
 export const metadata: Metadata = buildMetadata({
-  title: "For Institutions — Postgraduate Research Workshops & Faculty Partnerships",
+  title: "For Institutions — Postgraduate Research Workshops and Faculty Partnerships",
   description:
     "GradEdge partners with universities and polytechnics to deliver research mentoring workshops and coaching for postgraduate students.",
   path: "/institutions",

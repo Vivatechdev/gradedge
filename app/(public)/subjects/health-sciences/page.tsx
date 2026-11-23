@@ -30,27 +30,27 @@ export default async function HealthSciencesHubPage() {
   let subfields: SubFieldItem[] = [
     {
       slug: "clinical-medicine-surgery",
-      title: "Clinical Medicine & Surgery",
+      title: "Clinical Medicine and Surgery",
       summary: "Clinical trials, case series, surgical outcome studies, and diagnostic accuracy reviews.",
     },
     {
       slug: "public-health-epidemiology",
-      title: "Public Health & Epidemiology",
+      title: "Public Health and Epidemiology",
       summary: "Disease surveillance, cohort studies, biostatistics, and global health interventions.",
     },
     {
       slug: "nursing-midwifery",
-      title: "Nursing & Midwifery",
+      title: "Nursing and Midwifery",
       summary: "Evidence-based practice, patient care protocols, and qualitative clinical studies.",
     },
     {
       slug: "biomedical-sciences-pharmacology",
-      title: "Biomedical Sciences & Pharmacology",
+      title: "Biomedical Sciences and Pharmacology",
       summary: "Molecular biology, pharmacokinetics, cell assays, and translational laboratory research.",
     },
     {
       slug: "health-informatics-systems",
-      title: "Health Informatics & Health Systems",
+      title: "Health Informatics and Health Systems",
       summary: "Electronic health records, telemedicine evaluations, and healthcare analytics.",
     },
   ];
@@ -77,7 +77,7 @@ export default async function HealthSciencesHubPage() {
         items={[
           { label: "Home", href: "/" },
           { label: "Subject Areas", href: "/subjects" },
-          { label: "Health Sciences & Medicine" },
+          { label: "Health Sciences and Medicine" },
         ]}
       />
 

@@ -181,7 +181,7 @@ export default function ContactPage() {
 
             <div className="p-6 bg-paper border border-tone-rule rounded-[2px] space-y-3">
               <h3 className="font-serif text-lg text-tone-heading font-semibold">
-                Universities & Faculties
+                Universities and Faculties
               </h3>
               <p className="text-xs text-tone-muted leading-relaxed">
                 Institutions seeking cohort workshops, writing sprints, or embedded mentoring contracts should use our workshop request form.

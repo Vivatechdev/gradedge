@@ -140,7 +140,7 @@ export function ServiceSelector() {
               onClick={handleReset}
               className="text-xs text-tone-muted hover:text-navy underline cursor-pointer"
             >
-              Start Over &crarr;
+              Start Over ↵
             </button>
           </div>
 

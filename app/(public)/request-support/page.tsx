@@ -5,7 +5,7 @@ import { SectionLabel, StepList } from "@/components/ui/editorial";
 import { Button } from "@/components/ui/button";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Request Research Support & Submit Drafts",
+  title: "Request Research Support and Submit Drafts",
   description:
     "How to submit chapters, methodologies, and datasets for mentor review. Existing students log in to their dashboard.",
   path: "/request-support",
@@ -78,7 +78,7 @@ export default function RequestSupportPage() {
             </div>
             <div className="flex items-center gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-gold shrink-0" />
-              <span>Full NDA & Confidentiality</span>
+              <span>Full NDA and Confidentiality</span>
             </div>
             <div className="flex items-center gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-gold shrink-0" />

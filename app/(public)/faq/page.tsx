@@ -45,13 +45,13 @@ export default async function FullFaqPage() {
     },
     {
       id: "5",
-      category: "Pricing & payment",
+      category: "Pricing and payment",
       question: "How are your prices structured and what currencies are supported?",
       answer: "All services feature transparent, fixed milestone pricing listed in Nigerian Naira (NGN) and US Dollars (USD). The price quoted for your chapter or package is the exact total you pay, with zero hidden administrative fees, surprise surcharges, or billable hourly overruns.",
     },
     {
       id: "6",
-      category: "Pricing & payment",
+      category: "Pricing and payment",
       question: "Can I get a refund if I need to cancel?",
       answer: "One-on-one sessions cancelled with more than 24 hours notice receive a full refund. Multi-milestone project packages include pro-rated refunds on uninitiated chapters. Memberships can be cancelled anytime with zero penalty fees.",
     },

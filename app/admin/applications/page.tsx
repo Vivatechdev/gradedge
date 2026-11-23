@@ -38,7 +38,7 @@ const APPLICATIONS: AcceleratorApplication[] = [
     applicantName: "Oluwaseun Adeleke",
     email: "o.adeleke@postgrad.ox.ac.uk",
     targetUniversity: "University of Oxford",
-    fieldOfStudy: "Computational Genomics & Epigenetics",
+    fieldOfStudy: "Computational Genomics and Epigenetics",
     thesisTopic: "Machine Learning Predictors of Polygenic Risk Scores in Under-Sampled African Cohorts",
     proposedCohort: "Winter 2026 Doctoral Cohort",
     evaluationScore: 92,
@@ -50,7 +50,7 @@ const APPLICATIONS: AcceleratorApplication[] = [
     applicantName: "Marcus Sterling",
     email: "m.sterling@warwick.ac.uk",
     targetUniversity: "Warwick Business School",
-    fieldOfStudy: "Behavioral Finance & Market Microstructure",
+    fieldOfStudy: "Behavioral Finance and Market Microstructure",
     thesisTopic: "High-Frequency Algorithmic Order Flow Toxicity During Central Bank Rate Announcements",
     proposedCohort: "Winter 2026 Doctoral Cohort",
     evaluationScore: 88,
@@ -62,7 +62,7 @@ const APPLICATIONS: AcceleratorApplication[] = [
     applicantName: "Fatima Zahra",
     email: "f.zahra@kcl.ac.uk",
     targetUniversity: "King's College London",
-    fieldOfStudy: "Global Health Policy & Health Economics",
+    fieldOfStudy: "Global Health Policy and Health Economics",
     thesisTopic: "Cost-Effectiveness Evaluations of Universal Health Coverage Rollouts in Low-Income Federations",
     proposedCohort: "Winter 2026 Doctoral Cohort",
     evaluationScore: 95,
@@ -74,7 +74,7 @@ const APPLICATIONS: AcceleratorApplication[] = [
     applicantName: "David Thornton",
     email: "d.thornton@ed.ac.uk",
     targetUniversity: "University of Edinburgh",
-    fieldOfStudy: "Environmental Law & Policy",
+    fieldOfStudy: "Environmental Law and Policy",
     thesisTopic: "Extraterritorial Jurisdiction and Corporate Climate Due Diligence Under European Directives",
     proposedCohort: "Winter 2026 Doctoral Cohort",
     evaluationScore: 79,
@@ -135,7 +135,7 @@ export default function AdminApplicationsPage() {
           </div>
         </div>
 
-        {/* Search & Filters */}
+        {/* Search and Filters */}
         <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 bg-white p-3 border border-tone-rule rounded-[2px]">
           <div className="relative flex-1">
             <Search className="absolute left-3 top-2.5 h-4 w-4 text-stone-400" />

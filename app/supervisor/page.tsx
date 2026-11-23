@@ -38,7 +38,7 @@ export default function SupervisorPortalPage() {
 
   const [milestones, setMilestones] = useState<MilestoneReview[]>([
     {
-      chapter: "Chapter 1: Problem Statement & Epidemiological Hypotheses",
+      chapter: "Chapter 1: Problem Statement and Epidemiological Hypotheses",
       wordCount: 10250,
       similarity: "3% (Compliant)",
       mentorSignOff: "Approved by Dr. Eleanor Vance (Oct 28, 2026)",
@@ -46,7 +46,7 @@ export default function SupervisorPortalPage() {
       supervisorConcurrence: true,
     },
     {
-      chapter: "Chapter 2: Literature Review & Conceptual Synthesis Matrix",
+      chapter: "Chapter 2: Literature Review and Conceptual Synthesis Matrix",
       wordCount: 18450,
       similarity: "5% (Compliant)",
       mentorSignOff: "Approved by Dr. Eleanor Vance (Nov 02, 2026)",
@@ -54,7 +54,7 @@ export default function SupervisorPortalPage() {
       supervisorConcurrence: true,
     },
     {
-      chapter: "Chapter 3: Research Methodology & Propensity Score Matching Protocol",
+      chapter: "Chapter 3: Research Methodology and Propensity Score Matching Protocol",
       wordCount: 14320,
       similarity: "4% (Compliant)",
       mentorSignOff: "Active Review by Dr. Eleanor Vance (Nov 20, 2026)",
@@ -132,7 +132,7 @@ export default function SupervisorPortalPage() {
                 Freedom Sola
               </h1>
               <p className="text-xs text-stone-500 font-sans">
-                PhD in Public Health &amp; Epidemiology &bull; Cambridge Institute of Public Health
+                PhD in Public Health and Epidemiology &bull; Cambridge Institute of Public Health
               </p>
               <p className="font-serif text-sm text-stone-800 pt-1 leading-snug">
                 Thesis: &ldquo;Epidemiological Analysis of Maternal Health Access in Sub-Saharan Rural Districts&rdquo;
@@ -148,7 +148,7 @@ export default function SupervisorPortalPage() {
                   Dr. Eleanor Vance
                 </span>
                 <span className="text-[10px] text-stone-500 block">
-                  Methodology &amp; Biostatistics
+                  Methodology and Biostatistics
                 </span>
               </div>
               <Button
@@ -179,7 +179,7 @@ export default function SupervisorPortalPage() {
         <Card className="bg-white border-tone-rule">
           <CardHeader className="border-b border-tone-rule pb-4">
             <CardTitle className="font-serif text-base text-tone-heading">
-              Chapter Milestones &amp; Advisory Redline Audit
+              Chapter Milestones and Advisory Redline Audit
             </CardTitle>
             <p className="text-xs text-stone-500 font-sans">
               Review certified faculty feedback, Turnitin similarity records, and register departmental concurrence.
@@ -242,7 +242,7 @@ export default function SupervisorPortalPage() {
           <Card className="bg-white border-tone-rule">
             <CardHeader className="pb-3 border-b border-tone-rule">
               <CardTitle className="font-serif text-sm text-tone-heading">
-                Departmental Supervisory Notes &amp; Committee Direction
+                Departmental Supervisory Notes and Committee Direction
               </CardTitle>
             </CardHeader>
             <CardContent className="p-4 space-y-3 text-xs font-sans">
@@ -265,7 +265,7 @@ export default function SupervisorPortalPage() {
           <Card className="bg-paper border-tone-rule">
             <CardHeader className="pb-2">
               <CardTitle className="font-serif text-sm text-tone-heading">
-                University Supervisor Information &amp; Ethics Guarantee
+                University Supervisor Information and Ethics Guarantee
               </CardTitle>
             </CardHeader>
             <CardContent className="p-4 space-y-2 text-xs font-sans text-stone-600 leading-relaxed">

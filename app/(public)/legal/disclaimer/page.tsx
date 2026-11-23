@@ -21,7 +21,7 @@ export default function DisclaimerPage() {
       <PageHero
         sectionNumber={1}
         sectionLabel="Academic Disclaimers"
-        headline="Academic & Professional Disclaimer"
+        headline="Academic and Professional Disclaimer"
         standfirst="Important boundaries regarding mentoring feedback, committee authority, and scholarly outcomes."
       />
 

@@ -8,7 +8,7 @@ import { ResourceGate } from "@/components/marketing/ResourceGate";
 import { SectionLabel } from "@/components/ui/editorial";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Proposal, Dissertation & Defense Templates",
+  title: "Proposal, Dissertation and Defense Templates",
   description:
     "Free proposal, outline and defense-slide templates, downloadable after entering an email address.",
   path: "/resources/templates",

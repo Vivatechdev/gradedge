@@ -155,7 +155,7 @@ export default function StudentNotificationsPage() {
           <div className="space-y-1">
             <span className="type-micro text-gold">Activity Stream</span>
             <h1 className="font-serif text-2xl font-medium text-tone-heading">
-              Notifications & Updates
+              Notifications and Updates
             </h1>
             <p className="text-xs text-tone-muted leading-relaxed font-sans">
               Critical updates regarding your research drafts, upcoming sessions, and invoice status.

@@ -86,7 +86,7 @@ export default function StudentAcceleratorPage() {
             }
           />
         ) : isPaid && application.status === "accepted" ? (
-          /* ACCEPTED & PAID -> PROGRAM HOME PLACEHOLDER */
+          /* ACCEPTED and PAID -> PROGRAM HOME PLACEHOLDER */
           <div className="space-y-6">
             {/* Program Home Banner */}
             <div className="bg-white border border-tone-rule rounded-[2px] p-6 space-y-4 shadow-xs">
@@ -121,7 +121,7 @@ export default function StudentAcceleratorPage() {
                 </div>
                 <div>
                   <span className="font-medium text-tone-heading block">Format:</span>
-                  <span>Bi-weekly 60-min live clinics, written chapter critiques & mock defense</span>
+                  <span>Bi-weekly 60-min live clinics, written chapter critiques and mock defense</span>
                 </div>
               </div>
             </div>
@@ -132,7 +132,7 @@ export default function StudentAcceleratorPage() {
                 <div className="flex items-center gap-2">
                   <Calendar className="w-4 h-4 text-gold" />
                   <h3 className="font-serif text-base font-semibold text-tone-heading">
-                    Live Session & Workshop Timetable
+                    Live Session and Workshop Timetable
                   </h3>
                 </div>
                 <span className="text-[11px] font-mono text-tone-muted">12-Week Syllabus</span>
@@ -202,7 +202,7 @@ export default function StudentAcceleratorPage() {
               </div>
 
               <h2 className="font-serif text-xl font-medium text-tone-heading">
-                {application.status === "submitted" && "Application Submitted & Under Desk Review"}
+                {application.status === "submitted" && "Application Submitted and Under Desk Review"}
                 {application.status === "under_review" && "Detailed Faculty Committee Assessment"}
                 {application.status === "accepted" && "Candidate Clearance Granted: Action Required"}
                 {application.status === "waitlisted" && "Application Waitlisted for Subsequent Cohort"}

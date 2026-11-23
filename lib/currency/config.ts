@@ -49,7 +49,7 @@ export const COUNTRY_TO_CURRENCY_MAP: Record<string, SupportedCurrency> = {
   SK: "EUR", // Slovakia
   SI: "EUR", // Slovenia
   ES: "EUR", // Spain
-  // United States & default -> USD
+  // United States and default -> USD
   US: "USD",
 };
 
@@ -59,7 +59,7 @@ export interface CurrencyMetadata {
   name: string;
   locale: string;
   paystackDirectSupported: boolean; // Directly chargeable on Paystack account
-  approximateExchangeFromUsd: number; // Benchmark rate for admin copy tool & approximation display
+  approximateExchangeFromUsd: number; // Benchmark rate for admin copy tool and approximation display
 }
 
 export const CURRENCY_METADATA: Record<SupportedCurrency, CurrencyMetadata> = {

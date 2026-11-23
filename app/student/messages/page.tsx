@@ -285,7 +285,7 @@ export default function StudentMessagesPage() {
       }}
     >
       <div className="space-y-6">
-        {/* Header & Response Window Banner */}
+        {/* Header and Response Window Banner */}
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 border-b border-tone-rule pb-4">
           <div className="space-y-1">
             <span className="type-micro text-gold">Advisory Communications</span>

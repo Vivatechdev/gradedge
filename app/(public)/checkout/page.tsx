@@ -49,7 +49,7 @@ export default async function CheckoutPage({
     description = "One-on-one doctoral consultation, thesis critique, or methodology review.";
     includes = [
       "60-minute direct live session with assigned discipline mentor",
-      "Written session summary & actionable revision roadmap",
+      "Written session summary and actionable revision roadmap",
       "Follow-up clarification window",
     ];
     priceUsdMinor = 7500;

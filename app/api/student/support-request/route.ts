@@ -30,7 +30,7 @@ export async function POST(request: NextRequest) {
     const projectId = crypto.randomUUID();
 
     let studentName = profile?.full_name || user.email?.split("@")[0] || "Enrolled Student";
-    let serviceTitle = "Methodology & Review Support";
+    let serviceTitle = "Methodology and Review Support";
 
     if (process.env.NEXT_PUBLIC_SUPABASE_URL && process.env.SUPABASE_SERVICE_ROLE_KEY) {
       const supabase = createServiceRoleClient();

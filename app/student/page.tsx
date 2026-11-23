@@ -72,7 +72,7 @@ export default function StudentOverviewPage() {
       }}
     >
       <div className="space-y-6">
-        {/* Header Greeting & Plain Sentence */}
+        {/* Header Greeting and Plain Sentence */}
         <div className="border-b border-tone-rule pb-5 space-y-1.5">
           <span className="type-micro text-gold">Researcher Workspace</span>
           <h1 className="font-serif text-2xl sm:text-3xl text-tone-heading font-medium">
@@ -121,7 +121,7 @@ export default function StudentOverviewPage() {
 
         {/* Main 2-Column Dense Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          {/* Left Column (2 spans): Next Steps & Active Project */}
+          {/* Left Column (2 spans): Next Steps and Active Project */}
           <div className="lg:col-span-2 space-y-6">
             {/* NEXT STEPS LIST */}
             <div className="bg-white border border-tone-rule rounded-[2px] p-5 sm:p-6 space-y-4 shadow-xs">
@@ -344,7 +344,7 @@ export default function StudentOverviewPage() {
             </div>
           </div>
 
-          {/* Right Column: Quiet Activity List & Integrity Note */}
+          {/* Right Column: Quiet Activity List and Integrity Note */}
           <div className="space-y-6">
             {/* QUIET RECENT ACTIVITY */}
             <div className="bg-white border border-tone-rule rounded-[2px] p-5 sm:p-6 space-y-4 shadow-xs">

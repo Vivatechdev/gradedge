@@ -39,12 +39,12 @@ const MENTEES: MenteeBrief[] = [
     level: "PhD Candidate",
     status: "in_review",
     dueDate: "Nov 24, 2026",
-    currentMilestone: "Chapter 3: Sampling & Propensity Score Matching",
+    currentMilestone: "Chapter 3: Sampling and Propensity Score Matching",
   },
   {
     id: "br-102",
     candidateName: "Amina Bello",
-    projectTitle: "Panel Econometrics on Carbon Pricing Mechanisms & Inflationary Pressures",
+    projectTitle: "Panel Econometrics on Carbon Pricing Mechanisms and Inflationary Pressures",
     institution: "London School of Economics",
     level: "PhD Candidate",
     status: "active",
@@ -64,8 +64,8 @@ const MENTEES: MenteeBrief[] = [
   {
     id: "br-104",
     candidateName: "Khadija Umar",
-    projectTitle: "Corporate Governance & Financial Restatement Frequencies in Emerging Markets",
-    institution: "School of Business & Finance",
+    projectTitle: "Corporate Governance and Financial Restatement Frequencies in Emerging Markets",
+    institution: "School of Business and Finance",
     level: "PhD Candidate",
     status: "active",
     dueDate: "Dec 06, 2026",
@@ -96,7 +96,7 @@ export default function MentorPortalPage() {
               Welcome back, Dr. Eleanor Vance
             </h1>
             <p className="text-sm font-sans text-tone-body mt-1">
-              Department of Research Methodology &amp; Quantitative Inquiry &bull; 4 active candidates assigned.
+              Department of Research Methodology and Quantitative Inquiry &bull; 4 active candidates assigned.
             </p>
           </div>
           <div className="flex items-center gap-3">
@@ -164,7 +164,7 @@ export default function MentorPortalPage() {
           </Card>
         </div>
 
-        {/* Two-Column Section: Assigned Candidates & Scheduled Sessions */}
+        {/* Two-Column Section: Assigned Candidates and Scheduled Sessions */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Candidates List (2 Cols) */}
           <div className="lg:col-span-2 space-y-4">

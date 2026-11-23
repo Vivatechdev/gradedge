@@ -27,17 +27,17 @@ export const PRIMARY_NAV: NavItem[] = [
         description: "SPSS, R, Python, Stata, NVivo, SmartPLS",
       },
       {
-        label: "Editing & Writing Quality",
+        label: "Editing and Writing Quality",
         href: "/services/editing-and-writing-quality",
         description: "Academic editing, proofreading, referencing and similarity review",
       },
       {
-        label: "Publishing & Career",
+        label: "Publishing and Career",
         href: "/services/publishing-and-career",
         description: "Journal conversion, grant coaching and conference support",
       },
       {
-        label: "Coaching & Training",
+        label: "Coaching and Training",
         href: "/services/coaching-and-training",
         description: "Tutoring, workshops and defense preparation",
       },
@@ -74,9 +74,9 @@ export const FOOTER_COLUMNS: { heading: string; links: NavItem[] }[] = [
     links: [
       { label: "Dissertation Support", href: "/services/dissertation-support" },
       { label: "Data Analysis", href: "/services/data-analysis" },
-      { label: "Editing & Proofreading", href: "/services/editing-and-writing-quality" },
-      { label: "Publishing & Career", href: "/services/publishing-and-career" },
-      { label: "Coaching & Training", href: "/services/coaching-and-training" },
+      { label: "Editing and Proofreading", href: "/services/editing-and-writing-quality" },
+      { label: "Publishing and Career", href: "/services/publishing-and-career" },
+      { label: "Coaching and Training", href: "/services/coaching-and-training" },
       { label: "All Services", href: "/services" },
     ],
   },

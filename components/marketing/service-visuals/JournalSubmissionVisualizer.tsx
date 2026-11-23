@@ -24,11 +24,11 @@ const REBUTTAL_SCENARIOS: RebuttalScenario[] = [
     reviewer: "Reviewer 1 (Theoretical Framework)",
     critique: "The manuscript relies heavily on outdated models from the early 2000s and ignores recent discourse regarding institutional logics.",
     mentorStrategy: "Map out the genealogical evolution of the theory, cite the prominent 2022-2025 papers, and explain how your empirical findings bridge classical theory with modern institutional logics.",
-    formalRebuttalResponse: "We deeply appreciate the reviewer highlighting this theoretical opportunity. We have thoroughly revised Section 2.2 to incorporate foundational recent scholarship (e.g., Alvesson et al., 2023; Greenwood & Hinings, 2024), contextualizing how our findings extend classical institutional theory into modern distributed organizational contexts.",
+    formalRebuttalResponse: "We deeply appreciate the reviewer highlighting this theoretical opportunity. We have thoroughly revised Section 2.2 to incorporate foundational recent scholarship (e.g., Alvesson et al., 2023; Greenwood and Hinings, 2024), contextualizing how our findings extend classical institutional theory into modern distributed organizational contexts.",
     manuscriptPageChange: "Page 6, Section 2.2, Lines 124-180; 11 new peer-reviewed references added to Bibliography.",
   },
   {
-    reviewer: "Editor-in-Chief (Journal Scope & Formatting)",
+    reviewer: "Editor-in-Chief (Journal Scope and Formatting)",
     critique: "The manuscript exceeds the journal's 8,500-word limit by 2,200 words. Please truncate without losing analytical depth.",
     mentorStrategy: "Execute surgical structural truncation: relocate lengthy descriptive tables into online Supplementary Appendices and streamline repetitive transitions in the discussion chapter.",
     formalRebuttalResponse: "In strict accordance with the Editor's guidance, we streamlined the manuscript from 10,740 words to 8,310 words (-2,430 words). We achieved this by transferring extended item-level psychometric tables to Supplementary File S1 and tightening the discussion synthesis, preserving all core empirical analyses.",
@@ -47,7 +47,7 @@ export function JournalSubmissionVisualizer({ className }: { className?: string 
         <div className="flex items-center gap-2">
           <Award className="w-4 h-4 text-gold shrink-0" />
           <span className="type-micro font-semibold text-tone-heading tracking-wider">
-            Peer Review Response & Journal Conversion Dispatch
+            Peer Review Response and Journal Conversion Dispatch
           </span>
         </div>
         <span className="text-[11px] text-tone-muted font-mono">
@@ -92,7 +92,7 @@ export function JournalSubmissionVisualizer({ className }: { className?: string 
           })}
         </div>
 
-        {/* Right: Rebuttal Strategy & Actionable Response (7 Cols) */}
+        {/* Right: Rebuttal Strategy and Actionable Response (7 Cols) */}
         <div className="lg:col-span-7 p-6 sm:p-8 space-y-6 bg-white">
           <div className="space-y-2 border-b border-tone-rule pb-4">
             <span className="type-micro text-gold font-semibold">
@@ -120,7 +120,7 @@ export function JournalSubmissionVisualizer({ className }: { className?: string 
             {/* Formal Response */}
             <div className="space-y-1">
               <span className="type-micro text-navy block font-semibold">
-                Formal Letter to Editor &amp; Reviewers:
+                Formal Letter to Editor and Reviewers:
               </span>
               <p className="text-xs text-tone-body leading-relaxed bg-cream p-4 border border-gold/30 rounded-[2px] font-serif">
                 {scenario.formalRebuttalResponse}

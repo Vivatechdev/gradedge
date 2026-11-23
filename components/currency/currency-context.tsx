@@ -43,7 +43,7 @@ function setCookie(name: string, value: string, days: number = 365) {
 }
 
 /**
- * Automatically infers local currency using browser timezone & locale
+ * Automatically infers local currency using browser timezone and locale
  * when IP headers are not available (e.g. localhost, client-first mount).
  */
 function inferCurrencyFromClient(): SupportedCurrency | null {

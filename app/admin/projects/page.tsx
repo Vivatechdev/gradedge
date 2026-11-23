@@ -48,7 +48,7 @@ const INITIAL_PROJECTS: ProjectBrief[] = [
     fieldOfStudy: "Public Health Epidemiology",
     assignedMentor: "Dr. Eleanor Vance",
     status: "active",
-    serviceCategory: "Data Analysis & Statistics",
+    serviceCategory: "Data Analysis and Statistics",
     receivedDate: "Oct 27, 2026",
     turnaroundTarget: "3 business days",
     budgetMinor: 45000,
@@ -58,7 +58,7 @@ const INITIAL_PROJECTS: ProjectBrief[] = [
     id: "br-102",
     candidateName: "Amina Bello",
     candidateEmail: "a.bello@lse.ac.uk",
-    projectTitle: "Panel Econometrics on Carbon Pricing Mechanisms & Inflationary Pressures",
+    projectTitle: "Panel Econometrics on Carbon Pricing Mechanisms and Inflationary Pressures",
     institution: "London School of Economics",
     level: "PhD Candidate",
     fieldOfStudy: "Applied Econometrics",
@@ -77,7 +77,7 @@ const INITIAL_PROJECTS: ProjectBrief[] = [
     projectTitle: "Qualitative Phenomenology of Hybrid Learning Experiences in Tertiary STEM",
     institution: "University of Edinburgh",
     level: "Masters Researcher",
-    fieldOfStudy: "Higher Education & Pedagogy",
+    fieldOfStudy: "Higher Education and Pedagogy",
     assignedMentor: null,
     status: "needs_assignment",
     serviceCategory: "Methodology Review",
@@ -90,13 +90,13 @@ const INITIAL_PROJECTS: ProjectBrief[] = [
     id: "br-104",
     candidateName: "Khadija Umar",
     candidateEmail: "k.umar@imperial.ac.uk",
-    projectTitle: "Corporate Governance & Financial Restatement Frequencies in Emerging Markets",
+    projectTitle: "Corporate Governance and Financial Restatement Frequencies in Emerging Markets",
     institution: "Imperial College London",
     level: "PhD Candidate",
-    fieldOfStudy: "Finance & Accounting",
+    fieldOfStudy: "Finance and Accounting",
     assignedMentor: "Dr. Heather Wright",
     status: "active",
-    serviceCategory: "Editing & Writing Quality",
+    serviceCategory: "Editing and Writing Quality",
     receivedDate: "Oct 25, 2026",
     turnaroundTarget: "5 business days",
     budgetMinor: 40000,
@@ -151,7 +151,7 @@ export default function AdminProjectsPage() {
   return (
     <DashboardShell
       role="admin"
-      title="Support Requests & Project Briefs"
+      title="Support Requests and Project Briefs"
       user={{
         name: "Freedom Sola",
         email: "admin@gradedge.com",
@@ -159,11 +159,11 @@ export default function AdminProjectsPage() {
       }}
     >
       <div className="space-y-6 max-w-6xl">
-        {/* Top Header & Actions */}
+        {/* Top Header and Actions */}
         <div className="border-b border-tone-rule pb-5 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
           <div>
             <div className="flex items-center gap-2 mb-1">
-              <span className="type-micro text-gold">Project Scoping & Dispatch</span>
+              <span className="type-micro text-gold">Project Scoping and Dispatch</span>
               <span className="text-tone-rule">&bull;</span>
               <span className="text-xs text-tone-muted font-mono">{filtered.length} active briefs</span>
             </div>
@@ -242,7 +242,7 @@ export default function AdminProjectsPage() {
           </Card>
         </div>
 
-        {/* Filter Bar & Search */}
+        {/* Filter Bar and Search */}
         <div className="bg-white border border-tone-rule rounded-[4px] p-4 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-2xs">
           <div className="relative w-full sm:w-80">
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-stone-400" />
@@ -286,8 +286,8 @@ export default function AdminProjectsPage() {
             <table className="w-full text-left text-xs font-sans">
               <thead className="bg-paper border-b border-tone-rule text-[11px] uppercase tracking-wider text-tone-muted font-semibold">
                 <tr>
-                  <th className="py-3 px-4">Ref &amp; Candidate</th>
-                  <th className="py-3 px-4">Research Topic &amp; Field</th>
+                  <th className="py-3 px-4">Ref and Candidate</th>
+                  <th className="py-3 px-4">Research Topic and Field</th>
                   <th className="py-3 px-4">Service Tier</th>
                   <th className="py-3 px-4">Assigned Mentor</th>
                   <th className="py-3 px-4">Turnaround</th>

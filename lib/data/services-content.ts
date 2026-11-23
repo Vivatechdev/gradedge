@@ -90,21 +90,21 @@ export const CATEGORY_METADATA: Record<
     image_alt: "Statistical analysis charts, open software syntax scripts, and econometric data notebooks",
   },
   "editing-and-writing-quality": {
-    name: "Editing & Writing Quality",
+    name: "Editing and Writing Quality",
     description:
       "Line-level developmental editing, referencing compliance, and academic style refinement. We strengthen argument structure and scholarly register while protecting your intellectual voice.",
     image: "/images/services/cat-editing.jpg",
     image_alt: "Close-up of academic thesis manuscript with line-level editorial marks and precision references",
   },
   "publishing-and-career": {
-    name: "Publishing & Career",
+    name: "Publishing and Career",
     description:
       "Transform exhaustive dissertation chapters into competitive journal submissions, craft grant applications, and prepare responses to peer review.",
     image: "/images/services/cat-publishing.jpg",
     image_alt: "Peer-reviewed academic journals, accepted paper proofs, and grant application proposals",
   },
   "coaching-and-training": {
-    name: "Coaching & Training",
+    name: "Coaching and Training",
     description:
       "One-on-one presentation practice for oral and committee defenses, timeline management, and practical software intensives with experienced academic mentors.",
     image: "/images/services/cat-coaching.jpg",
@@ -116,7 +116,7 @@ export const SERVICES_CONTENT: Record<string, ServiceContentItem> = {
   // ── CATEGORY 1: DISSERTATION SUPPORT ─────────────────────────────────────────
   "dissertation-thesis-mentoring": {
     slug: "dissertation-thesis-mentoring",
-    title: "Dissertation & Thesis Mentoring",
+    title: "Dissertation and Thesis Mentoring",
     category: "dissertation-support",
     category_name: "Dissertation Support",
     two_sentence_promise:
@@ -127,7 +127,7 @@ export const SERVICES_CONTENT: Record<string, ServiceContentItem> = {
       "Our flagship mentoring engagement pairs you with an experienced academic mentor who reviews your draft chapters in structured cycles. We do not write your thesis; we train you to think, write, and defend like an established scholar.",
     format_text: "Milestone written reviews + 1-on-1 strategy sessions",
     turnaround_text: "5 to 7 working days per chapter",
-    best_for: "Doctoral & Master's candidates actively drafting chapters",
+    best_for: "Doctoral and Master's candidates actively drafting chapters",
     starting_price_ngn: 250000,
     starting_price_usd: 175,
     who_its_for: [
@@ -167,7 +167,7 @@ export const SERVICES_CONTENT: Record<string, ServiceContentItem> = {
     process_steps: [
       {
         step: 1,
-        title: "Intake & Project Scoping",
+        title: "Intake and Project Scoping",
         description: "Submit your chapter draft, university formatting guidelines, research questions, and any recent supervisor feedback.",
         typical_duration: "Day 1",
       },
@@ -179,13 +179,13 @@ export const SERVICES_CONTENT: Record<string, ServiceContentItem> = {
       },
       {
         step: 3,
-        title: "Delivery & Strategy Consultation",
+        title: "Delivery and Strategy Consultation",
         description: "Receive your annotated file and executive brief, followed by a recorded 60-minute strategy call to agree on revisions.",
         typical_duration: "Days 6 to 7",
       },
       {
         step: 4,
-        title: "Revision Implementation & Verification",
+        title: "Revision Implementation and Verification",
         description: "You execute the revisions using our action plan and submit your updated draft for final confirmation before supervisor submission.",
         typical_duration: "Days 8 to 14",
       },
@@ -273,7 +273,7 @@ export const SERVICES_CONTENT: Record<string, ServiceContentItem> = {
       },
     ],
     seo: {
-      meta_title: "Dissertation & Thesis Mentoring — Structured Feedback for Graduate Scholars",
+      meta_title: "Dissertation and Thesis Mentoring — Structured Feedback for Graduate Scholars",
       meta_description:
         "One-on-one academic mentoring and developmental chapter feedback for PhD and Master's candidates. Structured feedback cycles, argument clarity, and defense readiness.",
     },
@@ -281,7 +281,7 @@ export const SERVICES_CONTENT: Record<string, ServiceContentItem> = {
 
   "topic-proposal-development": {
     slug: "topic-proposal-development",
-    title: "Topic & Proposal Development",
+    title: "Topic and Proposal Development",
     category: "dissertation-support",
     category_name: "Dissertation Support",
     two_sentence_promise:
@@ -292,7 +292,7 @@ export const SERVICES_CONTENT: Record<string, ServiceContentItem> = {
       "A failed dissertation proposal costs an average of two semesters in administrative delays. We work with you to demarcate your problem statement, articulate your scholarly contribution, and craft a proposal your committee can approve with confidence.",
     format_text: "Written diagnostic audit + 2 strategy consultations",
     turnaround_text: "4 to 6 working days",
-    best_for: "Incoming doctoral scholars & Master's students preparing proposal defense",
+    best_for: "Incoming doctoral scholars and Master's students preparing proposal defense",
     starting_price_ngn: 180000,
     starting_price_usd: 125,
     who_its_for: [
@@ -313,7 +313,7 @@ export const SERVICES_CONTENT: Record<string, ServiceContentItem> = {
     ],
     deliverables: [
       {
-        title: "Proposal Feasibility & Scope Diagnostic",
+        title: "Proposal Feasibility and Scope Diagnostic",
         description: "An evaluation of your proposed scope, data access feasibility, and timeline realism.",
       },
       {
@@ -332,7 +332,7 @@ export const SERVICES_CONTENT: Record<string, ServiceContentItem> = {
     process_steps: [
       {
         step: 1,
-        title: "Interest & Literature Mapping",
+        title: "Interest and Literature Mapping",
         description: "Review current topic notes, target degree requirements, and key seminal papers in your area.",
         typical_duration: "Days 1 to 2",
       },
@@ -385,7 +385,7 @@ export const SERVICES_CONTENT: Record<string, ServiceContentItem> = {
     packages: [
       {
         id: "proposal-starter",
-        name: "Topic Scoping & Research Questions",
+        name: "Topic Scoping and Research Questions",
         description: "Refinement of your research problem, question hierarchy, and feasibility assessment.",
         price_ngn: 180000,
         price_usd: 125,
@@ -411,7 +411,7 @@ export const SERVICES_CONTENT: Record<string, ServiceContentItem> = {
       },
     ],
     seo: {
-      meta_title: "Dissertation Topic & Proposal Development — Academic Mentoring",
+      meta_title: "Dissertation Topic and Proposal Development — Academic Mentoring",
       meta_description:
         "Refine your research questions, bound your problem statement, and craft an institutionally viable dissertation proposal with expert academic mentoring.",
     },
@@ -470,13 +470,13 @@ export const SERVICES_CONTENT: Record<string, ServiceContentItem> = {
     process_steps: [
       {
         step: 1,
-        title: "Matrix & Chapter Ingestion",
+        title: "Matrix and Chapter Ingestion",
         description: "Submit your draft literature review chapter, synthesis matrix, and list of core foundational papers.",
         typical_duration: "Day 1",
       },
       {
         step: 2,
-        title: "Thematic & Critical Evaluation",
+        title: "Thematic and Critical Evaluation",
         description: "Mentor examines whether synthesis is genuinely critical or merely descriptive, noting structural weaknesses.",
         typical_duration: "Days 2 to 4",
       },
@@ -488,7 +488,7 @@ export const SERVICES_CONTENT: Record<string, ServiceContentItem> = {
       },
       {
         step: 4,
-        title: "Revision & Final Check",
+        title: "Revision and Final Check",
         description: "You rewrite identified passages and receive a secondary check on paragraph transitions.",
         typical_duration: "Days 6 to 7",
       },
@@ -529,7 +529,7 @@ export const SERVICES_CONTENT: Record<string, ServiceContentItem> = {
       },
     ],
     seo: {
-      meta_title: "Literature Review Support & Critical Synthesis — GradEdge",
+      meta_title: "Literature Review Support and Critical Synthesis — GradEdge",
       meta_description:
         "Master the craft of critical literature synthesis. Structure thematic reviews, build conceptual frameworks, and eliminate descriptive summaries with academic mentoring.",
     },
@@ -537,7 +537,7 @@ export const SERVICES_CONTENT: Record<string, ServiceContentItem> = {
 
   "research-design-ethics": {
     slug: "research-design-ethics",
-    title: "Research Design & Ethics Approval Support",
+    title: "Research Design and Ethics Approval Support",
     category: "dissertation-support",
     category_name: "Dissertation Support",
     two_sentence_promise:
@@ -573,7 +573,7 @@ export const SERVICES_CONTENT: Record<string, ServiceContentItem> = {
         description: "Systematic check that questions, data sources, sampling methods, and analytical plans correspond perfectly.",
       },
       {
-        title: "Ethics Application & Protocol Review",
+        title: "Ethics Application and Protocol Review",
         description: "Line-level critique of participant information sheets, consent forms, and data governance plans.",
       },
       {
@@ -588,19 +588,19 @@ export const SERVICES_CONTENT: Record<string, ServiceContentItem> = {
     process_steps: [
       {
         step: 1,
-        title: "Protocol & Instrument Submission",
+        title: "Protocol and Instrument Submission",
         description: "Submit Chapter 3 draft, institutional ethics guidelines, participant recruitment plans, and instruments.",
         typical_duration: "Day 1",
       },
       {
         step: 2,
-        title: "Methodological & Ethics Review",
+        title: "Methodological and Ethics Review",
         description: "Your mentor evaluates sampling power, ethical risks, privacy compliance, and paradigm coherence.",
         typical_duration: "Days 2 to 4",
       },
       {
         step: 3,
-        title: "Consultation & Revisions",
+        title: "Consultation and Revisions",
         description: "60-minute recorded session discussing protocol adjustments and response strategies for ethics committee queries.",
         typical_duration: "Day 5",
       },
@@ -631,7 +631,7 @@ export const SERVICES_CONTENT: Record<string, ServiceContentItem> = {
     packages: [
       {
         id: "design-ethics-standard",
-        name: "Methodology & Ethics Audit",
+        name: "Methodology and Ethics Audit",
         description: "Comprehensive review of Chapter 3 and your institutional ethics protocol.",
         price_ngn: 220000,
         price_usd: 150,
@@ -641,7 +641,7 @@ export const SERVICES_CONTENT: Record<string, ServiceContentItem> = {
       },
     ],
     seo: {
-      meta_title: "Research Design & Ethics Approval Support — GradEdge",
+      meta_title: "Research Design and Ethics Approval Support — GradEdge",
       meta_description:
         "Ensure your dissertation methodology and IRB ethics application are rigorous, compliant, and defensible with specialized academic mentoring.",
     },
@@ -682,7 +682,7 @@ export const SERVICES_CONTENT: Record<string, ServiceContentItem> = {
     ],
     deliverables: [
       {
-        title: "Syntax & Script Audit Report",
+        title: "Syntax and Script Audit Report",
         description: "Thorough review of your analytical script checking data cleaning routines, recoding, and model specifications.",
       },
       {
@@ -690,7 +690,7 @@ export const SERVICES_CONTENT: Record<string, ServiceContentItem> = {
         description: "Diagnostic documentation of normality, linearity, homoscedasticity, and multicollinearity metrics.",
       },
       {
-        title: "APA 7 Results Tables & Visualizations",
+        title: "APA 7 Results Tables and Visualizations",
         description: "Publication-grade tables formatted to current APA standards ready for your findings chapter.",
       },
       {
@@ -701,7 +701,7 @@ export const SERVICES_CONTENT: Record<string, ServiceContentItem> = {
     process_steps: [
       {
         step: 1,
-        title: "Data & Code Ingestion",
+        title: "Data and Code Ingestion",
         description: "Submit your de-identified dataset, analysis plan, research hypotheses, and existing syntax scripts.",
         typical_duration: "Day 1",
       },
@@ -719,13 +719,13 @@ export const SERVICES_CONTENT: Record<string, ServiceContentItem> = {
       },
       {
         step: 4,
-        title: "Results Review & Interpretation Check",
+        title: "Results Review and Interpretation Check",
         description: "You draft your findings narrative and receive line-level feedback on statistical accuracy.",
         typical_duration: "Days 6 to 7",
       },
     ],
     sample_feedback: {
-      title: "Statistical Syntax & Findings Review: Organizational Psychology",
+      title: "Statistical Syntax and Findings Review: Organizational Psychology",
       manuscript_context: "Hierarchical multiple regression examining employee burnout predictors.",
       original_text: "Table 4 shows the regression was significant (p < 0.05). Therefore, workload causes burnout.",
       annotated_excerpt: "Hierarchical multiple regression revealed that workload accounted for a statistically significant proportion of variance in emotional exhaustion above demographic controls, ΔR² = .14, F(3, 214) = 11.42, p < .001, 95% CI [.18, .44], with a moderate effect size (f² = .16).",
@@ -754,7 +754,7 @@ export const SERVICES_CONTENT: Record<string, ServiceContentItem> = {
     packages: [
       {
         id: "quant-model-audit",
-        name: "Model Specification & Syntax Review",
+        name: "Model Specification and Syntax Review",
         description: "Review of statistical hypotheses, variable recoding, and analysis syntax in SPSS, R, or Stata.",
         price_ngn: 300000,
         price_usd: 210,
@@ -764,7 +764,7 @@ export const SERVICES_CONTENT: Record<string, ServiceContentItem> = {
       },
       {
         id: "quant-complete-analysis",
-        name: "Full Statistical Mentorship & Results Structuring",
+        name: "Full Statistical Mentorship and Results Structuring",
         description: "End-to-end guidance from assumption testing to complete APA 7 results chapter review.",
         price_ngn: 600000,
         price_usd: 420,
@@ -772,7 +772,7 @@ export const SERVICES_CONTENT: Record<string, ServiceContentItem> = {
         turnaround: "10 working days",
         popular: true,
         includes: [
-          "Complete dataset verification & assumption diagnostics",
+          "Complete dataset verification and assumption diagnostics",
           "Reproducible syntax scripts with detailed comments",
           "APA 7-compliant results tables and charts",
           "Two 60-minute video coaching sessions",
@@ -811,7 +811,7 @@ export const SERVICES_CONTENT: Record<string, ServiceContentItem> = {
     signs_you_need_this: [
       "Your codebook has 300 isolated codes and you cannot explain how they group into overarching themes.",
       "Your supervisor notes that your findings read like summary quotes without analytical interpretation.",
-      "You are unsure how to demonstrate qualitative rigor, trustworthiness, and audit trails (Lincoln & Guba criteria).",
+      "You are unsure how to demonstrate qualitative rigor, trustworthiness, and audit trails (Lincoln and Guba criteria).",
       "You struggle to distinguish between inductive and deductive coding approaches in your methodology.",
     ],
     outcomes: [
@@ -821,11 +821,11 @@ export const SERVICES_CONTENT: Record<string, ServiceContentItem> = {
     ],
     deliverables: [
       {
-        title: "Codebook & Thematic Hierarchy Audit",
+        title: "Codebook and Thematic Hierarchy Audit",
         description: "Evaluation of candidate codes, parent-child nodes, and thematic boundaries for conceptual distinction.",
       },
       {
-        title: "Trustworthiness & Rigor Protocol",
+        title: "Trustworthiness and Rigor Protocol",
         description: "Guidance documenting credibility, transferability, dependability, and confirmability in Chapter 4.",
       },
       {
@@ -840,13 +840,13 @@ export const SERVICES_CONTENT: Record<string, ServiceContentItem> = {
     process_steps: [
       {
         step: 1,
-        title: "Transcript & Codebook Ingestion",
+        title: "Transcript and Codebook Ingestion",
         description: "Submit sample de-identified transcripts, current coding scheme, and qualitative research questions.",
         typical_duration: "Day 1",
       },
       {
         step: 2,
-        title: "Thematic & Conceptual Review",
+        title: "Thematic and Conceptual Review",
         description: "Mentor analyzes code consistency, conceptual depth, and alignment with your stated philosophical paradigm.",
         typical_duration: "Days 2 to 4",
       },
@@ -883,7 +883,7 @@ export const SERVICES_CONTENT: Record<string, ServiceContentItem> = {
     packages: [
       {
         id: "qual-codebook-audit",
-        name: "Codebook & Thematic Review",
+        name: "Codebook and Thematic Review",
         description: "Diagnostic review of your qualitative coding tree, theme hierarchy, and sample transcripts.",
         price_ngn: 280000,
         price_usd: 195,
@@ -952,7 +952,7 @@ export const SERVICES_CONTENT: Record<string, ServiceContentItem> = {
     process_steps: [
       {
         step: 1,
-        title: "Conceptual Framework & Dataset Intake",
+        title: "Conceptual Framework and Dataset Intake",
         description: "Submit your measurement model diagram, survey instrument, hypotheses, and clean dataset.",
         typical_duration: "Day 1",
       },
@@ -995,7 +995,7 @@ export const SERVICES_CONTENT: Record<string, ServiceContentItem> = {
     packages: [
       {
         id: "sem-standard",
-        name: "SEM Model Audit & Consultation",
+        name: "SEM Model Audit and Consultation",
         description: "Complete measurement and structural model review in SmartPLS or AMOS with strategy call.",
         price_ngn: 350000,
         price_usd: 245,
@@ -1021,7 +1021,7 @@ export const SERVICES_CONTENT: Record<string, ServiceContentItem> = {
     hero_image: "/images/services/service-mixed-methods.jpg",
     hero_image_alt: "Mixed methods research design flow chart showing quantitative and qualitative data integration",
     hero_summary:
-      "A genuine mixed-methods dissertation is not simply two separate studies bound together. We train you how to integrate qualitative insights with statistical results using joint displays and defensible methodological notation (Creswell & Plano Clark standards).",
+      "A genuine mixed-methods dissertation is not simply two separate studies bound together. We train you how to integrate qualitative insights with statistical results using joint displays and defensible methodological notation (Creswell and Plano Clark standards).",
     format_text: "Integration architecture audit + 1-on-1 strategy call",
     turnaround_text: "5 to 7 working days",
     best_for: "Researchers combining quantitative surveys with qualitative interviews",
@@ -1048,7 +1048,7 @@ export const SERVICES_CONTENT: Record<string, ServiceContentItem> = {
         description: "Audit of your study flowchart detailing sequencing, priority, and explicit points of interface.",
       },
       {
-        title: "Joint Display Architecture & Review",
+        title: "Joint Display Architecture and Review",
         description: "Custom tabular displays juxtaposing statistical results with explanatory thematic quotes.",
       },
       {
@@ -1063,13 +1063,13 @@ export const SERVICES_CONTENT: Record<string, ServiceContentItem> = {
     process_steps: [
       {
         step: 1,
-        title: "Study Design & Findings Review",
+        title: "Study Design and Findings Review",
         description: "Submit quantitative findings, qualitative themes, and current integration drafts.",
         typical_duration: "Day 1",
       },
       {
         step: 2,
-        title: "Integration Analysis & Display Audit",
+        title: "Integration Analysis and Display Audit",
         description: "Mentor evaluates integration rigor and structural joint display coherence.",
         typical_duration: "Days 2 to 4",
       },
@@ -1121,12 +1121,12 @@ export const SERVICES_CONTENT: Record<string, ServiceContentItem> = {
     },
   },
 
-  // ── CATEGORY 3: EDITING & WRITING QUALITY ────────────────────────────────────
+  // ── CATEGORY 3: EDITING and WRITING QUALITY ────────────────────────────────────
   "academic-editing-proofreading": {
     slug: "academic-editing-proofreading",
-    title: "Academic Editing & Proofreading",
+    title: "Academic Editing and Proofreading",
     category: "editing-and-writing-quality",
-    category_name: "Editing & Writing Quality",
+    category_name: "Editing and Writing Quality",
     two_sentence_promise:
       "Refine your scholarly tone, sentence rhythm, and argument coherence while preserving your authentic intellectual voice. We eliminate ambiguity, typographical errors, and clumsy phrasing to meet the highest university press standards.",
     hero_image: "/images/services/service-developmental-editing.jpg",
@@ -1175,7 +1175,7 @@ export const SERVICES_CONTENT: Record<string, ServiceContentItem> = {
     process_steps: [
       {
         step: 1,
-        title: "Manuscript Intake & Style Guide Confirmation",
+        title: "Manuscript Intake and Style Guide Confirmation",
         description: "Submit your chapter files (Word format) and specify your target style guide (APA, Chicago, Harvard).",
         typical_duration: "Day 1",
       },
@@ -1187,7 +1187,7 @@ export const SERVICES_CONTENT: Record<string, ServiceContentItem> = {
       },
       {
         step: 3,
-        title: "Delivery & Verification",
+        title: "Delivery and Verification",
         description: "Receive tracked and clean copies along with your editorial letter and review any margin queries.",
         typical_duration: "Days 6 to 7",
       },
@@ -1224,7 +1224,7 @@ export const SERVICES_CONTENT: Record<string, ServiceContentItem> = {
         price_usd: 105,
         rounds_of_feedback: "1 comprehensive edit + verification check",
         turnaround: "4 working days",
-        includes: ["Tracked & clean versions", "Grammar, syntax & tone refinement", "Editor's diagnostic letter"],
+        includes: ["Tracked and clean versions", "Grammar, syntax and tone refinement", "Editor's diagnostic letter"],
       },
       {
         id: "edit-full-thesis",
@@ -1245,7 +1245,7 @@ export const SERVICES_CONTENT: Record<string, ServiceContentItem> = {
       },
     ],
     seo: {
-      meta_title: "Academic Editing & Proofreading for Theses & Dissertations — GradEdge",
+      meta_title: "Academic Editing and Proofreading for Theses and Dissertations — GradEdge",
       meta_description:
         "Professional developmental editing and proofreading for graduate researchers. Refine scholarly voice, eliminate grammatical ambiguity, and prepare for examination.",
     },
@@ -1253,9 +1253,9 @@ export const SERVICES_CONTENT: Record<string, ServiceContentItem> = {
 
   "referencing-formatting-compliance": {
     slug: "referencing-formatting-compliance",
-    title: "Referencing, Citations & Style Compliance",
+    title: "Referencing, Citations and Style Compliance",
     category: "editing-and-writing-quality",
-    category_name: "Editing & Writing Quality",
+    category_name: "Editing and Writing Quality",
     two_sentence_promise:
       "Guarantee absolute concordance between your in-text citations and reference list entries, while formatting your manuscript to exact university press guidelines. We audit APA 7, Harvard, Chicago, Vancouver, and institutional style books.",
     hero_image: "/images/services/service-referencing-compliance.jpg",
@@ -1299,13 +1299,13 @@ export const SERVICES_CONTENT: Record<string, ServiceContentItem> = {
     process_steps: [
       {
         step: 1,
-        title: "Document & University Guidelines Submission",
+        title: "Document and University Guidelines Submission",
         description: "Submit complete dissertation draft and your university's official formatting handbook.",
         typical_duration: "Day 1",
       },
       {
         step: 2,
-        title: "Concordance Cross-Check & Styling",
+        title: "Concordance Cross-Check and Styling",
         description: "Editor matches every in-text citation against bibliography and sets up automated heading styles.",
         typical_duration: "Days 2 to 4",
       },
@@ -1341,17 +1341,17 @@ export const SERVICES_CONTENT: Record<string, ServiceContentItem> = {
     packages: [
       {
         id: "referencing-standard",
-        name: "Full Dissertation Citation & Format Audit",
+        name: "Full Dissertation Citation and Format Audit",
         description: "Complete citation concordance check, reference list formatting, and front matter setup.",
         price_ngn: 120000,
         price_usd: 85,
         rounds_of_feedback: "1 complete audit + verification",
         turnaround: "4 working days",
-        includes: ["Full citation concordance audit", "Reference list standardization", "Table of contents & front matter styling"],
+        includes: ["Full citation concordance audit", "Reference list standardization", "Table of contents and front matter styling"],
       },
     ],
     seo: {
-      meta_title: "Referencing, Citations & Dissertation Formatting Compliance — GradEdge",
+      meta_title: "Referencing, Citations and Dissertation Formatting Compliance — GradEdge",
       meta_description:
         "Ensure 100% citation concordance and full university formatting compliance. We audit APA 7, Harvard, Chicago, and Vancouver styles with meticulous accuracy.",
     },
@@ -1359,9 +1359,9 @@ export const SERVICES_CONTENT: Record<string, ServiceContentItem> = {
 
   "similarity-report-review": {
     slug: "similarity-report-review",
-    title: "Similarity Report Review & Paraphrasing Coaching",
+    title: "Similarity Report Review and Paraphrasing Coaching",
     category: "editing-and-writing-quality",
-    category_name: "Editing & Writing Quality",
+    category_name: "Editing and Writing Quality",
     two_sentence_promise:
       "Interpret your similarity report with academic precision and learn ethical paraphrasing techniques to eliminate unintended text overlap. We teach you how to synthesize source material without risking accidental plagiarism allegations.",
     hero_image: "/images/services/service-similarity-audit.jpg",
@@ -1405,7 +1405,7 @@ export const SERVICES_CONTENT: Record<string, ServiceContentItem> = {
     process_steps: [
       {
         step: 1,
-        title: "Report & Draft Submission",
+        title: "Report and Draft Submission",
         description: "Submit your official similarity PDF report along with the matching Word document draft.",
         typical_duration: "Day 1",
       },
@@ -1448,7 +1448,7 @@ export const SERVICES_CONTENT: Record<string, ServiceContentItem> = {
     packages: [
       {
         id: "similarity-review-standard",
-        name: "Similarity Report Audit & Coaching",
+        name: "Similarity Report Audit and Coaching",
         description: "Complete line-level report analysis and 45-minute live paraphrasing coaching consultation.",
         price_ngn: 100000,
         price_usd: 70,
@@ -1458,7 +1458,7 @@ export const SERVICES_CONTENT: Record<string, ServiceContentItem> = {
       },
     ],
     seo: {
-      meta_title: "Similarity Report Review & Paraphrasing Coaching — GradEdge",
+      meta_title: "Similarity Report Review and Paraphrasing Coaching — GradEdge",
       meta_description:
         "Understand your similarity report, eliminate accidental overlap, and master ethical academic paraphrasing with structured academic coaching.",
     },
@@ -1468,7 +1468,7 @@ export const SERVICES_CONTENT: Record<string, ServiceContentItem> = {
     slug: "esl-academic-writing-support",
     title: "Academic Writing Support for Multilingual Scholars",
     category: "editing-and-writing-quality",
-    category_name: "Editing & Writing Quality",
+    category_name: "Editing and Writing Quality",
     two_sentence_promise:
       "Bridge the gap between complex research thinking and native-level English academic prose. We coach multilingual researchers on disciplinary idioms, article usage, hedging conventions, and rhetorical argument structures.",
     hero_image: "/images/services/service-esl-writing.jpg",
@@ -1512,7 +1512,7 @@ export const SERVICES_CONTENT: Record<string, ServiceContentItem> = {
     process_steps: [
       {
         step: 1,
-        title: "Draft Submission & Target Review",
+        title: "Draft Submission and Target Review",
         description: "Submit chapter draft and note your native language background and specific areas of concern.",
         typical_duration: "Day 1",
       },
@@ -1554,7 +1554,7 @@ export const SERVICES_CONTENT: Record<string, ServiceContentItem> = {
     packages: [
       {
         id: "esl-writing-standard",
-        name: "Multilingual Chapter Edit & Coaching",
+        name: "Multilingual Chapter Edit and Coaching",
         description: "Detailed edit of one chapter (up to 8,000 words) plus a 60-minute writing mechanics coaching session.",
         price_ngn: 180000,
         price_usd: 125,
@@ -1570,12 +1570,12 @@ export const SERVICES_CONTENT: Record<string, ServiceContentItem> = {
     },
   },
 
-  // ── CATEGORY 4: PUBLISHING & CAREER ──────────────────────────────────────────
+  // ── CATEGORY 4: PUBLISHING and CAREER ──────────────────────────────────────────
   "journal-article-conversion": {
     slug: "journal-article-conversion",
-    title: "Journal Article Conversion & Publishing Support",
+    title: "Journal Article Conversion and Publishing Support",
     category: "publishing-and-career",
-    category_name: "Publishing & Career",
+    category_name: "Publishing and Career",
     two_sentence_promise:
       "Condense an exhaustive 60-page dissertation chapter into a focused, high-impact 7,000-word peer-reviewed journal manuscript. We help you reposition your literature, sharpen your contribution, and target suitable indexed journals.",
     hero_image: "/images/services/service-journal-conversion.jpg",
@@ -1623,13 +1623,13 @@ export const SERVICES_CONTENT: Record<string, ServiceContentItem> = {
     process_steps: [
       {
         step: 1,
-        title: "Dissertation Chapter & Journal Selection Intake",
+        title: "Dissertation Chapter and Journal Selection Intake",
         description: "Submit original thesis chapter, candidate journals (Scopus/Web of Science), and target word limits.",
         typical_duration: "Day 1",
       },
       {
         step: 2,
-        title: "Condensation & Architecture Blueprint",
+        title: "Condensation and Architecture Blueprint",
         description: "Mentor produces a structural blueprint mapping out the streamlined article argument.",
         typical_duration: "Days 2 to 4",
       },
@@ -1682,7 +1682,7 @@ export const SERVICES_CONTENT: Record<string, ServiceContentItem> = {
       },
     ],
     seo: {
-      meta_title: "Journal Article Conversion & Publishing Support — GradEdge",
+      meta_title: "Journal Article Conversion and Publishing Support — GradEdge",
       meta_description:
         "Convert your dissertation chapter into a high-impact peer-reviewed journal article. Restructure arguments, meet word counts, and navigate submission with expert mentoring.",
     },
@@ -1690,9 +1690,9 @@ export const SERVICES_CONTENT: Record<string, ServiceContentItem> = {
 
   "target-journal-selection-audit": {
     slug: "target-journal-selection-audit",
-    title: "Journal Selection & Manuscript Readiness Audit",
+    title: "Journal Selection and Manuscript Readiness Audit",
     category: "publishing-and-career",
-    category_name: "Publishing & Career",
+    category_name: "Publishing and Career",
     two_sentence_promise:
       "Avoid predatory publishers and rapid desk rejections by identifying indexed, reputable journals that genuinely match your paper's scope. We audit your draft against explicit journal criteria before you submit.",
     hero_image: "/images/services/service-journal-selection.jpg",
@@ -1736,19 +1736,19 @@ export const SERVICES_CONTENT: Record<string, ServiceContentItem> = {
     process_steps: [
       {
         step: 1,
-        title: "Draft & Preferences Ingestion",
+        title: "Draft and Preferences Ingestion",
         description: "Submit your manuscript draft, target indexing preferences (Scopus/WoS), and budget constraints.",
         typical_duration: "Day 1",
       },
       {
         step: 2,
-        title: "Citation & Scope Matching",
+        title: "Citation and Scope Matching",
         description: "Mentor analyzes your reference network and evaluates candidate journal editorial boards.",
         typical_duration: "Days 2 to 3",
       },
       {
         step: 3,
-        title: "Dossier Delivery & Strategy Consultation",
+        title: "Dossier Delivery and Strategy Consultation",
         description: "Receive journal dossier and conduct a 45-minute video call to select your primary target.",
         typical_duration: "Days 4 to 5",
       },
@@ -1757,7 +1757,7 @@ export const SERVICES_CONTENT: Record<string, ServiceContentItem> = {
       title: "Journal Scope Audit: Development Economics",
       manuscript_context: "Evaluating micro-credit interventions in rural Nigeria.",
       original_text: "Target Journal: American Economic Review (AER).",
-      annotated_excerpt: "AER publishes theoretical innovations and global econometric breakthroughs; a single-region regional empirical study faces immediate desk rejection here. Recommended realistic targets: Journal of Development Studies (Taylor & Francis, Q1), Development Policy Review (Wiley, Q2), or African Development Review (Q2).",
+      annotated_excerpt: "AER publishes theoretical innovations and global econometric breakthroughs; a single-region regional empirical study faces immediate desk rejection here. Recommended realistic targets: Journal of Development Studies (Taylor and Francis, Q1), Development Policy Review (Wiley, Q2), or African Development Review (Q2).",
       mentor_marginal_note: "Mentor note: Matching paper scope to journal aims is critical. The three recommended alternatives actively welcome regional empirical evaluations and have median turnaround times under 12 weeks.",
       actionable_takeaway: "Target journals whose published papers share your exact methodological approach and geographic scope.",
       label: "Illustrative example",
@@ -1778,7 +1778,7 @@ export const SERVICES_CONTENT: Record<string, ServiceContentItem> = {
     packages: [
       {
         id: "journal-selection-standard",
-        name: "Journal Matching & Readiness Audit",
+        name: "Journal Matching and Readiness Audit",
         description: "Dossier of 3 vetted target journals, desk-rejection risk audit, and 45-minute consultation.",
         price_ngn: 140000,
         price_usd: 95,
@@ -1788,7 +1788,7 @@ export const SERVICES_CONTENT: Record<string, ServiceContentItem> = {
       },
     ],
     seo: {
-      meta_title: "Target Journal Selection & Readiness Audit — GradEdge",
+      meta_title: "Target Journal Selection and Readiness Audit — GradEdge",
       meta_description:
         "Identify reputable, indexed Scopus and Web of Science journals matching your research. Avoid desk rejections with a comprehensive pre-submission readiness audit.",
     },
@@ -1796,9 +1796,9 @@ export const SERVICES_CONTENT: Record<string, ServiceContentItem> = {
 
   "response-to-reviewers-strategy": {
     slug: "response-to-reviewers-strategy",
-    title: "Response to Reviewers & Resubmission Strategy",
+    title: "Response to Reviewers and Resubmission Strategy",
     category: "publishing-and-career",
-    category_name: "Publishing & Career",
+    category_name: "Publishing and Career",
     two_sentence_promise:
       "Craft a respectful, authoritative point-by-point response letter to peer reviewers and implement requested revisions. We help you navigate contradictory referee feedback and defend your methodology diplomatically.",
     hero_image: "/images/services/service-reviewer-response.jpg",
@@ -1846,7 +1846,7 @@ export const SERVICES_CONTENT: Record<string, ServiceContentItem> = {
     process_steps: [
       {
         step: 1,
-        title: "Decision Letter & Draft Ingestion",
+        title: "Decision Letter and Draft Ingestion",
         description: "Submit the journal decision letter, all reviewer comments, original manuscript, and current draft revisions.",
         typical_duration: "Day 1",
       },
@@ -1858,7 +1858,7 @@ export const SERVICES_CONTENT: Record<string, ServiceContentItem> = {
       },
       {
         step: 3,
-        title: "Strategy Call & Final Polish",
+        title: "Strategy Call and Final Polish",
         description: "45-minute video call finalizing your response memo and editor cover letter before resubmission.",
         typical_duration: "Days 5 to 6",
       },
@@ -1898,7 +1898,7 @@ export const SERVICES_CONTENT: Record<string, ServiceContentItem> = {
       },
     ],
     seo: {
-      meta_title: "Response to Reviewers & Resubmission Strategy — GradEdge",
+      meta_title: "Response to Reviewers and Resubmission Strategy — GradEdge",
       meta_description:
         "Navigate journal peer review revisions with confidence. Draft diplomatic, authoritative response letters and implement requested manuscript changes.",
     },
@@ -1906,9 +1906,9 @@ export const SERVICES_CONTENT: Record<string, ServiceContentItem> = {
 
   "grant-scholarship-coaching": {
     slug: "grant-scholarship-coaching",
-    title: "Grant & Scholarship Application Coaching",
+    title: "Grant and Scholarship Application Coaching",
     category: "publishing-and-career",
-    category_name: "Publishing & Career",
+    category_name: "Publishing and Career",
     two_sentence_promise:
       "Craft persuasive research funding applications, fellowship proposals, and academic scholarship statements. We coach you on framing intellectual merit, broader societal impact, and budgetary feasibility to satisfy competitive evaluation panels.",
     hero_image: "/images/services/service-grant-coaching.jpg",
@@ -1945,7 +1945,7 @@ export const SERVICES_CONTENT: Record<string, ServiceContentItem> = {
         description: "Editorial refinement sharpening persuasive impact, project clarity, and academic tone.",
       },
       {
-        title: "Budget & Milestone Feasibility Review",
+        title: "Budget and Milestone Feasibility Review",
         description: "Critique of your project Gantt chart, research milestones, and expenditure justification.",
       },
       {
@@ -1956,7 +1956,7 @@ export const SERVICES_CONTENT: Record<string, ServiceContentItem> = {
     process_steps: [
       {
         step: 1,
-        title: "Call Guidelines & Draft Ingestion",
+        title: "Call Guidelines and Draft Ingestion",
         description: "Submit funder guidelines, evaluation rubrics, current proposal draft, and CV.",
         typical_duration: "Day 1",
       },
@@ -2004,22 +2004,22 @@ export const SERVICES_CONTENT: Record<string, ServiceContentItem> = {
         price_usd: 150,
         rounds_of_feedback: "1 comprehensive audit + 1 call",
         turnaround: "5 working days",
-        includes: ["Funder rubric alignment check", "Line-level proposal annotation", "Budget & timeline critique", "60-minute strategy session"],
+        includes: ["Funder rubric alignment check", "Line-level proposal annotation", "Budget and timeline critique", "60-minute strategy session"],
       },
     ],
     seo: {
-      meta_title: "Grant & Scholarship Application Coaching — GradEdge",
+      meta_title: "Grant and Scholarship Application Coaching — GradEdge",
       meta_description:
         "Craft competitive research grant and scholarship proposals. Master intellectual merit, impact statements, and budget justifications with specialized academic coaching.",
     },
   },
 
-  // ── CATEGORY 5: COACHING & TRAINING ──────────────────────────────────────────
+  // ── CATEGORY 5: COACHING and TRAINING ──────────────────────────────────────────
   "defense-presentation-coaching": {
     slug: "defense-presentation-coaching",
-    title: "Presentation & Oral Defense Coaching",
+    title: "Presentation and Oral Defense Coaching",
     category: "coaching-and-training",
-    category_name: "Coaching & Training",
+    category_name: "Coaching and Training",
     two_sentence_promise:
       "Prepare for your doctoral oral defense and committee examination with simulated mock sessions and slide deck refinement. We train you how to respond to adversarial committee questioning with composure, academic precision, and intellectual authority.",
     hero_image: "/images/services/service-oral-defense.jpg",
@@ -2067,13 +2067,13 @@ export const SERVICES_CONTENT: Record<string, ServiceContentItem> = {
     process_steps: [
       {
         step: 1,
-        title: "Manuscript Summary & Slide Intake",
+        title: "Manuscript Summary and Slide Intake",
         description: "Submit your final dissertation draft, abstract, defense slides, and committee member profiles.",
         typical_duration: "Day 1",
       },
       {
         step: 2,
-        title: "Slide Audit & Question Preparation",
+        title: "Slide Audit and Question Preparation",
         description: "Your mentor reviews your slides and generates tailored, discipline-specific examination probes.",
         typical_duration: "Days 2 to 3",
       },
@@ -2085,7 +2085,7 @@ export const SERVICES_CONTENT: Record<string, ServiceContentItem> = {
       },
       {
         step: 4,
-        title: "Debrief Memo & Final Adjustments",
+        title: "Debrief Memo and Final Adjustments",
         description: "Receive session recording and debrief memo with targeted slide refinement suggestions.",
         typical_duration: "Day 5",
       },
@@ -2116,7 +2116,7 @@ export const SERVICES_CONTENT: Record<string, ServiceContentItem> = {
     packages: [
       {
         id: "defense-intensive",
-        name: "Complete Mock Defense & Slide Coaching",
+        name: "Complete Mock Defense and Slide Coaching",
         description: "Slide deck audit, custom question inventory, 90-minute recorded mock examination, and debrief memo.",
         price_ngn: 180000,
         price_usd: 125,
@@ -2126,7 +2126,7 @@ export const SERVICES_CONTENT: Record<string, ServiceContentItem> = {
       },
     ],
     seo: {
-      meta_title: "Oral Defense & Presentation Coaching — GradEdge",
+      meta_title: "Oral Defense and Presentation Coaching — GradEdge",
       meta_description:
         "Prepare for your doctoral defense with simulated mock examinations, slide deck audits, and committee question inventories with experienced academic mentors.",
     },
@@ -2134,9 +2134,9 @@ export const SERVICES_CONTENT: Record<string, ServiceContentItem> = {
 
   "research-productivity-coaching": {
     slug: "research-productivity-coaching",
-    title: "Research Productivity & Timeline Management",
+    title: "Research Productivity and Timeline Management",
     category: "coaching-and-training",
-    category_name: "Coaching & Training",
+    category_name: "Coaching and Training",
     two_sentence_promise:
       "Overcome chronic academic procrastination, manage unstructured research schedules, and establish sustainable daily writing habits. We provide bi-weekly milestone accountability and workflow systems tailored to graduate researchers.",
     hero_image: "/images/services/service-productivity-timeline.jpg",
@@ -2165,7 +2165,7 @@ export const SERVICES_CONTENT: Record<string, ServiceContentItem> = {
     ],
     deliverables: [
       {
-        title: "Academic Workflow & Habit Audit",
+        title: "Academic Workflow and Habit Audit",
         description: "Analysis of your current schedule, productivity leaks, and cognitive fatigue triggers.",
       },
       {
@@ -2198,7 +2198,7 @@ export const SERVICES_CONTENT: Record<string, ServiceContentItem> = {
         step: 3,
         title: "Bi-Weekly Accountability Cadence",
         description: "Ongoing bi-weekly check-ins to review progress, troubleshoot blocks, and celebrate milestone completions.",
-        typical_duration: "Days 14 & 28",
+        typical_duration: "Days 14 and 28",
       },
     ],
     sample_feedback: {
@@ -2236,7 +2236,7 @@ export const SERVICES_CONTENT: Record<string, ServiceContentItem> = {
       },
     ],
     seo: {
-      meta_title: "Research Productivity & Dissertation Timeline Coaching — GradEdge",
+      meta_title: "Research Productivity and Dissertation Timeline Coaching — GradEdge",
       meta_description:
         "Overcome academic procrastination and finish your dissertation on schedule. Bi-weekly accountability, sustainable writing habits, and milestone roadmaps.",
     },
@@ -2246,7 +2246,7 @@ export const SERVICES_CONTENT: Record<string, ServiceContentItem> = {
     slug: "statistical-software-intensive",
     title: "1-on-1 Statistical Software Intensive (R, SPSS, Stata)",
     category: "coaching-and-training",
-    category_name: "Coaching & Training",
+    category_name: "Coaching and Training",
     two_sentence_promise:
       "Master your specific statistical software through dedicated one-on-one screen-share training using your actual research dataset. We teach you syntax scripting, data transformation, diagnostics, and graphical output generation.",
     hero_image: "/images/services/service-software-intensive.jpg",
@@ -2290,7 +2290,7 @@ export const SERVICES_CONTENT: Record<string, ServiceContentItem> = {
     process_steps: [
       {
         step: 1,
-        title: "Software & Goal Assessment",
+        title: "Software and Goal Assessment",
         description: "Identify target software (R, SPSS, Stata, Python), sample dataset, and analytical goals.",
         typical_duration: "Day 1",
       },
@@ -2308,7 +2308,7 @@ export const SERVICES_CONTENT: Record<string, ServiceContentItem> = {
       },
       {
         step: 4,
-        title: "Script & Recording Delivery",
+        title: "Script and Recording Delivery",
         description: "Delivery of clean, documented syntax scripts and session video archive.",
         typical_duration: "Immediate",
       },
@@ -2356,9 +2356,9 @@ export const SERVICES_CONTENT: Record<string, ServiceContentItem> = {
 
   "academic-career-postdoc-guidance": {
     slug: "academic-career-postdoc-guidance",
-    title: "Academic Career & Postdoctoral Application Guidance",
+    title: "Academic Career and Postdoctoral Application Guidance",
     category: "coaching-and-training",
-    category_name: "Coaching & Training",
+    category_name: "Coaching and Training",
     two_sentence_promise:
       "Transition from doctoral candidate to employed academic researcher. We coach you on crafting competitive academic CVs, research statements, teaching philosophies, and preparing for faculty job talk presentations.",
     hero_image: "/images/services/service-career-guidance.jpg",
@@ -2367,7 +2367,7 @@ export const SERVICES_CONTENT: Record<string, ServiceContentItem> = {
       "Navigating the academic job market demands framing your research as an ongoing, fundable research agenda rather than just a finished student dissertation. We help you assemble a competitive faculty application dossier and prepare for academic interviews.",
     format_text: "Dossier review + 60-minute academic job market strategy call",
     turnaround_text: "5 to 7 working days",
-    best_for: "Finishing doctoral candidates & postdocs applying for academic jobs",
+    best_for: "Finishing doctoral candidates and postdocs applying for academic jobs",
     starting_price_ngn: 180000,
     starting_price_usd: 125,
     who_its_for: [
@@ -2406,13 +2406,13 @@ export const SERVICES_CONTENT: Record<string, ServiceContentItem> = {
     process_steps: [
       {
         step: 1,
-        title: "Dossier & Target Institution Intake",
+        title: "Dossier and Target Institution Intake",
         description: "Submit current CV, research statement, teaching statement, and sample job advertisements.",
         typical_duration: "Day 1",
       },
       {
         step: 2,
-        title: "Dossier Review & Strategy Audit",
+        title: "Dossier Review and Strategy Audit",
         description: "Mentor critiques materials from the perspective of an academic search committee chair.",
         typical_duration: "Days 2 to 4",
       },
@@ -2458,7 +2458,7 @@ export const SERVICES_CONTENT: Record<string, ServiceContentItem> = {
       },
     ],
     seo: {
-      meta_title: "Academic Career & Postdoctoral Application Guidance — GradEdge",
+      meta_title: "Academic Career and Postdoctoral Application Guidance — GradEdge",
       meta_description:
         "Prepare for the academic job market. Craft high-impact academic CVs, research statements, and prepare for faculty job talk interviews with expert mentoring.",
     },

@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"),
   title: {
     template: "%s | GradEdge Academic Solutions",
-    default: "GradEdge Academic Solutions | Graduate Research Coaching & Mentoring",
+    default: "GradEdge Academic Solutions | Graduate Research Coaching and Mentoring",
   },
   description:
     "Rigorous, ethical academic coaching, dissertation mentoring, research design, and data analysis support for postgraduate researchers worldwide.",

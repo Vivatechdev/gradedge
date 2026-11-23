@@ -14,7 +14,7 @@ export default function AdminServicesListPage() {
   return (
     <DashboardShell
       role="admin"
-      title="Services & Editorial Catalog"
+      title="Services and Editorial Catalog"
       user={{
         name: "Freedom Sola",
         email: "freedom.sola@gradedge.internal",

@@ -190,7 +190,7 @@ export default function AdminPricesPage() {
   return (
     <DashboardShell
       role="admin"
-      title="Currency & Regional Pricing"
+      title="Currency and Regional Pricing"
       user={{
         name: "Freedom Sola",
         email: "freedom.sola@gradedge.internal",
@@ -280,7 +280,7 @@ export default function AdminPricesPage() {
               <table className="w-full text-left text-xs border-collapse">
                 <thead>
                   <tr className="border-b border-tone-rule bg-paper/80 font-mono text-[10px] text-tone-muted uppercase">
-                    <th className="py-2.5 px-3 min-w-[200px]">Item & Scope</th>
+                    <th className="py-2.5 px-3 min-w-[200px]">Item and Scope</th>
                     <th className="py-2.5 px-3 min-w-[80px]">Type</th>
                     {SUPPORTED_CURRENCIES.map((code) => (
                       <th key={code} className="py-2.5 px-2 min-w-[110px]">
@@ -392,7 +392,7 @@ export default function AdminPricesPage() {
                   </select>
                 </div>
 
-                {/* Discount Percentage Slider & Input */}
+                {/* Discount Percentage Slider and Input */}
                 <div className="space-y-1.5">
                   <div className="flex justify-between font-semibold text-tone-heading">
                     <span>Regional Discount:</span>

@@ -20,7 +20,7 @@ import {
 export const revalidate = 3600;
 
 export const metadata: Metadata = buildMetadata({
-  title: "All Research Mentoring & Coaching Services — GradEdge",
+  title: "All Research Mentoring and Coaching Services — GradEdge",
   description:
     "Expert academic mentoring and coaching across every stage of graduate research. Explore our 20 services spanning dissertation support, data analysis, editing, publishing, and defense coaching.",
   path: "/services",

@@ -8,7 +8,7 @@ import { ResourceGate } from "@/components/marketing/ResourceGate";
 import { SectionLabel } from "@/components/ui/editorial";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Downloadable Research & Methodology Guides",
+  title: "Downloadable Research and Methodology Guides",
   description:
     "Comprehensive PDF guides on quantitative diagnostics, qualitative coding, and defense preparation.",
   path: "/resources/guides",
@@ -21,7 +21,7 @@ export default function GuidesPage() {
       desc: "A 45-page practical guide on selecting research paradigms, defending sampling rationale, and mitigating common committee objections.",
     },
     {
-      title: "Quantitative Assumption Testing in SPSS & R",
+      title: "Quantitative Assumption Testing in SPSS and R",
       desc: "Step-by-step diagnostic workflows for normality, homoscedasticity, multicollinearity, and outlier treatment.",
     },
     {
@@ -43,7 +43,7 @@ export default function GuidesPage() {
       <PageHero
         sectionNumber={1}
         sectionLabel="Methodology Manuals"
-        headline="Downloadable research & writing guides."
+        headline="Downloadable research and writing guides."
         standfirst="Monographs and practical guides authored by our academic mentoring team. Enter your academic email to unlock full digital copies."
       />
 

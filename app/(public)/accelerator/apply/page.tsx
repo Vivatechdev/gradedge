@@ -133,11 +133,11 @@ export default function AcceleratorApplyPage() {
                 {...register("doctoral_stage")}
                 className="w-full border border-[#E4DFD5] bg-paper px-3 py-2 text-xs sm:text-sm rounded-[4px] focus:outline-none focus:ring-1 focus:ring-gold"
               >
-                <option value="Proposal & Research Design">Proposal & Research Design</option>
+                <option value="Proposal and Research Design">Proposal and Research Design</option>
                 <option value="Data Collection / Empirical Fieldwork">Data Collection / Fieldwork</option>
-                <option value="Data Analysis & Statistical Modeling">Data Analysis & Statistical Modeling</option>
+                <option value="Data Analysis and Statistical Modeling">Data Analysis and Statistical Modeling</option>
                 <option value="Mid-Candidacy / Writing Chapters">Mid-Candidacy / Writing Chapters</option>
-                <option value="Final Revisions & Pre-Defense Clearance">Final Revisions & Pre-Defense Clearance</option>
+                <option value="Final Revisions and Pre-Defense Clearance">Final Revisions and Pre-Defense Clearance</option>
                 <option value="Response to External Reviewers">Response to External Reviewers</option>
               </select>
             </div>
@@ -145,7 +145,7 @@ export default function AcceleratorApplyPage() {
 
           <div className="space-y-1 text-left">
             <label htmlFor="topic_summary" className="text-xs font-medium text-tone-heading block">
-              Topic summary & research question *
+              Topic summary and research question *
             </label>
             <textarea
               id="topic_summary"
@@ -184,7 +184,7 @@ export default function AcceleratorApplyPage() {
               rows={3}
               {...register("desired_outcomes")}
               className="w-full border border-[#E4DFD5] bg-paper px-3 py-2 text-xs sm:text-sm rounded-[4px] focus:outline-none focus:ring-1 focus:ring-gold"
-              placeholder="e.g. Line-level developmental critique on Chapters 3 & 4, structural equation modeling audit, 16-week defense readiness..."
+              placeholder="e.g. Line-level developmental critique on Chapters 3 and 4, structural equation modeling audit, 16-week defense readiness..."
             />
             {errors.desired_outcomes && (
               <p className="text-[11px] text-burgundy">{errors.desired_outcomes.message}</p>

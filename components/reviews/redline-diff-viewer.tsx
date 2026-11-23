@@ -75,7 +75,7 @@ const SAMPLE_PARAGRAPHS: RedlineParagraph[] = [
       },
       {
         type: "insertion",
-        text: "untestable strongly ignorable treatment assignment assumption (Rosenbaum & Rubin, 1983)",
+        text: "untestable strongly ignorable treatment assignment assumption (Rosenbaum and Rubin, 1983)",
       },
       {
         type: "unchanged",
@@ -117,7 +117,7 @@ export function RedlineDiffViewer({
         <div>
           <div className="flex items-center gap-2 mb-1">
             <span className="font-serif font-bold text-sm text-tone-heading">
-              Track Changes &amp; Editorial Redline
+              Track Changes and Editorial Redline
             </span>
             <Badge variant="gold" className="text-[9px]">
               Turnitin: {similarityScore}
@@ -192,7 +192,7 @@ export function RedlineDiffViewer({
           <span className="text-stone-400">&bull;</span>
           <span>Net increase: +34 words</span>
         </div>
-        <span className="text-stone-400 hidden sm:inline">Austin (2011) &amp; Rosenbaum (1983) applied</span>
+        <span className="text-stone-400 hidden sm:inline">Austin (2011) and Rosenbaum (1983) applied</span>
       </div>
 
       {/* Content Rendering Body */}

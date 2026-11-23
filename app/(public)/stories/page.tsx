@@ -13,7 +13,7 @@ import { SectionLabel } from "@/components/ui/editorial";
 export const revalidate = 600;
 
 export const metadata: Metadata = buildMetadata({
-  title: "Student Stories & Scholarly Outcomes",
+  title: "Student Stories and Scholarly Outcomes",
   description:
     "Real research journeys and thesis completion outcomes from postgraduate researchers mentored by GradEdge.",
   path: "/stories",

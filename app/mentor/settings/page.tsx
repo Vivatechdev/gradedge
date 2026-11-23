@@ -21,13 +21,13 @@ export default function MentorSettingsPage() {
   const { showToast } = useToast();
   const [fullName, setFullName] = useState("Dr. Eleanor Vance");
   const [academicTitle, setAcademicTitle] = useState("Associate Professor of Quantitative Methodology");
-  const [institution, setInstitution] = useState("Faculty of Social Sciences & Public Health");
+  const [institution, setInstitution] = useState("Faculty of Social Sciences and Public Health");
   const [orcid, setOrcid] = useState("0000-0002-1825-0097");
   const [maxCaseload, setMaxCaseload] = useState(4);
   const [specializations, setSpecializations] = useState([
     "Propensity Score Matching",
     "Panel Econometrics",
-    "Stata & R Programming",
+    "Stata and R Programming",
     "Survival Analysis",
     "Oral Defense Interrogation",
   ]);
@@ -55,7 +55,7 @@ export default function MentorSettingsPage() {
         <div className="border-b border-tone-rule pb-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div>
             <h2 className="font-serif text-2xl font-medium text-tone-heading">
-              Faculty Profile &amp; Mentoring Preferences
+              Faculty Profile and Mentoring Preferences
             </h2>
             <p className="text-xs text-tone-muted mt-1">
               Configure your academic credentials, methodological specializations, and doctoral mentee caseload capacity.
@@ -73,7 +73,7 @@ export default function MentorSettingsPage() {
             <Card className="bg-white border-tone-rule">
               <CardHeader className="border-b border-tone-rule pb-4">
                 <CardTitle className="font-serif text-base text-tone-heading">
-                  Academic Credentials &amp; Verification
+                  Academic Credentials and Verification
                 </CardTitle>
                 <p className="text-xs text-stone-500 font-sans">
                   Details displayed to prospective doctoral candidates during faculty matching.
@@ -91,7 +91,7 @@ export default function MentorSettingsPage() {
                 </div>
 
                 <div className="space-y-1.5">
-                  <label className="font-semibold text-stone-700">Academic Title &amp; Rank</label>
+                  <label className="font-semibold text-stone-700">Academic Title and Rank</label>
                   <input
                     type="text"
                     value={academicTitle}
@@ -150,7 +150,7 @@ export default function MentorSettingsPage() {
             </Card>
           </div>
 
-          {/* Caseload & Notifications (5 cols) */}
+          {/* Caseload and Notifications (5 cols) */}
           <div className="lg:col-span-5 space-y-5">
             {/* Caseload Capacity */}
             <Card className="bg-white border-tone-rule">
@@ -193,7 +193,7 @@ export default function MentorSettingsPage() {
             <Card className="bg-white border-tone-rule">
               <CardHeader className="border-b border-tone-rule pb-4">
                 <CardTitle className="font-serif text-base text-tone-heading">
-                  SLA &amp; Notification Alerts
+                  SLA and Notification Alerts
                 </CardTitle>
                 <p className="text-xs text-stone-500 font-sans">
                   Select your alert preferences for candidate submissions and consultations.

@@ -52,7 +52,7 @@ export async function GET() {
   const rssFeed = `<?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>GradEdge Blog — Research Methods &amp; Dissertation Guidance</title>
+    <title>GradEdge Blog — Research Methods and Dissertation Guidance</title>
     <link>${siteUrl}/blog</link>
     <description>Evidence-based coaching, statistical syntax, and thesis writing guidance for graduate researchers.</description>
     <language>en</language>

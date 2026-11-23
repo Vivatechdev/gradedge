@@ -54,7 +54,7 @@ const DISPUTES: QualityEscalation[] = [
     mentorName: "Dr. Miriam Al-Hassan",
     chapter: "Chapter 2: Conceptual Framework",
     issueCategory: "scope_creep",
-    issueLabel: "Scope & Thematic Depth Clarification",
+    issueLabel: "Scope and Thematic Depth Clarification",
     priority: "low",
     status: "open_triage",
     reportedDate: "Nov 19, 2026",
@@ -104,7 +104,7 @@ export default function AdminDisputesPage() {
   return (
     <DashboardShell
       role="admin"
-      title="Quality & Disputes"
+      title="Quality and Disputes"
       user={{
         id: "admin-1",
         name: "System Administrator",
@@ -117,7 +117,7 @@ export default function AdminDisputesPage() {
         <div className="border-b border-tone-rule pb-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div>
             <h2 className="font-serif text-2xl font-medium text-tone-heading">
-              Quality Assurance &amp; Revision Escalations
+              Quality Assurance and Revision Escalations
             </h2>
             <p className="text-xs text-tone-muted mt-1">
               Active triage desk for supervisory realignments, methodological second opinions, and SLA turnarounds.
@@ -205,7 +205,7 @@ export default function AdminDisputesPage() {
                 {/* Case Narrative */}
                 <div className="space-y-1.5">
                   <span className="font-semibold uppercase tracking-wider text-tone-heading text-[11px] block">
-                    Escalation Notes &amp; Committee Context:
+                    Escalation Notes and Committee Context:
                   </span>
                   <p className="p-3.5 bg-paper rounded-[2px] border border-tone-rule text-stone-700 leading-relaxed text-xs">
                     {selectedDispute.description}
@@ -215,7 +215,7 @@ export default function AdminDisputesPage() {
                 {/* Triage Actions */}
                 <div className="pt-4 border-t border-tone-rule space-y-3">
                   <span className="font-semibold uppercase tracking-wider text-tone-heading text-[11px] block">
-                    Triage &amp; Resolution Actions
+                    Triage and Resolution Actions
                   </span>
                   <div className="flex flex-wrap gap-2">
                     <Button

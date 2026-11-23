@@ -114,7 +114,7 @@ export function PaginatedTable<T extends Record<string, any>>({
       aria-label={caption || "Data table"}
       className={`space-y-3.5 ${className}`}
     >
-      {/* Controls Bar: Search & Page Size */}
+      {/* Controls Bar: Search and Page Size */}
       <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 text-xs">
         <div className="relative flex-1 max-w-sm">
           <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-3.5 w-3.5 text-tone-muted" aria-hidden="true" />

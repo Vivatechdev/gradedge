@@ -8,7 +8,7 @@ import { CheckoutForm } from "@/components/checkout/checkout-form";
 import { Currency } from "@/lib/payments/types";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Mentoring Scope & Secure Checkout — GradEdge",
+  title: "Mentoring Scope and Secure Checkout — GradEdge",
   description: "Review and confirm your academic mentoring package and deliverables.",
   path: "/checkout",
   noIndex: true,

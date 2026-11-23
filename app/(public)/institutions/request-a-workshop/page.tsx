@@ -10,7 +10,7 @@ import { Button } from "@/components/ui/button";
 
 function WorkshopFormContent() {
   const searchParams = useSearchParams();
-  const defaultTopic = searchParams.get("topic") ?? "Introduction to Research Design & Methodology";
+  const defaultTopic = searchParams.get("topic") ?? "Introduction to Research Design and Methodology";
 
   const [submitted, setSubmitted] = useState(false);
   const [serverError, setServerError] = useState("");
@@ -147,8 +147,8 @@ function WorkshopFormContent() {
             {...register("topic")}
             className="w-full border border-tone-rule bg-paper px-3 py-2 text-sm text-tone-body rounded-[2px] focus:outline-2 focus:outline-navy"
           >
-            <option value="Introduction to Research Design & Methodology">
-              Introduction to Research Design & Methodology
+            <option value="Introduction to Research Design and Methodology">
+              Introduction to Research Design and Methodology
             </option>
             <option value="Quantitative Data Analysis with SPSS or R">
               Quantitative Data Analysis with SPSS or R

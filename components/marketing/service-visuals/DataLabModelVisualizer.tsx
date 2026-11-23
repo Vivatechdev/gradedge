@@ -10,7 +10,7 @@ const SYNTAX_SAMPLES: Record<SoftwareTool, { code: string; library: string; desc
   R: {
     library: "lavaan v0.6-17",
     description: "Structural Equation Modeling with robust standard errors (MLR)",
-    code: `# Confirmatory Factor Analysis & Structural Path Model
+    code: `# Confirmatory Factor Analysis and Structural Path Model
 library(lavaan)
 model <- '
   # Measurement Model
@@ -22,7 +22,7 @@ model <- '
   ThesisCompletionProg ~ c_prime*SupervisorSupport + b*AcademicSelfEfficacy
   AcademicSelfEfficacy ~ a*SupervisorSupport
 
-  # Indirect & Total Effects
+  # Indirect and Total Effects
   indirect := a * b
   total    := c_prime + (a * b)
 '
@@ -30,7 +30,7 @@ fit <- sem(model, data = thesis_dataset, estimator = "MLR", missing = "FIML")
 summary(fit, fit.measures = TRUE, standardized = TRUE, rsquare = TRUE)`,
   },
   Python: {
-    library: "statsmodels v0.14 & pingouin",
+    library: "statsmodels v0.14 and pingouin",
     description: "Multi-level Mixed-Effects Regression with clustered standard errors",
     code: `import statsmodels.formula.api as smf
 import pingouin as pg
@@ -44,7 +44,7 @@ md = smf.mixedlm(
 mdf = md.fit(reml=True)
 print(mdf.summary())
 
-# Assumption Diagnostics: Heteroscedasticity & Normality of Residuals
+# Assumption Diagnostics: Heteroscedasticity and Normality of Residuals
 pg.normality(mdf.resid)
 pg.homoscedasticity(data=survey_df, dv='dissertation_progress', group='institution_id')`,
   },
@@ -81,7 +81,7 @@ nlcom (_b[ThesisProgress:MethodologicalConfidence]*_b[MethodologicalConfidence:S
     code: `Algorithm: Consistent PLS-SEM (PLSc)
 Weighting: Path Weighting Scheme
 Stop Criterion: 10^-7 | Maximum Iterations: 500
-Bootstrapping: 10,000 resamples with bias-corrected & accelerated (BCa) bootstrap
+Bootstrapping: 10,000 resamples with bias-corrected and accelerated (BCa) bootstrap
 Effect Size (f^2): Evaluated at 0.02 (small), 0.15 (medium), 0.35 (large)
 Predictive Relevance: Blindfolding procedure with cross-validated redundancy (Q^2)`,
   },
@@ -112,7 +112,7 @@ export function DataLabModelVisualizer({ className }: { className?: string }) {
         <div className="flex items-center gap-2.5">
           <Terminal className="w-4 h-4 text-gold shrink-0" />
           <span className="font-mono text-xs font-semibold text-white uppercase tracking-wider">
-            Empirical Statistical Lab & Syntax Architecture
+            Empirical Statistical Lab and Syntax Architecture
           </span>
         </div>
 
@@ -153,7 +153,7 @@ export function DataLabModelVisualizer({ className }: { className?: string }) {
           </p>
         </div>
 
-        {/* Right: Path Model Diagram & Diagnostic Fit (5 Cols) */}
+        {/* Right: Path Model Diagram and Diagnostic Fit (5 Cols) */}
         <div className="lg:col-span-5 p-6 space-y-6 bg-[#0D1A2B]">
           <div>
             <div className="flex items-center justify-between pb-2 border-b border-white/10">

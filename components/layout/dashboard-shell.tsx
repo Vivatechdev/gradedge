@@ -72,14 +72,14 @@ export function DashboardShell({
     { label: "My Projects", href: "/student/projects", icon: FolderKanban },
     { label: "Sessions", href: "/student/sessions", icon: CalendarCheck },
     { label: "Messages", href: "/student/messages", icon: MessageSquare },
-    { label: "Files & Drafts", href: "/student/files", icon: FileText },
+    { label: "Files and Drafts", href: "/student/files", icon: FileText },
     { label: "Chapter Reviews", href: "/student/reviews", icon: CheckSquare },
     { label: "Oral Defense Prep", href: "/student/defense-prep", icon: Award },
     { label: "Writing Velocity", href: "/student/analytics", icon: BarChart3 },
     { label: "Resource Vault", href: "/student/resources", icon: Library },
     { label: "Accelerator", href: "/student/accelerator", icon: BookOpen },
     { label: "Your Mentor", href: "/student/mentor", icon: Users },
-    { label: "Billing & Plans", href: "/student/billing", icon: CreditCard },
+    { label: "Billing and Plans", href: "/student/billing", icon: CreditCard },
     { label: "Settings", href: "/student/settings", icon: Settings },
   ];
 
@@ -88,15 +88,15 @@ export function DashboardShell({
     { label: "Operations", href: "/admin", icon: LayoutDashboard },
     { label: "Admissions Desk", href: "/admin/applications", icon: FileCheck },
     { label: "Support Requests", href: "/admin/projects", icon: FolderKanban },
-    { label: "Bookings & Pool", href: "/admin/bookings", icon: CalendarCheck },
+    { label: "Bookings and Pool", href: "/admin/bookings", icon: CalendarCheck },
     { label: "Faculty Mentors", href: "/admin/mentors", icon: Award },
     { label: "Researchers", href: "/admin/students", icon: Users },
-    { label: "Quality & Disputes", href: "/admin/disputes", icon: Scale },
+    { label: "Quality and Disputes", href: "/admin/disputes", icon: Scale },
     { label: "Institutional B2B", href: "/admin/institutions", icon: Building2 },
     { label: "Operations Analytics", href: "/admin/analytics", icon: BarChart3 },
     { label: "Services Catalog", href: "/admin/services", icon: FileText },
-    { label: "Currency & Prices", href: "/admin/prices", icon: CreditCard },
-    { label: "Content & Blog", href: "/admin/blog", icon: BookOpen },
+    { label: "Currency and Prices", href: "/admin/prices", icon: CreditCard },
+    { label: "Content and Blog", href: "/admin/blog", icon: BookOpen },
     { label: "Academic Integrity", href: "/admin/integrity", icon: ShieldCheck },
     { label: "Platform Settings", href: "/admin/settings", icon: Settings },
   ];
@@ -107,7 +107,7 @@ export function DashboardShell({
     { label: "Doctoral Mentees", href: "/mentor/mentees", icon: Users },
     { label: "Manuscript Reviews", href: "/mentor/reviews", icon: FileText },
     { label: "Consultation Schedule", href: "/mentor/schedule", icon: CalendarCheck },
-    { label: "Honorarium & Payouts", href: "/mentor/earnings", icon: CreditCard },
+    { label: "Honorarium and Payouts", href: "/mentor/earnings", icon: CreditCard },
     { label: "Academic Integrity", href: "/mentor/integrity", icon: ShieldCheck },
     { label: "Faculty Settings", href: "/mentor/settings", icon: Settings },
   ];
@@ -173,7 +173,7 @@ export function DashboardShell({
           </nav>
         </div>
 
-        {/* Sidebar Bottom: Back to Public Site & Academic Code Note */}
+        {/* Sidebar Bottom: Back to Public Site and Academic Code Note */}
         <div className="p-3 border-t border-tone-rule">
           {!collapsed && (
             <div className="p-2.5 bg-white/5 border border-tone-rule rounded-[2px] mb-2 text-[11px] text-tone-muted">
@@ -199,7 +199,7 @@ export function DashboardShell({
             <h1 className="font-serif text-lg sm:text-xl font-medium text-tone-heading truncate">{title}</h1>
           </div>
 
-          {/* Right Header items: Notifications & Profile Dropdown */}
+          {/* Right Header items: Notifications and Profile Dropdown */}
           <div className="flex items-center gap-4">
             {/* Realtime Notification Bell */}
             <NotificationBell userId={user.id} role={role} />
@@ -225,7 +225,7 @@ export function DashboardShell({
               <DropdownItem onClick={() => { 
                 window.location.href = role === "admin" ? "/admin/settings" : role === "mentor" ? "/mentor/settings" : "/student/settings"; 
               }}>
-                Account Profile & Settings
+                Account Profile and Settings
               </DropdownItem>
               <DropdownItem onClick={() => { 
                 window.location.href = role === "admin" ? "/admin/settings" : role === "mentor" ? "/mentor/settings" : "/student/settings?tab=notifications"; 
@@ -325,7 +325,7 @@ export function DashboardShell({
           >
             <div className="flex items-center justify-between pb-3 border-b border-white/10">
               <span className="text-xs uppercase tracking-wider font-semibold text-gold">
-                Additional Tools & Settings
+                Additional Tools and Settings
               </span>
               <button
                 type="button"

@@ -12,7 +12,7 @@ import { SectionLabel } from "@/components/ui/editorial";
 export const revalidate = 3600;
 
 export const metadata: Metadata = buildMetadata({
-  title: "Research Methodology Workshops for Universities & Polytechnics",
+  title: "Research Methodology Workshops for Universities and Polytechnics",
   description:
     "GradEdge delivers methodology, writing and data analysis workshops for postgraduate cohorts. Book for your faculty.",
   path: "/institutions/workshops",
@@ -21,7 +21,7 @@ export const metadata: Metadata = buildMetadata({
 export default function InstitutionalWorkshopsPage() {
   const workshops = [
     {
-      title: "Introduction to Research Design & Methodology",
+      title: "Introduction to Research Design and Methodology",
       duration: "2 to 3 hours",
       audience: "Masters and early-stage doctoral candidates",
       summary: "Framing defensible research questions, aligning ontological paradigms with empirical methods, and avoiding common proposal rejections.",

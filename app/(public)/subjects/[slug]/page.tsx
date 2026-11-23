@@ -18,7 +18,7 @@ const METHODOLOGIES_MAP: Record<
   "social-sciences-education": {
     methods: [
       "Qualitative phenomenology",
-      "Survey & instrument design",
+      "Survey and instrument design",
       "Mixed-methods sequential design",
       "Ethnographic field study",
       "Action research in educational settings",
@@ -30,14 +30,14 @@ const METHODOLOGIES_MAP: Record<
       "Cross-sectional survey modeling",
       "Comparative case study methodology",
       "Structural Equation Modeling (PLS-SEM)",
-      "Econometric time-series & panel regressions",
+      "Econometric time-series and panel regressions",
       "Grounded theory in organizational dynamics",
     ],
     software: ["SmartPLS", "SPSS", "Stata", "R", "EViews"],
   },
   "humanities-literature-history": {
     methods: [
-      "Archival & primary source analysis",
+      "Archival and primary source analysis",
       "Hermeneutic textual analysis",
       "Critical discourse analysis",
       "Historiographical synthesis",
@@ -49,7 +49,7 @@ const METHODOLOGIES_MAP: Record<
     methods: [
       "Empirical software engineering evaluations",
       "Human-computer interaction user studies",
-      "Algorithm benchmarking & complexity analysis",
+      "Algorithm benchmarking and complexity analysis",
       "Machine learning model evaluation metrics",
       "Systematic literature mapping (SLR)",
     ],
@@ -58,17 +58,17 @@ const METHODOLOGIES_MAP: Record<
   "engineering-physical-sciences": {
     methods: [
       "Factorial experimental design",
-      "Finite element analysis & numerical simulation",
+      "Finite element analysis and numerical simulation",
       "Mathematical modeling of physical systems",
       "Empirical material characterization",
-      "Benchmarking & sensitivity audits",
+      "Benchmarking and sensitivity audits",
     ],
     software: ["MATLAB", "Python", "ANSYS", "R", "LaTeX"],
   },
   "environmental-sciences-agriculture": {
     methods: [
-      "Ecological field sampling & longitudinal trials",
-      "Geospatial GIS modeling & remote sensing",
+      "Ecological field sampling and longitudinal trials",
+      "Geospatial GIS modeling and remote sensing",
       "Environmental impact assessment matrices",
       "Agricultural randomized complete block design",
       "Climate trend statistical downscaling",
@@ -77,7 +77,7 @@ const METHODOLOGIES_MAP: Record<
   },
   "law-criminology-policy": {
     methods: [
-      "Doctrinal legal inquiry & statutory interpretation",
+      "Doctrinal legal inquiry and statutory interpretation",
       "Comparative constitutional analysis",
       "Socio-legal empirical investigations",
       "Criminological policy evaluations",
@@ -87,7 +87,7 @@ const METHODOLOGIES_MAP: Record<
   },
   "psychology-behavioural-sciences": {
     methods: [
-      "Psychometric scale construction & factor analysis",
+      "Psychometric scale construction and factor analysis",
       "Experimental between/within-subjects designs",
       "Multivariate ANOVA / MANOVA diagnostics",
       "Systematic review with meta-analytic pooling",
@@ -107,59 +107,59 @@ interface SubjectData {
 const SUBJECTS_DATA_MAP: Record<string, SubjectData> = {
   "social-sciences-education": {
     slug: "social-sciences-education",
-    title: "Social Sciences & Education",
+    title: "Social Sciences and Education",
     summary: "Sociology, anthropology, pedagogy, education policy, and curriculum studies.",
-    description: "GradEdge supports researchers in Social Sciences & Education through research proposal formulation, quantitative and qualitative data analysis, developmental chapter reviews, and defense preparation.",
+    description: "GradEdge supports researchers in Social Sciences and Education through research proposal formulation, quantitative and qualitative data analysis, developmental chapter reviews, and defense preparation.",
   },
   "business-management-finance": {
     slug: "business-management-finance",
-    title: "Business, Management & Finance",
+    title: "Business, Management and Finance",
     summary: "Corporate strategy, econometrics, organizational behavior, and marketing research.",
-    description: "GradEdge supports researchers in Business, Management & Finance through empirical modeling, survey validation, econometrics, and publication guidance.",
+    description: "GradEdge supports researchers in Business, Management and Finance through empirical modeling, survey validation, econometrics, and publication guidance.",
   },
   "humanities-literature-history": {
     slug: "humanities-literature-history",
-    title: "Humanities, Literature & History",
+    title: "Humanities, Literature and History",
     summary: "Cultural studies, philosophical inquiries, historiography, and literary analysis.",
-    description: "GradEdge supports researchers in Humanities, Literature & History with archival inquiry, qualitative discourse analysis, and developmental prose editing.",
+    description: "GradEdge supports researchers in Humanities, Literature and History with archival inquiry, qualitative discourse analysis, and developmental prose editing.",
   },
   "computer-science-it": {
     slug: "computer-science-it",
-    title: "Computer Science & Information Technology",
+    title: "Computer Science and Information Technology",
     summary: "Machine learning, data science, human-computer interaction, and software systems.",
-    description: "GradEdge supports researchers in Computer Science & IT with algorithmic benchmarking, experiment design, syntax auditing, and IEEE/ACM journal structuring.",
+    description: "GradEdge supports researchers in Computer Science and IT with algorithmic benchmarking, experiment design, syntax auditing, and IEEE/ACM journal structuring.",
   },
   "engineering-physical-sciences": {
     slug: "engineering-physical-sciences",
-    title: "Engineering & Physical Sciences",
+    title: "Engineering and Physical Sciences",
     summary: "Mechanical, electrical, civil engineering, physics, and applied mathematics.",
-    description: "GradEdge supports researchers in Engineering & Physical Sciences with mathematical modeling, experimental design, and technical writing.",
+    description: "GradEdge supports researchers in Engineering and Physical Sciences with mathematical modeling, experimental design, and technical writing.",
   },
   "environmental-sciences-agriculture": {
     slug: "environmental-sciences-agriculture",
-    title: "Environmental Sciences & Agriculture",
+    title: "Environmental Sciences and Agriculture",
     summary: "Ecology, climate adaptation, agronomy, and sustainability policy.",
-    description: "GradEdge supports researchers in Environmental Sciences & Agriculture through field trial designs, geospatial analyses, and policy synthesis.",
+    description: "GradEdge supports researchers in Environmental Sciences and Agriculture through field trial designs, geospatial analyses, and policy synthesis.",
   },
   "law-criminology-policy": {
     slug: "law-criminology-policy",
-    title: "Law, Criminology & Policy Studies",
+    title: "Law, Criminology and Policy Studies",
     summary: "Jurisprudence, comparative law, criminal justice, and public administration.",
-    description: "GradEdge supports researchers in Law, Criminology & Policy with doctrinal legal inquiry, statutory analysis, and socio-legal frameworks.",
+    description: "GradEdge supports researchers in Law, Criminology and Policy with doctrinal legal inquiry, statutory analysis, and socio-legal frameworks.",
   },
   "psychology-behavioural-sciences": {
     slug: "psychology-behavioural-sciences",
-    title: "Psychology & Behavioural Sciences",
+    title: "Psychology and Behavioural Sciences",
     summary: "Clinical psychology, cognitive science, psychometrics, and experimental psychology.",
-    description: "GradEdge supports researchers in Psychology & Behavioural Sciences through psychometric scale validation, experimental design, and APA 7 results reporting.",
+    description: "GradEdge supports researchers in Psychology and Behavioural Sciences through psychometric scale validation, experimental design, and APA 7 results reporting.",
   },
 };
 
 const FALLBACK_SERVICES = [
-  { slug: "dissertation-thesis-mentoring", title: "Dissertation & Thesis Mentoring", summary: "One-on-one developmental chapter feedback." },
+  { slug: "dissertation-thesis-mentoring", title: "Dissertation and Thesis Mentoring", summary: "One-on-one developmental chapter feedback." },
   { slug: "quantitative-data-analysis", title: "Quantitative Data Analysis", summary: "Statistical syntax audits and results interpretation in SPSS, R, and Stata." },
   { slug: "qualitative-data-analysis", title: "Qualitative Data Analysis", summary: "Thematic coding, codebook development, and NVivo/ATLAS.ti mentoring." },
-  { slug: "academic-editing-proofreading", title: "Academic Editing & Proofreading", summary: "Substantive line-level editing and academic register refinement." },
+  { slug: "academic-editing-proofreading", title: "Academic Editing and Proofreading", summary: "Substantive line-level editing and academic register refinement." },
 ];
 
 export async function generateMetadata({
@@ -259,10 +259,10 @@ export default async function SubjectDetailPage({
           </div>
         </section>
 
-        {/* Methodologies & Software */}
+        {/* Methodologies and Software */}
         <section className="space-y-6 pt-8 border-t border-tone-rule">
           <SectionLabel number={2} label="Methodological Coverage" />
-          <h2 className="type-h2 text-tone-heading">Common research approaches & software</h2>
+          <h2 className="type-h2 text-tone-heading">Common research approaches and software</h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="space-y-3">
@@ -281,7 +281,7 @@ export default async function SubjectDetailPage({
 
             <div className="space-y-3">
               <h3 className="font-serif text-lg text-tone-heading font-semibold">
-                Supported Software & Tools
+                Supported Software and Tools
               </h3>
               <div className="flex flex-wrap gap-2 pt-1">
                 {methodology.software.map((sw, i) => (

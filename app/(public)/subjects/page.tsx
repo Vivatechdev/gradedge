@@ -48,47 +48,47 @@ export default async function SubjectsIndexPage() {
     subjects = [
       {
         slug: "health-sciences",
-        title: "Health Sciences & Medicine",
+        title: "Health Sciences and Medicine",
         summary: "Clinical medicine, epidemiology, public health, nursing, and biomedical research.",
       },
       {
         slug: "social-sciences-education",
-        title: "Social Sciences & Education",
+        title: "Social Sciences and Education",
         summary: "Sociology, anthropology, pedagogy, education policy, and curriculum studies.",
       },
       {
         slug: "business-management-finance",
-        title: "Business, Management & Finance",
+        title: "Business, Management and Finance",
         summary: "Corporate strategy, econometrics, organizational behavior, and marketing research.",
       },
       {
         slug: "humanities-literature-history",
-        title: "Humanities, Literature & History",
+        title: "Humanities, Literature and History",
         summary: "Cultural studies, philosophical inquiries, historiography, and literary analysis.",
       },
       {
         slug: "computer-science-it",
-        title: "Computer Science & Information Technology",
+        title: "Computer Science and Information Technology",
         summary: "Machine learning, data science, human-computer interaction, and software systems.",
       },
       {
         slug: "engineering-physical-sciences",
-        title: "Engineering & Physical Sciences",
+        title: "Engineering and Physical Sciences",
         summary: "Mechanical, electrical, civil engineering, physics, and applied mathematics.",
       },
       {
         slug: "environmental-sciences-agriculture",
-        title: "Environmental Sciences & Agriculture",
+        title: "Environmental Sciences and Agriculture",
         summary: "Ecology, climate adaptation, agronomy, and sustainability policy.",
       },
       {
         slug: "law-criminology-policy",
-        title: "Law, Criminology & Policy Studies",
+        title: "Law, Criminology and Policy Studies",
         summary: "Jurisprudence, comparative law, criminal justice, and public administration.",
       },
       {
         slug: "psychology-behavioural-sciences",
-        title: "Psychology & Behavioural Sciences",
+        title: "Psychology and Behavioural Sciences",
         summary: "Clinical psychology, cognitive science, psychometrics, and experimental psychology.",
       },
     ];

@@ -6,7 +6,7 @@ import { getServicesByCategory } from "@/lib/data/services-content";
 export const revalidate = 3600;
 
 export const metadata: Metadata = buildMetadata({
-  title: "Dissertation Support Services — Doctoral & Master's Mentoring",
+  title: "Dissertation Support Services — Doctoral and Master's Mentoring",
   description:
     "Comprehensive academic mentoring across all dissertation chapters: research questions, proposal development, literature review, methodology, and defense preparation.",
   path: "/services/dissertation-support",
@@ -24,7 +24,7 @@ export default function DissertationSupportCategoryPage() {
     {
       question: "Can I start mentoring if I only have a general topic in mind?",
       answer:
-        "Yes. Our Topic & Proposal Development service is designed specifically for researchers who have not yet finalized their research questions or conceptual framework.",
+        "Yes. Our Topic and Proposal Development service is designed specifically for researchers who have not yet finalized their research questions or conceptual framework.",
     },
     {
       question: "How long does a typical chapter review take?",

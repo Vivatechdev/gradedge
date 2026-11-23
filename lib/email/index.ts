@@ -217,7 +217,7 @@ export async function sendBookingAdminNotificationEmail({
     <p>A new 20-minute scoping consultation has been booked:</p>
     <div style="background-color: #FAF8F4; border: 1px solid #E4DFD5; padding: 14px 18px; margin: 18px 0; border-radius: 2px;">
       <p style="margin: 0 0 4px 0;"><strong>Candidate:</strong> ${guestName} (${guestEmail})</p>
-      <p style="margin: 0 0 4px 0;"><strong>Date & Time:</strong> ${dateStr} (${timezone})</p>
+      <p style="margin: 0 0 4px 0;"><strong>Date and Time:</strong> ${dateStr} (${timezone})</p>
       <p style="margin: 0 0 4px 0;"><strong>Academic Level:</strong> ${studyLevel || "Not provided"}</p>
       <p style="margin: 0 0 4px 0;"><strong>Discipline:</strong> ${fieldOfStudy || "Not provided"}</p>
       <p style="margin: 0 0 4px 0;"><strong>Focus:</strong> ${needs || topicHelp || "Advisory"}</p>

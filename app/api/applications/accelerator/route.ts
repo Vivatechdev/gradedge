@@ -20,7 +20,7 @@ export async function POST(request: NextRequest) {
       doctoral_stage: body.doctoral_stage || body.study_level,
       topic_summary: body.topic_summary || body.summary || body.dissertation_title,
       completed_summary: body.completed_summary || body.summary || "Draft in progress",
-      desired_outcomes: body.desired_outcomes || body.timeline || "Completion & defense readiness",
+      desired_outcomes: body.desired_outcomes || body.timeline || "Completion and defense readiness",
       preferred_start: body.preferred_start || body.timeline || "Next upcoming cohort",
     };
 

@@ -13,7 +13,7 @@ import { Badge } from "@/components/ui/badge";
 import { ShieldCheck, BookOpen, Terminal, Award, CheckCircle2 } from "lucide-react";
 
 export const metadata: Metadata = buildMetadata({
-  title: "About GradEdge Academic Solutions — Scholarly Mentoring & Faculty Standards",
+  title: "About GradEdge Academic Solutions — Scholarly Mentoring and Faculty Standards",
   description:
     "GradEdge provides graduate researchers with dedicated, discipline-specific doctoral mentoring. Learn about our Socratic approach, mentor credentials, and unwavering commitment to academic integrity.",
   path: "/about",
@@ -22,7 +22,7 @@ export const metadata: Metadata = buildMetadata({
 export default function AboutPage() {
   const steps = [
     {
-      title: "Diagnostic Intake & Research Scoping",
+      title: "Diagnostic Intake and Research Scoping",
       description:
         "We review your current chapter draft, research questions, supervisory committee notes, and empirical data challenges during a confidential 20-minute consultation.",
     },
@@ -32,12 +32,12 @@ export default function AboutPage() {
         "We pair you with an advisor holding an earned doctorate in your exact field and methodology (e.g. biostatistics, structural equation modeling, qualitative phenomenology).",
     },
     {
-      title: "Iterative Written Feedback & Socratic Annotation",
+      title: "Iterative Written Feedback and Socratic Annotation",
       description:
         "You submit chapters in focused batches. Your mentor delivers exhaustive line-level annotations, identifying logical gaps, methodological vulnerabilities, and citation weaknesses.",
     },
     {
-      title: "Independent Defense & Full Scholarly Ownership",
+      title: "Independent Defense and Full Scholarly Ownership",
       description:
         "Every sentence, dataset transformation, and theoretical synthesis is authored by you. You enter your committee defense with complete intellectual command of your thesis.",
     },
@@ -51,7 +51,7 @@ export default function AboutPage() {
       icon: Award,
     },
     {
-      title: "Computational & Methodological Rigor",
+      title: "Computational and Methodological Rigor",
       description:
         "Our data specialists maintain verified command of statistical software environments (R, Python, SPSS Hayes PROCESS, Stata, SmartPLS 4, NVivo, ATLAS.ti).",
       icon: Terminal,
@@ -87,7 +87,7 @@ export default function AboutPage() {
       />
 
       <div className="site-container py-12 md:py-16 space-y-16">
-        {/* ── 1. FOUNDER STATEMENT & ETHICAL CONVICTION ────────────────────── */}
+        {/* ── 1. FOUNDER STATEMENT and ETHICAL CONVICTION ────────────────────── */}
         <div className="border border-tone-rule bg-cream p-8 sm:p-10 rounded-[2px] shadow-xs relative overflow-hidden">
           <div className="max-w-3xl space-y-4 relative z-10">
             <div className="flex items-center gap-2">
@@ -110,13 +110,13 @@ export default function AboutPage() {
             </div>
 
             <div className="pt-4 border-t border-tone-rule/80 flex items-center justify-between text-xs text-tone-muted">
-              <span className="font-serif text-tone-heading font-medium">Academic Directorate & Faculty Council</span>
+              <span className="font-serif text-tone-heading font-medium">Academic Directorate and Faculty Council</span>
               <span className="font-mono text-[11px]">GradEdge Academic Solutions</span>
             </div>
           </div>
         </div>
 
-        {/* ── 2. PHILOSOPHY: SHORT CYCLES & WRITTEN FEEDBACK ───────────────── */}
+        {/* ── 2. PHILOSOPHY: SHORT CYCLES and WRITTEN FEEDBACK ───────────────── */}
         <div className="space-y-6 max-w-3xl">
           <SectionLabel label="Methodological Philosophy" />
           <h2 className="type-h2 text-tone-heading">
@@ -141,7 +141,7 @@ export default function AboutPage() {
           </div>
         </div>
 
-        {/* ── 3. FACULTY STANDARDS & CREDENTIALS MATRIX ────────────────────── */}
+        {/* ── 3. FACULTY STANDARDS and CREDENTIALS MATRIX ────────────────────── */}
         <div className="space-y-8 pt-8 border-t border-tone-rule">
           <div className="space-y-2 max-w-2xl">
             <SectionLabel label="Academic Governance" />

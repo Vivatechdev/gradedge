@@ -37,7 +37,7 @@ const SCHOLARS: StudentScholar[] = [
     email: "freedom.sola@cam.ac.uk",
     institution: "University of Cambridge",
     level: "PhD Candidate",
-    fieldOfStudy: "Public Health & Biostatistics",
+    fieldOfStudy: "Public Health and Biostatistics",
     enrolledAt: "Sep 2026",
     activeProjectsCount: 1,
     completedSessions: 3,
@@ -73,7 +73,7 @@ const SCHOLARS: StudentScholar[] = [
     email: "k.umar@imperial.ac.uk",
     institution: "Imperial College London",
     level: "PhD Candidate",
-    fieldOfStudy: "Finance & Corporate Governance",
+    fieldOfStudy: "Finance and Corporate Governance",
     enrolledAt: "Sep 2026",
     activeProjectsCount: 1,
     completedSessions: 4,
@@ -127,7 +127,7 @@ export default function AdminStudentsPage() {
   return (
     <DashboardShell
       role="admin"
-      title="Researchers & Candidates Directory"
+      title="Researchers and Candidates Directory"
       user={{
         name: "Freedom Sola",
         email: "admin@gradedge.com",
@@ -200,7 +200,7 @@ export default function AdminStudentsPage() {
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-[11px] text-stone-500">Russell Group &amp; Global Labs</p>
+              <p className="text-[11px] text-stone-500">Russell Group and Global Labs</p>
             </CardContent>
           </Card>
 
@@ -255,7 +255,7 @@ export default function AdminStudentsPage() {
                 <tr>
                   <th className="py-3 px-4">Candidate Scholar</th>
                   <th className="py-3 px-4">Affiliated Institution</th>
-                  <th className="py-3 px-4">Degree &amp; Field</th>
+                  <th className="py-3 px-4">Degree and Field</th>
                   <th className="py-3 px-4">Enrolled Date</th>
                   <th className="py-3 px-4">Active Projects</th>
                   <th className="py-3 px-4">Status</th>

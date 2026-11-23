@@ -308,7 +308,7 @@ function SettingsContent() {
   return (
     <DashboardShell
       role="student"
-      title="Settings & Privacy"
+      title="Settings and Privacy"
       user={{
         name: student.name,
         email: student.email,
@@ -320,7 +320,7 @@ function SettingsContent() {
         <div className="border-b border-tone-rule pb-4 space-y-1">
           <span className="type-micro text-gold">Researcher Profile</span>
           <h1 className="font-serif text-2xl font-medium text-tone-heading">
-            Account, Security & Privacy
+            Account, Security and Privacy
           </h1>
           <p className="text-xs text-tone-muted leading-relaxed font-sans">
             Manage your academic credentials, scheduling timezone, notification rules, and data governance.
@@ -338,7 +338,7 @@ function SettingsContent() {
               }`}
           >
             <User className="h-3.5 w-3.5" />
-            <span>Profile & Institution</span>
+            <span>Profile and Institution</span>
           </button>
           <button
             type="button"
@@ -349,7 +349,7 @@ function SettingsContent() {
               }`}
           >
             <KeyRound className="h-3.5 w-3.5" />
-            <span>Password & Security</span>
+            <span>Password and Security</span>
           </button>
           <button
             type="button"
@@ -371,7 +371,7 @@ function SettingsContent() {
               }`}
           >
             <Shield className="h-3.5 w-3.5" />
-            <span>Data & Privacy</span>
+            <span>Data and Privacy</span>
           </button>
         </div>
 
@@ -474,12 +474,12 @@ function SettingsContent() {
               </form>
             )}
 
-            {/* TAB 2: SECURITY & PASSWORD */}
+            {/* TAB 2: SECURITY and PASSWORD */}
             {activeTab === "security" && (
               <form onSubmit={handleUpdatePassword} className="bg-white border border-tone-rule rounded-[2px] p-6 space-y-6">
                 <div>
                   <h2 className="font-serif text-lg font-medium text-tone-heading">
-                    Password & Credentials
+                    Password and Credentials
                   </h2>
                   <p className="text-xs text-tone-muted mt-0.5">
                     Update your account password. Choose a strong combination of letters, numbers, and symbols.
@@ -542,7 +542,7 @@ function SettingsContent() {
                   <div className="p-4 flex items-center justify-between">
                     <div>
                       <h3 className="text-xs font-semibold text-tone-heading">
-                        Session & Coaching Reminders
+                        Session and Coaching Reminders
                       </h3>
                       <p className="text-xs text-tone-muted mt-0.5">
                         Receive 24-hour and 1-hour pre-session calendar alerts with video meeting links.
@@ -559,7 +559,7 @@ function SettingsContent() {
                   <div className="p-4 flex items-center justify-between">
                     <div>
                       <h3 className="text-xs font-semibold text-tone-heading">
-                        Mentor Notes & Manuscript Feedback
+                        Mentor Notes and Manuscript Feedback
                       </h3>
                       <p className="text-xs text-tone-muted mt-0.5">
                         Receive email alerts whenever your mentor annotates drafts or posts messages.
@@ -576,7 +576,7 @@ function SettingsContent() {
                   <div className="p-4 flex items-center justify-between">
                     <div>
                       <h3 className="text-xs font-semibold text-tone-heading">
-                        Invoices & Billing Receipts
+                        Invoices and Billing Receipts
                       </h3>
                       <p className="text-xs text-tone-muted mt-0.5">
                         Receive sequential PDF tax invoices upon session or membership payments.
@@ -593,7 +593,7 @@ function SettingsContent() {
                   <div className="p-4 flex items-center justify-between">
                     <div>
                       <h3 className="text-xs font-semibold text-tone-heading">
-                        Academic Methodology & Writing Guides
+                        Academic Methodology and Writing Guides
                       </h3>
                       <p className="text-xs text-tone-muted mt-0.5">
                         Receive quiet, occasional editorial essays, statistical guides, and symposium invitations.
@@ -622,7 +622,7 @@ function SettingsContent() {
               </div>
             )}
 
-            {/* TAB 4: DATA & PRIVACY */}
+            {/* TAB 4: DATA and PRIVACY */}
             {activeTab === "data" && (
               <div className="space-y-6">
                 {/* Download Data Card */}
@@ -662,7 +662,7 @@ function SettingsContent() {
                     </div>
                     <div className="space-y-1">
                       <h2 className="font-serif text-lg font-medium text-error">
-                        Delete Account & Data Retention
+                        Delete Account and Data Retention
                       </h2>
                       <p className="text-xs text-tone-muted leading-relaxed font-sans">
                         Permanently purge your account, drafts, mentor correspondence, and booking associations.
@@ -671,7 +671,7 @@ function SettingsContent() {
                   </div>
 
                   <div className="p-4 bg-error/5 border border-error/20 rounded-[2px] space-y-2 text-xs text-tone-body font-sans">
-                    <span className="font-semibold text-error block">Academic & Legal Consequences:</span>
+                    <span className="font-semibold text-error block">Academic and Legal Consequences:</span>
                     <ul className="list-disc list-inside space-y-1 text-tone-muted">
                       <li>Active scoping projects and ongoing milestone reviews will be immediately terminated.</li>
                       <li>Upcoming booked consultations will be cancelled and released to the open pool.</li>
@@ -743,7 +743,7 @@ function SettingsContent() {
               onClick={handleDeleteAccount}
               className="text-xs text-error border-error/40 hover:bg-error/5 hover:text-error hover:border-error"
             >
-              {deletingAccount ? "Purging data..." : "Confirm & Delete Account"}
+              {deletingAccount ? "Purging data..." : "Confirm and Delete Account"}
             </Button>
           </div>
         </div>

@@ -36,7 +36,7 @@ export default async function CheckoutSuccessPage({
           </p>
         </div>
 
-        {/* Invoice & Reference Pill */}
+        {/* Invoice and Reference Pill */}
         <div className="bg-white p-6 border border-tone-rule rounded-[2px] text-left space-y-3 shadow-xs">
           <div className="flex items-center justify-between border-b border-tone-rule pb-3">
             <div className="flex items-center gap-2">

@@ -6,7 +6,7 @@ import { getServicesByCategory } from "@/lib/data/services-content";
 export const revalidate = 3600;
 
 export const metadata: Metadata = buildMetadata({
-  title: "Academic Coaching & Skills Training Services — GradEdge",
+  title: "Academic Coaching and Skills Training Services — GradEdge",
   description:
     "Simulated oral defense (defense) coaching, research productivity sprints, 1-on-1 software intensives, and academic career job market preparation.",
   path: "/services/coaching-and-training",
@@ -36,7 +36,7 @@ export default function CoachingAndTrainingCategoryPage() {
   return (
     <ServiceCategoryView
       categorySlug="coaching-and-training"
-      categoryName="Coaching & Training"
+      categoryName="Coaching and Training"
       headerImage="/images/services/stage-start.jpg"
       headerImageAlt="Doctoral defense presentation room, oral examination notes, and one-on-one academic coaching"
       headline="Practical skills, defense confidence, and research momentum."

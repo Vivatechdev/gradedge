@@ -45,7 +45,7 @@ export default function AdminBlogManagementPage() {
   return (
     <DashboardShell
       role="admin"
-      title="Content & Blog Publishing"
+      title="Content and Blog Publishing"
       user={{
         name: "Freedom Sola",
         email: "freedom.sola@gradedge.internal",
@@ -59,7 +59,7 @@ export default function AdminBlogManagementPage() {
               Publishing Desk
             </span>
             <h2 className="text-2xl font-serif text-tone-heading mt-1">
-              New Article & Imagery Metadata
+              New Article and Imagery Metadata
             </h2>
             <p className="text-xs text-tone-muted mt-1">
               All GradEdge articles require editorial photography with mandatory screen-reader alt descriptions.
@@ -163,7 +163,7 @@ export default function AdminBlogManagementPage() {
             <Card background="white" topRuleGold>
               <CardHeader>
                 <CardTitle className="text-base font-serif text-tone-heading">
-                  Featured Image & Screen-Reader Alt
+                  Featured Image and Screen-Reader Alt
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-4 text-xs">

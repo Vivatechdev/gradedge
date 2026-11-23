@@ -40,7 +40,7 @@ const MENTORS_DATA: FacultyMentor[] = [
     name: "Dr. Eleanor Vance",
     title: "Associate Professor of Quantitative Methodology",
     institution: "University of Cambridge",
-    specialization: "Propensity Score Matching, Stata & R, Panel Econometrics",
+    specialization: "Propensity Score Matching, Stata and R, Panel Econometrics",
     activeMentees: 4,
     maxCapacity: 4,
     averageRating: 4.96,
@@ -52,7 +52,7 @@ const MENTORS_DATA: FacultyMentor[] = [
   {
     id: "f-102",
     name: "Prof. Arthur Pendelton",
-    title: "Chair of Econometric Theory & Public Policy",
+    title: "Chair of Econometric Theory and Public Policy",
     institution: "London School of Economics",
     specialization: "Dynamic Panel GMM, Instrumental Variables, Macroeconomics",
     activeMentees: 3,
@@ -80,7 +80,7 @@ const MENTORS_DATA: FacultyMentor[] = [
   {
     id: "f-104",
     name: "Dr. Kwesi Mensah",
-    title: "Reader in Biostatistics & Epidemiology",
+    title: "Reader in Biostatistics and Epidemiology",
     institution: "Imperial College London",
     specialization: "Survival Analysis, Cox Proportional Hazards, Clinical Trials",
     activeMentees: 4,
@@ -132,7 +132,7 @@ export default function AdminMentorsPage() {
         <div className="border-b border-tone-rule pb-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div>
             <h2 className="font-serif text-2xl font-medium text-tone-heading">
-              Faculty Roster &amp; Honorarium Management
+              Faculty Roster and Honorarium Management
             </h2>
             <p className="text-xs text-tone-muted mt-1">
               Active PhD advisors, caseload distribution, turnaround metrics, and batch honorarium disbursements.
@@ -166,7 +166,7 @@ export default function AdminMentorsPage() {
             </CardHeader>
             <CardContent>
               <span className="text-[11px] text-stone-500 font-sans">
-                Oxford, Cambridge, LSE &amp; Imperial faculty
+                Oxford, Cambridge, LSE and Imperial faculty
               </span>
             </CardContent>
           </Card>

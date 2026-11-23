@@ -29,7 +29,7 @@ export const SELECTOR_QUESTIONS: SelectorQuestion[] = [
     options: [
       {
         id: "proposal",
-        label: "Topic & Proposal Stage",
+        label: "Topic and Proposal Stage",
         description: "Formulating research questions, writing the proposal, or preparing for proposal defense.",
       },
       {
@@ -39,22 +39,22 @@ export const SELECTOR_QUESTIONS: SelectorQuestion[] = [
       },
       {
         id: "methodology",
-        label: "Research Design & Ethics",
+        label: "Research Design and Ethics",
         description: "Designing sampling strategies, drafting instruments, or submitting to IRB/ethics.",
       },
       {
         id: "analysis",
-        label: "Data Collection & Analysis",
+        label: "Data Collection and Analysis",
         description: "Working with statistical software (SPSS, R) or qualitative transcripts (NVivo).",
       },
       {
         id: "writing",
-        label: "Chapter Writing & Revisions",
+        label: "Chapter Writing and Revisions",
         description: "Drafting dissertation chapters, revising based on supervisor notes, or polishing prose.",
       },
       {
         id: "defense",
-        label: "Oral Defense & Examination",
+        label: "Oral Defense and Examination",
         description: "Preparing slides, practicing oral defense questioning, or converting thesis to journal papers.",
       },
     ],
@@ -77,17 +77,17 @@ export const SELECTOR_QUESTIONS: SelectorQuestion[] = [
       },
       {
         id: "writing_clarity",
-        label: "Academic Writing Register & Structure",
+        label: "Academic Writing Register and Structure",
         description: "Arguments feel descriptive, unidiomatic, or readers find your text dense.",
       },
       {
         id: "timeline_burnout",
-        label: "Procrastination & Loss of Momentum",
+        label: "Procrastination and Loss of Momentum",
         description: "Struggling with self-directed schedules, perfectionist paralysis, or isolation.",
       },
       {
         id: "integrity_overlap",
-        label: "Similarity Report & Integrity Flags",
+        label: "Similarity Report and Integrity Flags",
         description: "Need to interpret similarity strings and paraphrase source material ethically.",
       },
     ],

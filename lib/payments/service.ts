@@ -402,7 +402,7 @@ export async function processPaymentSuccess({
     legalName: (settingsMap.get("business_legal_name") as string) || "GradEdge Academic Solutions Ltd",
     address:
       (settingsMap.get("business_address") as string) ||
-      "Level 4, Academic Innovation Hub, Victoria Island, Lagos & Oxford Desk",
+      "Level 4, Academic Innovation Hub, Victoria Island, Lagos and Oxford Desk",
     taxId: (settingsMap.get("business_tax_id") as string) || "TIN-GE-2026-9481",
     financeEmail: (settingsMap.get("business_finance_email") as string) || "finance@gradedge.com",
     phone: (settingsMap.get("business_phone") as string) || "+234 1 800 GRADEDGE",
@@ -480,7 +480,7 @@ export async function processPaymentSuccess({
     await supabase.from("notifications").insert({
       user_id: payment.user_id,
       type: "payment_succeeded",
-      title: "Payment Confirmed & Settled",
+      title: "Payment Confirmed and Settled",
       body: `Your payment of ${formatMoney(payment.amount_minor, payment.currency)} was authorized. Official invoice ${invoiceNumber} is available in your billing records.`,
       link: "/student/billing",
     });

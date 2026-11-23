@@ -16,7 +16,7 @@ export function RedlineDiffVisualizer({ className }: { className?: string }) {
         <div className="flex items-center gap-2">
           <Edit3 className="w-4 h-4 text-gold shrink-0" />
           <span className="type-micro font-semibold text-tone-heading tracking-wider">
-            Redline Editorial Proofroom & Line-Level Audit
+            Redline Editorial Proofroom and Line-Level Audit
           </span>
         </div>
 
@@ -83,7 +83,7 @@ export function RedlineDiffVisualizer({ className }: { className?: string }) {
                   (Smith and Jones 2020)
                 </span>
                 <span className="text-emerald-800 bg-emerald-100/70 px-1 font-medium">
-                  (Smith &amp; Jones, 2020, p. 114)
+                  (Smith and Jones, 2020, p. 114)
                 </span>
                 .{" "}
                 <span className="line-through text-red-700/80 bg-red-100/60 px-1">
@@ -145,7 +145,7 @@ export function RedlineDiffVisualizer({ className }: { className?: string }) {
                 <span className="text-emerald-700 font-mono text-[10px]">Publication-Ready</span>
               </div>
               <p className="text-tone-body leading-relaxed">
-                &ldquo;While scholarly inquiry has extensively investigated instructional retention factors (e.g., Anderson &amp; Thorne, 2021; Williams, 2023), the affective mechanisms mediated by administrative leadership remain under-theorized. Addressing this empirical void, the present investigation employs a convergent mixed-methods design integrating semi-structured phenomenology with structural equation modeling.&rdquo;
+                &ldquo;While scholarly inquiry has extensively investigated instructional retention factors (e.g., Anderson and Thorne, 2021; Williams, 2023), the affective mechanisms mediated by administrative leadership remain under-theorized. Addressing this empirical void, the present investigation employs a convergent mixed-methods design integrating semi-structured phenomenology with structural equation modeling.&rdquo;
               </p>
               <div className="pt-2 font-sans text-[11px] text-emerald-900 space-y-1">
                 <span className="font-semibold block">&check; Formal academic register and domain-specific lexicon</span>
@@ -169,19 +169,19 @@ export function RedlineDiffVisualizer({ className }: { className?: string }) {
                 </p>
               </div>
               <div className="p-4 bg-paper border border-tone-rule rounded-[2px] space-y-2">
-                <span className="font-semibold text-navy block text-sm">Chicago 17th (Notes &amp; Bib)</span>
+                <span className="font-semibold text-navy block text-sm">Chicago 17th (Notes and Bib)</span>
                 <p className="text-tone-muted text-[11px] leading-relaxed">
                   Footnotes and endnotes formatting, subsequent shortened citations (ibid replacement), and bibliographic indentation.
                 </p>
               </div>
               <div className="p-4 bg-paper border border-tone-rule rounded-[2px] space-y-2">
-                <span className="font-semibold text-navy block text-sm">IEEE &amp; Vancouver</span>
+                <span className="font-semibold text-navy block text-sm">IEEE and Vancouver</span>
                 <p className="text-tone-muted text-[11px] leading-relaxed">
                   Numerical bracketed citation ordering, mathematical equations formatting, and biomedical journal conformity.
                 </p>
               </div>
               <div className="p-4 bg-paper border border-tone-rule rounded-[2px] space-y-2">
-                <span className="font-semibold text-navy block text-sm">Harvard &amp; Oxford</span>
+                <span className="font-semibold text-navy block text-sm">Harvard and Oxford</span>
                 <p className="text-tone-muted text-[11px] leading-relaxed">
                   Institutional author-date conventions, UK vs. US orthography and spelling, and Oxford comma consistency.
                 </p>

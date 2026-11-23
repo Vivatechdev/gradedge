@@ -16,14 +16,14 @@ export const HOME_SERVICES: HomeServiceItem[] = [
   // Starting out
   {
     slug: "topic-proposal-development",
-    title: "Topic & Proposal Development",
+    title: "Topic and Proposal Development",
     stage: "Starting out",
     stageId: "starting-out",
     description: "Narrow your focus, frame your research questions, and structure a defensible proposal.",
   },
   {
     slug: "research-design-ethics",
-    title: "Research Design & Ethics Support",
+    title: "Research Design and Ethics Support",
     stage: "Starting out",
     stageId: "starting-out",
     description: "Choose methodology, plan sampling instruments, and prepare institutional ethics applications.",
@@ -67,21 +67,21 @@ export const HOME_SERVICES: HomeServiceItem[] = [
   // Writing it up
   {
     slug: "dissertation-thesis-mentoring",
-    title: "Dissertation & Thesis Mentoring",
+    title: "Dissertation and Thesis Mentoring",
     stage: "Writing it up",
     stageId: "writing-up",
     description: "Chapter-by-chapter developmental feedback on structure, argument clarity, and academic register.",
   },
   {
     slug: "academic-editing-proofreading",
-    title: "Academic Editing & Proofreading",
+    title: "Academic Editing and Proofreading",
     stage: "Writing it up",
     stageId: "writing-up",
     description: "Line-level editorial refinement to elevate scholarly clarity, style, and argumentative coherence.",
   },
   {
     slug: "referencing-formatting-compliance",
-    title: "Referencing & Formatting Compliance",
+    title: "Referencing and Formatting Compliance",
     stage: "Writing it up",
     stageId: "writing-up",
     description: "Precision alignment with APA, Chicago, Harvard, IEEE, and university manuscript guidelines.",
@@ -124,7 +124,7 @@ export const HOME_SERVICES: HomeServiceItem[] = [
   },
   {
     slug: "grant-scholarship-coaching",
-    title: "Grant & Scholarship Coaching",
+    title: "Grant and Scholarship Coaching",
     stage: "Getting it out",
     stageId: "getting-out",
     description: "Structure competitive research grant proposals and fellowship applications.",
@@ -132,7 +132,7 @@ export const HOME_SERVICES: HomeServiceItem[] = [
   // Skills and training
   {
     slug: "defense-presentation-coaching",
-    title: "Defense & Oral Defense Coaching",
+    title: "Defense and Oral Defense Coaching",
     stage: "Skills and training",
     stageId: "skills-training",
     description: "Prepare for your oral examination with mock questions, defense slides, and examiner handling.",
@@ -153,7 +153,7 @@ export const HOME_SERVICES: HomeServiceItem[] = [
   },
   {
     slug: "academic-career-postdoc-guidance",
-    title: "Academic Career & Postdoc Guidance",
+    title: "Academic Career and Postdoc Guidance",
     stage: "Skills and training",
     stageId: "skills-training",
     description: "Academic CV development, research statements, and postdoctoral job market positioning.",

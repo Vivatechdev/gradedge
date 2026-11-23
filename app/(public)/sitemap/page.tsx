@@ -49,7 +49,7 @@ export default function HumanSitemapPage() {
 
         <div className="pt-8 border-t border-tone-rule space-y-4">
           <h3 className="font-serif text-lg text-tone-heading font-semibold">
-            Legal & Compliance Documents
+            Legal and Compliance Documents
           </h3>
           <ul className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-tone-muted">
             {LEGAL_LINKS.map((item) => (

@@ -149,7 +149,7 @@ export default function StudentFilesPage() {
   return (
     <DashboardShell
       role="student"
-      title="Files & Drafts"
+      title="Files and Drafts"
       user={{
         name: student.name,
         email: student.email,
@@ -159,16 +159,16 @@ export default function StudentFilesPage() {
       <div className="space-y-8">
         {/* Header */}
         <div className="border-b border-tone-rule pb-5 space-y-1">
-          <span className="type-micro text-gold">Manuscript & Empirical Repository</span>
+          <span className="type-micro text-gold">Manuscript and Empirical Repository</span>
           <h1 className="font-serif text-2xl font-medium text-tone-heading">
-            Files, Draft Chapters & Analysis Data
+            Files, Draft Chapters and Analysis Data
           </h1>
           <p className="text-xs text-tone-muted leading-relaxed font-sans">
             Store revision drafts, statistical syntax scripts, and review feedback privately. All downloads use encrypted, signed URLs.
           </p>
         </div>
 
-        {/* UPLOAD PANEL (Drag & Drop + Versioning) */}
+        {/* UPLOAD PANEL (Drag and Drop + Versioning) */}
         <div className="bg-white border border-tone-rule rounded-[2px] p-6 space-y-5 shadow-xs">
           <div className="flex items-center gap-2 border-b border-tone-rule pb-3">
             <UploadCloud className="w-4 h-4 text-gold" />
@@ -279,7 +279,7 @@ export default function StudentFilesPage() {
             {isUploading && (
               <div className="space-y-1 pt-1">
                 <div className="flex justify-between text-[10px] text-tone-muted">
-                  <span>Encrypting & uploading...</span>
+                  <span>Encrypting and uploading...</span>
                   <span>{uploadProgress}%</span>
                 </div>
                 <div className="w-full h-1 bg-paper border border-tone-rule rounded-full overflow-hidden">
@@ -309,7 +309,7 @@ export default function StudentFilesPage() {
         <div className="space-y-6">
           <div className="flex items-center justify-between border-b border-tone-rule pb-2">
             <h2 className="font-serif text-lg font-medium text-tone-heading">
-              Repository Folders & Project Files
+              Repository Folders and Project Files
             </h2>
             <span className="text-xs text-tone-muted">Total Files: {files.length}</span>
           </div>

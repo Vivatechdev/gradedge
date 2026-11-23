@@ -6,7 +6,7 @@ import { getServicesByCategory } from "@/lib/data/services-content";
 export const revalidate = 3600;
 
 export const metadata: Metadata = buildMetadata({
-  title: "Academic Editing & Writing Quality Services — GradEdge",
+  title: "Academic Editing and Writing Quality Services — GradEdge",
   description:
     "Substantive developmental editing, referencing style compliance, and similarity report coaching for graduate researchers and academic authors.",
   path: "/services/editing-and-writing-quality",
@@ -24,7 +24,7 @@ export default function EditingAndWritingQualityCategoryPage() {
     {
       question: "Do you verify citation concordance between text and bibliography?",
       answer:
-        "Yes. Our Referencing & Style Compliance service cross-checks every in-text citation against your bibliography, flags orphan entries, verifies DOIs, and formats citations according to APA 7, Harvard, Chicago, or Vancouver.",
+        "Yes. Our Referencing and Style Compliance service cross-checks every in-text citation against your bibliography, flags orphan entries, verifies DOIs, and formats citations according to APA 7, Harvard, Chicago, or Vancouver.",
     },
     {
       question: "Can you help me lower a high similarity report percentage?",
@@ -36,7 +36,7 @@ export default function EditingAndWritingQualityCategoryPage() {
   return (
     <ServiceCategoryView
       categorySlug="editing-and-writing-quality"
-      categoryName="Editing & Writing Quality"
+      categoryName="Editing and Writing Quality"
       headerImage="/images/services/stage-writing.jpg"
       headerImageAlt="Academic thesis draft with line-level editorial marks, style manual, and citation reference lists"
       headline="Clarity, precision, and scholarly authority in every paragraph."

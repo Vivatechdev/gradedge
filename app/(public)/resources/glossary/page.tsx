@@ -8,7 +8,7 @@ import {
 import { GlossarySearch, type GlossaryTerm } from "@/components/marketing/GlossarySearch";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Research Methods & Dissertation Glossary — Academic Terminology",
+  title: "Research Methods and Dissertation Glossary — Academic Terminology",
   description:
     "Plain-language definitions of common research and methods terms from epistemology to multivariate statistics.",
   path: "/resources/glossary",

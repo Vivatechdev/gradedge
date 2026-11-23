@@ -17,7 +17,7 @@ interface ChapterBlueprint {
 const CHAPTERS: ChapterBlueprint[] = [
   {
     number: "01",
-    title: "Introduction & Research Formulation",
+    title: "Introduction and Research Formulation",
     focus: "Problem statement, significance, research questions, conceptual boundaries",
     bottleneck: "Vague problem statement leading supervisors to question the study's scientific justification.",
     mentorIntervention: "We stress-test research questions against doctoral criteria to ensure narrow, falsifiable scope.",
@@ -30,12 +30,12 @@ const CHAPTERS: ChapterBlueprint[] = [
     focus: "Theoretical framework, thematic synthesis, methodological critique of past studies",
     bottleneck: "Dumping summaries author-by-author without synthesizing the critical gap in knowledge.",
     mentorIntervention: "We structure thematic synthesis matrices so literature directly justifies your empirical study.",
-    deliverable: "Synthesis matrix & coherent thematic chapter structured around your conceptual framework.",
+    deliverable: "Synthesis matrix and coherent thematic chapter structured around your conceptual framework.",
     targetWords: "8,000 – 12,000 words",
   },
   {
     number: "03",
-    title: "Research Design & Methodology",
+    title: "Research Design and Methodology",
     focus: "Epistemological stance, sampling frame, instrument validity, ethical compliance",
     bottleneck: "Methodological misalignment between research questions, sampling strategy, and statistical tests.",
     mentorIntervention: "Complete audit of validity threats, power calculations, and protocol audit trails.",
@@ -44,7 +44,7 @@ const CHAPTERS: ChapterBlueprint[] = [
   },
   {
     number: "04",
-    title: "Empirical Analysis & Findings",
+    title: "Empirical Analysis and Findings",
     focus: "Descriptive statistics, inferential models, qualitative coding, hypothesis testing",
     bottleneck: "Presenting raw software output without scholarly narrative and diagnostic verification.",
     mentorIntervention: "Publication-grade table formatting (APA 7th/Chicago) with rigorous interpretive prose.",
@@ -53,7 +53,7 @@ const CHAPTERS: ChapterBlueprint[] = [
   },
   {
     number: "05",
-    title: "Discussion & Conclusions",
+    title: "Discussion and Conclusions",
     focus: "Contextualization with literature, theoretical contribution, policy implications, limitations",
     bottleneck: "Merely repeating Chapter 4 results without demonstrating theoretical contribution.",
     mentorIntervention: "We coach you on defending broader significance and delineating realistic future research.",
@@ -73,11 +73,11 @@ export function ThesisArchitectureVisualizer({ className }: { className?: string
         <div className="flex items-center gap-2">
           <BookOpen className="w-4 h-4 text-gold shrink-0" />
           <span className="type-micro font-semibold text-tone-heading tracking-wider">
-            Thesis Architecture & Supervisory Milestone Navigator
+            Thesis Architecture and Supervisory Milestone Navigator
           </span>
         </div>
         <span className="text-[11px] text-tone-muted font-mono">
-          Select chapter to inspect supervisory risk & intervention
+          Select chapter to inspect supervisory risk and intervention
         </span>
       </div>
 

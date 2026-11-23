@@ -45,7 +45,7 @@ export async function POST(request: NextRequest) {
     const endTime = new Date(startTime.getTime() + settings.sessionDurationMinutes * 60 * 1000);
     const now = new Date();
 
-    // Check minimum notice & max advance
+    // Check minimum notice and max advance
     const minNoticeTime = new Date(now.getTime() + settings.minNoticeHours * 60 * 60 * 1000);
     const maxAdvanceTime = new Date(now.getTime() + settings.maxAdvanceDays * 24 * 60 * 60 * 1000);
 

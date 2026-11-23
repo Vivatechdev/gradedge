@@ -279,7 +279,7 @@ export function AuthShell({
                 </span>
               </div>
 
-              {/* Card Header: Manuscript Title & Status Tag Cross-fade */}
+              {/* Card Header: Manuscript Title and Status Tag Cross-fade */}
               <div className="flex items-center justify-between border-b border-[#E4DFD5] pb-3 mb-4">
                 <div className="flex items-center gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-gold" aria-hidden="true" />
@@ -329,7 +329,7 @@ export function AuthShell({
                   </div>
                 </div>
 
-                {/* Feedback & Revision Stack (Min-height preserves zero layout shift) */}
+                {/* Feedback and Revision Stack (Min-height preserves zero layout shift) */}
                 <div className="relative min-h-[64px] flex items-center mt-2.5">
                   {/* Mentor Comment Card (Fades in 30-62%) */}
                   <div className="anim-mentor-card absolute inset-x-0 top-0 bg-[#FAF8F4] border-l-2 border-gold border-t border-r border-b border-[#E4DFD5] rounded-r-[3px] p-2.5 shadow-xs">
@@ -366,7 +366,7 @@ export function AuthShell({
                     </span>
                   </div>
                 </div>
-                {/* Progress Track & Animated Fill */}
+                {/* Progress Track and Animated Fill */}
                 <div className="w-full h-1.5 bg-[#E4DFD5] rounded-full overflow-hidden">
                   <div className="anim-progress-fill h-full bg-gold rounded-full" />
                 </div>
@@ -374,7 +374,7 @@ export function AuthShell({
             </div>
           </div>
 
-          {/* 3. Headline & Three Lines */}
+          {/* 3. Headline and Three Lines */}
           <div className="relative z-10 mt-2">
             <h2 className="font-serif text-2xl lg:text-[26px] xl:text-[28px] font-medium leading-tight text-white mb-4">
               A second pair of eyes on your thesis.

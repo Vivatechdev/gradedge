@@ -193,7 +193,7 @@ export async function markAllAsRead(userId: string): Promise<boolean> {
 function escapeHtml(str: string): string {
   if (!str) return "";
   return str
-    .replace(/&/g, "&amp;")
+    .replace(/&/g, "and")
     .replace(/</g, "&lt;")
     .replace(/>/g, "&gt;")
     .replace(/"/g, "&quot;")

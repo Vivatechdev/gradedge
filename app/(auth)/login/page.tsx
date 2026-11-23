@@ -113,7 +113,7 @@ function LoginForm() {
       }
       activeTab="login"
     >
-      {/* Database-Free Preview Mode & Quick Access Banner */}
+      {/* Database-Free Preview Mode and Quick Access Banner */}
       <div className="mb-6 p-4 bg-paper-warm border border-tone-rule rounded-[4px] space-y-3">
         <div className="flex items-center justify-between">
           <span className="type-micro uppercase tracking-wider text-gold font-semibold flex items-center gap-1.5">

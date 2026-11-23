@@ -12,7 +12,7 @@ import {
 export const revalidate = 3600;
 
 export const metadata: Metadata = buildMetadata({
-  title: "Academic Research Resources — Templates, Guides & Glossary",
+  title: "Academic Research Resources — Templates, Guides and Glossary",
   description:
     "Free proposal, chapter outline and defense-slide templates, downloadable methodology guides, and an extensive research methods glossary.",
   path: "/resources",
@@ -21,13 +21,13 @@ export const metadata: Metadata = buildMetadata({
 export default function ResourcesHubPage() {
   const sections = [
     {
-      title: "Proposal & Dissertation Templates",
+      title: "Proposal and Dissertation Templates",
       href: "/resources/templates",
       description:
         "Structured, institutional-ready templates for research proposals, chapter outlines, literature synthesis matrices, and oral defense slide decks.",
     },
     {
-      title: "Research & Methodology Guides",
+      title: "Research and Methodology Guides",
       href: "/resources/guides",
       description:
         "In-depth downloadable PDF manuals on quantitative assumption checking, qualitative coding frameworks, and committee feedback navigation.",

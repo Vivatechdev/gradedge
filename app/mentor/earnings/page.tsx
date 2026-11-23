@@ -43,7 +43,7 @@ const TRANSACTIONS: PayoutTransaction[] = [
     id: "tx-401",
     date: "Nov 19, 2026",
     candidateName: "Freedom Sola",
-    milestoneTitle: "Chapter 3: Methodology Redline & Caliper Matching Diagnostics",
+    milestoneTitle: "Chapter 3: Methodology Redline and Caliper Matching Diagnostics",
     amount: 450,
     currency: "GBP",
     status: "processing",
@@ -63,7 +63,7 @@ const TRANSACTIONS: PayoutTransaction[] = [
     id: "tx-403",
     date: "Nov 08, 2026",
     candidateName: "Chidi Okafor",
-    milestoneTitle: "Chapter 2: Conceptual Framework Review & Thematic Matrix",
+    milestoneTitle: "Chapter 2: Conceptual Framework Review and Thematic Matrix",
     amount: 400,
     currency: "GBP",
     status: "cleared",
@@ -73,7 +73,7 @@ const TRANSACTIONS: PayoutTransaction[] = [
     id: "tx-404",
     date: "Nov 03, 2026",
     candidateName: "Khadija Umar",
-    milestoneTitle: "Research Proposal Addendum & Empirical Scope Audit",
+    milestoneTitle: "Research Proposal Addendum and Empirical Scope Audit",
     amount: 250,
     currency: "GBP",
     status: "cleared",
@@ -83,7 +83,7 @@ const TRANSACTIONS: PayoutTransaction[] = [
     id: "tx-405",
     date: "Oct 28, 2026",
     candidateName: "Freedom Sola",
-    milestoneTitle: "Chapter 1: Problem Statement & Epidemiological Hypotheses",
+    milestoneTitle: "Chapter 1: Problem Statement and Epidemiological Hypotheses",
     amount: 350,
     currency: "GBP",
     status: "cleared",
@@ -117,7 +117,7 @@ export default function MentorEarningsPage() {
   return (
     <DashboardShell
       role="mentor"
-      title="Honorarium & Payouts"
+      title="Honorarium and Payouts"
       user={{
         id: "mentor-101",
         name: "Dr. Eleanor Vance",
@@ -130,7 +130,7 @@ export default function MentorEarningsPage() {
         <div className="border-b border-tone-rule pb-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div>
             <h2 className="font-serif text-2xl font-medium text-tone-heading">
-              Faculty Honorarium &amp; Payouts Ledger
+              Faculty Honorarium and Payouts Ledger
             </h2>
             <p className="text-xs text-tone-muted mt-1">
               Transparent, milestone-based compensation for doctoral mentoring, manuscript redlining, and oral defense coaching.
@@ -187,7 +187,7 @@ export default function MentorEarningsPage() {
           <Card className="bg-white border-tone-rule">
             <CardHeader className="pb-1">
               <span className="type-micro uppercase text-tone-muted tracking-wider">
-                Cleared &amp; Disbursed
+                Cleared and Disbursed
               </span>
               <div className="flex items-center justify-between pt-1">
                 <span className="font-serif text-3xl font-bold text-emerald-700">
@@ -244,7 +244,7 @@ export default function MentorEarningsPage() {
             <table className="w-full min-w-[600px] text-xs font-sans text-left">
               <thead className="bg-paper border-b border-tone-rule text-stone-500 uppercase tracking-wide text-[10px]">
                 <tr>
-                  <th className="py-3 px-4 font-semibold">Date &amp; Ref</th>
+                  <th className="py-3 px-4 font-semibold">Date and Ref</th>
                   <th className="py-3 px-4 font-semibold">Doctoral Candidate</th>
                   <th className="py-3 px-4 font-semibold">Milestone / Scope</th>
                   <th className="py-3 px-4 font-semibold text-right">Amount ({selectedCurrency})</th>
@@ -285,7 +285,7 @@ export default function MentorEarningsPage() {
           </CardContent>
         </Card>
 
-        {/* Bank & Tax Profile */}
+        {/* Bank and Tax Profile */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <Card className="bg-paper border-tone-rule">
             <CardContent className="p-4 space-y-2 text-xs font-sans">
@@ -304,7 +304,7 @@ export default function MentorEarningsPage() {
           <Card className="bg-paper border-tone-rule">
             <CardContent className="p-4 space-y-2 text-xs font-sans">
               <span className="font-serif font-semibold text-tone-heading block">
-                Tax &amp; Compliance Withholding
+                Tax and Compliance Withholding
               </span>
               <p className="text-stone-600">
                 Classification: <strong className="text-stone-800">Independent Academic Consultant (HMRC Self-Employed)</strong>

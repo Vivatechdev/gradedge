@@ -31,7 +31,7 @@ interface ChapterBurndown {
 const CHAPTERS: ChapterBurndown[] = [
   {
     id: "ch-1",
-    name: "Chapter 1: Problem Statement & Epidemiological Hypotheses",
+    name: "Chapter 1: Problem Statement and Epidemiological Hypotheses",
     targetWords: 10000,
     currentWords: 10250,
     status: "completed",
@@ -40,7 +40,7 @@ const CHAPTERS: ChapterBurndown[] = [
   },
   {
     id: "ch-2",
-    name: "Chapter 2: Literature Review & Conceptual Synthesis",
+    name: "Chapter 2: Literature Review and Conceptual Synthesis",
     targetWords: 18000,
     currentWords: 18450,
     status: "completed",
@@ -49,7 +49,7 @@ const CHAPTERS: ChapterBurndown[] = [
   },
   {
     id: "ch-3",
-    name: "Chapter 3: Methodology & Propensity Score Protocol",
+    name: "Chapter 3: Methodology and Propensity Score Protocol",
     targetWords: 15000,
     currentWords: 14320,
     status: "in_review",
@@ -57,14 +57,14 @@ const CHAPTERS: ChapterBurndown[] = [
   },
   {
     id: "ch-4",
-    name: "Chapter 4: Empirical Results & Covariate Balance Analysis",
+    name: "Chapter 4: Empirical Results and Covariate Balance Analysis",
     targetWords: 22000,
     currentWords: 11180,
     status: "drafting",
   },
   {
     id: "ch-5",
-    name: "Chapter 5: Discussion, Limitations & Policy Implications",
+    name: "Chapter 5: Discussion, Limitations and Policy Implications",
     targetWords: 15000,
     currentWords: 0,
     status: "planned",
@@ -79,13 +79,13 @@ export default function StudentAnalyticsPage() {
   const overallPercentage = Math.round((totalWrittenWords / totalTargetWords) * 100);
 
   return (
-    <DashboardShell role="student" title="Writing Velocity & Burndown" user={student}>
+    <DashboardShell role="student" title="Writing Velocity and Burndown" user={student}>
       <div className="space-y-6">
         {/* Header */}
         <div className="border-b border-tone-rule pb-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div>
             <h2 className="font-serif text-2xl font-medium text-tone-heading">
-              Dissertation Burndown &amp; Writing Velocity
+              Dissertation Burndown and Writing Velocity
             </h2>
             <p className="text-xs text-tone-muted mt-1">
               Live word count metrics, milestone trajectory, and estimated oral defense timeline.

@@ -135,7 +135,7 @@ async function runSeed() {
       description: "End-to-end milestone mentoring from methodology through final defense preparation.",
       price_minor: 185000,
       currency: "USD",
-      includes: ["All dissertation chapters reviewed", "Bi-weekly video consultations", "Methodology and data audit", "Mock viva/defense examination"],
+      includes: ["All dissertation chapters reviewed", "Bi-weekly video consultations", "Methodology and data audit", "Mock defense examination"],
     },
     // Quantitative packages
     {
@@ -335,7 +335,7 @@ async function runSeed() {
     { slug: "statistical-analysis", name: "Statistical Analysis", description: "Quantitative techniques, software syntax tutorials, and assumption diagnostics.", sort_order: 2 },
     { slug: "literature-reviews", name: "Literature Reviews", description: "Systematic review protocols, theoretical gap identification, and synthesis techniques.", sort_order: 3 },
     { slug: "academic-writing-editing", name: "Academic Writing & Editing", description: "Clarity, coherence, scholarly voice, and developmental chapter structuring.", sort_order: 4 },
-    { slug: "defense-preparation", name: "Defense Preparation", description: "Viva voce strategies, committee objection handling, and presentation slides.", sort_order: 5 },
+    { slug: "defense-preparation", name: "Defense Preparation", description: "Oral defense strategies, committee objection handling, and presentation slides.", sort_order: 5 },
     { slug: "ethics-research-integrity", name: "Ethics & Research Integrity", description: "Institutional Review Board (IRB) protocols, consent mechanics, and research ethics.", sort_order: 6 },
     { slug: "publishing-peer-reviewed", name: "Publishing in Peer-Reviewed Journals", description: "Manuscript conversion, journal selection, and addressing reviewer comments.", sort_order: 7 },
     { slug: "academic-productivity", name: "Academic Productivity", description: "Thesis chapter sprint planning, avoiding burnout, and supervisor management.", sort_order: 8 },

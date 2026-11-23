@@ -28,7 +28,7 @@ export default function LegalAcademicIntegrityPage() {
 
       <div className="site-container py-12 md:py-16 max-w-3xl prose prose-sm text-tone-body leading-relaxed space-y-8">
         <section className="space-y-3">
-          <h2 className="type-h3 text-tone-heading">1. Core Mission & Definitions</h2>
+          <h2 className="type-h3 text-tone-heading">1. Core Mission and Definitions</h2>
           <p>
             GradEdge Academic Solutions is an academic mentoring and developmental feedback service. Our function is to assist researchers in building scholarly capabilities, mastering empirical methodologies, and refining scholarly arguments. In this policy, &ldquo;Coaching&rdquo; and &ldquo;Mentoring&rdquo; denote critical, formative commentary, methodological auditing, and structural questioning. These terms expressly exclude ghostwriting, co-authorship, or text generation on behalf of the client.
           </p>

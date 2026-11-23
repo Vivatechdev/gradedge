@@ -29,21 +29,21 @@ export async function GET() {
           brief: "Comprehensive mixed-methods dissertation investigating macroeconomic governance reforms.",
           status: "active",
           due_date: new Date(Date.now() + 86400000 * 45).toISOString(),
-          services: { title: "Dissertation Mentoring & Advisory" },
+          services: { title: "Dissertation Mentoring and Advisory" },
           mentors: { full_name: "Dr. Eleanor Vance" },
           milestones: [
-            { id: "m-1", title: "Chapter 1: Problem Statement & Research Hypotheses", status: "done", sort_order: 1 },
+            { id: "m-1", title: "Chapter 1: Problem Statement and Research Hypotheses", status: "done", sort_order: 1 },
             { id: "m-2", title: "Chapter 2: Critical Literature Synthesis Matrix", status: "done", sort_order: 2 },
-            { id: "m-3", title: "Chapter 3: Methodology & Sampling Strategy", status: "in_progress", sort_order: 3 },
+            { id: "m-3", title: "Chapter 3: Methodology and Sampling Strategy", status: "in_progress", sort_order: 3 },
             { id: "m-4", title: "Chapter 4: Statistical Econometric Estimation", status: "pending", sort_order: 4 },
-            { id: "m-5", title: "Chapter 5: Discussion & Oral Defense Preparation", status: "pending", sort_order: 5 },
+            { id: "m-5", title: "Chapter 5: Discussion and Oral Defense Preparation", status: "pending", sort_order: 5 },
           ],
         },
         milestoneProgress: {
           total: 5,
           completed: 2,
           nextDue: new Date(Date.now() + 86400000 * 7).toISOString(),
-          nextTitle: "Chapter 3: Methodology & Sampling Strategy",
+          nextTitle: "Chapter 3: Methodology and Sampling Strategy",
         },
         unreadMessages: 1,
         unreadNotifications: 2,
@@ -107,7 +107,7 @@ export async function GET() {
       }
     }
 
-    // 4. Fetch unread counts (messages, notifications & pending invoices)
+    // 4. Fetch unread counts (messages, notifications and pending invoices)
     const { data: threads } = await supabase
       .from("message_threads")
       .select("id, messages(id, sender_id, read_at)")

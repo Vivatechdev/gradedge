@@ -5,32 +5,33 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { DashboardShell } from "@/components/layout/dashboard-shell";
 import { type DaySlots, type TimeSlot } from "@/lib/booking/availability";
+import { Clock } from "lucide-react";
 
 const PAID_SERVICES = [
   {
     id: "serv-tutoring",
-    name: "One-on-One Research & Methodology Tutoring",
+    name: "One-on-One Research and Methodology Tutoring",
     duration: "60 minutes",
     fee: "$120 / session",
     desc: "Intensive methodological consultation with an assigned discipline specialist.",
   },
   {
     id: "serv-data",
-    name: "Quantitative & Statistical Modeling Review",
+    name: "Quantitative and Statistical Modeling Review",
     duration: "60 minutes",
     fee: "$160 / session",
     desc: "Syntax audit, regression diagnostics, or structural equation model coaching.",
   },
   {
     id: "serv-editing",
-    name: "Developmental Editing & Chapter Critique",
+    name: "Developmental Editing and Chapter Critique",
     duration: "60 minutes",
     fee: "$140 / session",
     desc: "Line-by-line structural, rhetorical, and argument coherence review.",
   },
   {
     id: "serv-defense",
-    name: "Mock Defense Presentation & defense Coaching",
+    name: "Mock Defense Presentation and defense Coaching",
     duration: "60 minutes",
     fee: "$180 / session",
     desc: "Simulated committee questioning, slide review, and defense strategy.",
@@ -155,7 +156,7 @@ export default function BookPaidSessionPage() {
         {reservation ? (
           <div className="bg-white border border-[#E4DFD5] rounded-[4px] p-8 text-center space-y-5 shadow-xs">
             <div className="w-12 h-12 bg-gold/15 text-gold border border-gold/30 rounded-full flex items-center justify-center mx-auto text-xl font-bold">
-              &clock;
+              <Clock className="w-6 h-6" />
             </div>
 
             <div className="space-y-1.5">
@@ -301,7 +302,7 @@ export default function BookPaidSessionPage() {
             {/* Notes */}
             <div className="space-y-1.5 text-left pt-2 border-t border-[#E4DFD5]">
               <label htmlFor="notes" className="text-xs font-semibold text-tone-heading block">
-                Session Focus & Goals (Optional)
+                Session Focus and Goals (Optional)
               </label>
               <textarea
                 id="notes"

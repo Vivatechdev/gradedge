@@ -18,37 +18,37 @@ const VIVA_SCENARIOS: VivaScenario[] = [
     trapQuestion: "You used purposive sampling for your qualitative cohort. Why should the academic committee trust your findings given this lack of statistical generalizability?",
     examinerHiddenIntent: "Testing whether you confuse quantitative statistical generalizability with qualitative theoretical transferability.",
     scholarResponseFramework: [
-      "1. Clarify Epistemology: Reaffirm that qualitative inquiry aims for analytical and theoretical transferability (Lincoln & Guba, 1985), not population generalizability.",
+      "1. Clarify Epistemology: Reaffirm that qualitative inquiry aims for analytical and theoretical transferability (Lincoln and Guba, 1985), not population generalizability.",
       "2. Defend Purposive Criteria: State the exact inclusion criteria that ensured information-rich cases (Patton, 2015).",
       "3. Demonstrate Data Saturation: Reference the audit trail confirming code saturation was achieved by Interview 18.",
     ],
-    slidePresentationTip: "Keep a dedicated 'Methodological Rigor & Trustworthiness' backup slide with Lincoln & Guba's four-dimension credibility matrix ready.",
+    slidePresentationTip: "Keep a dedicated 'Methodological Rigor and Trustworthiness' backup slide with Lincoln and Guba's four-dimension credibility matrix ready.",
   },
   {
     examinerRole: "Internal Examiner (Theoretical Contribution)",
-    trapQuestion: "Your statistical findings partially contradict Smith & Jones (2021). Does this invalidate your theoretical model?",
+    trapQuestion: "Your statistical findings partially contradict Smith and Jones (2021). Does this invalidate your theoretical model?",
     examinerHiddenIntent: "Probing whether you panic and concede, or whether you can articulate contextual boundary conditions with scholarly poise.",
     scholarResponseFramework: [
       "1. Welcome Discrepancy: Frame the divergence not as a failure, but as an empirical discovery of boundary conditions.",
-      "2. Contrast Contexts: Highlight that Smith & Jones sampled public-sector employees in Western Europe, while your investigation evaluated emerging-market private institutions.",
+      "2. Contrast Contexts: Highlight that Smith and Jones sampled public-sector employees in Western Europe, while your investigation evaluated emerging-market private institutions.",
       "3. Articulate Contribution: Explain how your study refines the original theory to account for institutional variance.",
     ],
-    slidePresentationTip: "Show a side-by-side contextual comparison table contrasting your study's sample parameters against Smith & Jones.",
+    slidePresentationTip: "Show a side-by-side contextual comparison table contrasting your study's sample parameters against Smith and Jones.",
   },
   {
-    examinerRole: "Committee Chair (Practical & Policy Impact)",
+    examinerRole: "Committee Chair (Practical and Policy Impact)",
     trapQuestion: "If you had to advise the Ministry or an executive board tomorrow based solely on your Chapter 5 conclusions, what is the single policy change you would recommend?",
     examinerHiddenIntent: "Testing your ability to synthesize 80,000 words into an executive, high-impact translation without academic rambling.",
     scholarResponseFramework: [
       "1. Direct Synthesis: Deliver one precise, evidence-backed institutional intervention in 30 seconds.",
-      "2. Cost & Feasibility: Acknowledge resource constraints and phased implementation.",
+      "2. Cost and Feasibility: Acknowledge resource constraints and phased implementation.",
       "3. Scholarly Humility: Delineate what the study can authoritatively prescribe versus what warrants further longitudinal inquiry.",
     ],
     slidePresentationTip: "Conclude your presentation deck with a crisp 'Translational Policy Roadmap' diagram connecting findings to implementation.",
   },
 ];
 
-export function VivaDefenseVisualizer({ className }: { className?: string }) {
+export function OralDefenseVisualizer({ className }: { className?: string }) {
   const [selectedIdx, setSelectedIdx] = useState(0);
   const scenario = VIVA_SCENARIOS[selectedIdx];
 
@@ -59,11 +59,11 @@ export function VivaDefenseVisualizer({ className }: { className?: string }) {
         <div className="flex items-center gap-2">
           <Users className="w-4 h-4 text-gold shrink-0" />
           <span className="type-micro font-semibold text-tone-heading tracking-wider">
-            Oral Defense & Examination Chamber
+            Oral Defense and Examination Chamber
           </span>
         </div>
         <span className="text-[11px] text-tone-muted font-mono">
-          Doctoral &amp; Masters Committee Interrogation Scenarios
+          Doctoral and Masters Committee Interrogation Scenarios
         </span>
       </div>
 
@@ -105,7 +105,7 @@ export function VivaDefenseVisualizer({ className }: { className?: string }) {
           })}
         </div>
 
-        {/* Right: Defense Strategy & Response Architecture (7 Cols) */}
+        {/* Right: Defense Strategy and Response Architecture (7 Cols) */}
         <div className="lg:col-span-7 p-6 sm:p-8 space-y-6 bg-white">
           <div className="space-y-2 border-b border-tone-rule pb-4">
             <span className="type-micro text-gold font-semibold">

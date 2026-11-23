@@ -236,7 +236,7 @@ export default function RegisterPage() {
           )}
         </div>
 
-        {/* Study Level & Field of Study */}
+        {/* Study Level and Field of Study */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-1">
           <div className="space-y-1.5">
             <label
@@ -294,7 +294,7 @@ export default function RegisterPage() {
           />
         </div>
 
-        {/* Checkbox 1: Terms & Academic Integrity Policy (Required) */}
+        {/* Checkbox 1: Terms and Academic Integrity Policy (Required) */}
         <div className="pt-2">
           <label className="flex items-start gap-3 cursor-pointer select-none">
             <input
@@ -326,7 +326,7 @@ export default function RegisterPage() {
           </label>
         </div>
 
-        {/* Checkbox 2: Marketing Opt-in (Separate & Unchecked) */}
+        {/* Checkbox 2: Marketing Opt-in (Separate and Unchecked) */}
         <div>
           <label className="flex items-start gap-3 cursor-pointer select-none">
             <input

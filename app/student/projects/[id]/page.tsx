@@ -182,7 +182,7 @@ export default function ProjectDetailPage({
             <div className="md:col-span-2 space-y-6">
               <div className="bg-white border border-tone-rule rounded-[2px] p-6 space-y-3">
                 <h3 className="font-serif text-base font-semibold text-tone-heading">
-                  Research Brief & Scope
+                  Research Brief and Scope
                 </h3>
                 <p className="text-xs text-tone-muted leading-relaxed">
                   {project?.brief || "No detailed brief provided for this project."}
@@ -191,7 +191,7 @@ export default function ProjectDetailPage({
 
               <div className="bg-white border border-tone-rule rounded-[2px] p-6 space-y-3">
                 <h3 className="font-serif text-base font-semibold text-tone-heading">
-                  Pedagogic Framework & Authorship Guarantee
+                  Pedagogic Framework and Authorship Guarantee
                 </h3>
                 <p className="text-xs text-tone-muted leading-relaxed">
                   Every critique, syntax audit, and marginal annotation provided under this project is developmental. You maintain 100% intellectual property, research questions, and manuscript authorship.
@@ -233,7 +233,7 @@ export default function ProjectDetailPage({
             <div className="border-b border-tone-rule pb-3 flex items-center justify-between">
               <div>
                 <h3 className="font-serif text-base font-semibold text-tone-heading">
-                  Chapter & Research Milestones
+                  Chapter and Research Milestones
                 </h3>
                 <p className="text-xs text-tone-muted">
                   Milestones require faculty mentor verification before completion. You can record your drafting notes below.
@@ -345,7 +345,7 @@ export default function ProjectDetailPage({
           <div className="bg-white border border-tone-rule rounded-[2px] p-6 space-y-4 shadow-xs">
             <div className="flex items-center justify-between border-b border-tone-rule pb-3">
               <h3 className="font-serif text-base font-semibold text-tone-heading">
-                Manuscript & Data Files
+                Manuscript and Data Files
               </h3>
               <Button variant="accent" size="sm" href="/student/files">
                 Upload New Draft
@@ -453,7 +453,7 @@ export default function ProjectDetailPage({
           <div className="bg-white border border-tone-rule rounded-[2px] p-6 space-y-4 shadow-xs">
             <div className="border-b border-tone-rule pb-3">
               <h3 className="font-serif text-base font-semibold text-tone-heading">
-                Project Milestone Invoices & Payments
+                Project Milestone Invoices and Payments
               </h3>
             </div>
 

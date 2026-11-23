@@ -6,7 +6,7 @@ import { getServicesByCategory } from "@/lib/data/services-content";
 export const revalidate = 3600;
 
 export const metadata: Metadata = buildMetadata({
-  title: "Data Analysis Services — Quantitative, Qualitative & SEM",
+  title: "Data Analysis Services — Quantitative, Qualitative and SEM",
   description:
     "Expert academic data analysis mentoring in SPSS, R, Stata, Python, NVivo, and SmartPLS. We audit assumptions, guide syntax execution, and teach output interpretation.",
   path: "/services/data-analysis",

@@ -152,7 +152,7 @@ export async function buildConsultationConfirmedEmail({
     <div style="background-color: #FAF8F4; border: 1px solid #E4DFD5; padding: 16px 20px; margin: 20px 0; border-radius: 2px;">
       <table style="width: 100%; font-size: 14px; line-height: 1.8;">
         <tr>
-          <td style="width: 110px; color: #555555; vertical-align: top;"><strong>Date & Time:</strong></td>
+          <td style="width: 110px; color: #555555; vertical-align: top;"><strong>Date and Time:</strong></td>
           <td style="color: #14263F; font-weight: 600;">${escapeHtml(dateStr)} (${escapeHtml(timezone)})</td>
         </tr>
         ${
@@ -184,7 +184,7 @@ export async function buildConsultationConfirmedEmail({
 }
 
 // ============================================================================
-// 5. SESSION REMINDERS (24h & 1h)
+// 5. SESSION REMINDERS (24h and 1h)
 // ============================================================================
 export async function buildSessionReminderEmail({
   to,
@@ -271,7 +271,7 @@ export async function buildBookingStatusEmail({
       rescheduleUrl
         ? `<p style="margin: 24px 0;">
             <a href="${rescheduleUrl}" style="background-color: #14263F; color: #FFFFFF; text-decoration: none; padding: 12px 24px; font-size: 14px; border-radius: 2px; display: inline-block;">
-              Select a New Date & Time &rarr;
+              Select a New Date and Time &rarr;
             </a>
           </p>`
         : `<p style="font-size: 14px;">You may book another available time slot whenever convenient at <a href="${SITE_URL}/book" style="color: #14263F; text-decoration: underline;">gradedge.com/book</a>.</p>`
@@ -341,7 +341,7 @@ export async function buildPaymentReceiptEmail({
         </tr>
       </table>
     </div>
-    <p style="font-size: 14px;">An official PDF invoice receipt is attached to this transmission. You can also review your full transaction record inside the <a href="${SITE_URL}/student/billing" style="color: #14263F; text-decoration: underline;">Billing & Invoices</a> section of your dashboard.</p>
+    <p style="font-size: 14px;">An official PDF invoice receipt is attached to this transmission. You can also review your full transaction record inside the <a href="${SITE_URL}/student/billing" style="color: #14263F; text-decoration: underline;">Billing and Invoices</a> section of your dashboard.</p>
   `;
 
   return {
@@ -857,7 +857,7 @@ export async function buildResourceDownloadEmail({
 }
 
 // ============================================================================
-// 20. MENTOR ASSIGNED (INTRODUCES FIRST NAME & SHORT BIO)
+// 20. MENTOR ASSIGNED (INTRODUCES FIRST NAME and SHORT BIO)
 // ============================================================================
 export async function buildMentorAssignedEmail({
   to,
@@ -915,7 +915,7 @@ export async function buildMentorAssignedEmail({
 function escapeHtml(str: string): string {
   if (!str) return "";
   return str
-    .replace(/&/g, "&amp;")
+    .replace(/&/g, "and")
     .replace(/</g, "&lt;")
     .replace(/>/g, "&gt;")
     .replace(/"/g, "&quot;")

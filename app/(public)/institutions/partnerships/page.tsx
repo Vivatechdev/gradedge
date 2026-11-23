@@ -11,7 +11,7 @@ import { SectionLabel, StepList } from "@/components/ui/editorial";
 export const revalidate = 3600;
 
 export const metadata: Metadata = buildMetadata({
-  title: "University & Institutional Strategic Partnerships",
+  title: "University and Institutional Strategic Partnerships",
   description:
     "Long-term research mentoring partnerships, faculty referral agreements, and embedded writing centers for universities.",
   path: "/institutions/partnerships",

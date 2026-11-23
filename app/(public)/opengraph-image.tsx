@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 
 export const alt =
-  "GradEdge Academic Solutions — Dissertation Mentoring & Research Coaching";
+  "GradEdge Academic Solutions — Dissertation Mentoring and Research Coaching";
 
 export const size = {
   width: 1200,

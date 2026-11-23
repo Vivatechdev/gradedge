@@ -118,12 +118,12 @@ export default function AdminIntegrityPage() {
         <div className="border-b border-tone-rule pb-5 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
           <div>
             <div className="flex items-center gap-2 mb-1">
-              <span className="type-micro text-gold">Compliance &amp; Governance</span>
+              <span className="type-micro text-gold">Compliance and Governance</span>
               <span className="text-tone-rule">&bull;</span>
               <span className="text-xs text-tone-muted font-mono">Zero-Ghostwriting Certified</span>
             </div>
             <h1 className="text-2xl sm:text-3xl font-serif text-tone-heading font-medium">
-              Academic Integrity &amp; Audit Logs
+              Academic Integrity and Audit Logs
             </h1>
             <p className="text-xs sm:text-sm text-tone-muted mt-1 max-w-xl leading-relaxed">
               Verify compliance with institutional ethics, supervise mentor coaching logs, and ensure no ghostwriting occurs.
@@ -244,7 +244,7 @@ export default function AdminIntegrityPage() {
             <table className="w-full text-left text-xs font-sans">
               <thead className="bg-paper border-b border-tone-rule text-[11px] uppercase tracking-wider text-tone-muted font-semibold">
                 <tr>
-                  <th className="py-3 px-4">Log ID &amp; Timestamp</th>
+                  <th className="py-3 px-4">Log ID and Timestamp</th>
                   <th className="py-3 px-4">Audit Event</th>
                   <th className="py-3 px-4">Actor</th>
                   <th className="py-3 px-4">Target Context</th>

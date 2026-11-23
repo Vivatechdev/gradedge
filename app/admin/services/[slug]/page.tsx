@@ -42,7 +42,7 @@ export default function AdminServiceEditorPage({
       }}
     >
       <div className="space-y-6 max-w-5xl">
-        {/* Header Breadcrumb & Actions */}
+        {/* Header Breadcrumb and Actions */}
         <div className="border-b border-tone-rule pb-4 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
           <div>
             <div className="flex items-center gap-2 text-xs text-tone-muted">
@@ -75,12 +75,12 @@ export default function AdminServiceEditorPage({
         <div className="flex flex-wrap gap-1 border-b border-tone-rule pb-2 text-xs">
           {(
             [
-              { id: "overview", label: "Hero & At-A-Glance" },
-              { id: "content", label: "Checklists & Deliverables" },
-              { id: "process", label: "Process & Timeline" },
+              { id: "overview", label: "Hero and At-A-Glance" },
+              { id: "content", label: "Checklists and Deliverables" },
+              { id: "process", label: "Process and Timeline" },
               { id: "sample", label: "Sample Feedback Mockup" },
-              { id: "faqs", label: "FAQs & Integrity" },
-              { id: "seo", label: "SEO & Meta" },
+              { id: "faqs", label: "FAQs and Integrity" },
+              { id: "seo", label: "SEO and Meta" },
             ] as const
           ).map((tab) => (
             <button
@@ -103,7 +103,7 @@ export default function AdminServiceEditorPage({
             <div className="space-y-6">
               <Card background="white">
                 <CardHeader>
-                  <CardTitle className="text-base font-serif text-tone-heading">Hero & Promise</CardTitle>
+                  <CardTitle className="text-base font-serif text-tone-heading">Hero and Promise</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4 text-xs">
                   <div>
@@ -215,7 +215,7 @@ export default function AdminServiceEditorPage({
             </div>
           )}
 
-          {/* TAB 2: CONTENT & DELIVERABLES */}
+          {/* TAB 2: CONTENT and DELIVERABLES */}
           {activeTab === "content" && (
             <div className="space-y-6">
               <Card background="white">
@@ -245,7 +245,7 @@ export default function AdminServiceEditorPage({
               <Card background="white">
                 <CardHeader>
                   <CardTitle className="text-base font-serif text-tone-heading">
-                    Deliverables & Expected Outcomes
+                    Deliverables and Expected Outcomes
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4 text-xs">
@@ -462,7 +462,7 @@ export default function AdminServiceEditorPage({
             </Card>
           )}
 
-          {/* TAB 5: FAQS & INTEGRITY */}
+          {/* TAB 5: FAQS and INTEGRITY */}
           {activeTab === "faqs" && (
             <div className="space-y-6">
               <Card background="cream" topRuleGold>

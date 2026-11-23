@@ -41,7 +41,7 @@ const REVIEW_QUEUE: ManuscriptReviewItem[] = [
     candidateName: "Freedom Sola",
     institution: "Cambridge Institute of Public Health",
     title: "Epidemiological Analysis of Maternal Health Access in Rural Districts",
-    chapter: "Chapter 3: Methodology & Propensity Score Matching Protocol",
+    chapter: "Chapter 3: Methodology and Propensity Score Matching Protocol",
     wordCount: 14320,
     similarityScore: "4% (Turnitin verified)",
     submittedAt: "Nov 20, 2026 &bull; 11:30 UTC",
@@ -54,7 +54,7 @@ const REVIEW_QUEUE: ManuscriptReviewItem[] = [
     id: "rev-202",
     candidateName: "Khadija Umar",
     institution: "Alliance Manchester Business School",
-    title: "Corporate Governance & Financial Restatement Frequencies in Emerging Markets",
+    title: "Corporate Governance and Financial Restatement Frequencies in Emerging Markets",
     chapter: "Chapter 2: Literature Review Synthesis Matrix",
     wordCount: 18450,
     similarityScore: "5% (Turnitin verified)",
@@ -109,7 +109,7 @@ export default function MentorReviewsPage() {
         <div className="border-b border-tone-rule pb-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div>
             <h2 className="font-serif text-2xl font-medium text-tone-heading">
-              Manuscript Review &amp; Redlining Desk
+              Manuscript Review and Redlining Desk
             </h2>
             <p className="text-xs text-tone-muted mt-1">
               Guaranteed 48-hour faculty turnaround on doctoral chapter submissions and methodology redlines.
@@ -205,7 +205,7 @@ export default function MentorReviewsPage() {
               </CardHeader>
 
               <CardContent className="p-5 space-y-6">
-                {/* Manuscript Download & Inspect Actions */}
+                {/* Manuscript Download and Inspect Actions */}
                 <div className="p-3.5 bg-paper rounded-[2px] border border-tone-rule flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                   <div className="space-y-0.5">
                     <span className="text-xs font-semibold text-tone-heading block flex items-center gap-1.5">
@@ -226,7 +226,7 @@ export default function MentorReviewsPage() {
                   </Button>
                 </div>
 
-                {/* Interactive Redline & Track Changes Workbench */}
+                {/* Interactive Redline and Track Changes Workbench */}
                 <div className="space-y-2">
                   <RedlineDiffViewer
                     candidateName={selectedReview.candidateName}
@@ -244,7 +244,7 @@ export default function MentorReviewsPage() {
                     {[
                       { key: "rigor", label: "Methodological Rigor" },
                       { key: "theory", label: "Theoretical Grounding" },
-                      { key: "citations", label: "Citation & Reference Hygiene" },
+                      { key: "citations", label: "Citation and Reference Hygiene" },
                       { key: "reproducibility", label: "Empirical Reproducibility" },
                     ].map((item) => (
                       <div key={item.key} className="p-2.5 bg-paper rounded-[2px] border border-tone-rule">
@@ -272,10 +272,10 @@ export default function MentorReviewsPage() {
                   </div>
                 </div>
 
-                {/* Editorial Feedback & Redline Notes */}
+                {/* Editorial Feedback and Redline Notes */}
                 <div className="space-y-2">
                   <label className="text-xs font-semibold uppercase tracking-wider text-tone-heading block">
-                    Faculty Redlining Notes &amp; Required Revisions
+                    Faculty Redlining Notes and Required Revisions
                   </label>
                   <textarea
                     rows={4}

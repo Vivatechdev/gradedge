@@ -12,25 +12,25 @@ export const SERVICE_CATEGORIES = [
   {
     name: "Dissertation Support",
     href: "/services/dissertation-support",
-    summary: "Dissertation & thesis mentoring, research formulation, literature review",
+    summary: "Dissertation and thesis mentoring, research formulation, literature review",
   },
   {
     name: "Data Analysis",
     href: "/services/data-analysis",
-    summary: "SPSS, R, Python, Stata, NVivo, SmartPLS & structural equation modeling",
+    summary: "SPSS, R, Python, Stata, NVivo, SmartPLS and structural equation modeling",
   },
   {
-    name: "Editing & Writing Quality",
+    name: "Editing and Writing Quality",
     href: "/services/editing-and-writing-quality",
     summary: "Academic editing, proofreading, referencing and similarity review",
   },
   {
-    name: "Publishing & Career",
+    name: "Publishing and Career",
     href: "/services/publishing-and-career",
     summary: "Journal conversion, grant coaching, conference presentations",
   },
   {
-    name: "Coaching & Training",
+    name: "Coaching and Training",
     href: "/services/coaching-and-training",
     summary: "One-on-one tutoring, institutional workshops, oral defense coaching",
   },
@@ -243,7 +243,7 @@ export function PublicHeader({
           <div className="px-6 py-6 flex-1 space-y-5">
             <div>
               <span className="text-[10px] uppercase tracking-widest text-tone-muted font-semibold block mb-2">
-                Services & Focus Areas
+                Services and Focus Areas
               </span>
               <div className="space-y-2 border-l border-tone-rule pl-3">
                 {SERVICE_CATEGORIES.map((cat) => (
@@ -280,7 +280,7 @@ export function PublicHeader({
 
             <div className="pt-3 border-t border-tone-rule space-y-2">
               <span className="text-[10px] uppercase tracking-widest text-tone-muted font-semibold block">
-                Workspaces &amp; Portals
+                Workspaces and Portals
               </span>
               <div className="flex flex-col gap-1.5 text-xs font-sans">
                 <Link
@@ -308,7 +308,7 @@ export function PublicHeader({
                   href="/login"
                   className="text-gold font-semibold hover:text-navy transition-colors flex items-center justify-between"
                 >
-                  <span>Sign In (Any Random Email &amp; Password)</span>
+                  <span>Sign In (Any Random Email and Password)</span>
                   <span>&rarr;</span>
                 </Link>
               </div>

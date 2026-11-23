@@ -214,7 +214,7 @@ export function SharedFileUpload({
         <div className="flex flex-col items-center justify-center gap-2">
           <UploadCloud className="h-8 w-8 text-tone-muted" aria-hidden="true" />
           <p className="text-sm font-medium text-tone-heading">
-            Drag & drop manuscript or dataset, or <span className="text-gold underline">browse files</span>
+            Drag and drop manuscript or dataset, or <span className="text-gold underline">browse files</span>
           </p>
           <p className="text-xs text-tone-muted">
             Supported: PDF, Word (.docx), CSV, SPSS (.sav), R, Python (.py), ZIP &bull; Max 25 MB
@@ -222,7 +222,7 @@ export function SharedFileUpload({
         </div>
       </div>
 
-      {/* Selected File Details & Metadata Controls */}
+      {/* Selected File Details and Metadata Controls */}
       {selectedFile && (
         <div className="mt-4 p-4 bg-paper border border-tone-rule rounded-[2px] space-y-3">
           <div className="flex items-center justify-between">
@@ -269,8 +269,8 @@ export function SharedFileUpload({
                   onChange={(e) => setVisibility(e.target.value as any)}
                   className="w-full h-8 px-2 border border-tone-rule rounded-[2px] text-xs bg-white text-tone-heading focus:border-gold focus:outline-none"
                 >
-                  <option value="shared_with_mentor">Shared with Assigned Mentor & Admin</option>
-                  <option value="private">Private (Only You & Admin)</option>
+                  <option value="shared_with_mentor">Shared with Assigned Mentor and Admin</option>
+                  <option value="private">Private (Only You and Admin)</option>
                 </select>
               </div>
 

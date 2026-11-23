@@ -42,7 +42,7 @@ function escapePdfText(str: string): string {
 export function generateInvoicePdfBuffer(params: InvoicePdfParams): Buffer {
   const business = {
     legalName: params.businessDetails?.legalName || "GradEdge Academic Solutions Ltd",
-    address: params.businessDetails?.address || "Level 4, Academic Innovation Hub, Lagos & Oxford Desk",
+    address: params.businessDetails?.address || "Level 4, Academic Innovation Hub, Lagos and Oxford Desk",
     taxId: params.businessDetails?.taxId || "TIN-GE-2026-9481",
     financeEmail: params.businessDetails?.financeEmail || "finance@gradedge.com",
     phone: params.businessDetails?.phone || "+234 1 800 GRADEDGE",
@@ -66,18 +66,18 @@ export function generateInvoicePdfBuffer(params: InvoicePdfParams): Buffer {
 
   // 3. Header Text
   lines.push("BT /F1 18 Tf 1 1 1 rg 40 795 Td (GRADEDGE) Tj ET");
-  lines.push("BT /F2 9 Tf 1 1 1 rg 40 780 Td (Academic Research Mentoring & Defense Preparation) Tj ET");
+  lines.push("BT /F2 9 Tf 1 1 1 rg 40 780 Td (Academic Research Mentoring and Defense Preparation) Tj ET");
   lines.push("BT /F1 13 Tf 1 1 1 rg 400 795 Td (OFFICIAL INVOICE) Tj ET");
   lines.push(`BT /F2 9 Tf 1 1 1 rg 400 780 Td (${escapePdfText(params.invoiceNumber)}) Tj ET`);
 
-  // 4. Issue Date & Paid Status Badge
+  // 4. Issue Date and Paid Status Badge
   lines.push(`BT /F2 9 Tf 0.294 0.333 0.388 rg 40 725 Td (Issued: ${escapePdfText(issuedDateStr)}) Tj ET`);
   lines.push("BT /F1 10 Tf 0.078 0.149 0.247 rg 400 725 Td (STATUS: PAID IN FULL) Tj ET");
 
   // Divider line
   lines.push("0.894 0.875 0.835 RG 1 w 40 710 m 555 710 l S");
 
-  // 5. Issued By & Billed To Blocks
+  // 5. Issued By and Billed To Blocks
   lines.push("BT /F1 9 Tf 0.078 0.149 0.247 rg 40 688 Td (ISSUED BY:) Tj ET");
   lines.push(`BT /F2 9 Tf 0.294 0.333 0.388 rg 40 673 Td (${escapePdfText(business.legalName)}) Tj ET`);
   lines.push(`BT /F2 8.5 Tf 0.294 0.333 0.388 rg 40 659 Td (${escapePdfText(business.address)}) Tj ET`);

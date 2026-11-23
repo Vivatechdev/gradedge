@@ -63,7 +63,7 @@ VALUES
     18000, -- $180.00 in minor units (cents)
     'USD',
     'month',
-    ARRAY['Bi-weekly 60-minute video coaching calls', 'Line-level developmental review across all chapters', 'Statistical syntax auditing (R, Python, SPSS, Stata)', 'Pre-defense mock viva clearance'],
+    ARRAY['Bi-weekly 60-minute video coaching calls', 'Line-level developmental review across all chapters', 'Statistical syntax auditing (R, Python, SPSS, Stata)', 'Pre-defense mock examination clearance'],
     true
   ),
   (
@@ -73,7 +73,7 @@ VALUES
     8500000, -- ₦85,000.00 in minor units (kobo)
     'NGN',
     'month',
-    ARRAY['Bi-weekly 60-minute video coaching calls', 'Line-level developmental review across all chapters', 'Statistical syntax auditing (R, Python, SPSS, Stata)', 'Pre-defense mock viva clearance'],
+    ARRAY['Bi-weekly 60-minute video coaching calls', 'Line-level developmental review across all chapters', 'Statistical syntax auditing (R, Python, SPSS, Stata)', 'Pre-defense mock examination clearance'],
     true
   )
 ON CONFLICT (id) DO NOTHING;

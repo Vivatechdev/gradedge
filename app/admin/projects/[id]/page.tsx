@@ -26,7 +26,7 @@ export default function AdminProjectDetailPage() {
   const [mentor, setMentor] = useState("Dr. Eleanor Vance");
   const [status, setStatus] = useState("active");
   const [internalNotes, setInternalNotes] = useState(
-    "Candidate submitted complete quantitative survey responses. Focus is primarily on multivariate regression validation and SEM moderation testing in SPSS & SmartPLS."
+    "Candidate submitted complete quantitative survey responses. Focus is primarily on multivariate regression validation and SEM moderation testing in SPSS and SmartPLS."
   );
   const [savedNotice, setSavedNotice] = useState(false);
 
@@ -96,18 +96,18 @@ export default function AdminProjectDetailPage() {
         )}
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          {/* Main Column (2 cols): Brief Content & Milestones */}
+          {/* Main Column (2 cols): Brief Content and Milestones */}
           <div className="lg:col-span-2 space-y-6">
             <Card background="white" className="border-tone-rule shadow-2xs">
               <CardHeader className="pb-3 border-b border-tone-rule">
                 <CardTitle className="font-serif text-base text-tone-heading">
-                  Research Specification &amp; Scope
+                  Research Specification and Scope
                 </CardTitle>
               </CardHeader>
               <CardContent className="pt-4 space-y-4 text-xs font-sans">
                 <div>
                   <span className="text-[10px] uppercase tracking-wider text-tone-muted font-semibold block mb-1">
-                    Problem Statement &amp; Methodology
+                    Problem Statement and Methodology
                   </span>
                   <p className="text-tone-body leading-relaxed bg-paper p-3 rounded-[2px] border border-tone-rule">
                     The research models maternal health clinic accessibility across 44 rural primary health centers using a cross-sectional quasi-experimental framework. Needs validation of propensity score matching equations and logistical regression modeling.
@@ -119,7 +119,7 @@ export default function AdminProjectDetailPage() {
                     <span className="text-[10px] uppercase tracking-wider text-tone-muted font-semibold block mb-1">
                       Academic Discipline
                     </span>
-                    <span className="font-medium text-tone-heading">Health Sciences &amp; Biostatistics</span>
+                    <span className="font-medium text-tone-heading">Health Sciences and Biostatistics</span>
                   </div>
                   <div>
                     <span className="text-[10px] uppercase tracking-wider text-tone-muted font-semibold block mb-1">
@@ -135,15 +135,15 @@ export default function AdminProjectDetailPage() {
             <Card background="white" className="border-tone-rule shadow-2xs">
               <CardHeader className="pb-3 border-b border-tone-rule">
                 <CardTitle className="font-serif text-base text-tone-heading">
-                  Advisory Milestones &amp; Deliverables
+                  Advisory Milestones and Deliverables
                 </CardTitle>
               </CardHeader>
               <CardContent className="pt-4 space-y-3">
                 {[
                   { title: "Milestone 1: Sampling Strategy Review", status: "completed", date: "Oct 29, 2026" },
-                  { title: "Milestone 2: Data Cleaning & Normality Testing", status: "completed", date: "Nov 05, 2026" },
-                  { title: "Milestone 3: Multivariate Regression & Propensity Matching", status: "in_progress", date: "Nov 24, 2026" },
-                  { title: "Milestone 4: Findings Interpretation & Defense Briefing", status: "pending", date: "Dec 10, 2026" },
+                  { title: "Milestone 2: Data Cleaning and Normality Testing", status: "completed", date: "Nov 05, 2026" },
+                  { title: "Milestone 3: Multivariate Regression and Propensity Matching", status: "in_progress", date: "Nov 24, 2026" },
+                  { title: "Milestone 4: Findings Interpretation and Defense Briefing", status: "pending", date: "Dec 10, 2026" },
                 ].map((m, idx) => (
                   <div
                     key={idx}
@@ -173,7 +173,7 @@ export default function AdminProjectDetailPage() {
             </Card>
           </div>
 
-          {/* Sidebar Column (1 col): Mentor Assignment & Internal Notes */}
+          {/* Sidebar Column (1 col): Mentor Assignment and Internal Notes */}
           <div className="space-y-6">
             <Card background="white" className="border-tone-rule shadow-2xs">
               <CardHeader className="pb-3 border-b border-tone-rule">
@@ -210,7 +210,7 @@ export default function AdminProjectDetailPage() {
                     >
                       <option value="active">Active Advisory</option>
                       <option value="in_scoping">Under Scoping</option>
-                      <option value="completed">Completed &amp; Archival</option>
+                      <option value="completed">Completed and Archival</option>
                     </select>
                   </div>
 

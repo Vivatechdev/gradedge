@@ -13,7 +13,7 @@ import {
   DataLabModelVisualizer,
   RedlineDiffVisualizer,
   JournalSubmissionVisualizer,
-  VivaDefenseVisualizer,
+  OralDefenseVisualizer,
 } from "@/components/marketing/service-visuals";
 
 interface CategoryFaq {
@@ -51,7 +51,7 @@ export function ServiceCategoryView({
       case "publishing-and-career":
         return <JournalSubmissionVisualizer />;
       case "coaching-and-training":
-        return <VivaDefenseVisualizer />;
+        return <OralDefenseVisualizer />;
       case "dissertation-support":
       default:
         return <ThesisArchitectureVisualizer />;
@@ -112,7 +112,7 @@ export function ServiceCategoryView({
             <span className="type-micro text-tone-muted">
               Services in {categoryName} ({services.length})
             </span>
-            <span className="text-xs text-tone-muted">Click any service to view full syllabus & deliverables</span>
+            <span className="text-xs text-tone-muted">Click any service to view full syllabus and deliverables</span>
           </div>
 
           <div className="divide-y divide-tone-rule border-b border-tone-rule">
@@ -154,7 +154,7 @@ export function ServiceCategoryView({
                   </p>
                 </div>
 
-                {/* Price & Action */}
+                {/* Price and Action */}
                 <div className="md:col-span-3 flex md:flex-col items-center md:items-end justify-between md:justify-center gap-2">
                   <div className="text-left md:text-right">
                     <span className="text-[11px] text-tone-muted block">From</span>
@@ -168,7 +168,7 @@ export function ServiceCategoryView({
                     className="inline-flex items-center gap-1.5 text-xs font-medium text-navy hover:text-gold transition-colors pt-1"
                     aria-label={`View syllabus for ${service.title}`}
                   >
-                    <span>Full syllabus & pricing</span>
+                    <span>Full syllabus and pricing</span>
                     <ArrowRight className="w-3.5 h-3.5" />
                   </Link>
                 </div>

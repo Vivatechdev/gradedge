@@ -89,7 +89,7 @@ export function renderBrandedLayout({
             </td>
           </tr>
 
-          <!-- Footer with Reason & Opt-Out -->
+          <!-- Footer with Reason and Opt-Out -->
           <tr>
             <td style="background-color: #FAF8F4; padding: 20px 32px; border-top: 1px solid #E4DFD5; font-size: 12px; color: #666666; line-height: 1.55;">
               <p style="margin: 0 0 8px 0;">
@@ -107,7 +107,7 @@ export function renderBrandedLayout({
                   : ""
               }
               <p style="margin: 12px 0 0 0; font-size: 11px; color: #888888;">
-                GradEdge Academic Solutions &bull; Post-Graduate Advisory & Methodological Consulting &bull; &copy; ${new Date().getFullYear()}
+                GradEdge Academic Solutions &bull; Post-Graduate Advisory and Methodological Consulting &bull; &copy; ${new Date().getFullYear()}
               </p>
             </td>
           </tr>
@@ -128,7 +128,7 @@ export function renderBrandedLayout({
 function escapeHtml(str: string): string {
   if (!str) return "";
   return str
-    .replace(/&/g, "&amp;")
+    .replace(/&/g, "and")
     .replace(/</g, "&lt;")
     .replace(/>/g, "&gt;")
     .replace(/"/g, "&quot;")
@@ -155,7 +155,6 @@ function convertHtmlToText(
     .replace(/<a\s+(?:[^>]*?\s+)?href="([^"]*)"[^>]*>(.*?)<\/a>/gi, "$2 ($1)")
     .replace(/<[^>]+>/gi, "")
     .replace(/&nbsp;/g, " ")
-    .replace(/&amp;/g, "&")
     .replace(/&lt;/g, "<")
     .replace(/&gt;/g, ">")
     .replace(/&quot;/g, '"')

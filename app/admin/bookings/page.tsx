@@ -91,7 +91,7 @@ const MENTOR_POOL: MentorFaculty[] = [
   {
     id: "m-01",
     name: "Dr. Eleanor Vance",
-    discipline: "Biostatistics & Quantitative Modeling",
+    discipline: "Biostatistics and Quantitative Modeling",
     activeMentees: 4,
     capacity: 5,
     rating: 4.95,
@@ -100,7 +100,7 @@ const MENTOR_POOL: MentorFaculty[] = [
   {
     id: "m-02",
     name: "Dr. Alex Taylor",
-    discipline: "Applied Econometrics & Stata/Python",
+    discipline: "Applied Econometrics and Stata/Python",
     activeMentees: 3,
     capacity: 4,
     rating: 4.92,
@@ -109,7 +109,7 @@ const MENTOR_POOL: MentorFaculty[] = [
   {
     id: "m-03",
     name: "Dr. Marcus King",
-    discipline: "Qualitative Inquiry & NVivo Hierarchy",
+    discipline: "Qualitative Inquiry and NVivo Hierarchy",
     activeMentees: 4,
     capacity: 4,
     rating: 4.88,
@@ -118,7 +118,7 @@ const MENTOR_POOL: MentorFaculty[] = [
   {
     id: "m-04",
     name: "Dr. Heather Wright",
-    discipline: "Literature Synthesis & Academic Prose",
+    discipline: "Literature Synthesis and Academic Prose",
     activeMentees: 2,
     capacity: 4,
     rating: 4.97,
@@ -127,7 +127,7 @@ const MENTOR_POOL: MentorFaculty[] = [
   {
     id: "m-05",
     name: "Dr. Samuel Oladipo",
-    discipline: "Research Design & Mixed Methods",
+    discipline: "Research Design and Mixed Methods",
     activeMentees: 1,
     capacity: 3,
     rating: 4.90,
@@ -149,7 +149,7 @@ export default function AdminBookingsPage() {
   return (
     <DashboardShell
       role="admin"
-      title="Bookings & Faculty Mentor Pool"
+      title="Bookings and Faculty Mentor Pool"
       user={{
         name: "Freedom Sola",
         email: "admin@gradedge.com",
@@ -161,12 +161,12 @@ export default function AdminBookingsPage() {
         <div className="border-b border-tone-rule pb-5 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
           <div>
             <div className="flex items-center gap-2 mb-1">
-              <span className="type-micro text-gold">Advisory Scheduling &amp; Capacity</span>
+              <span className="type-micro text-gold">Advisory Scheduling and Capacity</span>
               <span className="text-tone-rule">&bull;</span>
               <span className="text-xs text-tone-muted font-mono">100% Calendar Sync</span>
             </div>
             <h1 className="text-2xl sm:text-3xl font-serif text-tone-heading font-medium">
-              Consultation Sessions &amp; Faculty Pool
+              Consultation Sessions and Faculty Pool
             </h1>
             <p className="text-xs sm:text-sm text-tone-muted mt-1 max-w-xl leading-relaxed">
               Track 1-on-1 methodology consultations, Google Meet links, and manage mentor workload distribution.
@@ -289,7 +289,7 @@ export default function AdminBookingsPage() {
               <table className="w-full text-left text-xs font-sans">
                 <thead className="bg-paper border-b border-tone-rule text-[11px] uppercase tracking-wider text-tone-muted font-semibold">
                   <tr>
-                    <th className="py-3 px-4">Ref &amp; Date</th>
+                    <th className="py-3 px-4">Ref and Date</th>
                     <th className="py-3 px-4">Candidate Scholar</th>
                     <th className="py-3 px-4">Consultation Topic</th>
                     <th className="py-3 px-4">Allocated Mentor</th>
@@ -356,7 +356,7 @@ export default function AdminBookingsPage() {
                 <thead className="bg-paper border-b border-tone-rule text-[11px] uppercase tracking-wider text-tone-muted font-semibold">
                   <tr>
                     <th className="py-3 px-4">Mentor Name</th>
-                    <th className="py-3 px-4">Discipline &amp; Specialty</th>
+                    <th className="py-3 px-4">Discipline and Specialty</th>
                     <th className="py-3 px-4">Active Mentees</th>
                     <th className="py-3 px-4">Capacity Status</th>
                     <th className="py-3 px-4">Rating</th>

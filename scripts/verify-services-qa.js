@@ -40,7 +40,7 @@ const TARGET_PAGES = [
     name: "service-coaching",
     url: "http://localhost:3000/services/defense-presentation-coaching",
     type: "service",
-    expectedVisualizer: "VivaDefenseVisualizer",
+    expectedVisualizer: "OralDefenseVisualizer",
   },
   {
     name: "category-data-analysis",

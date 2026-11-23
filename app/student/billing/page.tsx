@@ -90,7 +90,7 @@ export default function StudentBillingPage() {
   return (
     <DashboardShell
       role="student"
-      title="Billing & Membership"
+      title="Billing and Membership"
       user={{
         name: student.name,
         email: student.email,
@@ -102,7 +102,7 @@ export default function StudentBillingPage() {
         <div className="border-b border-tone-rule pb-4 space-y-1">
           <span className="type-micro text-gold">Financial Desk</span>
           <h1 className="font-serif text-2xl font-medium text-tone-heading">
-            Billing, Invoices & Active Membership
+            Billing, Invoices and Active Membership
           </h1>
           <p className="text-xs text-tone-muted leading-relaxed font-sans">
             Review your continuous coaching plan, download sequential PDF tax invoices, and manage payment records.
@@ -214,19 +214,19 @@ export default function StudentBillingPage() {
             <div className="py-6 text-center text-xs text-tone-muted space-y-3">
               <p>You do not currently have an active monthly research coaching membership.</p>
               <Button variant="accent" href="/pricing" size="sm">
-                View Membership Plans & Pricing
+                View Membership Plans and Pricing
               </Button>
             </div>
           )}
         </div>
 
-        {/* PAYMENT HISTORY & DOWNLOADABLE INVOICES */}
+        {/* PAYMENT HISTORY and DOWNLOADABLE INVOICES */}
         <div className="bg-white border border-tone-rule rounded-[2px] p-6 space-y-5 shadow-xs">
           <div className="flex items-center justify-between border-b border-tone-rule pb-3">
             <div className="flex items-center gap-2">
               <FileText className="w-4 h-4 text-gold" />
               <h2 className="font-serif text-base font-semibold text-tone-heading">
-                Payment History & Official Tax Invoices
+                Payment History and Official Tax Invoices
               </h2>
             </div>
             <span className="text-xs text-tone-muted">

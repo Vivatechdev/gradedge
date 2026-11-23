@@ -40,7 +40,7 @@ export default async function AcceleratorCheckoutPage({
         items={[
           { label: "Home", href: "/" },
           { label: "Accelerator", href: "/accelerator" },
-          { label: "Enrollment & Tuition" },
+          { label: "Enrollment and Tuition" },
         ]}
       />
 

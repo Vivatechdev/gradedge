@@ -45,7 +45,7 @@ export default function MentorIntegrityPage() {
         <div className="border-b border-tone-rule pb-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div>
             <h2 className="font-serif text-2xl font-medium text-tone-heading">
-              Faculty Code of Ethics &amp; Academic Integrity
+              Faculty Code of Ethics and Academic Integrity
             </h2>
             <p className="text-xs text-tone-muted mt-1">
               GradEdge strictly enforces ethical academic coaching. Mentors never write, fabricate, or complete candidate dissertations.
@@ -104,7 +104,7 @@ export default function MentorIntegrityPage() {
                   2
                 </span>
                 <CardTitle className="font-serif text-base text-tone-heading">
-                  Empirical Reproducibility &amp; Transparency
+                  Empirical Reproducibility and Transparency
                 </CardTitle>
               </div>
             </CardHeader>
@@ -152,12 +152,12 @@ export default function MentorIntegrityPage() {
           </Card>
         </div>
 
-        {/* Ombudsman Contact & Escalation */}
+        {/* Ombudsman Contact and Escalation */}
         <Card className="bg-paper border-tone-rule">
           <CardContent className="p-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
             <div className="space-y-1">
               <span className="font-serif font-semibold text-sm text-tone-heading block">
-                Academic Ombudsman &amp; Ethics Escalation Channel
+                Academic Ombudsman and Ethics Escalation Channel
               </span>
               <p className="text-xs text-stone-600 font-sans max-w-xl">
                 If a candidate requests ghostwriting, data fabrication, or violations of university guidelines, faculty mentors have a protected right to pause the project and notify the Academic Ombudsman immediately.

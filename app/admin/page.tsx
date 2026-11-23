@@ -45,7 +45,7 @@ const RECENT_BRIEFS: BriefItem[] = [
   {
     id: "br-102",
     candidateName: "Amina Bello",
-    projectTitle: "Panel Econometrics on Carbon Pricing Mechanisms & Inflationary Pressures",
+    projectTitle: "Panel Econometrics on Carbon Pricing Mechanisms and Inflationary Pressures",
     institution: "Institute of Development Economics",
     level: "PhD Candidate",
     assignedMentor: "Dr. A. T.",
@@ -67,8 +67,8 @@ const RECENT_BRIEFS: BriefItem[] = [
   {
     id: "br-104",
     candidateName: "Khadija Umar",
-    projectTitle: "Corporate Governance & Financial Restatement Frequencies in Emerging Markets",
-    institution: "School of Business & Finance",
+    projectTitle: "Corporate Governance and Financial Restatement Frequencies in Emerging Markets",
+    institution: "School of Business and Finance",
     level: "PhD Candidate",
     assignedMentor: "Dr. H. W.",
     status: "active",
@@ -80,28 +80,28 @@ const RECENT_BRIEFS: BriefItem[] = [
 const MENTOR_FACULTY_POOL = [
   {
     name: "Dr. E. R.",
-    specialty: "Biostatistics & Quantitative Modeling",
+    specialty: "Biostatistics and Quantitative Modeling",
     activeMentees: 4,
     capacity: 5,
     status: "Available",
   },
   {
     name: "Dr. A. T.",
-    specialty: "Applied Econometrics & Stata/Python",
+    specialty: "Applied Econometrics and Stata/Python",
     activeMentees: 3,
     capacity: 4,
     status: "Available",
   },
   {
     name: "Dr. M. K.",
-    specialty: "Qualitative Inquiry & NVivo Hierarchy",
+    specialty: "Qualitative Inquiry and NVivo Hierarchy",
     activeMentees: 4,
     capacity: 4,
     status: "At Capacity",
   },
   {
     name: "Dr. H. W.",
-    specialty: "Literature Synthesis & Academic Prose",
+    specialty: "Literature Synthesis and Academic Prose",
     activeMentees: 2,
     capacity: 4,
     status: "Available",
@@ -136,7 +136,7 @@ export default function AdminDashboardPage() {
               <span className="text-xs text-tone-muted font-mono">Status: Triage Active</span>
             </div>
             <h2 className="text-2xl sm:text-3xl font-serif text-tone-heading font-medium">
-              Academic Support Triage & Quality Assurance
+              Academic Support Triage and Quality Assurance
             </h2>
             <p className="text-xs sm:text-sm text-tone-muted mt-1 max-w-xl leading-relaxed">
               Review incoming researcher project briefs, allocate PhD faculty mentors, and verify zero-ghostwriting compliance.
@@ -165,7 +165,7 @@ export default function AdminDashboardPage() {
           </div>
         </div>
 
-        {/* ── 2. OPERATIONAL COUNTERS & CAPACITY ────────────────────────────── */}
+        {/* ── 2. OPERATIONAL COUNTERS and CAPACITY ────────────────────────────── */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           <Card background="white" className="border-tone-rule shadow-xs hover:border-gold/60 transition-colors">
             <CardHeader className="pb-2">
@@ -315,7 +315,7 @@ export default function AdminDashboardPage() {
           <div className="p-4 sm:p-5 border-b border-tone-rule bg-cream flex justify-between items-center">
             <div>
               <h3 className="font-serif text-lg text-tone-heading font-medium">
-                Faculty Mentor Capacity & Workload
+                Faculty Mentor Capacity and Workload
               </h3>
               <p className="text-xs text-tone-muted mt-0.5">
                 Anonymous faculty pool oversight complying with Scholar and Mentor Privacy Protocols.

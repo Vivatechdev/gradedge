@@ -19,11 +19,11 @@ import {
 
 const SERVICES = [
   { id: "dissertation-thesis-mentoring", title: "Full Dissertation / Thesis Mentoring" },
-  { id: "topic-proposal-development", title: "Topic Framing & Proposal Architecture" },
-  { id: "literature-review-support", title: "Literature Review Synthesis & Matrix" },
-  { id: "data-analysis", title: "Quantitative & Qualitative Data Analysis (R, SPSS, Python)" },
-  { id: "defense-preparation", title: "Oral Defense & mock defense Coaching" },
-  { id: "editing-and-writing-quality", title: "Academic Proofreading & Structural Edit" },
+  { id: "topic-proposal-development", title: "Topic Framing and Proposal Architecture" },
+  { id: "literature-review-support", title: "Literature Review Synthesis and Matrix" },
+  { id: "data-analysis", title: "Quantitative and Qualitative Data Analysis (R, SPSS, Python)" },
+  { id: "defense-preparation", title: "Oral Defense and mock defense Coaching" },
+  { id: "editing-and-writing-quality", title: "Academic Proofreading and Structural Edit" },
 ];
 
 export default function NewSupportRequestPage() {
@@ -139,7 +139,7 @@ export default function NewSupportRequestPage() {
                   </div>
                   <div>
                     <h4 className="font-serif font-semibold text-tone-heading">
-                      Mentor Allocation & Scope Plan
+                      Mentor Allocation and Scope Plan
                     </h4>
                     <p className="text-tone-muted text-[11px] leading-relaxed">
                       We match you with a faculty advisor specialized in your specific discipline and quantitative/qualitative tools (SPSS, R, Stata, NVivo).
@@ -216,7 +216,7 @@ export default function NewSupportRequestPage() {
                   required
                   value={title}
                   onChange={(e) => setTitle(e.target.value)}
-                  placeholder="e.g. Chapter 3: Hierarchical Regression & Factor Analysis Validation"
+                  placeholder="e.g. Chapter 3: Hierarchical Regression and Factor Analysis Validation"
                   className="w-full h-10 px-3 text-xs bg-white border border-tone-rule rounded-[2px] focus:outline-none focus:border-navy"
                 />
               </div>

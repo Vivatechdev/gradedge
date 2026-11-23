@@ -113,7 +113,7 @@ function StyleguideContent() {
           <div className="flex items-center gap-4">
             <Logo variant="full" href="/" />
             <span className="text-xs font-semibold uppercase tracking-widest text-tone-muted border-l border-tone-rule pl-4">
-              Design System & Component Styleguide
+              Design System and Component Styleguide
             </span>
           </div>
           <Link
@@ -129,7 +129,7 @@ function StyleguideContent() {
         {/* Intro */}
         <div className="border-b border-tone-rule pb-8">
           <SectionLabel number={1} label="Foundations" />
-          <h1 className="type-h1 mt-2">Design Tokens & Editorial Aesthetics</h1>
+          <h1 className="type-h1 mt-2">Design Tokens and Editorial Aesthetics</h1>
           <p className="type-lead mt-3 max-w-3xl">
             This design system strictly adheres to the GradEdge Anti-Generic Rules: flat surfaces,
             hairline rules (`#E4DFD5`), Fraunces serif headings, Instrument Sans body typography,
@@ -208,7 +208,7 @@ function StyleguideContent() {
         {/* 2. TYPOGRAPHY SCALE */}
         <section className="space-y-6">
           <SectionLabel number={3} label="Typography" />
-          <h2 className="type-h2">Type Hierarchy & Optical Sizing</h2>
+          <h2 className="type-h2">Type Hierarchy and Optical Sizing</h2>
 
           <div className="space-y-8 bg-cream p-8 border border-tone-rule rounded-[2px]">
             <div>
@@ -259,7 +259,7 @@ function StyleguideContent() {
             </div>
 
             <div className="pt-6 border-t border-tone-rule">
-              <span className="type-micro block mb-2">Small Text (14px) & Micro-Label</span>
+              <span className="type-micro block mb-2">Small Text (14px) and Micro-Label</span>
               <p className="type-small">
                 Sequential invoices are generated automatically for all completed mentoring sessions.
               </p>
@@ -273,7 +273,7 @@ function StyleguideContent() {
         {/* 3. LOGO VARIANTS */}
         <section className="space-y-6">
           <SectionLabel number={4} label="Brand Identity" />
-          <h2 className="type-h2">Logo Component & Clear Space</h2>
+          <h2 className="type-h2">Logo Component and Clear Space</h2>
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             <div className="p-6 bg-white border border-tone-rule rounded-[2px] flex flex-col justify-between">
@@ -289,7 +289,7 @@ function StyleguideContent() {
               <div className="py-4">
                 <Logo variant="full-white" />
               </div>
-              <span className="text-[11px] text-tone-muted">Used in footers, dark bars & sidebars</span>
+              <span className="text-[11px] text-tone-muted">Used in footers, dark bars and sidebars</span>
             </div>
 
             <div data-tone="navy-deep" className="tone-navy-deep p-6 bg-navy-deep border border-tone-rule rounded-[2px] flex flex-col justify-between text-tone-body">
@@ -297,7 +297,7 @@ function StyleguideContent() {
               <div className="py-4">
                 <Logo variant="symbol" />
               </div>
-              <span className="text-[11px] text-tone-muted">Used in collapsed sidebars & mobile icons</span>
+              <span className="text-[11px] text-tone-muted">Used in collapsed sidebars and mobile icons</span>
             </div>
           </div>
         </section>
@@ -305,7 +305,7 @@ function StyleguideContent() {
         {/* 4. BUTTONS */}
         <section className="space-y-6">
           <SectionLabel number={5} label="Interactive Controls" />
-          <h2 className="type-h2">Button Variants & States</h2>
+          <h2 className="type-h2">Button Variants and States</h2>
 
           <div className="space-y-6 bg-white p-8 border border-tone-rule rounded-[2px]">
             <div>
@@ -328,7 +328,7 @@ function StyleguideContent() {
             </div>
 
             <div className="pt-6 border-t border-tone-rule">
-              <span className="type-micro block mb-3">States (Loading & Disabled)</span>
+              <span className="type-micro block mb-3">States (Loading and Disabled)</span>
               <div className="flex flex-wrap items-center gap-4">
                 <Button variant="primary" isLoading>Processing request</Button>
                 <Button variant="accent" isLoading>Saving changes</Button>
@@ -342,7 +342,7 @@ function StyleguideContent() {
         {/* 5. FORM CONTROLS */}
         <section className="space-y-6">
           <SectionLabel number={6} label="Forms" />
-          <h2 className="type-h2">Form Fields, Labels & Inline Validation</h2>
+          <h2 className="type-h2">Form Fields, Labels and Inline Validation</h2>
 
           <div className="bg-white p-8 border border-tone-rule rounded-[2px] max-w-3xl space-y-6">
             <FormGroup
@@ -382,7 +382,7 @@ function StyleguideContent() {
               </FormRow>
 
               <Textarea
-                label="Research Brief & Methodology Outline"
+                label="Research Brief and Methodology Outline"
                 placeholder="Describe your current chapter, data structure, or committee questions..."
                 helperText="Maximum 1,000 words for scoping review."
                 rows={4}
@@ -402,7 +402,7 @@ function StyleguideContent() {
                 <span className="type-micro block mb-2">Preferred Consultation Delivery</span>
                 <div className="space-y-2">
                   <Radio name="delivery" label="Private 1-on-1 Video Call (Encrypted)" defaultChecked />
-                  <Radio name="delivery" label="Written Chapter Audit & Developmental Notes" />
+                  <Radio name="delivery" label="Written Chapter Audit and Developmental Notes" />
                 </div>
               </div>
 
@@ -418,10 +418,10 @@ function StyleguideContent() {
           </div>
         </section>
 
-        {/* 6. CARDS & EDITORIAL CONTAINERS */}
+        {/* 6. CARDS and EDITORIAL CONTAINERS */}
         <section className="space-y-6">
           <SectionLabel number={7} label="Containers" />
-          <h2 className="type-h2">Cards & Content Surfaces</h2>
+          <h2 className="type-h2">Cards and Content Surfaces</h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <Card background="cream">
@@ -488,10 +488,10 @@ function StyleguideContent() {
           />
         </section>
 
-        {/* 8. BADGES & STATUS TAGS */}
+        {/* 8. BADGES and STATUS TAGS */}
         <section className="space-y-6">
           <SectionLabel number={9} label="Indicators" />
-          <h2 className="type-h2">Badges & Status Tags</h2>
+          <h2 className="type-h2">Badges and Status Tags</h2>
 
           <div className="bg-white p-6 border border-tone-rule rounded-[2px] flex flex-wrap gap-3 items-center">
             <Badge variant="default">Default</Badge>
@@ -504,10 +504,10 @@ function StyleguideContent() {
           </div>
         </section>
 
-        {/* 9. ACCORDION & TABS */}
+        {/* 9. ACCORDION and TABS */}
         <section className="space-y-6">
-          <SectionLabel number={10} label="Disclosure & Navigation" />
-          <h2 className="type-h2">Tabs & Native FAQ Accordion</h2>
+          <SectionLabel number={10} label="Disclosure and Navigation" />
+          <h2 className="type-h2">Tabs and Native FAQ Accordion</h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Interactive Tabs */}
@@ -567,10 +567,10 @@ function StyleguideContent() {
           </div>
         </section>
 
-        {/* 10. OVERLAYS: MODAL, DRAWER, TOAST & TOOLTIP */}
+        {/* 10. OVERLAYS: MODAL, DRAWER, TOAST and TOOLTIP */}
         <section className="space-y-6">
-          <SectionLabel number={11} label="Overlays & Feedback" />
-          <h2 className="type-h2">Dialogs, Drawers & System Toasts</h2>
+          <SectionLabel number={11} label="Overlays and Feedback" />
+          <h2 className="type-h2">Dialogs, Drawers and System Toasts</h2>
 
           <div className="bg-white p-6 border border-tone-rule rounded-[2px] flex flex-wrap gap-4 items-center">
             <Button variant="primary" onClick={() => setModalOpen(true)}>
@@ -707,7 +707,7 @@ function StyleguideContent() {
         {/* 11. EDITORIAL COMPONENTS */}
         <section className="space-y-6">
           <SectionLabel number={12} label="Editorial Layouts" />
-          <h2 className="type-h2">Pull Quotes, Margin Notes & Step Lists</h2>
+          <h2 className="type-h2">Pull Quotes, Margin Notes and Step Lists</h2>
 
           <div className="space-y-6">
             <PullQuote
@@ -738,7 +738,7 @@ function StyleguideContent() {
               <StepList
                 steps={[
                   {
-                    title: "Submit your research brief & timeline",
+                    title: "Submit your research brief and timeline",
                     description:
                       "Share your current chapter drafts, committee feedback, and upcoming academic submission milestones.",
                   },
@@ -748,7 +748,7 @@ function StyleguideContent() {
                       "We match your project with a mentor holding an earned postgraduate degree in your exact field.",
                   },
                   {
-                    title: "Structured review & 1-on-1 strategy sessions",
+                    title: "Structured review and 1-on-1 strategy sessions",
                     description:
                       "Receive written developmental edits and walk through revision steps during dedicated video consultations.",
                   },
@@ -761,7 +761,7 @@ function StyleguideContent() {
         {/* 12. UTILITY COMPONENTS */}
         <section className="space-y-6">
           <SectionLabel number={13} label="Utilities" />
-          <h2 className="type-h2">Breadcrumbs, Pagination, Avatars & Skeletons</h2>
+          <h2 className="type-h2">Breadcrumbs, Pagination, Avatars and Skeletons</h2>
 
           <div className="bg-white p-8 border border-tone-rule rounded-[2px] space-y-8">
             <div>

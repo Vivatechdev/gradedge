@@ -11,7 +11,7 @@ import { AccordionItem, Accordion } from "@/components/ui/accordion";
 export const revalidate = 3600;
 
 export const metadata: Metadata = buildMetadata({
-  title: "Dissertation Accelerator FAQ — Questions & Admissions Criteria",
+  title: "Dissertation Accelerator FAQ — Questions and Admissions Criteria",
   description:
     "Frequently asked questions about the nine-month Dissertation Accelerator program: eligibility, pacing, mentor matching, and refund policies.",
   path: "/accelerator/faq",

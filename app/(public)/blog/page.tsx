@@ -14,7 +14,7 @@ import { NewsletterForm } from "@/components/marketing/NewsletterForm";
 export const revalidate = 600;
 
 export const metadata: Metadata = buildMetadata({
-  title: "Blog — Research Methods, Academic Writing & Thesis Guidance",
+  title: "Blog — Research Methods, Academic Writing and Thesis Guidance",
   description:
     "The GradEdge blog covers research methodology, academic writing, data analysis, literature reviews, publishing and postgraduate wellbeing. Written by our team.",
   path: "/blog",
@@ -42,12 +42,12 @@ export default async function BlogIndexPage() {
     { slug: "dissertation-methodology", name: "Dissertation Methodology" },
     { slug: "statistical-analysis", name: "Statistical Analysis" },
     { slug: "literature-reviews", name: "Literature Reviews" },
-    { slug: "academic-writing-editing", name: "Academic Writing & Editing" },
+    { slug: "academic-writing-editing", name: "Academic Writing and Editing" },
     { slug: "defense-preparation", name: "Defense Preparation" },
-    { slug: "ethics-research-integrity", name: "Ethics & Research Integrity" },
+    { slug: "ethics-research-integrity", name: "Ethics and Research Integrity" },
     { slug: "publishing-peer-reviewed", name: "Publishing in Peer-Reviewed Journals" },
     { slug: "academic-productivity", name: "Academic Productivity" },
-    { slug: "grant-writing-scholarships", name: "Grant Writing & Scholarships" },
+    { slug: "grant-writing-scholarships", name: "Grant Writing and Scholarships" },
   ];
 
   const FALLBACK_POSTS: PostItem[] = [

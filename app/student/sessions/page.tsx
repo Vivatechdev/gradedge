@@ -98,7 +98,7 @@ export default function StudentSessionsPage() {
           <div className="space-y-1">
             <span className="type-micro text-gold">Advisory Schedule</span>
             <h1 className="font-serif text-2xl font-medium text-tone-heading">
-              Mentoring & Consultation Sessions
+              Mentoring and Consultation Sessions
             </h1>
             <p className="text-xs text-tone-muted leading-relaxed font-sans">
               All times displayed in your detected local timezone:{" "}
@@ -133,7 +133,7 @@ export default function StudentSessionsPage() {
                 : "border-transparent text-tone-muted hover:text-tone-heading"
             }`}
           >
-            Past & Completed ({data.past.length})
+            Past and Completed ({data.past.length})
           </button>
         </div>
 

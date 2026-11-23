@@ -23,7 +23,7 @@ const ACADEMIC_TIMEZONES = [
 export function AdvisoryBookingChamber() {
   const [step, setStep] = useState<1 | 2 | 3>(1);
 
-  // Timezone selection & detection
+  // Timezone selection and detection
   const [timezone, setTimezone] = useState("UTC");
   const [detectedTz, setDetectedTz] = useState("UTC");
 
@@ -40,7 +40,7 @@ export function AdvisoryBookingChamber() {
   const [topicHelp, setTopicHelp] = useState("");
   const [message, setMessage] = useState("");
 
-  // Submission & Conflict State
+  // Submission and Conflict State
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const [conflictSlots, setConflictSlots] = useState<TimeSlot[]>([]);
@@ -171,7 +171,7 @@ export function AdvisoryBookingChamber() {
           </span>
           <h2 className="font-serif text-lg sm:text-xl font-semibold text-tone-heading">
             {step === 1 && "Step 1: Choose a Day and Time"}
-            {step === 2 && "Step 2: Your Details & Research Focus"}
+            {step === 2 && "Step 2: Your Details and Research Focus"}
             {step === 3 && "Step 3: Consultation Confirmed"}
           </h2>
         </div>
@@ -186,7 +186,7 @@ export function AdvisoryBookingChamber() {
                 : "bg-white text-tone-muted border-[#E4DFD5]"
             )}
           >
-            1. Day & Time
+            1. Day and Time
           </span>
           <span className="text-[#E4DFD5]">&rarr;</span>
           <span
@@ -376,7 +376,7 @@ export function AdvisoryBookingChamber() {
         </div>
       )}
 
-      {/* ── STEP 2: DETAILS & TOPIC FOCUS ────────────────────────────────── */}
+      {/* ── STEP 2: DETAILS and TOPIC FOCUS ────────────────────────────────── */}
       {step === 2 && (
         <form onSubmit={handleSubmitBooking} className="p-6 sm:p-8 space-y-6">
           {/* Slot Summary Pill */}
@@ -509,7 +509,7 @@ export function AdvisoryBookingChamber() {
             />
           </div>
 
-          {/* Academic Integrity & Free Notice */}
+          {/* Academic Integrity and Free Notice */}
           <div className="p-3.5 bg-[#FAF8F4] border border-[#E4DFD5] rounded-[4px] text-[11px] text-tone-muted font-sans leading-relaxed">
             <strong>Honest Advisory Policy:</strong> This 20-minute call is free with zero obligation. We evaluate your methodology and tell you honestly whether we have the right specialist. We do not write thesis chapters for students.
           </div>
@@ -535,7 +535,7 @@ export function AdvisoryBookingChamber() {
         </form>
       )}
 
-      {/* ── STEP 3: CONFIRMATION & CALENDAR ──────────────────────────────── */}
+      {/* ── STEP 3: CONFIRMATION and CALENDAR ──────────────────────────────── */}
       {step === 3 && confirmedBooking && (
         <div className="p-6 sm:p-10 space-y-6 text-center">
           <div className="w-12 h-12 bg-forest/10 text-forest border border-forest/30 rounded-full flex items-center justify-center mx-auto text-xl font-bold">

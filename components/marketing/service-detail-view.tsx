@@ -20,7 +20,7 @@ import {
   DataLabModelVisualizer,
   RedlineDiffVisualizer,
   JournalSubmissionVisualizer,
-  VivaDefenseVisualizer,
+  OralDefenseVisualizer,
 } from "@/components/marketing/service-visuals";
 
 interface ServiceDetailViewProps {
@@ -48,8 +48,8 @@ interface CategoryConfig {
 const CATEGORY_CONFIG: Record<string, CategoryConfig> = {
   "dissertation-support": {
     trackBadge: "Doctoral Manuscript Track",
-    heroPill: "Thesis Architecture & Chapter Roadmapping",
-    visualizerTitle: "Interactive Thesis Architecture & Milestone Navigator",
+    heroPill: "Thesis Architecture and Chapter Roadmapping",
+    visualizerTitle: "Interactive Thesis Architecture and Milestone Navigator",
     visualizerSubtitle: "Explore chapter-by-chapter supervisory hurdles, target word lengths, and our structured mentor interventions.",
     icon: BookOpen,
     accentColor: "border-gold/40 bg-gold/5 text-gold",
@@ -61,33 +61,33 @@ const CATEGORY_CONFIG: Record<string, CategoryConfig> = {
       { id: "what-you-get", label: "Deliverables" },
       { id: "how-it-works", label: "Workflow" },
       { id: "example", label: "Mentor Feedback" },
-      { id: "packages", label: "Packages & Pricing" },
+      { id: "packages", label: "Packages and Pricing" },
       { id: "faq", label: "FAQ" },
     ],
   },
   "data-analysis": {
     trackBadge: "Empirical Laboratory Track",
-    heroPill: "Computational Modeling & Fit Diagnostics",
-    visualizerTitle: "Interactive Computational Workbench & Fit Diagnostics",
+    heroPill: "Computational Modeling and Fit Diagnostics",
+    visualizerTitle: "Interactive Computational Workbench and Fit Diagnostics",
     visualizerSubtitle: "Switch between statistical packages (R, Python, SPSS, Stata, SmartPLS) to inspect reproducible syntax and model fit indexes.",
     icon: Terminal,
     accentColor: "border-navy/40 bg-navy/5 text-navy",
     guaranteeText: "Reproducible code repository with full dataset audit trails. Clear methodology reports with zero synthetic fabrication.",
     navSections: [
       { id: "overview", label: "Overview" },
-      { id: "interactive-lab", label: "Code & Diagnostics" },
+      { id: "interactive-lab", label: "Code and Diagnostics" },
       { id: "is-this-for-you", label: "Empirical Scope" },
-      { id: "what-you-get", label: "Deliverables & Data" },
+      { id: "what-you-get", label: "Deliverables and Data" },
       { id: "how-it-works", label: "Pipeline" },
       { id: "example", label: "Audit Evidence" },
-      { id: "packages", label: "Packages & Pricing" },
+      { id: "packages", label: "Packages and Pricing" },
       { id: "faq", label: "FAQ" },
     ],
   },
   "editing-and-writing-quality": {
-    trackBadge: "Editorial & Style Compliance Track",
-    heroPill: "Redline Proofroom & Style Manual Compliance",
-    visualizerTitle: "Scholarly Redline Proofroom & Tracked Changes Diff",
+    trackBadge: "Editorial and Style Compliance Track",
+    heroPill: "Redline Proofroom and Style Manual Compliance",
+    visualizerTitle: "Scholarly Redline Proofroom and Tracked Changes Diff",
     visualizerSubtitle: "Inspect line-level tracked changes, academic prose transformations, and strict style manual compliance (APA 7th, Chicago, IEEE, Harvard).",
     icon: FileCode,
     accentColor: "border-gold/50 bg-cream text-tone-heading",
@@ -99,14 +99,14 @@ const CATEGORY_CONFIG: Record<string, CategoryConfig> = {
       { id: "what-you-get", label: "Edited Deliverables" },
       { id: "how-it-works", label: "Revision Cycles" },
       { id: "example", label: "Annotations" },
-      { id: "packages", label: "Tiers & Turnaround" },
+      { id: "packages", label: "Tiers and Turnaround" },
       { id: "faq", label: "FAQ" },
     ],
   },
   "publishing-and-career": {
     trackBadge: "High-Impact Journal Dispatch Track",
-    heroPill: "Q1/Q2 Scopus Alignment & Peer Review Diplomacy",
-    visualizerTitle: "Journal Submission Blueprint & Author Rebuttal Simulator",
+    heroPill: "Q1/Q2 Scopus Alignment and Peer Review Diplomacy",
+    visualizerTitle: "Journal Submission Blueprint and Author Rebuttal Simulator",
     visualizerSubtitle: "Simulate rigorous point-by-point author rebuttals responding diplomatically to critical reviewer commentary.",
     icon: Award,
     accentColor: "border-gold/60 bg-gold/10 text-gold",
@@ -118,13 +118,13 @@ const CATEGORY_CONFIG: Record<string, CategoryConfig> = {
       { id: "what-you-get", label: "Dispatch Deliverables" },
       { id: "how-it-works", label: "Submission Flow" },
       { id: "example", label: "Reviewer Response Sample" },
-      { id: "packages", label: "Scope & Investment" },
+      { id: "packages", label: "Scope and Investment" },
       { id: "faq", label: "FAQ" },
     ],
   },
   "coaching-and-training": {
-    trackBadge: "Oral Examination & Defense Chamber Track",
-    heroPill: "Oral Defense Simulation & Committee Cross-Examination",
+    trackBadge: "Oral Examination and Defense Chamber Track",
+    heroPill: "Oral Defense Simulation and Committee Cross-Examination",
     visualizerTitle: "Oral Defense Oral Defense Simulation Chamber",
     visualizerSubtitle: "Practice structured academic responses against external examiner methodological traps, committee challenges, and policy translation probes.",
     icon: Users,
@@ -192,7 +192,7 @@ export function ServiceDetailView({
       case "publishing-and-career":
         return <JournalSubmissionVisualizer />;
       case "coaching-and-training":
-        return <VivaDefenseVisualizer />;
+        return <OralDefenseVisualizer />;
       case "dissertation-support":
       default:
         return <ThesisArchitectureVisualizer />;
@@ -237,7 +237,7 @@ export function ServiceDetailView({
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           {/* ════ LEFT COLUMN: WIDE EDITORIAL CONTENT (8 Cols) ══════════════ */}
           <div className="lg:col-span-8 space-y-16">
-            {/* ── SECTION 1: OVERVIEW & HERO ──────────────────────────────── */}
+            {/* ── SECTION 1: OVERVIEW and HERO ──────────────────────────────── */}
             <section id="overview" className="scroll-mt-32 space-y-8">
               <div className="space-y-4">
                 <div className="flex flex-wrap items-center gap-2">
@@ -307,7 +307,7 @@ export function ServiceDetailView({
                 <ShieldCheck className="w-5 h-5 text-gold shrink-0 mt-0.5" />
                 <div className="space-y-1">
                   <span className="text-xs font-semibold text-tone-heading block">
-                    Academic Integrity & Quality Standard
+                    Academic Integrity and Quality Standard
                   </span>
                   <p className="text-xs text-tone-body leading-relaxed">
                     {categoryConfig.guaranteeText}
@@ -521,7 +521,7 @@ export function ServiceDetailView({
 
             {/* ── SECTION 7: TOOLS AND METHODS ────────────────────────────── */}
             <section className="space-y-4 pt-8 border-t border-tone-rule">
-              <span className="type-micro text-tone-muted">Methodology & Software</span>
+              <span className="type-micro text-tone-muted">Methodology and Software</span>
               <h3 className="font-serif text-xl text-tone-heading font-medium">
                 Tools and software environments covered:
               </h3>
@@ -575,13 +575,13 @@ export function ServiceDetailView({
               </div>
             </section>
 
-            {/* ── SECTION 9: PACKAGES & PRICING COMPARISON TABLE ───────────── */}
+            {/* ── SECTION 9: PACKAGES and PRICING COMPARISON TABLE ───────────── */}
             <section id="packages" className="scroll-mt-32 space-y-6 pt-8 border-t border-tone-rule">
               <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
                 <div className="space-y-2">
                   <span className="type-micro text-tone-muted">Investment Tiers</span>
                   <h2 className="font-serif text-2xl sm:text-3xl text-tone-heading font-medium">
-                    Packages & Pricing
+                    Packages and Pricing
                   </h2>
                   <p className="text-xs sm:text-sm text-tone-muted max-w-xl">
                     Transparent investment with no hidden charges. Choose the scope that matches your chapter milestone.
@@ -710,7 +710,7 @@ export function ServiceDetailView({
               </div>
             </section>
 
-            {/* ── SECTION 11: RELATED SERVICES & BLOG POSTS ────────────────── */}
+            {/* ── SECTION 11: RELATED SERVICES and BLOG POSTS ────────────────── */}
             <section className="space-y-8 pt-8 border-t border-tone-rule">
               <div className="space-y-4">
                 <span className="type-micro text-tone-muted">Complementary Support</span>

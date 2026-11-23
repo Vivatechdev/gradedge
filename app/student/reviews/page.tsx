@@ -35,7 +35,7 @@ interface ChapterSubmissionReview {
 const REVIEWS: ChapterSubmissionReview[] = [
   {
     id: "sub-1",
-    chapterTitle: "Chapter 3: Methodology & Propensity Score Matching Protocol",
+    chapterTitle: "Chapter 3: Methodology and Propensity Score Matching Protocol",
     mentorName: "Dr. Eleanor Vance",
     submittedAt: "Nov 20, 2026",
     status: "in_review",
@@ -46,7 +46,7 @@ const REVIEWS: ChapterSubmissionReview[] = [
   },
   {
     id: "sub-2",
-    chapterTitle: "Chapter 2: Literature Review & Conceptual Synthesis Matrix",
+    chapterTitle: "Chapter 2: Literature Review and Conceptual Synthesis Matrix",
     mentorName: "Dr. Eleanor Vance",
     submittedAt: "Nov 02, 2026",
     status: "approved",
@@ -56,7 +56,7 @@ const REVIEWS: ChapterSubmissionReview[] = [
   },
   {
     id: "sub-3",
-    chapterTitle: "Chapter 1: Problem Statement & Epidemiological Hypotheses",
+    chapterTitle: "Chapter 1: Problem Statement and Epidemiological Hypotheses",
     mentorName: "Dr. Eleanor Vance",
     submittedAt: "Oct 15, 2026",
     status: "approved",
@@ -86,7 +86,7 @@ export default function StudentReviewsPage() {
         <div className="border-b border-tone-rule pb-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div>
             <h2 className="font-serif text-2xl font-medium text-tone-heading">
-              Chapter Feedback &amp; Redline Archive
+              Chapter Feedback and Redline Archive
             </h2>
             <p className="text-xs text-tone-muted mt-1">
               Complete audit trail of faculty mentor evaluations, track-changes commentary, and Turnitin similarity certificates.
@@ -143,7 +143,7 @@ export default function StudentReviewsPage() {
             })}
           </div>
 
-          {/* Right Column: Detailed Review & Rubric (7 cols) */}
+          {/* Right Column: Detailed Review and Rubric (7 cols) */}
           <div className="lg:col-span-7 space-y-5">
             <Card className="bg-white border-tone-rule">
               <CardHeader className="border-b border-tone-rule pb-4">
@@ -164,7 +164,7 @@ export default function StudentReviewsPage() {
               </CardHeader>
 
               <CardContent className="p-5 space-y-5 text-xs font-sans">
-                {/* Score & Similarity Highlights */}
+                {/* Score and Similarity Highlights */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   <div className="p-3 bg-paper rounded-[2px] border border-tone-rule">
                     <span className="text-stone-500 text-[11px] block">Rubric Assessment</span>
@@ -184,7 +184,7 @@ export default function StudentReviewsPage() {
                 {/* Faculty Commentary */}
                 <div className="space-y-1.5">
                   <span className="font-semibold uppercase tracking-wider text-tone-heading text-[11px] block">
-                    Faculty Commentary &amp; Structural Notes:
+                    Faculty Commentary and Structural Notes:
                   </span>
                   <div className="p-4 bg-paper rounded-[2px] border border-tone-rule text-stone-700 leading-relaxed text-xs">
                     {selectedReview.feedbackSummary}
@@ -194,7 +194,7 @@ export default function StudentReviewsPage() {
                 {/* Interactive Track Changes / Redline Viewer */}
                 <div className="space-y-2">
                   <span className="font-semibold uppercase tracking-wider text-tone-heading text-[11px] block">
-                    Interactive Manuscript Redlines &amp; Margin Notes
+                    Interactive Manuscript Redlines and Margin Notes
                   </span>
                   <RedlineDiffViewer
                     candidateName={student.name}

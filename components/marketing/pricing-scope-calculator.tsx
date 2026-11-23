@@ -37,7 +37,7 @@ const RESEARCH_MILESTONES = [
   },
   {
     id: "data-empirical",
-    label: "Data Analysis, Syntax Audit & SEM Fit",
+    label: "Data Analysis, Syntax Audit and SEM Fit",
     baseNgn: 180000,
     baseUsd: 180,
     turnaround: "2–3 weeks",
@@ -45,7 +45,7 @@ const RESEARCH_MILESTONES = [
   },
   {
     id: "methodology",
-    label: "Research Design, Sampling & Codebooks",
+    label: "Research Design, Sampling and Codebooks",
     baseNgn: 140000,
     baseUsd: 140,
     turnaround: "10–14 days",
@@ -53,7 +53,7 @@ const RESEARCH_MILESTONES = [
   },
   {
     id: "literature",
-    label: "Literature Synthesis & Thematic Matrix",
+    label: "Literature Synthesis and Thematic Matrix",
     baseNgn: 120000,
     baseUsd: 120,
     turnaround: "10–14 days",
@@ -61,7 +61,7 @@ const RESEARCH_MILESTONES = [
   },
   {
     id: "defense",
-    label: "Oral Defense & Mock Committee Defense",
+    label: "Oral Defense and Mock Committee Defense",
     baseNgn: 95000,
     baseUsd: 95,
     turnaround: "1 week intensive",

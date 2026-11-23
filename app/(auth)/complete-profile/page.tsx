@@ -168,7 +168,7 @@ function CompleteProfileForm() {
           />
         </div>
 
-        {/* Study Level & Field of Study */}
+        {/* Study Level and Field of Study */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-1">
           <div className="space-y-1.5">
             <label
@@ -226,7 +226,7 @@ function CompleteProfileForm() {
           />
         </div>
 
-        {/* Checkbox 1: Terms & Academic Integrity Policy (Required) */}
+        {/* Checkbox 1: Terms and Academic Integrity Policy (Required) */}
         <div className="pt-2">
           <label className="flex items-start gap-3 cursor-pointer select-none">
             <input
@@ -258,7 +258,7 @@ function CompleteProfileForm() {
           </label>
         </div>
 
-        {/* Checkbox 2: Marketing Opt-in (Separate & Unchecked) */}
+        {/* Checkbox 2: Marketing Opt-in (Separate and Unchecked) */}
         <div>
           <label className="flex items-start gap-3 cursor-pointer select-none">
             <input
@@ -280,7 +280,7 @@ function CompleteProfileForm() {
             disabled={loading}
             className="w-full bg-gold hover:bg-gold-deep text-[#14263F] font-bold text-xs sm:text-sm py-2.5 px-4 rounded-[4px] transition-colors disabled:opacity-60 cursor-pointer disabled:cursor-not-allowed"
           >
-            {loading ? "Saving profile..." : "Complete Profile & Continue"}
+            {loading ? "Saving profile..." : "Complete Profile and Continue"}
           </button>
         </div>
       </form>

@@ -6,7 +6,7 @@ import { getServicesByCategory } from "@/lib/data/services-content";
 export const revalidate = 3600;
 
 export const metadata: Metadata = buildMetadata({
-  title: "Publishing & Academic Career Services — GradEdge",
+  title: "Publishing and Academic Career Services — GradEdge",
   description:
     "Convert dissertation chapters into peer-reviewed journal articles, target indexed journals, respond to reviewers, and craft competitive research grant proposals.",
   path: "/services/publishing-and-career",
@@ -36,7 +36,7 @@ export default function PublishingAndCareerCategoryPage() {
   return (
     <ServiceCategoryView
       categorySlug="publishing-and-career"
-      categoryName="Publishing & Career"
+      categoryName="Publishing and Career"
       headerImage="/images/services/stage-publishing.jpg"
       headerImageAlt="Peer-reviewed scholarly journals, published proofs, and research grant funding applications"
       headline="From doctoral dissertation to peer-reviewed publication."

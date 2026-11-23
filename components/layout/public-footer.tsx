@@ -81,22 +81,22 @@ export function PublicFooter() {
               </li>
               <li>
                 <Link href="/services/data-analysis" className="hover:text-white transition-colors">
-                  Data Analysis & Statistics
+                  Data Analysis and Statistics
                 </Link>
               </li>
               <li>
                 <Link href="/services/editing-and-writing-quality" className="hover:text-white transition-colors">
-                  Editing & Writing Quality
+                  Editing and Writing Quality
                 </Link>
               </li>
               <li>
                 <Link href="/services/publishing-and-career" className="hover:text-white transition-colors">
-                  Publishing & Career Support
+                  Publishing and Career Support
                 </Link>
               </li>
               <li>
                 <Link href="/services/coaching-and-training" className="hover:text-white transition-colors">
-                  Coaching & Training
+                  Coaching and Training
                 </Link>
               </li>
               <li className="pt-1">
@@ -115,17 +115,17 @@ export function PublicFooter() {
             <ul className="space-y-2 text-tone-muted">
               <li>
                 <Link href="/blog" className="hover:text-white transition-colors">
-                  Writing & Research Advice
+                  Writing and Research Advice
                 </Link>
               </li>
               <li>
                 <Link href="/resources" className="hover:text-white transition-colors">
-                  Templates & Audit Guides
+                  Templates and Audit Guides
                 </Link>
               </li>
               <li>
                 <Link href="/subjects" className="hover:text-white transition-colors">
-                  Subject Areas & Disciplines
+                  Subject Areas and Disciplines
                 </Link>
               </li>
               <li>
@@ -159,12 +159,12 @@ export function PublicFooter() {
               </li>
               <li>
                 <Link href="/pricing" className="hover:text-white transition-colors">
-                  Pricing & Support Tiers
+                  Pricing and Support Tiers
                 </Link>
               </li>
               <li>
                 <Link href="/institutions" className="hover:text-white transition-colors">
-                  For Universities & Labs
+                  For Universities and Labs
                 </Link>
               </li>
               <li>
@@ -183,7 +183,7 @@ export function PublicFooter() {
           {/* Column 4: Legal */}
           <div>
             <h5 className="font-semibold uppercase tracking-wider text-gold mb-3">
-              Legal & Policies
+              Legal and Policies
             </h5>
             <ul className="space-y-2 text-tone-muted">
               <li>
@@ -198,12 +198,12 @@ export function PublicFooter() {
               </li>
               <li>
                 <Link href="/legal/privacy" className="hover:text-white transition-colors">
-                  Privacy & Data Policy
+                  Privacy and Data Policy
                 </Link>
               </li>
               <li>
                 <Link href="/legal/refunds" className="hover:text-white transition-colors">
-                  Refund & Cancellation Policy
+                  Refund and Cancellation Policy
                 </Link>
               </li>
               <li>
@@ -220,12 +220,12 @@ export function PublicFooter() {
           </div>
         </div>
 
-        {/* Portals & Workspaces Preview Row */}
+        {/* Portals and Workspaces Preview Row */}
         <div className="py-6 border-b border-tone-rule/60 flex flex-wrap items-center justify-between gap-4 text-xs font-sans">
           <div className="flex items-center gap-2">
             <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
             <span className="font-semibold text-white tracking-wide uppercase text-[11px]">
-              Workspaces &amp; Portals:
+              Workspaces and Portals:
             </span>
           </div>
           <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-tone-muted">
@@ -251,7 +251,7 @@ export function PublicFooter() {
               href="/login"
               className="text-gold hover:text-white transition-colors underline underline-offset-4"
             >
-              Sign In (Any Random Email &amp; Password)
+              Sign In (Any Random Email and Password)
             </Link>
           </div>
         </div>

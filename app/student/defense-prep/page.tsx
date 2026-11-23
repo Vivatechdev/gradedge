@@ -61,7 +61,7 @@ const VIVA_QUESTIONS: VivaQuestion[] = [
   {
     id: "vq-4",
     category: "limitations",
-    categoryLabel: "Limitations & Delimitations",
+    categoryLabel: "Limitations and Delimitations",
     question: "If you had an additional year and unlimited funding, what critical limitation in this study would you address first?",
     examinerFocus: "Evaluating academic honesty and mature critical self-appraisal without invalidating the integrity of your findings.",
     recommendedStructure: "1. Identify one structural constraint (e.g., longitudinal attrition). 2. Explain how a prospective design would fortify the findings. 3. Re-affirm why the current results remain internally valid.",
@@ -97,7 +97,7 @@ export default function StudentDefensePrepPage() {
         <div className="border-b border-tone-rule pb-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div>
             <h2 className="font-serif text-2xl font-medium text-tone-heading">
-              Oral Defense & Examination Simulator
+              Oral Defense and Examination Simulator
             </h2>
             <p className="text-xs text-tone-muted mt-1">
               Prepare for rigorous doctoral examination with real examiner questions, structure rubrics, and mock committee interrogations.
@@ -126,7 +126,7 @@ export default function StudentDefensePrepPage() {
               <Badge variant="gold" className="text-[10px]">
                 Oral Readiness Score
               </Badge>
-              <span className="text-xs text-white/70">Based on methodology defense &amp; slide audits</span>
+              <span className="text-xs text-white/70">Based on methodology defense and slide audits</span>
             </div>
             <h3 className="font-serif text-2xl text-white font-medium">
               84% &mdash; High Committee Readiness
@@ -221,7 +221,7 @@ export default function StudentDefensePrepPage() {
             </Card>
           </div>
 
-          {/* Practice & Rubric Workspace (7 cols) */}
+          {/* Practice and Rubric Workspace (7 cols) */}
           <div className="lg:col-span-7 space-y-5">
             <Card className="bg-white border-tone-rule">
               <CardHeader className="border-b border-tone-rule pb-4">
@@ -237,10 +237,10 @@ export default function StudentDefensePrepPage() {
               </CardHeader>
 
               <CardContent className="p-5 space-y-5 text-xs font-sans">
-                {/* Examiner Psychology & Focus */}
+                {/* Examiner Psychology and Focus */}
                 <div className="p-3.5 bg-paper rounded-[2px] border border-tone-rule space-y-1">
                   <span className="font-semibold text-navy block text-xs">
-                    Examiner Intent &amp; Trap to Avoid:
+                    Examiner Intent and Trap to Avoid:
                   </span>
                   <p className="text-stone-600 text-[11px] leading-relaxed">
                     {selectedQuestion.examinerFocus}
@@ -257,10 +257,10 @@ export default function StudentDefensePrepPage() {
                   </div>
                 </div>
 
-                {/* Candidate Notes & Rehearsal Draft */}
+                {/* Candidate Notes and Rehearsal Draft */}
                 <div className="space-y-2">
                   <label className="font-semibold uppercase tracking-wider text-tone-heading text-[11px] block">
-                    Your Defense Formulation &amp; Key References:
+                    Your Defense Formulation and Key References:
                   </label>
                   <textarea
                     rows={5}
@@ -321,7 +321,7 @@ export default function StudentDefensePrepPage() {
                       GradEdge Doctoral Advisory Services &bull; Oral Defense Preparation
                     </span>
                     <h1 className="font-serif text-2xl font-bold text-tone-heading mt-1">
-                      Oral Examination Question Bank &amp; Defense Notes
+                      Oral Examination Question Bank and Defense Notes
                     </h1>
                     <p className="text-xs text-stone-600 mt-0.5">
                       Candidate: <strong>{student.name}</strong> &bull; {student.institution}

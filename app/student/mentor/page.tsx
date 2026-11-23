@@ -161,7 +161,7 @@ export default function StudentMentorPage() {
           <div className="space-y-1">
             <span className="type-micro text-gold">Academic Faculty</span>
             <h1 className="font-serif text-2xl font-medium text-tone-heading">
-              Faculty Mentor & Advisory
+              Faculty Mentor and Advisory
             </h1>
             <p className="text-xs text-tone-muted leading-relaxed font-sans">
               Your assigned faculty scholar guides your methodology, reviews draft iterations, and conducts 1-on-1 consultations.
@@ -266,7 +266,7 @@ export default function StudentMentorPage() {
                 </p>
               </div>
 
-              {/* Disciplines & Software Grid */}
+              {/* Disciplines and Software Grid */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
                 <div className="p-4 bg-paper-light border border-tone-rule rounded-[2px] space-y-2">
                   <div className="flex items-center gap-2 text-xs font-semibold text-tone-heading">
@@ -288,7 +288,7 @@ export default function StudentMentorPage() {
                 <div className="p-4 bg-paper-light border border-tone-rule rounded-[2px] space-y-2">
                   <div className="flex items-center gap-2 text-xs font-semibold text-tone-heading">
                     <Laptop className="h-4 w-4 text-navy" />
-                    <span>Methodological & Data Tools</span>
+                    <span>Methodological and Data Tools</span>
                   </div>
                   <div className="flex flex-wrap gap-1.5 pt-1">
                     {mentor.software.map((s) => (

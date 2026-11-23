@@ -24,7 +24,7 @@ import { PricingScopeCalculator } from "@/components/marketing/pricing-scope-cal
 export const revalidate = 3600;
 
 export const metadata: Metadata = buildMetadata({
-  title: "Transparent Pricing — Services, Packages & Membership Plans",
+  title: "Transparent Pricing — Services, Packages and Membership Plans",
   description:
     "Transparent pricing for every GradEdge service. Sessions, project packages and monthly membership plans. Pay securely in NGN or USD.",
   path: "/pricing",
@@ -84,16 +84,16 @@ export default async function PricingPage() {
   // Fallbacks
   if (services.length === 0) {
     services = [
-      { id: "1", slug: "dissertation-thesis-mentoring", title: "Dissertation & Thesis Mentoring", category: "Dissertation Support", price_from_minor: 4500000, currency: "NGN", delivery_mode: "project" },
-      { id: "2", slug: "topic-proposal-development", title: "Topic & Proposal Development", category: "Dissertation Support", price_from_minor: 3000000, currency: "NGN", delivery_mode: "project" },
+      { id: "1", slug: "dissertation-thesis-mentoring", title: "Dissertation and Thesis Mentoring", category: "Dissertation Support", price_from_minor: 4500000, currency: "NGN", delivery_mode: "project" },
+      { id: "2", slug: "topic-proposal-development", title: "Topic and Proposal Development", category: "Dissertation Support", price_from_minor: 3000000, currency: "NGN", delivery_mode: "project" },
       { id: "3", slug: "literature-review-support", title: "Literature Review Support", category: "Dissertation Support", price_from_minor: 3500000, currency: "NGN", delivery_mode: "project" },
-      { id: "4", slug: "research-design-ethics", title: "Research Design & Ethics Support", category: "Dissertation Support", price_from_minor: 3000000, currency: "NGN", delivery_mode: "project" },
+      { id: "4", slug: "research-design-ethics", title: "Research Design and Ethics Support", category: "Dissertation Support", price_from_minor: 3000000, currency: "NGN", delivery_mode: "project" },
       { id: "5", slug: "quantitative-data-analysis", title: "Quantitative Data Analysis", category: "Data Analysis", price_from_minor: 5000000, currency: "NGN", delivery_mode: "project" },
       { id: "6", slug: "qualitative-data-analysis", title: "Qualitative Data Analysis", category: "Data Analysis", price_from_minor: 4500000, currency: "NGN", delivery_mode: "project" },
-      { id: "7", slug: "academic-editing-proofreading", title: "Academic Editing & Proofreading", category: "Editing & Writing Quality", price_from_minor: 2500000, currency: "NGN", delivery_mode: "session" },
-      { id: "8", slug: "referencing-formatting-compliance", title: "Referencing & Formatting Compliance", category: "Editing & Writing Quality", price_from_minor: 1500000, currency: "NGN", delivery_mode: "session" },
-      { id: "9", slug: "journal-article-conversion", title: "Journal Article Conversion", category: "Publishing & Career", price_from_minor: 6000000, currency: "NGN", delivery_mode: "project" },
-      { id: "10", slug: "defense-presentation-coaching", title: "Defense & Presentation Coaching", category: "Coaching & Training", price_from_minor: 3500000, currency: "NGN", delivery_mode: "session" },
+      { id: "7", slug: "academic-editing-proofreading", title: "Academic Editing and Proofreading", category: "Editing and Writing Quality", price_from_minor: 2500000, currency: "NGN", delivery_mode: "session" },
+      { id: "8", slug: "referencing-formatting-compliance", title: "Referencing and Formatting Compliance", category: "Editing and Writing Quality", price_from_minor: 1500000, currency: "NGN", delivery_mode: "session" },
+      { id: "9", slug: "journal-article-conversion", title: "Journal Article Conversion", category: "Publishing and Career", price_from_minor: 6000000, currency: "NGN", delivery_mode: "project" },
+      { id: "10", slug: "defense-presentation-coaching", title: "Defense and Presentation Coaching", category: "Coaching and Training", price_from_minor: 3500000, currency: "NGN", delivery_mode: "session" },
     ];
   }
 
@@ -146,7 +146,7 @@ export default async function PricingPage() {
         {/* Services pricing table */}
         <section className="space-y-4">
           <SectionLabel label="Starting Investment by Service" />
-          <h2 className="type-h2 text-tone-heading">Services & starting rates</h2>
+          <h2 className="type-h2 text-tone-heading">Services and starting rates</h2>
 
           <div className="border border-tone-rule bg-white rounded-[2px] overflow-hidden shadow-xs">
             <div className="overflow-x-auto">
@@ -197,7 +197,7 @@ export default async function PricingPage() {
 
         {/* Membership pricing */}
         <section className="space-y-4 pt-8 border-t border-tone-rule">
-          <SectionLabel label="Monthly & Annual Membership Tiers" />
+          <SectionLabel label="Monthly and Annual Membership Tiers" />
           <h2 className="type-h2 text-tone-heading">Ongoing membership tiers</h2>
 
           <div className="border border-tone-rule bg-white rounded-[2px] overflow-hidden shadow-xs">
@@ -240,10 +240,10 @@ export default async function PricingPage() {
           </div>
         </section>
 
-        {/* Pricing variables & mechanics */}
+        {/* Pricing variables and mechanics */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-8 border-t border-tone-rule">
           <section className="space-y-3">
-            <SectionLabel label="Pricing Factors & Scoping" />
+            <SectionLabel label="Pricing Factors and Scoping" />
             <h3 className="type-h3 text-tone-heading">What affects the final price</h3>
             <ul className="space-y-2 text-sm text-tone-muted">
               <li className="flex items-start gap-2">
@@ -260,14 +260,14 @@ export default async function PricingPage() {
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-gold font-bold">&bull;</span>
-                <span><strong>Pacing & Turnaround:</strong> Standard 5-day feedback cycles vs. expedited committee review requirements.</span>
+                <span><strong>Pacing and Turnaround:</strong> Standard 5-day feedback cycles vs. expedited committee review requirements.</span>
               </li>
             </ul>
           </section>
 
           <section className="space-y-3">
-            <SectionLabel label="Transparent Pricing & Currency" />
-            <h3 className="type-h3 text-tone-heading">Currencies & Invoicing</h3>
+            <SectionLabel label="Transparent Pricing and Currency" />
+            <h3 className="type-h3 text-tone-heading">Currencies and Invoicing</h3>
             <div className="type-body text-tone-body space-y-3 leading-relaxed text-sm text-tone-muted">
               <p>
                 All services feature clear, upfront milestone pricing in Nigerian Naira (NGN) and US Dollars (USD). The price listed is the exact total you pay.
@@ -282,7 +282,7 @@ export default async function PricingPage() {
           </section>
         </div>
 
-        {/* Refunds & cancellation */}
+        {/* Refunds and cancellation */}
         <section className="p-6 bg-paper border border-tone-rule rounded-[2px] space-y-2">
           <SectionLabel label="Institutional Refund Guarantee" />
           <h3 className="font-serif text-base text-tone-heading font-semibold">

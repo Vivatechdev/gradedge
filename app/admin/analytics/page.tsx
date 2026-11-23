@@ -24,7 +24,7 @@ export default function AdminAnalyticsPage() {
   const [timeRange, setTimeRange] = useState("30d");
 
   const handleExport = () => {
-    showToast("Operations & Revenue Analytics Report (.CSV) downloaded.", "success");
+    showToast("Operations and Revenue Analytics Report (.CSV) downloaded.", "success");
   };
 
   return (
@@ -43,7 +43,7 @@ export default function AdminAnalyticsPage() {
         <div className="border-b border-tone-rule pb-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div>
             <h2 className="font-serif text-2xl font-medium text-tone-heading">
-              Platform Operations, SLA &amp; Revenue Analytics
+              Platform Operations, SLA and Revenue Analytics
             </h2>
             <p className="text-xs text-tone-muted mt-1">
               Multi-currency platform performance, turnaround compliance, and doctoral accelerator milestones.
@@ -208,9 +208,9 @@ export default function AdminAnalyticsPage() {
             </CardHeader>
             <CardContent className="space-y-3 font-sans text-xs">
               {[
-                { discipline: "Quantitative Econometrics & Biostatistics", avg: "34.2 hrs", compliance: "99.1%" },
-                { discipline: "Qualitative Phenomenology & Education", avg: "38.5 hrs", compliance: "97.8%" },
-                { discipline: "Corporate Governance & Legal Theory", avg: "36.0 hrs", compliance: "98.5%" },
+                { discipline: "Quantitative Econometrics and Biostatistics", avg: "34.2 hrs", compliance: "99.1%" },
+                { discipline: "Qualitative Phenomenology and Education", avg: "38.5 hrs", compliance: "97.8%" },
+                { discipline: "Corporate Governance and Legal Theory", avg: "36.0 hrs", compliance: "98.5%" },
               ].map((d) => (
                 <div key={d.discipline} className="flex items-center justify-between p-2.5 bg-white border border-tone-rule rounded-[2px]">
                   <div>
@@ -228,12 +228,12 @@ export default function AdminAnalyticsPage() {
           <Card className="bg-paper border-tone-rule">
             <CardHeader className="pb-2">
               <CardTitle className="font-serif text-sm text-tone-heading">
-                Academic Integrity &amp; Turnitin Zero-Breach Record
+                Academic Integrity and Turnitin Zero-Breach Record
               </CardTitle>
             </CardHeader>
             <CardContent className="p-4 space-y-2 text-xs font-sans text-stone-600 leading-relaxed">
               <p>
-                Zero ghostwriting violations reported across 142 total milestone reviews in 2026. All manuscripts scored beneath the 8% similarity threshold (citations &amp; standard formulas excluded).
+                Zero ghostwriting violations reported across 142 total milestone reviews in 2026. All manuscripts scored beneath the 8% similarity threshold (citations and standard formulas excluded).
               </p>
               <div className="pt-2">
                 <a href="/admin/integrity" className="text-gold font-medium hover:underline text-[11px]">

@@ -58,7 +58,7 @@ export const DEFAULT_EMAIL_TEMPLATES: Record<EmailTemplateKey, TemplateConfig> =
     intro: "Your research consultation booking status has been updated.",
   },
   payment_receipt: {
-    subject: "Payment Receipt & Invoice — GradEdge Academic Solutions",
+    subject: "Payment Receipt and Invoice — GradEdge Academic Solutions",
     intro: "Thank you for your payment. Your official PDF receipt and invoice details are summarized below.",
   },
   payment_failed: {
@@ -70,7 +70,7 @@ export const DEFAULT_EMAIL_TEMPLATES: Record<EmailTemplateKey, TemplateConfig> =
     intro: "Thank you for applying to the Graduate Accelerator. The admissions committee has received your dossier.",
   },
   accelerator_accepted: {
-    subject: "Graduate Accelerator: Acceptance & Enrollment Offer",
+    subject: "Graduate Accelerator: Acceptance and Enrollment Offer",
     intro: "We are pleased to inform you that your research proposal has been approved for the upcoming Accelerator cohort.",
   },
   accelerator_waitlisted: {

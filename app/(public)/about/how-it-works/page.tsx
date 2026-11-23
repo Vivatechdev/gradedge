@@ -56,7 +56,7 @@ export default function HowItWorksPage() {
 
       <PageHero
         sectionNumber={1}
-        sectionLabel="Methodology & Process"
+        sectionLabel="Methodology and Process"
         headline="Here is exactly what happens when you work with us."
         standfirst="No surprises. From your first call to your final submission, here is how our research coaching process operates."
       />
@@ -121,7 +121,7 @@ export default function HowItWorksPage() {
 
         {/* Confidentiality */}
         <section className="space-y-4 pt-8 border-t border-tone-rule">
-          <SectionLabel number={5} label="Privacy & Security" />
+          <SectionLabel number={5} label="Privacy and Security" />
           <h2 className="type-h2 text-tone-heading">Scholarly confidentiality</h2>
           <p className="type-body text-tone-body leading-relaxed">
             All submissions are treated as confidential. We do not share your work with third parties. Mentor assignments are private. Your personal data is stored securely and processed in accordance with our Privacy Policy.

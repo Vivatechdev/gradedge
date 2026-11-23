@@ -131,7 +131,7 @@ export function CheckoutForm({
 
   return (
     <form onSubmit={handleCheckout} className="bg-white border border-tone-rule rounded-[2px] p-6 sm:p-8 text-left space-y-6 shadow-xs font-sans">
-      {/* Purpose & Inclusions */}
+      {/* Purpose and Inclusions */}
       <div className="space-y-3 pb-5 border-b border-tone-rule">
         <span className="type-micro text-gold">Item Summary</span>
         <h2 className="font-serif text-xl sm:text-2xl font-medium text-tone-heading">{title}</h2>
@@ -149,7 +149,7 @@ export function CheckoutForm({
         )}
       </div>
 
-      {/* Currency Selector (Rule 1 & 5) */}
+      {/* Currency Selector (Rule 1 and 5) */}
       <div className="space-y-2">
         <div className="flex items-center justify-between">
           <label className="text-xs font-semibold text-tone-heading">
@@ -321,9 +321,9 @@ export function CheckoutForm({
       <div className="pt-3 border-t border-tone-rule flex items-start gap-2 text-[11px] text-tone-muted">
         <ShieldCheck className="w-4 h-4 text-gold shrink-0 mt-0.5" />
         <span>
-          Academic Integrity & Satisfaction Policy: Clear milestone deliverables with zero hidden fees. Read our{" "}
+          Academic Integrity and Satisfaction Policy: Clear milestone deliverables with zero hidden fees. Read our{" "}
           <Link href="/legal/terms#refunds" className="text-navy hover:text-gold underline font-medium">
-            Refund & Cancellation Policy
+            Refund and Cancellation Policy
           </Link>
           .
         </span>

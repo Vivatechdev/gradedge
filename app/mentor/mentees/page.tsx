@@ -43,10 +43,10 @@ const MENTEES_DATA: MenteeRecord[] = [
     name: "Freedom Sola",
     email: "freedom.sola@university.edu",
     institution: "Cambridge Institute of Public Health",
-    degree: "PhD in Public Health & Epidemiology",
+    degree: "PhD in Public Health and Epidemiology",
     field: "Quantitative / Propensity Matching",
     topic: "Epidemiological Analysis of Maternal Health Access in Sub-Saharan Rural Districts",
-    currentMilestone: "Chapter 3: Sampling & Propensity Score Matching",
+    currentMilestone: "Chapter 3: Sampling and Propensity Score Matching",
     progressPercent: 68,
     status: "in_review",
     lastReviewDate: "Nov 19, 2026",
@@ -59,8 +59,8 @@ const MENTEES_DATA: MenteeRecord[] = [
     email: "a.bello@lse.ac.uk",
     institution: "London School of Economics",
     degree: "PhD in Applied Econometrics",
-    field: "Panel Data & Time-Series Stata",
-    topic: "Panel Econometrics on Carbon Pricing Mechanisms & Inflationary Pressures Across Sub-Saharan Markets",
+    field: "Panel Data and Time-Series Stata",
+    topic: "Panel Econometrics on Carbon Pricing Mechanisms and Inflationary Pressures Across Sub-Saharan Markets",
     currentMilestone: "Chapter 4: Stata Empirical Regression Tables",
     progressPercent: 82,
     status: "active",
@@ -76,7 +76,7 @@ const MENTEES_DATA: MenteeRecord[] = [
     degree: "DPhil in Educational Technology",
     field: "Qualitative Phenomenology / NVivo",
     topic: "Qualitative Phenomenology of Hybrid Learning Experiences in Tertiary STEM",
-    currentMilestone: "NVivo Thematic Coding Framework & Audit Trail",
+    currentMilestone: "NVivo Thematic Coding Framework and Audit Trail",
     progressPercent: 54,
     status: "scheduled",
     lastReviewDate: "Nov 08, 2026",
@@ -88,9 +88,9 @@ const MENTEES_DATA: MenteeRecord[] = [
     name: "Khadija Umar",
     email: "k.umar@business.manchester.ac.uk",
     institution: "Alliance Manchester Business School",
-    degree: "PhD in Accounting & Corporate Governance",
+    degree: "PhD in Accounting and Corporate Governance",
     field: "Mixed-Methods / Governance Indices",
-    topic: "Corporate Governance & Financial Restatement Frequencies in Emerging Capital Markets",
+    topic: "Corporate Governance and Financial Restatement Frequencies in Emerging Capital Markets",
     currentMilestone: "Chapter 2: Literature Review Synthesis Matrix",
     progressPercent: 40,
     status: "in_review",
@@ -147,7 +147,7 @@ export default function MentorMenteesPage() {
           </div>
         </div>
 
-        {/* Search & Filter Toolbar */}
+        {/* Search and Filter Toolbar */}
         <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 bg-white p-3 border border-tone-rule rounded-[2px]">
           <div className="relative flex-1">
             <Search className="absolute left-3 top-2.5 h-4 w-4 text-stone-400" />
@@ -183,7 +183,7 @@ export default function MentorMenteesPage() {
             <Card key={mentee.id} className="bg-white border-tone-rule hover:border-gold/60 transition-all">
               <CardContent className="p-5 sm:p-6 space-y-4">
                 <div className="flex flex-col lg:flex-row lg:items-start justify-between gap-4">
-                  {/* Scholar Bio & Project */}
+                  {/* Scholar Bio and Project */}
                   <div className="space-y-1.5 flex-1">
                     <div className="flex items-center gap-2 flex-wrap">
                       <span className="font-serif text-lg font-semibold text-tone-heading">
@@ -223,7 +223,7 @@ export default function MentorMenteesPage() {
                   </div>
                 </div>
 
-                {/* Milestone Progress & Metrics Bar */}
+                {/* Milestone Progress and Metrics Bar */}
                 <div className="pt-3 border-t border-tone-rule/70 grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs font-sans">
                   <div>
                     <div className="flex items-center justify-between mb-1">
@@ -255,7 +255,7 @@ export default function MentorMenteesPage() {
 
                   <div className="space-y-0.5">
                     <span className="text-stone-500 text-[11px] uppercase tracking-wide block">
-                      Integrity &amp; Similarity
+                      Integrity and Similarity
                     </span>
                     <span className="font-medium text-emerald-700 flex items-center gap-1.5">
                       <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" />

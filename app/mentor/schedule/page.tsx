@@ -36,7 +36,7 @@ const UPCOMING_SESSIONS: ConsultationSession[] = [
   {
     id: "sess-301",
     candidateName: "Freedom Sola",
-    topic: "Propensity Score Matching Caliper Diagnostics & Covariate Balance",
+    topic: "Propensity Score Matching Caliper Diagnostics and Covariate Balance",
     dateStr: "Wednesday, Nov 25, 2026",
     timeStr: "14:00 - 15:00 UTC",
     durationMinutes: 60,
@@ -103,7 +103,7 @@ export default function MentorSchedulePage() {
         <div className="border-b border-tone-rule pb-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div>
             <h2 className="font-serif text-2xl font-medium text-tone-heading">
-              Advisory Sessions &amp; Office Hours
+              Advisory Sessions and Office Hours
             </h2>
             <p className="text-xs text-tone-muted mt-1">
               Live 1-on-1 methodology consultations, oral defense simulations, and dissertation diagnostics.

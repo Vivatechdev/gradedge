@@ -27,14 +27,14 @@ const TEMPLATE_OPTIONS: { key: EmailTemplateKey; label: string; group: string }[
   { key: "session_reminder_24h", label: "Session Reminder (24h)", group: "Bookings" },
   { key: "session_reminder_1h", label: "Session Reminder (1h)", group: "Bookings" },
   { key: "booking_cancelled_or_rescheduled", label: "Session Cancelled / Rescheduled", group: "Bookings" },
-  { key: "payment_receipt", label: "Payment Receipt & Invoice", group: "Billing" },
+  { key: "payment_receipt", label: "Payment Receipt and Invoice", group: "Billing" },
   { key: "payment_failed", label: "Payment Failed", group: "Billing" },
   { key: "membership_renewal_notice", label: "Membership Renewal (3-day)", group: "Billing" },
   { key: "membership_cancelled", label: "Membership Cancelled", group: "Billing" },
   { key: "accelerator_application_received", label: "Accelerator Application Received", group: "Accelerator" },
   { key: "accelerator_accepted", label: "Accelerator Accepted with Offer", group: "Accelerator" },
   { key: "accelerator_waitlisted", label: "Accelerator Waitlisted", group: "Accelerator" },
-  { key: "accelerator_declined", label: "Accelerator Declined (Kind & Respectful)", group: "Accelerator" },
+  { key: "accelerator_declined", label: "Accelerator Declined (Kind and Respectful)", group: "Accelerator" },
   { key: "mentor_assigned", label: "Mentor Appointed to Candidate", group: "Advisory" },
   { key: "new_message_digest", label: "Unread Message Digest", group: "Advisory" },
   { key: "project_status_changed", label: "Project Milestone Status Changed", group: "Projects" },
@@ -149,7 +149,7 @@ export default function AdminSettingsPage() {
         type: "success",
       });
 
-      // Reload settings & cron runs
+      // Reload settings and cron runs
       const reload = await fetch("/api/admin/settings");
       if (reload.ok) {
         const d = await reload.json();
@@ -226,9 +226,9 @@ export default function AdminSettingsPage() {
         {/* Header */}
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 border-b border-tone-rule pb-4">
           <div className="space-y-1">
-            <span className="type-micro text-gold">Governance & Infrastructure</span>
+            <span className="type-micro text-gold">Governance and Infrastructure</span>
             <h1 className="font-serif text-2xl font-medium text-tone-heading">
-              Platform & Communications Settings
+              Platform and Communications Settings
             </h1>
           </div>
 
@@ -283,7 +283,7 @@ export default function AdminSettingsPage() {
             }`}
           >
             <Activity className="h-3.5 w-3.5" />
-            <span>Background Jobs & Cron Log</span>
+            <span>Background Jobs and Cron Log</span>
           </button>
         </div>
 
@@ -408,7 +408,7 @@ export default function AdminSettingsPage() {
           <div className="max-w-2xl bg-white border border-tone-rule rounded-[2px] p-6 space-y-5">
             <div className="border-b border-tone-rule pb-3">
               <h3 className="font-serif text-base font-semibold text-tone-heading">
-                Mentor & Advisory Desk Response Windows
+                Mentor and Advisory Desk Response Windows
               </h3>
               <p className="text-xs text-tone-muted">
                 Define the stated turnaround expectations displayed across student messaging channels.
@@ -433,7 +433,7 @@ export default function AdminSettingsPage() {
           </div>
         )}
 
-        {/* TAB 3: CRON & BACKGROUND JOBS */}
+        {/* TAB 3: CRON and BACKGROUND JOBS */}
         {activeTab === "cron" && (
           <div className="space-y-4">
             <div className="p-5 bg-white border border-tone-rule rounded-[2px] flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">

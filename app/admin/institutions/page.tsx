@@ -37,7 +37,7 @@ const INSTITUTIONS: UniversityContract[] = [
   {
     id: "inst-701",
     institutionName: "University of Cambridge",
-    department: "Institute of Public Health & Global Health Epidemiology",
+    department: "Institute of Public Health and Global Health Epidemiology",
     contractType: "doctoral_consortium",
     allocatedSeats: 20,
     activeSeats: 18,
@@ -50,7 +50,7 @@ const INSTITUTIONS: UniversityContract[] = [
   {
     id: "inst-702",
     institutionName: "Oxford Africa Scholars Doctoral Consortium",
-    department: "Faculty of Social Sciences & International Development",
+    department: "Faculty of Social Sciences and International Development",
     contractType: "enterprise_lab",
     allocatedSeats: 15,
     activeSeats: 14,
@@ -63,7 +63,7 @@ const INSTITUTIONS: UniversityContract[] = [
   {
     id: "inst-703",
     institutionName: "Wellcome Trust PhD Training Partnership",
-    department: "Genomics, Biostatistics & Infectious Disease Informatics",
+    department: "Genomics, Biostatistics and Infectious Disease Informatics",
     contractType: "enterprise_lab",
     allocatedSeats: 25,
     activeSeats: 21,
@@ -93,7 +93,7 @@ export default function AdminInstitutionsPage() {
   };
 
   const handleDownloadAgreement = (name: string) => {
-    showToast(`Master Institutional SLA & Service Agreement (.PDF) for ${name} downloaded.`, "info");
+    showToast(`Master Institutional SLA and Service Agreement (.PDF) for ${name} downloaded.`, "info");
   };
 
   return (
@@ -112,7 +112,7 @@ export default function AdminInstitutionsPage() {
         <div className="border-b border-tone-rule pb-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div>
             <h2 className="font-serif text-2xl font-medium text-tone-heading">
-              University Labs &amp; Institutional B2B Contracts
+              University Labs and Institutional B2B Contracts
             </h2>
             <p className="text-xs text-tone-muted mt-1">
               Enterprise agreements, doctoral consortia seat allocations, and institutional invoicing.
@@ -173,7 +173,7 @@ export default function AdminInstitutionsPage() {
           <Card className="bg-white border-tone-rule">
             <CardHeader className="pb-1">
               <span className="type-micro uppercase text-tone-muted tracking-wider">
-                Compliance &amp; Ethics Accreditation
+                Compliance and Ethics Accreditation
               </span>
               <div className="flex items-center justify-between pt-1">
                 <span className="font-serif text-2xl font-bold text-emerald-700">
@@ -196,7 +196,7 @@ export default function AdminInstitutionsPage() {
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
               <div>
                 <CardTitle className="font-serif text-base text-tone-heading">
-                  Partner Universities &amp; Doctoral Consortia
+                  Partner Universities and Doctoral Consortia
                 </CardTitle>
                 <p className="text-xs text-stone-500 font-sans">
                   Institutional accounts receive dedicated doctoral cohorts and monthly faculty progress summaries.
@@ -219,7 +219,7 @@ export default function AdminInstitutionsPage() {
             <table className="w-full min-w-[650px] text-xs font-sans text-left">
               <thead className="bg-paper border-b border-tone-rule text-stone-500 uppercase tracking-wide text-[10px]">
                 <tr>
-                  <th className="py-3 px-4 font-semibold">Institution &amp; Department</th>
+                  <th className="py-3 px-4 font-semibold">Institution and Department</th>
                   <th className="py-3 px-4 font-semibold text-center">Seats</th>
                   <th className="py-3 px-4 font-semibold">Academic Liaison</th>
                   <th className="py-3 px-4 font-semibold text-right">Annual Value</th>

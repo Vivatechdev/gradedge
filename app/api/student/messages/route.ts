@@ -133,7 +133,7 @@ export async function POST(req: Request) {
       .neq("sender_id", user.id)
       .is("read_at", null);
 
-    // Fetch thread and sender profile for notification & email digest
+    // Fetch thread and sender profile for notification and email digest
     const { data: threadData } = await supabase
       .from("message_threads")
       .select("id, subject, student_id, mentor_id")

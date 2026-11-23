@@ -136,7 +136,7 @@ export default function StudentProjectsPage() {
                     </Button>
                   </div>
 
-                  {/* Metadata Row & Progress */}
+                  {/* Metadata Row and Progress */}
                   <div className="pt-3 border-t border-tone-rule grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs text-tone-muted">
                     <div className="flex items-center gap-2">
                       <User className="w-3.5 h-3.5 text-gold shrink-0" />

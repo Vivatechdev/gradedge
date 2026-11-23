@@ -159,7 +159,7 @@ export async function getAvailableSlots(options: GenerateSlotsOptions = {}): Pro
       while (currentSlotStart.getTime() + settings.sessionDurationMinutes * 60 * 1000 <= ruleEnd.getTime()) {
         const currentSlotEnd = new Date(currentSlotStart.getTime() + settings.sessionDurationMinutes * 60 * 1000);
 
-        // Verify minimum notice & maximum advance
+        // Verify minimum notice and maximum advance
         if (currentSlotStart >= minNoticeDate && currentSlotStart <= maxAdvanceDate) {
           // Check collision with existing bookings
           const hasCollision = existingBookings.some((b) => {
