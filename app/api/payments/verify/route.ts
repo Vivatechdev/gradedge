@@ -1,14 +1,27 @@
 import { NextResponse } from "next/server";
+import { checkRateLimit, recordFailedAttempt } from "@/lib/auth/server";
 import { paymentProvider } from "@/lib/payments/paystack";
 import { processPaymentSuccess, processPaymentFailure } from "@/lib/payments/service";
 
 export async function GET(req: Request) {
   try {
+    const forwarded = req.headers.get("x-forwarded-for");
+    const ip = forwarded ? forwarded.split(",")[0].trim() : "anonymous";
+    const rl = checkRateLimit("payment_verify", ip, 20, 600000);
+
+    if (!rl.allowed) {
+      return NextResponse.json(
+        { error: `Too many verification requests. Please wait ${rl.retryAfterSeconds} seconds.` },
+        { status: 429 }
+      );
+    }
+    recordFailedAttempt("payment_verify", ip, 20, 600000);
+
     const { searchParams } = new URL(req.url);
     const reference = searchParams.get("reference") || searchParams.get("trxref");
 
-    if (!reference) {
-      return NextResponse.json({ error: "Transaction reference is required." }, { status: 400 });
+    if (!reference || !/^[a-zA-Z0-9_-]{8,100}$/.test(reference)) {
+      return NextResponse.json({ error: "A valid transaction reference is required." }, { status: 400 });
     }
 
     // Server-side verification (Rule 4: Never trust browser redirect as proof of payment)

@@ -20,22 +20,12 @@ export interface CronRunResult {
 export function verifyCronAuth(request: NextRequest): boolean {
   const cronSecret = process.env.CRON_SECRET;
   if (!cronSecret) {
-    // In local development or mock mode without a secret configured, allow execution
-    return true;
+    // Fail closed: CRON_SECRET must be configured
+    return false;
   }
 
   const authHeader = request.headers.get("authorization");
-  if (authHeader === `Bearer ${cronSecret}`) {
-    return true;
-  }
-
-  // Support Vercel Cron header if secret matches or standard vercel-cron header
-  const vercelHeader = request.headers.get("x-vercel-cron");
-  if (vercelHeader && authHeader === `Bearer ${cronSecret}`) {
-    return true;
-  }
-
-  return false;
+  return authHeader === `Bearer ${cronSecret}`;
 }
 
 /**

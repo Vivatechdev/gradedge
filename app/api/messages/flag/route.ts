@@ -5,7 +5,7 @@ import { createNotification } from "@/lib/notifications/service";
 
 export async function POST(request: NextRequest) {
   try {
-    const { user } = await requireUser();
+    const { user, profile } = await requireUser();
     const body = await request.json();
     const { messageId, reason, severity = "medium", notes } = body;
 
@@ -18,7 +18,7 @@ export async function POST(request: NextRequest) {
     // Fetch message and thread details
     const { data: message, error: mErr } = await supabase
       .from("messages")
-      .select("id, thread_id, body, sender_id, message_threads(id, project_id, subject, student_id)")
+      .select("id, thread_id, body, sender_id, message_threads(id, project_id, subject, student_id, mentor_id)")
       .eq("id", messageId)
       .single();
 
@@ -27,6 +27,15 @@ export async function POST(request: NextRequest) {
     }
 
     const thread = (message as any).message_threads;
+    const isParticipant =
+      thread?.student_id === user.id ||
+      thread?.mentor_id === user.id ||
+      message.sender_id === user.id ||
+      profile?.role === "admin";
+
+    if (!isParticipant) {
+      return NextResponse.json({ error: "Forbidden: you do not have access to this thread" }, { status: 403 });
+    }
     const projectId = thread?.project_id || null;
     const excerpt = message.body.length > 300 ? message.body.slice(0, 297) + "..." : message.body;
 
