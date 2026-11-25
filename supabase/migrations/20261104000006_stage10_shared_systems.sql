@@ -130,7 +130,7 @@ VALUES
       "subject": "Mentor Appointed: Welcome to Your Research Guidance",
       "intro": "We have matched your project with an academic mentor whose research specialization aligns with your methodological framework."
     }
-  }'::jsonb)
+  }'::jsonb, now())
 ON CONFLICT (key) DO UPDATE
 SET value = EXCLUDED.value, updated_at = now();
 

@@ -40,7 +40,7 @@ CREATE INDEX IF NOT EXISTS idx_mentor_change_student ON public.mentor_change_req
 INSERT INTO public.settings (key, value, updated_at)
 VALUES
   ('mentor_matching_window', '"48 business hours"'::jsonb, now()),
-  ('mentor_response_window', '"24 business hours (Monday–Friday, 9:00 AM – 6:00 PM)"'::jsonb),
+  ('mentor_response_window', '"24 business hours (Monday–Friday, 9:00 AM – 6:00 PM)"'::jsonb, now()),
   ('data_export_retention_days', '30'::jsonb, now())
 ON CONFLICT (key) DO UPDATE
   SET value = EXCLUDED.value, updated_at = now();
