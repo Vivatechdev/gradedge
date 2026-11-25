@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { checkRateLimit, recordFailedAttempt } from "@/lib/auth/server";
 import { createServiceRoleClient } from "@/lib/supabase/service-role";
 import { formatSlotForTimezone, getBookingSettings, getNextAvailableSlots } from "@/lib/booking/availability";
 import { generateICSString } from "@/lib/booking/calendar-ics";
@@ -9,6 +10,16 @@ export async function GET(
   { params }: { params: Promise<{ token: string }> }
 ) {
   try {
+    const ip = request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || "anonymous";
+    const rl = checkRateLimit("booking_manage", ip, 30, 600000);
+    if (!rl.allowed) {
+      return NextResponse.json(
+        { error: `Too many requests. Please wait ${rl.retryAfterSeconds} seconds.` },
+        { status: 429 }
+      );
+    }
+    recordFailedAttempt("booking_manage", ip, 30, 600000);
+
     const { token } = await params;
 
     if (!token || token.length < 8) {
@@ -85,6 +96,16 @@ export async function POST(
   { params }: { params: Promise<{ token: string }> }
 ) {
   try {
+    const ip = request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || "anonymous";
+    const rl = checkRateLimit("booking_manage", ip, 30, 600000);
+    if (!rl.allowed) {
+      return NextResponse.json(
+        { error: `Too many requests. Please wait ${rl.retryAfterSeconds} seconds.` },
+        { status: 429 }
+      );
+    }
+    recordFailedAttempt("booking_manage", ip, 30, 600000);
+
     const { token } = await params;
     const body = await request.json();
     const { action, reason, starts_at, timezone } = body;

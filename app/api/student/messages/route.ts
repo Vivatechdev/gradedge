@@ -79,6 +79,40 @@ export async function POST(req: Request) {
 
     let activeThreadId = threadId;
 
+    // Verify ownership if replying to an existing thread
+    if (activeThreadId) {
+      const { data: existingThread } = await supabase
+        .from("message_threads")
+        .select("id, student_id")
+        .eq("id", activeThreadId)
+        .eq("student_id", user.id)
+        .single();
+
+      if (!existingThread) {
+        return NextResponse.json(
+          { error: "Forbidden: you do not have access to this message thread." },
+          { status: 403 }
+        );
+      }
+    }
+
+    // Verify file ownership if attaching a file
+    if (attachmentFileId) {
+      const { data: ownedFile } = await supabase
+        .from("files")
+        .select("id")
+        .eq("id", attachmentFileId)
+        .eq("owner_id", user.id)
+        .single();
+
+      if (!ownedFile) {
+        return NextResponse.json(
+          { error: "Forbidden: invalid or unauthorized file attachment." },
+          { status: 403 }
+        );
+      }
+    }
+
     // Create new thread if needed
     if (!activeThreadId) {
       // Find assigned mentor if any
