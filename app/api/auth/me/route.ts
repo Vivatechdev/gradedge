@@ -8,37 +8,6 @@ export async function GET() {
     const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 
     if (!supabaseUrl || !supabaseAnonKey) {
-      const cookieStore = await cookies();
-      const mockRole = cookieStore.get("mock_user_role")?.value;
-      if (mockRole) {
-        const mockEmail = cookieStore.get("mock_user_email")?.value || "scholar@gradedge.com";
-        const mockName =
-          cookieStore.get("mock_user_name")?.value ||
-          (mockRole === "admin"
-            ? "System Administrator"
-            : mockRole === "mentor"
-            ? "Dr. Eleanor Vance"
-            : "Doctoral Scholar");
-
-        return NextResponse.json({
-          user: {
-            id: "mock-user-id",
-            email: mockEmail,
-            full_name: mockName,
-          },
-          profile: {
-            id: "mock-user-id",
-            full_name: mockName,
-            email: mockEmail,
-            role: mockRole,
-            study_level: "phd",
-            field_of_study: "Research Methodology",
-            institution: mockRole === "admin" ? "GradEdge Operations" : "University of Cambridge",
-            terms_accepted_at: new Date().toISOString(),
-            profile_completed_at: new Date().toISOString(),
-          },
-        });
-      }
       return NextResponse.json({ user: null, profile: null }, { status: 401 });
     }
 

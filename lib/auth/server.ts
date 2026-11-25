@@ -71,42 +71,9 @@ export async function requireUser(returnTo?: string): Promise<{
     }
   }
 
-  // Test/local mode fallback without Supabase credentials
-  const cookieStore = await cookies();
-  const roleCookie = cookieStore.get("mock_user_role")?.value;
-
-  if (!roleCookie) {
-    const query = returnTo ? `?returnTo=${encodeURIComponent(returnTo)}` : "";
-    redirect(`/login${query}`);
-  }
-
-  const mockEmail = cookieStore.get("mock_user_email")?.value || "scholar@gradedge.com";
-  const mockName =
-    cookieStore.get("mock_user_name")?.value ||
-    (roleCookie === "admin"
-      ? "System Administrator"
-      : roleCookie === "mentor"
-      ? "Dr. Eleanor Vance"
-      : "Doctoral Scholar");
-
-  const mockProfile: UserProfile = {
-    id: "mock-user-id",
-    role: (roleCookie as UserRole) || "student",
-    full_name: mockName,
-    email: mockEmail,
-    institution: roleCookie === "admin" ? "GradEdge Operations" : "University of Cambridge",
-    study_level: "phd",
-    field_of_study: "Research Methodology",
-    timezone: "UTC",
-    marketing_opt_in: false,
-    terms_accepted_at: new Date().toISOString(),
-    terms_version: "1.0",
-    profile_completed_at: new Date().toISOString(),
-    status: "active",
-    created_at: new Date().toISOString(),
-  };
-
-  return { user: { id: "mock-user-id", email: mockEmail }, profile: mockProfile };
+  // Real Supabase Auth required — no mock session fallback.
+  const query = returnTo ? `?returnTo=${encodeURIComponent(returnTo)}` : "";
+  redirect(`/login${query}`);
 }
 
 /**

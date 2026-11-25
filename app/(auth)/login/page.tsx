@@ -72,27 +72,11 @@ function LoginForm() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!email) {
-      setErrorMessage("Please enter an email address.");
+    if (!email || !password) {
+      setErrorMessage("Please enter both your email address and password.");
       return;
     }
-    await executeLogin(email, password || "gradedge2026");
-  };
-
-  const handleQuickRole = async (role: "student" | "mentor" | "admin") => {
-    const roleEmails = {
-      student: "scholar@gradedge.com",
-      mentor: "mentor@gradedge.com",
-      admin: "admin@gradedge.com",
-    };
-    const rolePaths = {
-      student: "/student",
-      mentor: "/mentor",
-      admin: "/admin",
-    };
-    setEmail(roleEmails[role]);
-    setPassword("gradedge2026");
-    await executeLogin(roleEmails[role], "gradedge2026", rolePaths[role]);
+    await executeLogin(email, password);
   };
 
   return (

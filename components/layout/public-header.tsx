@@ -184,6 +184,22 @@ export function PublicHeader({
           <div className="hidden lg:flex items-center gap-4">
             <CurrencySelector />
 
+            {isLoggedIn ? (
+              <Link
+                href={dashboardHref}
+                className="text-xs font-medium uppercase tracking-wider text-tone-link hover:text-tone-heading underline decoration-gold underline-offset-4"
+              >
+                Dashboard
+              </Link>
+            ) : (
+              <Link
+                href="/login"
+                className="text-xs font-medium uppercase tracking-wider text-tone-muted hover:text-tone-heading transition-colors"
+              >
+                Log in
+              </Link>
+            )}
+
             <Button href="/booking" variant="accent" size="sm">
               Book a free call
             </Button>
@@ -260,6 +276,24 @@ export function PublicHeader({
             <div className="pt-4 border-t border-tone-rule flex items-center justify-between">
               <span className="text-xs text-tone-muted font-medium">Select Currency</span>
               <CurrencySelector />
+            </div>
+
+            <div className="pt-3 border-t border-tone-rule">
+              {isLoggedIn ? (
+                <Link
+                  href={dashboardHref}
+                  className="block py-2 text-xs font-semibold uppercase tracking-wider text-navy hover:text-gold transition-colors"
+                >
+                  Go to Dashboard &rarr;
+                </Link>
+              ) : (
+                <Link
+                  href="/login"
+                  className="block py-2 text-xs font-semibold uppercase tracking-wider text-navy hover:text-gold transition-colors"
+                >
+                  Log in / Sign up &rarr;
+                </Link>
+              )}
             </div>
           </div>
 

@@ -39,24 +39,6 @@ function applyCurrencyHeaders(request: NextRequest, res: NextResponse): NextResp
 export default async function proxy(request: NextRequest) {
   const { pathname, search } = request.nextUrl;
 
-  // Lock down all login, registration, and portal routes when portals are not publicly enabled
-  const portalsEnabled = process.env.NEXT_PUBLIC_ENABLE_PORTALS === "true";
-  const isAuthOrPortalRoute =
-    pathname.startsWith("/login") ||
-    pathname.startsWith("/register") ||
-    pathname.startsWith("/forgot-password") ||
-    pathname.startsWith("/reset") ||
-    pathname.startsWith("/verify-email") ||
-    pathname.startsWith("/complete-profile") ||
-    pathname.startsWith("/student") ||
-    pathname.startsWith("/mentor") ||
-    pathname.startsWith("/admin") ||
-    pathname.startsWith("/supervisor");
-
-  if (!portalsEnabled && isAuthOrPortalRoute) {
-    return NextResponse.redirect(new URL("/", request.url));
-  }
-
   let response = NextResponse.next({
     request: {
       headers: request.headers,
@@ -110,20 +92,7 @@ export default async function proxy(request: NextRequest) {
     }
   }
 
-  // Fallback to mock session cookies (when database is not configured or in preview mode)
-  if (!user) {
-    const mockRole =
-      request.cookies.get("mock_user_role")?.value ||
-      request.cookies.get("sb-access-token")?.value;
-
-    if (mockRole) {
-      const mockEmail = request.cookies.get("mock_user_email")?.value || "scholar@gradedge.com";
-      user = { id: "mock-user-id", email: mockEmail };
-      role = mockRole;
-      const mockIncomplete = request.cookies.get("mock_incomplete_profile")?.value === "true";
-      isProfileCompleted = !mockIncomplete;
-    }
-  }
+  // No mock session cookie fallback: real Supabase Auth is strictly required.
 
   // Handle /complete-profile route
   if (pathname.startsWith("/complete-profile")) {
@@ -190,7 +159,14 @@ export default async function proxy(request: NextRequest) {
     });
   }
 
-  // 3. Student routes protection
+  // 3. Mentor routes protection
+  if (pathname.startsWith("/mentor")) {
+    if (role !== "mentor" && role !== "admin") {
+      return NextResponse.redirect(new URL("/student", request.url));
+    }
+  }
+
+  // 4. Student routes protection
   if (pathname.startsWith("/student")) {
     if (role === "mentor") {
       return NextResponse.redirect(new URL("/mentor", request.url));
