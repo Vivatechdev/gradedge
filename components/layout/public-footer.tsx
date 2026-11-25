@@ -220,42 +220,6 @@ export function PublicFooter() {
           </div>
         </div>
 
-        {/* Portals and Workspaces Preview Row */}
-        <div className="py-6 border-b border-tone-rule/60 flex flex-wrap items-center justify-between gap-4 text-xs font-sans">
-          <div className="flex items-center gap-2">
-            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-            <span className="font-semibold text-white tracking-wide uppercase text-[11px]">
-              Workspaces and Portals:
-            </span>
-          </div>
-          <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-tone-muted">
-            <Link
-              href="/student"
-              className="text-white hover:text-gold transition-colors font-medium flex items-center gap-1"
-            >
-              🎓 Student Dashboard
-            </Link>
-            <Link
-              href="/mentor"
-              className="text-white hover:text-gold transition-colors font-medium flex items-center gap-1"
-            >
-              👨‍🏫 Mentor Portal
-            </Link>
-            <Link
-              href="/admin"
-              className="text-white hover:text-gold transition-colors font-medium flex items-center gap-1"
-            >
-              🛡️ Admin Console
-            </Link>
-            <Link
-              href="/login"
-              className="text-gold hover:text-white transition-colors underline underline-offset-4"
-            >
-              Sign In (Any Random Email and Password)
-            </Link>
-          </div>
-        </div>
-
         {/* Bottom Bar: Copyright, Plain Social Links, Sitemap */}
         <div className="pt-8 flex flex-col md:flex-row items-center justify-between text-xs text-tone-muted gap-4 text-center md:text-left">
           <p>&copy; 2026 GradEdge Academic Solutions. All rights reserved.</p>

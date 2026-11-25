@@ -39,6 +39,24 @@ function applyCurrencyHeaders(request: NextRequest, res: NextResponse): NextResp
 export default async function proxy(request: NextRequest) {
   const { pathname, search } = request.nextUrl;
 
+  // Lock down all login, registration, and portal routes when portals are not publicly enabled
+  const portalsEnabled = process.env.NEXT_PUBLIC_ENABLE_PORTALS === "true";
+  const isAuthOrPortalRoute =
+    pathname.startsWith("/login") ||
+    pathname.startsWith("/register") ||
+    pathname.startsWith("/forgot-password") ||
+    pathname.startsWith("/reset") ||
+    pathname.startsWith("/verify-email") ||
+    pathname.startsWith("/complete-profile") ||
+    pathname.startsWith("/student") ||
+    pathname.startsWith("/mentor") ||
+    pathname.startsWith("/admin") ||
+    pathname.startsWith("/supervisor");
+
+  if (!portalsEnabled && isAuthOrPortalRoute) {
+    return NextResponse.redirect(new URL("/", request.url));
+  }
+
   let response = NextResponse.next({
     request: {
       headers: request.headers,
@@ -125,7 +143,8 @@ export default async function proxy(request: NextRequest) {
   const isProtectedPath =
     pathname.startsWith("/student") ||
     pathname.startsWith("/admin") ||
-    pathname.startsWith("/mentor");
+    pathname.startsWith("/mentor") ||
+    pathname.startsWith("/supervisor");
 
   if (!isProtectedPath) {
     return applyCurrencyHeaders(request, response);

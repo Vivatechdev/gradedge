@@ -184,22 +184,6 @@ export function PublicHeader({
           <div className="hidden lg:flex items-center gap-4">
             <CurrencySelector />
 
-            {isLoggedIn ? (
-              <Link
-                href={dashboardHref}
-                className="text-xs font-medium uppercase tracking-wider text-tone-link hover:text-tone-heading underline decoration-gold underline-offset-4"
-              >
-                Dashboard
-              </Link>
-            ) : (
-              <Link
-                href="/login"
-                className="text-xs font-medium uppercase tracking-wider text-tone-muted hover:text-tone-heading transition-colors"
-              >
-                Log in
-              </Link>
-            )}
-
             <Button href="/booking" variant="accent" size="sm">
               Book a free call
             </Button>
@@ -276,42 +260,6 @@ export function PublicHeader({
             <div className="pt-4 border-t border-tone-rule flex items-center justify-between">
               <span className="text-xs text-tone-muted font-medium">Select Currency</span>
               <CurrencySelector />
-            </div>
-
-            <div className="pt-3 border-t border-tone-rule space-y-2">
-              <span className="text-[10px] uppercase tracking-widest text-tone-muted font-semibold block">
-                Workspaces and Portals
-              </span>
-              <div className="flex flex-col gap-1.5 text-xs font-sans">
-                <Link
-                  href="/student"
-                  className="text-navy font-semibold hover:text-gold transition-colors flex items-center justify-between"
-                >
-                  <span>🎓 Student Dashboard</span>
-                  <span>&rarr;</span>
-                </Link>
-                <Link
-                  href="/mentor"
-                  className="text-navy font-semibold hover:text-gold transition-colors flex items-center justify-between"
-                >
-                  <span>👨‍🏫 Faculty Mentor Portal</span>
-                  <span>&rarr;</span>
-                </Link>
-                <Link
-                  href="/admin"
-                  className="text-navy font-semibold hover:text-gold transition-colors flex items-center justify-between"
-                >
-                  <span>🛡️ Admin Console</span>
-                  <span>&rarr;</span>
-                </Link>
-                <Link
-                  href="/login"
-                  className="text-gold font-semibold hover:text-navy transition-colors flex items-center justify-between"
-                >
-                  <span>Sign In (Any Random Email and Password)</span>
-                  <span>&rarr;</span>
-                </Link>
-              </div>
             </div>
           </div>
 

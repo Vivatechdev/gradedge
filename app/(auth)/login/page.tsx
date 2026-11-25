@@ -113,48 +113,6 @@ function LoginForm() {
       }
       activeTab="login"
     >
-      {/* Database-Free Preview Mode and Quick Access Banner */}
-      <div className="mb-6 p-4 bg-paper-warm border border-tone-rule rounded-[4px] space-y-3">
-        <div className="flex items-center justify-between">
-          <span className="type-micro uppercase tracking-wider text-gold font-semibold flex items-center gap-1.5">
-            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-            Database-Free Preview
-          </span>
-          <span className="text-[11px] text-stone-500 font-sans">
-            One-Click Portals
-          </span>
-        </div>
-        <p className="text-xs text-tone-body font-sans leading-relaxed">
-          No database required. Enter <strong>any email and random password</strong> below, or click any portal button to jump straight in:
-        </p>
-        <div className="grid grid-cols-3 gap-2 pt-1">
-          <button
-            type="button"
-            onClick={() => handleQuickRole("student")}
-            disabled={loading}
-            className="px-2.5 py-2 text-xs font-sans font-medium text-navy bg-white border border-tone-rule hover:border-gold hover:text-gold rounded-[2px] text-center transition-all shadow-2xs cursor-pointer disabled:opacity-50"
-          >
-            🎓 Student
-          </button>
-          <button
-            type="button"
-            onClick={() => handleQuickRole("mentor")}
-            disabled={loading}
-            className="px-2.5 py-2 text-xs font-sans font-medium text-navy bg-white border border-tone-rule hover:border-gold hover:text-gold rounded-[2px] text-center transition-all shadow-2xs cursor-pointer disabled:opacity-50"
-          >
-            👨‍🏫 Mentor
-          </button>
-          <button
-            type="button"
-            onClick={() => handleQuickRole("admin")}
-            disabled={loading}
-            className="px-2.5 py-2 text-xs font-sans font-medium text-navy bg-white border border-tone-rule hover:border-gold hover:text-gold rounded-[2px] text-center transition-all shadow-2xs cursor-pointer disabled:opacity-50"
-          >
-            🛡️ Admin
-          </button>
-        </div>
-      </div>
-
       {/* Target Role Guidance Notice */}
       {targetRole !== "student" && (
         <div className="mb-5 p-3 bg-navy/5 border border-navy/20 rounded-[2px] text-xs font-sans text-navy flex items-center gap-2">
